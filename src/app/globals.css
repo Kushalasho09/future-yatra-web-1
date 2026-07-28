@@ -20,7 +20,7 @@
 body {
   color: var(--color-navy-deep);
   background-color: #FFFFFF;
-  font-family: var(--font-inter), sans-serif;
+  font-family: var(--font-outfit), var(--font-plus-jakarta), sans-serif;
   overflow-x: hidden;
 }
 

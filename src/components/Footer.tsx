@@ -58,27 +58,27 @@ export default function Footer() {
           {/* Sub-Brands Col */}
           <div className="space-y-3">
             <h4 className="font-heading text-micro uppercase tracking-wider text-teal-bright font-semibold">
-              Our Verticals
+              Our Brands
             </h4>
             <ul className="space-y-2 text-small text-muted">
               <li>
-                <Link href="/brands/brand-1" className="hover:text-teal-bright transition-colors duration-150">
-                  Yatra Global Academy
+                <Link href="/coming-soon?brand=university-yatra" className="hover:text-teal-bright transition-colors duration-150">
+                  University Yatra
                 </Link>
               </li>
               <li>
-                <Link href="/brands/brand-2" className="hover:text-teal-bright transition-colors duration-150">
-                  Yatra Executive Careers
+                <Link href="/coming-soon?brand=academic-yatra" className="hover:text-teal-bright transition-colors duration-150">
+                  Academic Yatra
                 </Link>
               </li>
               <li>
-                <Link href="/brands/brand-3" className="hover:text-teal-bright transition-colors duration-150">
-                  Yatra World Mobility
+                <Link href="/coming-soon?brand=medico-yatra" className="hover:text-teal-bright transition-colors duration-150">
+                  Medico Yatra
                 </Link>
               </li>
               <li>
-                <Link href="/brands/brand-4" className="hover:text-teal-bright transition-colors duration-150">
-                  Yatra EdTech Solutions
+                <Link href="/coming-soon?brand=applyvisa-yatra" className="hover:text-teal-bright transition-colors duration-150">
+                  ApplyVisa Yatra
                 </Link>
               </li>
             </ul>
@@ -109,10 +109,17 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Mandatory Compliance Disclaimer Banner */}
+        <div className="my-8 p-4 rounded-xl bg-navy-glow/20 border border-teal-bright/20 text-xs text-muted/90 leading-relaxed text-center font-normal">
+          <p>
+            Future Yatra Private Limited provides educational counselling and application support services. We do not guarantee admission, visa approval, scholarship, employment outcomes, or permanent residency. All information provided is for guidance purposes only.
+          </p>
+        </div>
+
         {/* Bottom copyright row */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-micro text-muted">
-          <p>© 2026 Future Yatra Global Education Consulting. All rights reserved.</p>
-          <p className="mt-2 sm:mt-0">Accredited Study Abroad & Visa Advisory</p>
+        <div className="pt-4 border-t border-line/10 flex flex-col sm:flex-row items-center justify-between text-micro text-muted">
+          <p>© 2026 Future Yatra Private Limited. All rights reserved.</p>
+          <p className="mt-2 sm:mt-0">Study Abroad, Test Prep, MBBS & Visa Group</p>
         </div>
       </div>
     </footer>

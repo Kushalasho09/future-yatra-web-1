@@ -27,8 +27,8 @@ const config: Config = {
         amber: "#E0A23F",
       },
       fontFamily: {
-        heading: ["var(--font-space-grotesk)", "sans-serif"],
-        body: ["var(--font-inter)", "sans-serif"],
+        heading: ["var(--font-plus-jakarta)", "sans-serif"],
+        body: ["var(--font-outfit)", "var(--font-plus-jakarta)", "sans-serif"],
       },
       fontSize: {
         display: ["56px", { lineHeight: "1.12", letterSpacing: "-0.02em" }],
