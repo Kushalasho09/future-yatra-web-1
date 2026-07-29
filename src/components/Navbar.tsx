@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { Menu, X, ArrowRight, Compass } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -20,13 +21,15 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full bg-white/85 backdrop-blur-md border-b border-line/80 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* Brand Logo */}
-        <Link href="/" className="flex items-center space-x-3 group">
-          <div className="w-10 h-10 rounded-pill bg-navy flex items-center justify-center text-teal font-heading font-bold text-h3 transition-transform duration-200 group-hover:scale-105 shadow-md">
-            <Compass className="w-5 h-5 text-teal" />
-          </div>
-          <span className="font-heading text-h3 font-bold text-navy tracking-tight">
-            Future Yatra
-          </span>
+        <Link href="/" className="flex items-center group">
+          <Image
+            src="/images/logo.png"
+            alt="Future Yatra Logo"
+            width={240}
+            height={50}
+            priority
+            className="h-11 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+          />
         </Link>
 
         {/* Desktop Navigation Links */}

@@ -24,6 +24,24 @@ body {
   overflow-x: hidden;
 }
 
+.font-cursive {
+  font-family: var(--font-caveat), "Caveat", cursive, sans-serif;
+}
+
+.font-cursive-awesome {
+  font-family: var(--font-pacifico), var(--font-kaushan), cursive, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.font-calligraphy {
+  font-family: var(--font-great-vibes), "Great Vibes", cursive, serif;
+}
+
+.font-tempting {
+  font-family: 'Tempting', var(--font-alex-brush), var(--font-tangerine), var(--font-great-vibes), cursive, serif;
+  letter-spacing: 0.02em;
+}
+
 /* 3D PERSPECTIVE UTILITIES */
 .perspective-1000 {
   perspective: 1000px;

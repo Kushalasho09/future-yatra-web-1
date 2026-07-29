@@ -20,7 +20,7 @@ export default function ComingSoon({ pageTitle = "Coming Soon" }: ComingSoonProp
 
       <Card3DTilt maxTilt={8} className="max-w-xl w-full">
         <motion.div
-          initial={{ opacity: 0, scale: 0.9, y: 30 }}
+          initial={false}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.6, ease: easeTier1 }}
           className="glass-card-light rounded-section p-10 sm:p-14 text-center space-y-8 border border-line shadow-2xl bg-white/95 relative overflow-hidden"

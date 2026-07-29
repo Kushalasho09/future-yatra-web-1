@@ -58,9 +58,7 @@ export default function SignatureLine() {
   if (!mounted) return null;
 
   if (isMobile) {
-    return (
-      <div className="absolute left-4 top-0 bottom-0 w-[2px] bg-teal/50 pointer-events-none z-10" />
-    );
+    return null;
   }
 
   return (

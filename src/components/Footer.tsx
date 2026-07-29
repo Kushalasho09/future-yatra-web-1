@@ -1,5 +1,5 @@
+import Image from "next/image";
 import Link from "next/link";
-import { Compass } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -8,14 +8,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 pb-12 border-b border-line/10">
           {/* Brand Col */}
           <div className="space-y-4 md:col-span-1">
-            <div className="flex items-center space-x-3">
-              <div className="w-9 h-9 rounded-pill bg-teal flex items-center justify-center text-navy font-heading font-bold text-h3 shadow-sm">
-                <Compass className="w-5 h-5 text-navy" />
-              </div>
-              <span className="font-heading text-h3 font-bold text-white tracking-tight">
-                Future Yatra
-              </span>
-            </div>
+            <Link href="/" className="inline-block">
+              <Image
+                src="/images/logo-white.png"
+                alt="Future Yatra Logo"
+                width={220}
+                height={46}
+                className="h-10 w-auto object-contain"
+              />
+            </Link>
             <p className="text-small text-muted leading-relaxed">
               Premier global education and visa consulting platform empowering students and ambitious executives with top university placements and visa assistance.
             </p>

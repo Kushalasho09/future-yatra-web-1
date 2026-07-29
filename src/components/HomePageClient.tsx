@@ -31,6 +31,12 @@ import SignatureLine from "@/components/SignatureLine";
 import MagneticButton from "@/components/MagneticButton";
 import Card3DTilt from "@/components/Card3DTilt";
 import FaqAccordion from "@/components/FaqAccordion";
+import CursiveMarqueeBanner from "@/components/CursiveMarqueeBanner";
+import HeroImageCollage from "@/components/HeroImageCollage";
+import TopStudyDestinations from "@/components/TopStudyDestinations";
+import WhatSetsUsApartSection from "@/components/WhatSetsUsApartSection";
+import WhoWeAreSection from "@/components/WhoWeAreSection";
+import OurTeamSection from "@/components/OurTeamSection";
 
 export default function HomePageClient() {
   const easeTier1: [number, number, number, number] = [0.16, 1, 0.3, 1];
@@ -217,37 +223,37 @@ export default function HomePageClient() {
         {/* ==================================================================== */}
         {/* HERO SECTION                                                         */}
         {/* ==================================================================== */}
-        <section className="py-12 md:py-20 lg:py-24">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <section className="py-8 sm:py-16 md:py-20 lg:py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
             {/* Left Content Column */}
-            <div className="lg:col-span-7 space-y-8">
+            <div className="lg:col-span-7 space-y-5 sm:space-y-8">
               {/* Category Badge */}
               <motion.div
-                initial={{ opacity: 0, y: 15 }}
+                initial={false}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: easeTier1 }}
-                className="inline-flex items-center space-x-2 bg-navy text-white px-4 py-2 rounded-pill font-heading text-micro uppercase tracking-wider font-semibold shadow-md"
+                className="inline-flex items-center space-x-2 bg-navy text-white px-3.5 sm:px-4 py-2 rounded-pill font-heading text-xs sm:text-micro uppercase tracking-wider font-semibold shadow-md max-w-full"
               >
-                <Sparkles className="w-4 h-4 text-teal animate-pulse" />
-                <span>Future Yatra Private Limited</span>
+                <Sparkles className="w-4 h-4 text-teal animate-pulse flex-shrink-0" />
+                <span className="truncate">Future Yatra Private Limited</span>
               </motion.div>
 
               {/* Headline */}
               <motion.h1
-                initial={{ opacity: 0, y: 20 }}
+                initial={false}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1, ease: easeTier1 }}
-                className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-navy tracking-tight leading-[1.12]"
+                className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold text-navy tracking-tight leading-[1.15]"
               >
                 Your Journey. <span className="text-teal">Every Stage.</span> One Company.
               </motion.h1>
 
               {/* Body */}
               <motion.p
-                initial={{ opacity: 0, y: 20 }}
+                initial={false}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2, ease: easeTier1 }}
-                className="text-body-l text-muted leading-relaxed max-w-2xl font-normal"
+                className="text-body sm:text-body-l text-muted leading-relaxed max-w-2xl font-normal"
               >
                 Future Yatra Private Limited brings together four specialist brands — study abroad
                 admissions, test preparation, MBBS counselling, and visa documentation — so you
@@ -256,15 +262,15 @@ export default function HomePageClient() {
 
               {/* Hero Primary Action Button */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={false}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3, ease: easeTier1 }}
-                className="pt-2"
+                className="pt-1 sm:pt-2"
               >
-                <MagneticButton>
+                <MagneticButton className="w-full sm:w-auto">
                   <Link
                     href="/contact"
-                    className="inline-flex items-center space-x-3 bg-navy text-white text-body font-semibold px-8 py-4 rounded-pill hover:bg-navy-glow hover:shadow-[0_0_25px_rgba(45,189,182,0.45)] transition-all duration-350 shadow-lg group"
+                    className="w-full sm:w-auto inline-flex items-center justify-center space-x-3 bg-navy text-white text-body font-semibold px-6 sm:px-8 py-3.5 sm:py-4 rounded-pill hover:bg-navy-glow hover:shadow-[0_0_25px_rgba(45,189,182,0.45)] transition-all duration-350 shadow-lg group"
                   >
                     <span>Book a Free Conversation</span>
                     <ArrowRight className="w-5 h-5 text-teal-bright group-hover:translate-x-1 transition-transform duration-150" />
@@ -273,227 +279,70 @@ export default function HomePageClient() {
               </motion.div>
             </div>
 
-            {/* Right Visual Collage (Inspired by User's Reference Layouts) */}
+            {/* Right Visual Collage with Auto-Rotating 2.5s Slider */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial={false}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2, ease: easeTier1 }}
-              className="lg:col-span-5 relative"
+              className="lg:col-span-5 relative mt-4 lg:mt-0"
             >
-              <Card3DTilt maxTilt={6}>
-                <div className="relative mx-auto max-w-md lg:max-w-none">
-                  {/* Decorative flight/path dashes graphics */}
-                  <svg
-                    className="absolute -top-10 -right-10 w-48 h-48 text-teal/30 pointer-events-none hidden sm:block"
-                    viewBox="0 0 200 200"
-                    fill="none"
-                  >
-                    <path
-                      d="M20 180 C 80 120, 120 80, 180 20"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeDasharray="6 6"
-                    />
-                  </svg>
-
-                  {/* Main Visual Image Card */}
-                  <div className="relative rounded-[32px] overflow-hidden border border-line shadow-2xl bg-white group">
-                    <Image
-                      src="/images/hero_student_journey.png"
-                      alt="Future Yatra Student Journey"
-                      width={600}
-                      height={650}
-                      className="w-full h-[420px] sm:h-[480px] object-cover object-center group-hover:scale-105 transition-transform duration-700"
-                      priority
-                    />
-                  </div>
-
-                  {/* Floating Secondary Image Cards */}
-                  <div className="absolute -bottom-6 -left-6 w-36 sm:w-44 rounded-2xl overflow-hidden border-2 border-white shadow-xl hidden sm:block">
-                    <Image
-                      src="/images/hero_test_prep.png"
-                      alt="Academic Prep"
-                      width={200}
-                      height={200}
-                      className="w-full h-28 object-cover"
-                    />
-                  </div>
-
-                  <div className="absolute -top-6 -left-6 w-36 sm:w-44 rounded-2xl overflow-hidden border-2 border-white shadow-xl hidden sm:block">
-                    <Image
-                      src="/images/hero_visa_passport.png"
-                      alt="Visa Support"
-                      width={200}
-                      height={200}
-                      className="w-full h-28 object-cover"
-                    />
-                  </div>
-                </div>
-              </Card3DTilt>
+              <HeroImageCollage />
             </motion.div>
           </div>
         </section>
+      </div>
 
-        {/* ==================================================================== */}
-        {/* WHAT SETS US APART                                                   */}
-        {/* ==================================================================== */}
-        <section className="py-16 border-t border-line/60">
-          <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
-            <span className="font-heading text-micro uppercase tracking-wider text-teal font-semibold">
-              Distinct Standard
-            </span>
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
-              What Sets Us Apart
-            </h2>
-          </div>
+      {/* ==================================================================== */}
+      {/* INFINITE MOVING MARQUEE BANNER WITH CURSIVE FONTS                    */}
+      {/* ==================================================================== */}
+      <CursiveMarqueeBanner />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {whatSetsUsApart.map((item, idx) => {
-              const IconComponent = item.icon;
-              return (
-                <div
-                  key={idx}
-                  className="glass-card-light rounded-2xl p-6 border border-line flex flex-col justify-between hover:border-teal/50 hover:shadow-lg transition-all duration-300 bg-white/80"
-                >
-                  <div className="space-y-4">
-                    <div className="w-12 h-12 rounded-xl bg-teal-tint border border-teal/30 flex items-center justify-center text-teal">
-                      <IconComponent className="w-6 h-6" />
-                    </div>
-                    <h3 className="font-heading text-lg font-bold text-navy leading-snug">
-                      {item.title}
-                    </h3>
-                    <p className="text-small text-muted leading-relaxed">{item.description}</p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </section>
+      {/* ==================================================================== */}
+      {/* TOP STUDY DESTINATIONS (MODELED AFTER USER REFERENCE IMAGE 1)        */}
+      {/* ==================================================================== */}
+      <TopStudyDestinations />
 
-        {/* ==================================================================== */}
-        {/* WHO WE ARE                                                           */}
-        {/* ==================================================================== */}
-        <section className="py-16">
-          <div className="glass-card-light rounded-3xl p-8 sm:p-12 border border-line bg-gradient-to-br from-white via-sand-tint to-white shadow-xl relative overflow-hidden">
-            <div className="max-w-3xl space-y-6">
-              <div className="inline-flex items-center space-x-2 bg-teal-tint text-teal px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">
-                <Compass className="w-4 h-4" />
-                <span>Who We Are</span>
-              </div>
+      {/* ==================================================================== */}
+      {/* WHAT SETS US APART (MODELED AFTER USER REFERENCE IMAGE 2)            */}
+      {/* ==================================================================== */}
+      <WhatSetsUsApartSection />
 
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
-                Built for the Complete Study Abroad & Visa Journey
-              </h2>
+      {/* ==================================================================== */}
+      {/* WHO WE ARE (MODELED AFTER USER SECOND REFERENCE IMAGE)              */}
+      {/* ==================================================================== */}
+      <WhoWeAreSection />
 
-              <div className="space-y-4 text-body text-muted leading-relaxed font-normal">
-                <p>
-                  Future Yatra Private Limited exists because a study abroad journey is rarely just
-                  one decision. It moves through a test score, a university application, sometimes
-                  a medical entrance pathway, and almost always a visa.
-                </p>
-                <p>
-                  Instead of building one generalist consultancy, we built four specialist brands —
-                  each focused on one part of that journey, each held to the same company-wide
-                  standard of transparent, ethical counselling.
-                </p>
-              </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
 
-              <div className="pt-4">
-                <Link
-                  href="/about-us/"
-                  className="inline-flex items-center space-x-2 text-teal font-semibold text-body hover:text-navy transition-colors duration-150 group"
-                >
-                  <span>Read Our Full Story</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-150" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* ==================================================================== */}
-        {/* OUR BRANDS                                                           */}
-        {/* ==================================================================== */}
-        <section className="py-16">
-          <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
-            <span className="font-heading text-micro uppercase tracking-wider text-teal font-semibold">
-              The Verticals
-            </span>
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-navy">Our Brands</h2>
-            <p className="text-muted text-body">
-              Four specialist teams working together under one accountable parent company.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {ourBrands.map((brand, idx) => {
-              const IconComp = brand.icon;
-              return (
-                <div
-                  key={idx}
-                  className="glass-card-light rounded-3xl p-8 border border-line flex flex-col justify-between hover:border-teal hover:shadow-xl transition-all duration-300 bg-white group"
-                >
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <div className="w-14 h-14 rounded-2xl bg-teal-tint border border-teal/30 flex items-center justify-center text-navy shadow-sm">
-                        <IconComp className="w-7 h-7 text-teal" />
-                      </div>
-                      <span className="text-micro font-bold uppercase tracking-wider text-muted/80 bg-sand px-3 py-1 rounded-full border border-line">
-                        {brand.tagline}
-                      </span>
-                    </div>
-
-                    <h3 className="font-heading text-2xl font-bold text-navy group-hover:text-teal transition-colors duration-200">
-                      {brand.name}
-                    </h3>
-
-                    <p className="text-body text-muted leading-relaxed font-normal">
-                      {brand.description}
-                    </p>
-                  </div>
-
-                  <div className="pt-6 border-t border-line/60">
-                    <Link
-                      href={brand.link}
-                      className="inline-flex items-center space-x-2 text-navy font-semibold text-small hover:text-teal transition-colors duration-150 group/link"
-                    >
-                      <span>Learn More</span>
-                      <ArrowRight className="w-4 h-4 text-teal group-hover/link:translate-x-1 transition-transform duration-150" />
-                    </Link>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </section>
 
         {/* ==================================================================== */}
         {/* OUR COMMITMENT                                                       */}
         {/* ==================================================================== */}
-        <section className="py-16">
-          <div className="bg-navy text-white rounded-3xl p-8 sm:p-12 relative overflow-hidden shadow-2xl">
-            <div className="max-w-3xl space-y-6 relative z-10">
-              <div className="inline-flex items-center space-x-2 bg-teal/20 border border-teal/40 text-teal-bright px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">
+        <section className="py-10 sm:py-16">
+          <div className="bg-navy text-white rounded-2xl sm:rounded-3xl p-6 sm:p-12 relative overflow-hidden shadow-2xl">
+            <div className="max-w-3xl space-y-4 sm:space-y-6 relative z-10">
+              <div className="inline-flex items-center space-x-2 bg-teal/20 border border-teal/40 text-teal-bright px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">
                 <ShieldCheck className="w-4 h-4 text-teal-bright" />
                 <span>Our Standard</span>
               </div>
 
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white">
+              <h2 className="font-heading text-2xl sm:text-4xl font-bold text-white">
                 Our Commitment
               </h2>
 
-              <p className="text-body-l text-sand-tint/90 leading-relaxed">
+              <p className="text-small sm:text-body-l text-sand-tint/90 leading-relaxed">
                 Education and visa consulting in India has a trust problem. Future Yatra holds
                 itself to a clear standard, across every brand:
               </p>
 
-              <div className="space-y-4 pt-2">
+              <div className="space-y-3 sm:space-y-4 pt-2">
                 {commitmentPoints.map((point, idx) => (
-                  <div key={idx} className="flex items-start space-x-4">
-                    <div className="w-7 h-7 rounded-full bg-teal/20 border border-teal/40 text-teal-bright flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">
+                  <div key={idx} className="flex items-start space-x-3.5 sm:space-x-4">
+                    <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-teal/20 border border-teal/40 text-teal-bright flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">
                       {idx + 1}
                     </div>
-                    <p className="text-small text-sand-tint/90 leading-relaxed">{point}</p>
+                    <p className="text-xs sm:text-small text-sand-tint/90 leading-relaxed">{point}</p>
                   </div>
                 ))}
               </div>
@@ -504,28 +353,28 @@ export default function HomePageClient() {
         {/* ==================================================================== */}
         {/* HOW IT WORKS                                                         */}
         {/* ==================================================================== */}
-        <section className="py-16">
-          <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
-            <span className="font-heading text-micro uppercase tracking-wider text-teal font-semibold">
+        <section className="py-10 sm:py-16">
+          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 space-y-2 sm:space-y-3">
+            <span className="font-heading text-xs sm:text-micro uppercase tracking-wider text-teal font-semibold">
               Simple & Transparent
             </span>
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-navy">How It Works</h2>
+            <h2 className="font-heading text-2xl sm:text-4xl font-bold text-navy">How It Works</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-8 relative">
             {howItWorks.map((step, idx) => (
               <div
                 key={idx}
-                className="glass-card-light rounded-3xl p-8 border border-line bg-white/90 relative flex flex-col justify-between"
+                className="glass-card-light rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-line bg-white/90 relative flex flex-col justify-between"
               >
-                <div className="space-y-4">
-                  <span className="font-heading text-4xl font-extrabold text-teal/40 block">
+                <div className="space-y-3 sm:space-y-4">
+                  <span className="font-heading text-3xl sm:text-4xl font-extrabold text-teal/40 block">
                     {step.step}
                   </span>
-                  <h3 className="font-heading text-xl font-bold text-navy leading-snug">
+                  <h3 className="font-heading text-lg sm:text-xl font-bold text-navy leading-snug">
                     {step.title}
                   </h3>
-                  <p className="text-small text-muted leading-relaxed font-normal">{step.desc}</p>
+                  <p className="text-xs sm:text-small text-muted leading-relaxed font-normal">{step.desc}</p>
                 </div>
               </div>
             ))}
@@ -535,30 +384,30 @@ export default function HomePageClient() {
         {/* ==================================================================== */}
         {/* WHY FUTURE YATRA                                                     */}
         {/* ==================================================================== */}
-        <section className="py-16">
-          <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
-            <span className="font-heading text-micro uppercase tracking-wider text-teal font-semibold">
+        <section className="py-10 sm:py-16">
+          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 space-y-2 sm:space-y-3">
+            <span className="font-heading text-xs sm:text-micro uppercase tracking-wider text-teal font-semibold">
               Core Principles
             </span>
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
+            <h2 className="font-heading text-2xl sm:text-4xl font-bold text-navy">
               Why Future Yatra
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8">
             {whyFutureYatra.map((prop, idx) => {
               const IconC = prop.icon;
               return (
                 <div
                   key={idx}
-                  className="glass-card-light rounded-3xl p-8 border border-line bg-white/90 flex items-start space-x-5"
+                  className="glass-card-light rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-line bg-white/90 flex flex-col sm:flex-row items-start space-y-3 sm:space-y-0 sm:space-x-5"
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-teal-tint border border-teal/30 flex items-center justify-center text-teal flex-shrink-0">
-                    <IconC className="w-6 h-6" />
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-teal-tint border border-teal/30 flex items-center justify-center text-teal flex-shrink-0">
+                    <IconC className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
-                  <div className="space-y-2">
-                    <h3 className="font-heading text-xl font-bold text-navy">{prop.title}</h3>
-                    <p className="text-small text-muted leading-relaxed font-normal">{prop.desc}</p>
+                  <div className="space-y-1.5 sm:space-y-2">
+                    <h3 className="font-heading text-lg sm:text-xl font-bold text-navy">{prop.title}</h3>
+                    <p className="text-xs sm:text-small text-muted leading-relaxed font-normal">{prop.desc}</p>
                   </div>
                 </div>
               );
@@ -569,14 +418,14 @@ export default function HomePageClient() {
         {/* ==================================================================== */}
         {/* SUCCESS SNAPSHOT (COMPLIANCE MANDATED PLACEHOLDER)                    */}
         {/* ==================================================================== */}
-        <section className="py-16">
-          <div className="glass-card-light rounded-3xl p-8 sm:p-10 border border-teal/30 bg-teal-tint/30 text-center max-w-4xl mx-auto space-y-6">
-            <div className="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full border border-teal/40 text-xs font-semibold text-navy shadow-sm">
-              <Lock className="w-4 h-4 text-teal" />
-              <span>Compliance Notice — Success Snapshot</span>
+        <section className="py-10 sm:py-16">
+          <div className="glass-card-light rounded-2xl sm:rounded-3xl p-6 sm:p-10 border border-teal/30 bg-teal-tint/30 text-center max-w-4xl mx-auto space-y-4 sm:space-y-6">
+            <div className="inline-flex items-center space-x-2 bg-white px-3.5 py-1.5 rounded-full border border-teal/40 text-xs font-semibold text-navy shadow-sm max-w-full">
+              <Lock className="w-4 h-4 text-teal flex-shrink-0" />
+              <span className="truncate">Compliance Notice — Success Snapshot</span>
             </div>
 
-            <p className="text-body sm:text-body-l text-navy max-w-2xl mx-auto leading-relaxed font-medium">
+            <p className="text-small sm:text-body-l text-navy max-w-2xl mx-auto leading-relaxed font-medium">
               Verified success stories will be added here as they become available. We will not
               publish testimonials or outcome claims that cannot be verified.
             </p>
@@ -584,10 +433,10 @@ export default function HomePageClient() {
             <div>
               <Link
                 href="/coming-soon?section=success-stories"
-                className="inline-flex items-center space-x-2 text-teal font-semibold text-body hover:text-navy transition-colors duration-150 group"
+                className="inline-flex items-center space-x-2 text-teal font-semibold text-small sm:text-body hover:text-navy transition-colors duration-150 group"
               >
                 <span>View Success Stories</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-150" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-150" />
               </Link>
             </div>
           </div>
@@ -596,16 +445,16 @@ export default function HomePageClient() {
         {/* ==================================================================== */}
         {/* PARTNER WITH US & CAREERS (2-COL BANNERS)                            */}
         {/* ==================================================================== */}
-        <section className="py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <section className="py-8 sm:py-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8">
             {/* Partner With Us */}
-            <div className="glass-card-light rounded-3xl p-8 border border-line bg-white flex flex-col justify-between space-y-6">
+            <div className="glass-card-light rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-line bg-white flex flex-col justify-between space-y-5 sm:space-y-6">
               <div className="space-y-3">
                 <div className="w-10 h-10 rounded-xl bg-teal-tint flex items-center justify-center text-teal">
                   <HeartHandshake className="w-5 h-5" />
                 </div>
-                <h3 className="font-heading text-2xl font-bold text-navy">Partner With Us</h3>
-                <p className="text-small text-muted leading-relaxed">
+                <h3 className="font-heading text-xl sm:text-2xl font-bold text-navy">Partner With Us</h3>
+                <p className="text-xs sm:text-small text-muted leading-relaxed">
                   Are you a school, college, university, or agent looking to work with an
                   established, multi-brand education and visa consulting group?
                 </p>
@@ -623,18 +472,18 @@ export default function HomePageClient() {
             </div>
 
             {/* Careers */}
-            <div className="glass-card-light rounded-3xl p-8 border border-line bg-white flex flex-col justify-between space-y-6">
+            <div className="glass-card-light rounded-3xl p-6 sm:p-8 border border-line bg-white flex flex-col justify-between space-y-5 sm:space-y-6">
               <div className="space-y-3">
                 <div className="w-10 h-10 rounded-xl bg-teal-tint flex items-center justify-center text-teal">
                   <Briefcase className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-micro font-bold uppercase tracking-wider text-teal">
+                  <span className="text-xs sm:text-micro font-bold uppercase tracking-wider text-teal">
                     Life at Future Yatra
                   </span>
-                  <h3 className="font-heading text-2xl font-bold text-navy">Careers</h3>
+                  <h3 className="font-heading text-xl sm:text-2xl font-bold text-navy">Careers</h3>
                 </div>
-                <p className="text-small text-muted leading-relaxed">
+                <p className="text-xs sm:text-small text-muted leading-relaxed">
                   We're building four specialist teams under one accountable company — and we're
                   looking for people who take honest student counselling as seriously as we do.
                 </p>
@@ -653,15 +502,24 @@ export default function HomePageClient() {
           </div>
         </section>
 
+      </div>
+
+      {/* ==================================================================== */}
+      {/* OUR TEAM                                                              */}
+      {/* ==================================================================== */}
+      <OurTeamSection />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+
         {/* ==================================================================== */}
         {/* FAQ SECTION (ACCORDION COMPONENT)                                    */}
         {/* ==================================================================== */}
-        <section className="py-16">
-          <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
-            <span className="font-heading text-micro uppercase tracking-wider text-teal font-semibold">
+        <section className="py-10 sm:py-16">
+          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 space-y-2 sm:space-y-3">
+            <span className="font-heading text-xs sm:text-micro uppercase tracking-wider text-teal font-semibold">
               Got Questions?
             </span>
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
+            <h2 className="font-heading text-2xl sm:text-4xl font-bold text-navy">
               Frequently Asked Questions
             </h2>
           </div>
@@ -672,23 +530,23 @@ export default function HomePageClient() {
         {/* ==================================================================== */}
         {/* FINAL CTA                                                            */}
         {/* ==================================================================== */}
-        <section className="py-16">
-          <div className="bg-gradient-to-r from-navy via-navy-deep to-navy text-white rounded-3xl p-10 sm:p-16 text-center space-y-6 shadow-2xl relative overflow-hidden border border-teal/20">
-            <div className="max-w-2xl mx-auto space-y-4">
-              <h2 className="font-heading text-3xl sm:text-5xl font-bold text-white tracking-tight">
+        <section className="py-10 sm:py-16">
+          <div className="bg-gradient-to-r from-navy via-navy-deep to-navy text-white rounded-2xl sm:rounded-3xl p-7 sm:p-16 text-center space-y-5 sm:space-y-6 shadow-2xl relative overflow-hidden border border-teal/20">
+            <div className="max-w-2xl mx-auto space-y-3 sm:space-y-4">
+              <h2 className="font-heading text-2xl sm:text-5xl font-bold text-white tracking-tight leading-tight">
                 Start With a Free, No-Obligation Conversation
               </h2>
-              <p className="text-body-l text-sand-tint/90 leading-relaxed font-normal">
+              <p className="text-small sm:text-body-l text-sand-tint/90 leading-relaxed font-normal">
                 No pressure, no sales pitch — just an honest first conversation about your goals,
                 and how Future Yatra can help.
               </p>
             </div>
 
-            <div className="pt-4 flex justify-center">
-              <MagneticButton>
+            <div className="pt-2 sm:pt-4 flex justify-center">
+              <MagneticButton className="w-full sm:w-auto">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center space-x-3 bg-teal text-navy text-body font-semibold px-9 py-4 rounded-pill hover:bg-teal-bright hover:shadow-[0_0_30px_rgba(45,189,182,0.6)] transition-all duration-350 shadow-xl group"
+                  className="w-full sm:w-auto inline-flex items-center justify-center space-x-3 bg-teal text-navy text-small sm:text-body font-semibold px-6 sm:px-9 py-3.5 sm:py-4 rounded-pill hover:bg-teal-bright hover:shadow-[0_0_30px_rgba(45,189,182,0.6)] transition-all duration-350 shadow-xl group"
                 >
                   <span>Book a Free Conversation</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-150" />
