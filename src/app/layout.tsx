@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans, Outfit, Caveat, Pacifico, Kaushan_Script, Great_Vibe
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import HydrationFix from "@/components/HydrationFix";
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -89,6 +90,7 @@ export default function RootLayout({
         suppressHydrationWarning
         className="font-body text-navy-deep bg-white antialiased min-h-screen flex flex-col selection:bg-teal selection:text-white"
       >
+        <HydrationFix />
         <Navbar />
         <main className="flex-grow relative">{children}</main>
         <Footer />
