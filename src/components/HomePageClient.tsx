@@ -37,6 +37,13 @@ import TopStudyDestinations from "@/components/TopStudyDestinations";
 import WhatSetsUsApartSection from "@/components/WhatSetsUsApartSection";
 import WhoWeAreSection from "@/components/WhoWeAreSection";
 import OurTeamSection from "@/components/OurTeamSection";
+import OurCommitmentSection from "@/components/OurCommitmentSection";
+import HowItWorksSection from "@/components/HowItWorksSection";
+import CorePrinciplesSection from "@/components/CorePrinciplesSection";
+import SuccessSnapshotSection from "@/components/SuccessSnapshotSection";
+import PartnerAndCareersSection from "@/components/PartnerAndCareersSection";
+import GrandCtaBannerSection from "@/components/GrandCtaBannerSection";
+import FaqSection from "@/components/FaqSection";
 
 export default function HomePageClient() {
   const easeTier1: [number, number, number, number] = [0.16, 1, 0.3, 1];
@@ -312,250 +319,47 @@ export default function HomePageClient() {
       {/* ==================================================================== */}
       <WhoWeAreSection />
 
+      {/* ==================================================================== */}
+      {/* OUR COMMITMENT                                                       */}
+      {/* ==================================================================== */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-
-
-
-        {/* ==================================================================== */}
-        {/* OUR COMMITMENT                                                       */}
-        {/* ==================================================================== */}
-        <section className="py-10 sm:py-16">
-          <div className="bg-navy text-white rounded-2xl sm:rounded-3xl p-6 sm:p-12 relative overflow-hidden shadow-2xl">
-            <div className="max-w-3xl space-y-4 sm:space-y-6 relative z-10">
-              <div className="inline-flex items-center space-x-2 bg-teal/20 border border-teal/40 text-teal-bright px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">
-                <ShieldCheck className="w-4 h-4 text-teal-bright" />
-                <span>Our Standard</span>
-              </div>
-
-              <h2 className="font-heading text-2xl sm:text-4xl font-bold text-white">
-                Our Commitment
-              </h2>
-
-              <p className="text-small sm:text-body-l text-sand-tint/90 leading-relaxed">
-                Education and visa consulting in India has a trust problem. Future Yatra holds
-                itself to a clear standard, across every brand:
-              </p>
-
-              <div className="space-y-3 sm:space-y-4 pt-2">
-                {commitmentPoints.map((point, idx) => (
-                  <div key={idx} className="flex items-start space-x-3.5 sm:space-x-4">
-                    <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-teal/20 border border-teal/40 text-teal-bright flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">
-                      {idx + 1}
-                    </div>
-                    <p className="text-xs sm:text-small text-sand-tint/90 leading-relaxed">{point}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ==================================================================== */}
-        {/* HOW IT WORKS                                                         */}
-        {/* ==================================================================== */}
-        <section className="py-10 sm:py-16">
-          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 space-y-2 sm:space-y-3">
-            <span className="font-heading text-xs sm:text-micro uppercase tracking-wider text-teal font-semibold">
-              Simple & Transparent
-            </span>
-            <h2 className="font-heading text-2xl sm:text-4xl font-bold text-navy">How It Works</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-8 relative">
-            {howItWorks.map((step, idx) => (
-              <div
-                key={idx}
-                className="glass-card-light rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-line bg-white/90 relative flex flex-col justify-between"
-              >
-                <div className="space-y-3 sm:space-y-4">
-                  <span className="font-heading text-3xl sm:text-4xl font-extrabold text-teal/40 block">
-                    {step.step}
-                  </span>
-                  <h3 className="font-heading text-lg sm:text-xl font-bold text-navy leading-snug">
-                    {step.title}
-                  </h3>
-                  <p className="text-xs sm:text-small text-muted leading-relaxed font-normal">{step.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* ==================================================================== */}
-        {/* WHY FUTURE YATRA                                                     */}
-        {/* ==================================================================== */}
-        <section className="py-10 sm:py-16">
-          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 space-y-2 sm:space-y-3">
-            <span className="font-heading text-xs sm:text-micro uppercase tracking-wider text-teal font-semibold">
-              Core Principles
-            </span>
-            <h2 className="font-heading text-2xl sm:text-4xl font-bold text-navy">
-              Why Future Yatra
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8">
-            {whyFutureYatra.map((prop, idx) => {
-              const IconC = prop.icon;
-              return (
-                <div
-                  key={idx}
-                  className="glass-card-light rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-line bg-white/90 flex flex-col sm:flex-row items-start space-y-3 sm:space-y-0 sm:space-x-5"
-                >
-                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-teal-tint border border-teal/30 flex items-center justify-center text-teal flex-shrink-0">
-                    <IconC className="w-5 h-5 sm:w-6 sm:h-6" />
-                  </div>
-                  <div className="space-y-1.5 sm:space-y-2">
-                    <h3 className="font-heading text-lg sm:text-xl font-bold text-navy">{prop.title}</h3>
-                    <p className="text-xs sm:text-small text-muted leading-relaxed font-normal">{prop.desc}</p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </section>
-
-        {/* ==================================================================== */}
-        {/* SUCCESS SNAPSHOT (COMPLIANCE MANDATED PLACEHOLDER)                    */}
-        {/* ==================================================================== */}
-        <section className="py-10 sm:py-16">
-          <div className="glass-card-light rounded-2xl sm:rounded-3xl p-6 sm:p-10 border border-teal/30 bg-teal-tint/30 text-center max-w-4xl mx-auto space-y-4 sm:space-y-6">
-            <div className="inline-flex items-center space-x-2 bg-white px-3.5 py-1.5 rounded-full border border-teal/40 text-xs font-semibold text-navy shadow-sm max-w-full">
-              <Lock className="w-4 h-4 text-teal flex-shrink-0" />
-              <span className="truncate">Compliance Notice — Success Snapshot</span>
-            </div>
-
-            <p className="text-small sm:text-body-l text-navy max-w-2xl mx-auto leading-relaxed font-medium">
-              Verified success stories will be added here as they become available. We will not
-              publish testimonials or outcome claims that cannot be verified.
-            </p>
-
-            <div>
-              <Link
-                href="/coming-soon?section=success-stories"
-                className="inline-flex items-center space-x-2 text-teal font-semibold text-small sm:text-body hover:text-navy transition-colors duration-150 group"
-              >
-                <span>View Success Stories</span>
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-150" />
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* ==================================================================== */}
-        {/* PARTNER WITH US & CAREERS (2-COL BANNERS)                            */}
-        {/* ==================================================================== */}
-        <section className="py-8 sm:py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8">
-            {/* Partner With Us */}
-            <div className="glass-card-light rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-line bg-white flex flex-col justify-between space-y-5 sm:space-y-6">
-              <div className="space-y-3">
-                <div className="w-10 h-10 rounded-xl bg-teal-tint flex items-center justify-center text-teal">
-                  <HeartHandshake className="w-5 h-5" />
-                </div>
-                <h3 className="font-heading text-xl sm:text-2xl font-bold text-navy">Partner With Us</h3>
-                <p className="text-xs sm:text-small text-muted leading-relaxed">
-                  Are you a school, college, university, or agent looking to work with an
-                  established, multi-brand education and visa consulting group?
-                </p>
-              </div>
-
-              <div>
-                <Link
-                  href="/coming-soon?section=partner"
-                  className="inline-flex items-center space-x-2 text-teal font-semibold text-small hover:text-navy transition-colors duration-150 group"
-                >
-                  <span>Partner With Future Yatra</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-150" />
-                </Link>
-              </div>
-            </div>
-
-            {/* Careers */}
-            <div className="glass-card-light rounded-3xl p-6 sm:p-8 border border-line bg-white flex flex-col justify-between space-y-5 sm:space-y-6">
-              <div className="space-y-3">
-                <div className="w-10 h-10 rounded-xl bg-teal-tint flex items-center justify-center text-teal">
-                  <Briefcase className="w-5 h-5" />
-                </div>
-                <div>
-                  <span className="text-xs sm:text-micro font-bold uppercase tracking-wider text-teal">
-                    Life at Future Yatra
-                  </span>
-                  <h3 className="font-heading text-xl sm:text-2xl font-bold text-navy">Careers</h3>
-                </div>
-                <p className="text-xs sm:text-small text-muted leading-relaxed">
-                  We're building four specialist teams under one accountable company — and we're
-                  looking for people who take honest student counselling as seriously as we do.
-                </p>
-              </div>
-
-              <div>
-                <Link
-                  href="/coming-soon?section=careers"
-                  className="inline-flex items-center space-x-2 text-teal font-semibold text-small hover:text-navy transition-colors duration-150 group"
-                >
-                  <span>Explore Careers</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-150" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
+        <OurCommitmentSection />
       </div>
+
+      {/* ==================================================================== */}
+      {/* HOW IT WORKS (MODELED AFTER REF IMAGES 1 & 3 WITH HERO THEME)        */}
+      {/* ==================================================================== */}
+      <HowItWorksSection />
+
+      {/* ==================================================================== */}
+      {/* WHY FUTURE YATRA (CORE PRINCIPLES - SPLIT SHOWCASE STUDIO)           */}
+      {/* ==================================================================== */}
+      <CorePrinciplesSection />
+
+      {/* ==================================================================== */}
+      {/* SUCCESS SNAPSHOT & IMPACT STORIES (MODELED AFTER REF IMAGES 1 & 2)    */}
+      {/* ==================================================================== */}
+      <SuccessSnapshotSection />
+
+      {/* ==================================================================== */}
+      {/* PARTNER WITH US & CAREERS (DUAL LUXURY HERO STAGE BANNERS)           */}
+      {/* ==================================================================== */}
+      <PartnerAndCareersSection />
 
       {/* ==================================================================== */}
       {/* OUR TEAM                                                              */}
       {/* ==================================================================== */}
       <OurTeamSection />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+      {/* ==================================================================== */}
+      {/* FAQ SECTION (ORGANIC FLUID CAPSULE STUDIO)                           */}
+      {/* ==================================================================== */}
+      <FaqSection />
 
-        {/* ==================================================================== */}
-        {/* FAQ SECTION (ACCORDION COMPONENT)                                    */}
-        {/* ==================================================================== */}
-        <section className="py-10 sm:py-16">
-          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 space-y-2 sm:space-y-3">
-            <span className="font-heading text-xs sm:text-micro uppercase tracking-wider text-teal font-semibold">
-              Got Questions?
-            </span>
-            <h2 className="font-heading text-2xl sm:text-4xl font-bold text-navy">
-              Frequently Asked Questions
-            </h2>
-          </div>
-
-          <FaqAccordion items={faqItems} />
-        </section>
-
-        {/* ==================================================================== */}
-        {/* FINAL CTA                                                            */}
-        {/* ==================================================================== */}
-        <section className="py-10 sm:py-16">
-          <div className="bg-gradient-to-r from-navy via-navy-deep to-navy text-white rounded-2xl sm:rounded-3xl p-7 sm:p-16 text-center space-y-5 sm:space-y-6 shadow-2xl relative overflow-hidden border border-teal/20">
-            <div className="max-w-2xl mx-auto space-y-3 sm:space-y-4">
-              <h2 className="font-heading text-2xl sm:text-5xl font-bold text-white tracking-tight leading-tight">
-                Start With a Free, No-Obligation Conversation
-              </h2>
-              <p className="text-small sm:text-body-l text-sand-tint/90 leading-relaxed font-normal">
-                No pressure, no sales pitch — just an honest first conversation about your goals,
-                and how Future Yatra can help.
-              </p>
-            </div>
-
-            <div className="pt-2 sm:pt-4 flex justify-center">
-              <MagneticButton className="w-full sm:w-auto">
-                <Link
-                  href="/contact"
-                  className="w-full sm:w-auto inline-flex items-center justify-center space-x-3 bg-teal text-navy text-small sm:text-body font-semibold px-6 sm:px-9 py-3.5 sm:py-4 rounded-pill hover:bg-teal-bright hover:shadow-[0_0_30px_rgba(45,189,182,0.6)] transition-all duration-350 shadow-xl group"
-                >
-                  <span>Book a Free Conversation</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-150" />
-                </Link>
-              </MagneticButton>
-            </div>
-          </div>
-        </section>
-      </div>
+      {/* ==================================================================== */}
+      {/* FINAL CTA (LUXURY GRAND CONSULTATION STAGE BANNER)                  */}
+      {/* ==================================================================== */}
+      <GrandCtaBannerSection />
     </div>
   );
 }
