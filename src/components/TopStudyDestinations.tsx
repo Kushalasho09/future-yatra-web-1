@@ -5,7 +5,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight, ArrowRight, GraduationCap, BookOpen, Stethoscope, FileCheck2 } from "lucide-react";
 
-export default function TopStudyDestinations() {
+export interface TopStudyDestinationsProps {
+  eyebrow?: React.ReactNode;
+  title?: React.ReactNode;
+  description?: React.ReactNode;
+}
+
+export default function TopStudyDestinations({
+  eyebrow = "Four Specialist Verticals",
+  title = "Our Brands",
+  description = "Four specialist teams working together under one accountable parent company.",
+}: TopStudyDestinationsProps = {}) {
   const brands = [
     {
       id: "university",
@@ -89,15 +99,15 @@ export default function TopStudyDestinations() {
       {/* SECTION HEADER OUTSIDE CARD */}
       <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-12 space-y-1.5 sm:space-y-2 px-4">
         <span className="font-tempting text-teal text-xl sm:text-3xl font-normal block">
-          Four Specialist Verticals
+          {eyebrow}
         </span>
 
         <h2 className="font-heading text-2xl sm:text-5xl font-extrabold text-navy tracking-tight">
-          Our Brands
+          {title}
         </h2>
 
         <p className="text-muted text-xs sm:text-body max-w-xl mx-auto font-normal">
-          Four specialist teams working together under one accountable parent company.
+          {description}
         </p>
       </div>
 

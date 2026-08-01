@@ -1,19 +1,17 @@
-import ComingSoon from "@/components/ComingSoon";
+import type { Metadata } from "next";
+import AboutUsPageClient from "@/components/AboutUsPageClient";
+
+export const metadata: Metadata = {
+  title: "About Us | Future Yatra Private Limited",
+  description:
+    "Future Yatra Private Limited is India's founder-led study abroad and visa consulting group. Learn about our parent company and four specialist brands.",
+  openGraph: {
+    title: "About Us | Future Yatra Private Limited",
+    description:
+      "India's founder-led study abroad and visa consulting group. One accountable partner for your entire journey.",
+  },
+};
 
 export default function AboutPage() {
-  return <ComingSoon pageTitle="About Us" />;
+  return <AboutUsPageClient />;
 }
-
-/* 
-// PREVIOUS FULL ABOUT PAGE IMPLEMENTATION (PRESERVED FOR FUTURE RELEASE)
-"use client";
-
-import Link from "next/link";
-import { motion } from "framer-motion";
-import { Users, Target, Shield, Award, ArrowRight, CheckCircle2, Globe2 } from "lucide-react";
-import Card3DTilt from "@/components/Card3DTilt";
-
-export function AboutPageContent() {
-  // ...
-}
-*/
