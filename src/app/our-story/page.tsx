@@ -1,20 +1,27 @@
-import ComingSoon from "@/components/ComingSoon";
+import type { Metadata } from "next";
+import OurStoryPageClient from "@/components/OurStoryPageClient";
+
+export const metadata: Metadata = {
+  title: "Our Story | Future Yatra Private Limited",
+  description:
+    "Future Yatra was born from a personal experience with misleading advice during a move to Canada — built to replace confusion with clarity, and false promises with transparency.",
+  keywords: [
+    "Future Yatra story",
+    "why Future Yatra was founded",
+    "Future Yatra founder journey",
+    "honest study abroad consulting India",
+    "Future Yatra Private Limited",
+  ],
+  openGraph: {
+    title: "Our Story | Future Yatra Private Limited",
+    description:
+      "Future Yatra was born from a personal experience with misleading advice during a move to Canada — built to replace confusion with clarity, and false promises with transparency.",
+    url: "https://futureyatra.com/our-story/",
+    siteName: "Future Yatra",
+    type: "website",
+  },
+};
 
 export default function OurStoryPage() {
-  return <ComingSoon pageTitle="Our Story" />;
+  return <OurStoryPageClient />;
 }
-
-/* 
-// PREVIOUS FULL OUR STORY PAGE IMPLEMENTATION (PRESERVED FOR FUTURE RELEASE)
-"use client";
-
-import Link from "next/link";
-import { motion } from "framer-motion";
-import SignatureLine from "@/components/SignatureLine";
-import Card3DTilt from "@/components/Card3DTilt";
-import { Calendar, Award, Globe, Rocket, ArrowRight, CheckCircle2 } from "lucide-react";
-
-export function OurStoryPageContent() {
-  // ...
-}
-*/
