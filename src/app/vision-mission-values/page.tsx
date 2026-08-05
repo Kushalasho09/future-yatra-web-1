@@ -7,6 +7,6 @@ export const metadata: Metadata = {
     "Explore the vision, mission, and core operational values of Future Yatra Private Limited — guiding University Yatra, Academic Yatra, Medico Yatra, and ApplyVisa Yatra.",
 };
 
-export default function VisionPage() {
+export default function VisionMissionValuesPage() {
   return <VisionValuesPageClient />;
 }
