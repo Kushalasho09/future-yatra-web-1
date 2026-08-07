@@ -848,8 +848,8 @@ export default function OurBrandsPageClient() {
                   key={goal.id}
                   onClick={() => setSelectedGoal(goal.id)}
                   className={`p-4 rounded-2xl border text-left font-heading font-semibold text-xs sm:text-sm flex flex-col items-start gap-3 transition-all ${selectedGoal === goal.id
-                      ? "bg-navy-deep text-white border-teal-bright shadow-lg scale-105"
-                      : "bg-white text-navy-deep border-line hover:border-teal/50"
+                    ? "bg-navy-deep text-white border-teal-bright shadow-lg scale-105"
+                    : "bg-white text-navy-deep border-line hover:border-teal/50"
                     }`}
                 >
                   <goal.icon className={`w-6 h-6 ${selectedGoal === goal.id ? "text-teal-bright" : "text-navy"}`} />

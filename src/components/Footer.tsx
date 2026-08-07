@@ -174,8 +174,8 @@ export default function Footer() {
         </div>
 
         {/* Mandatory Compliance Disclaimer Banner */}
-        <div className="my-8 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-navy-deep via-navy to-navy-deep border border-teal/30 text-xs text-sand-tint/90 leading-relaxed text-center shadow-lg font-medium max-w-4xl mx-auto">
-          <p>
+        <div className="my-8 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-navy-deep via-navy to-navy-deep border border-teal/30 text-center shadow-lg max-w-4xl mx-auto">
+          <p className="text-white text-xs sm:text-small font-medium leading-relaxed">
             Future Yatra Private Limited provides educational counselling and application support services. We do not guarantee admission, visa approval, scholarship, employment outcomes, or permanent residency. All information provided is for guidance purposes only.
           </p>
         </div>
