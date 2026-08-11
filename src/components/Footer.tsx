@@ -1,17 +1,28 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, ShieldCheck, Mail, MapPin, Phone, Sparkles } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 
 export default function Footer() {
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setMousePos({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+    });
+  };
+
   return (
-    <footer className="bg-gradient-to-b from-navy to-[#0b172e] text-white border-t border-teal/30 pt-16 pb-12 mt-20 relative overflow-hidden">
+    <footer className="bg-gradient-to-b from-[#122447] via-[#0b172e] to-[#050b16] text-white border-t border-teal/30 pt-16 pb-6 mt-20 relative overflow-hidden group">
       
-      {/* Background Glow Orbs */}
+      {/* Background Ambient Glow Orbs */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-teal/10 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-0 right-10 w-96 h-96 bg-navy-glow/20 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-teal/5 rounded-full blur-[160px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -174,14 +185,14 @@ export default function Footer() {
         </div>
 
         {/* Mandatory Compliance Disclaimer Banner */}
-        <div className="my-8 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-navy-deep via-navy to-navy-deep border border-teal/30 text-center shadow-lg max-w-4xl mx-auto">
+        <div className="my-8 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-[#101f3d] via-navy to-[#101f3d] border border-teal/25 text-center shadow-lg max-w-4xl mx-auto">
           <p className="text-white text-xs sm:text-small font-medium leading-relaxed">
             Future Yatra Private Limited provides educational counselling and application support services. We do not guarantee admission, visa approval, scholarship, employment outcomes, or permanent residency. All information provided is for guidance purposes only.
           </p>
         </div>
 
         {/* Bottom copyright row */}
-        <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-sand-tint/70 gap-2">
+        <div className="pt-4 pb-6 flex flex-col sm:flex-row items-center justify-between text-xs text-sand-tint/70 gap-2 border-b border-white/10">
           <p>© 2026 Future Yatra Private Limited. All rights reserved.</p>
           <p className="font-semibold text-teal-bright">
             Study Abroad • Test Prep • MBBS • Visa Consulting Group
@@ -189,6 +200,37 @@ export default function Footer() {
         </div>
 
       </div>
+
+      {/* DEVSTUDIO-STYLE GRAND FOOTER BRANDING DISPLAY BANNER (FULL WIDTH & SUBTLE AMBIENT HOVER) */}
+      <div
+        onMouseMove={handleMouseMove}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        className="w-full relative overflow-hidden pt-6 pb-2 text-center select-none cursor-pointer group/brand"
+      >
+        {/* Dynamic Soft Light Beam Glow on Cursor Hover */}
+        <div
+          className="absolute pointer-events-none transition-opacity duration-300 blur-3xl rounded-full"
+          style={{
+            width: "450px",
+            height: "300px",
+            left: `${mousePos.x - 225}px`,
+            top: `${mousePos.y - 150}px`,
+            background: "radial-gradient(circle, rgba(63, 224, 214, 0.22) 0%, rgba(45, 189, 182, 0.08) 60%, transparent 85%)",
+            opacity: isHovered ? 0.9 : 0,
+          }}
+        />
+
+        {/* Ambient Full-Width Background Gradient Glow on Hover */}
+        <div className="absolute inset-0 bg-gradient-to-t from-teal/15 via-teal/5 to-transparent opacity-0 group-hover/brand:opacity-80 transition-opacity duration-700 pointer-events-none blur-3xl" />
+
+        <div className="relative z-10 w-full overflow-hidden px-0">
+          <h2 className="font-heading font-black text-[17.5vw] sm:text-[18.5vw] lg:text-[19.2vw] tracking-tighter leading-none whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-b from-white/18 via-teal/10 to-transparent transition-all duration-700 group-hover/brand:from-teal-bright/70 group-hover/brand:via-teal/35 group-hover/brand:to-transparent group-hover/brand:drop-shadow-[0_-4px_22px_rgba(63,224,214,0.25)] transform group-hover/brand:scale-[1.01] block w-full text-center">
+            Future Yatra
+          </h2>
+        </div>
+      </div>
+
     </footer>
   );
 }

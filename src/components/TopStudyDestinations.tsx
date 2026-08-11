@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight, ArrowRight, GraduationCap, BookOpen, Stethoscope, FileCheck2 } from "lucide-react";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 export interface TopStudyDestinationsProps {
   eyebrow?: React.ReactNode;
@@ -196,16 +197,16 @@ export default function TopStudyDestinations({
                 {active.description}
               </p>
 
-              {/* EXPLORE BRAND CTA BUTTON */}
+              {/* EXPLORE BRAND CTA BUTTON WITH HOVER BORDER GRADIENT */}
               <div className="pt-2 sm:pt-4">
-                <Link
-                  href={active.link}
-                  className="inline-flex items-center space-x-2.5 px-6 py-3 sm:px-8 sm:py-4 rounded-xl sm:rounded-2xl bg-teal text-navy font-heading font-black text-xs sm:text-sm tracking-wider uppercase shadow-[0_0_20px_rgba(45,189,182,0.6)] hover:bg-teal-bright hover:shadow-[0_0_35px_rgba(45,189,182,0.9)] hover:scale-105 transition-all duration-300 border-2 border-white/50 group/btn"
-                >
-                  <span className="text-navy font-black tracking-wider">
-                    EXPLORE BRAND
-                  </span>
-                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-navy group-hover/btn:translate-x-1 transition-transform stroke-[3]" />
+                <Link href={active.link}>
+                  <HoverBorderGradient
+                    as="div"
+                    containerClassName="rounded-full"
+                    className="bg-white hover:bg-teal-tint/40 text-navy hover:text-teal font-heading font-black text-xs sm:text-sm tracking-wider uppercase px-8 py-3 rounded-full border border-teal/20 shadow-sm"
+                  >
+                    <span>EXPLORE BRAND</span>
+                  </HoverBorderGradient>
                 </Link>
               </div>
 

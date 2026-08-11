@@ -1,38 +1,52 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Compass, ShieldCheck, Target } from "lucide-react";
 import MagneticButton from "@/components/MagneticButton";
+import { DirectionAwareHover } from "@/components/ui/direction-aware-hover";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 export default function WhoWeAreSection() {
+  const [isCardHovered, setIsCardHovered] = useState(false);
+
   return (
     <section className="py-14 sm:py-24 border-t border-line/60 bg-gradient-to-b from-white via-sand-tint/30 to-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           
-          {/* LEFT COLUMN: VISUAL IMAGE WITH OFFSET FRAME & OVERLAPPING STAT BADGE (MODELED AFTER IMAGE 2 REFERENCE) */}
+          {/* LEFT COLUMN: VISUAL IMAGE WITH DIRECTION-AWARE HOVER & OVERLAPPING STAT BADGE */}
           <div className="lg:col-span-5 relative">
-            <div className="relative mx-auto max-w-md lg:max-w-none">
+            <div
+              className="relative mx-auto max-w-md lg:max-w-none"
+              onMouseEnter={() => setIsCardHovered(true)}
+              onMouseLeave={() => setIsCardHovered(false)}
+            >
               {/* Decorative Offset Teal Frame behind image */}
               <div className="absolute -bottom-4 -left-4 w-full h-full rounded-3xl border-2 border-teal/40 pointer-events-none hidden sm:block" />
 
-              {/* Main Visual Image */}
-              <div className="relative rounded-3xl overflow-hidden border border-line shadow-2xl bg-white group">
-                <Image
-                  src="/images/hero_campus_life.png"
-                  alt="Future Yatra Student Life"
-                  width={600}
-                  height={650}
-                  className="w-full h-[320px] sm:h-[460px] object-cover object-center group-hover:scale-105 transition-transform duration-700"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-transparent" />
-              </div>
+              {/* Main Visual Image with Direction-Aware Hover Effect */}
+              <DirectionAwareHover
+                imageUrl="/images/hero_campus_life.png"
+                className="w-full h-[320px] sm:h-[460px] border border-line shadow-2xl"
+              >
+                <div className="space-y-1 pr-4">
+                  <p className="font-heading font-extrabold text-lg sm:text-xl text-white">
+                    Empowering Global Dreams
+                  </p>
+                  <p className="text-xs sm:text-small text-teal-bright font-medium">
+                    10,000+ Students Advised Across 4 Specialist Brands
+                  </p>
+                </div>
+              </DirectionAwareHover>
 
-              {/* Floating Overlapping Stat Badge (Modeled after Red Badge in Image 2) */}
-              <div className="absolute -bottom-6 -right-3 sm:-right-6 bg-navy text-white p-4 sm:p-6 rounded-2xl border-2 border-teal shadow-2xl flex items-center space-x-3.5 z-20">
+              {/* Floating Overlapping Stat Badge (Fades out when hovered to reveal direction-aware content cleanly) */}
+              <div
+                className={`absolute -bottom-6 -right-3 sm:-right-6 bg-navy text-white p-4 sm:p-6 rounded-2xl border-2 border-teal shadow-2xl flex items-center space-x-3.5 z-20 transition-all duration-350 pointer-events-none ${
+                  isCardHovered ? "opacity-0 scale-90 translate-y-2" : "opacity-100 scale-100 translate-y-0"
+                }`}
+              >
                 <div className="w-12 h-12 rounded-xl bg-teal/20 border border-teal/40 flex items-center justify-center text-teal-bright flex-shrink-0">
                   <ShieldCheck className="w-6 h-6 text-teal-bright" />
                 </div>
@@ -99,17 +113,17 @@ export default function WhoWeAreSection() {
               </div>
             </div>
 
-            {/* Primary CTA Button */}
+            {/* Primary CTA Button with Hover Border Gradient */}
             <div className="pt-2">
-              <MagneticButton className="inline-block">
-                <Link
-                  href="/about-us/"
-                  className="inline-flex items-center justify-center space-x-3 bg-navy text-white text-body font-semibold px-7 py-3.5 rounded-pill hover:bg-navy-glow hover:shadow-[0_0_20px_rgba(45,189,182,0.4)] transition-all duration-300 shadow-md group"
+              <Link href="/about-us/">
+                <HoverBorderGradient
+                  as="div"
+                  containerClassName="rounded-full"
+                  className="bg-white hover:bg-teal-tint/40 text-navy hover:text-teal font-extrabold text-small px-7 py-3 rounded-full border border-teal/20 shadow-sm"
                 >
                   <span>Read Our Full Story</span>
-                  <ArrowRight className="w-4 h-4 text-teal-bright group-hover:translate-x-1 transition-transform duration-200" />
-                </Link>
-              </MagneticButton>
+                </HoverBorderGradient>
+              </Link>
             </div>
 
           </div>

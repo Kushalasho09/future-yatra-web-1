@@ -108,35 +108,21 @@ export default function HeroImageCollage() {
                 priority
               />
 
-              {/* Soft Gradient Overlay for Text Visibility */}
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-transparent to-black/20" />
+              {/* Soft Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/40 via-transparent to-transparent pointer-events-none" />
 
-              {/* Top Right Live Badge */}
-              <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs font-semibold text-navy shadow-md border border-line flex items-center space-x-2">
-                <span className="w-2 h-2 rounded-full bg-teal-bright animate-ping" />
-                <span>{active.badge}</span>
-              </div>
-
-              {/* Bottom Info Bar & Manual Slide Dots */}
-              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white z-10">
-                <div>
-                  <p className="text-xs sm:text-small font-semibold text-sand-tint drop-shadow-sm">
-                    {active.subtext}
-                  </p>
-                </div>
-
-                <div className="flex items-center space-x-1.5 bg-black/50 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20">
-                  {slides.map((_, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => setCurrentIndex(idx)}
-                      aria-label={`Switch to slide ${idx + 1}`}
-                      className={`h-2 rounded-full transition-all duration-300 ${
-                        idx === currentIndex ? "w-6 bg-teal-bright" : "w-2 bg-white/50 hover:bg-white"
-                      }`}
-                    />
-                  ))}
-                </div>
+              {/* Bottom Right Manual Slide Dots */}
+              <div className="absolute bottom-4 right-4 flex items-center space-x-1.5 bg-black/50 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20 z-10">
+                {slides.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrentIndex(idx)}
+                    aria-label={`Switch to slide ${idx + 1}`}
+                    className={`h-2 rounded-full transition-all duration-300 ${
+                      idx === currentIndex ? "w-6 bg-teal-bright" : "w-2 bg-white/50 hover:bg-white"
+                    }`}
+                  />
+                ))}
               </div>
             </motion.div>
           </AnimatePresence>

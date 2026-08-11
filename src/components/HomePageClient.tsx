@@ -44,6 +44,11 @@ import SuccessSnapshotSection from "@/components/SuccessSnapshotSection";
 import PartnerAndCareersSection from "@/components/PartnerAndCareersSection";
 import GrandCtaBannerSection from "@/components/GrandCtaBannerSection";
 import FaqSection from "@/components/FaqSection";
+import { AuroraBackground } from "@/components/ui/aurora-background";
+import { SparklesCore } from "@/components/ui/sparkles";
+import { LayoutTextFlip } from "@/components/ui/layout-text-flip";
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
+import { NoiseBackground } from "@/components/ui/noise-background";
 
 export default function HomePageClient() {
   const easeTier1: [number, number, number, number] = [0.16, 1, 0.3, 1];
@@ -226,78 +231,109 @@ export default function HomePageClient() {
       <div className="absolute top-10 left-10 w-96 h-96 bg-navy-glow/15 rounded-pill blur-3xl pointer-events-none animate-orb-1" />
       <div className="absolute top-72 right-10 w-[450px] h-[450px] bg-teal/20 rounded-pill blur-3xl pointer-events-none animate-orb-2" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-        {/* ==================================================================== */}
-        {/* HERO SECTION                                                         */}
-        {/* ==================================================================== */}
-        <section className="py-8 sm:py-16 md:py-20 lg:py-24">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
-            {/* Left Content Column */}
-            <div className="lg:col-span-7 space-y-5 sm:space-y-8">
-              {/* Category Badge */}
+      <BackgroundGradientAnimation
+        gradientBackgroundStart="rgb(255, 255, 255)"
+        gradientBackgroundEnd="rgb(240, 253, 250)"
+        firstColor="45, 189, 182"
+        secondColor="63, 224, 214"
+        thirdColor="58, 94, 168"
+        fourthColor="147, 197, 253"
+        fifthColor="231, 249, 247"
+        pointerColor="45, 189, 182"
+        blendingValue="soft-light"
+        className="w-full min-h-screen relative z-20"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full min-h-screen flex flex-col justify-center">
+          {/* ==================================================================== */}
+          {/* HERO SECTION                                                         */}
+          {/* ==================================================================== */}
+          <section className="pt-28 sm:pt-36 md:pt-40 lg:pt-44 pb-20 sm:pb-28 lg:pb-32">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
+              {/* Left Content Column */}
+              <div className="lg:col-span-7 space-y-5 sm:space-y-8">
+                {/* Ultra-Aesthetic Hero Brand Badge with Dynamic Text Flipper */}
+                <motion.div
+                  initial={false}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, ease: easeTier1 }}
+                  className="inline-flex items-center space-x-3 bg-white/90 backdrop-blur-md border border-slate-200/80 px-4 py-2 rounded-full shadow-[0_4px_20px_-4px_rgba(18,36,71,0.08)] hover:shadow-[0_6px_25px_-4px_rgba(45,189,182,0.18)] transition-all duration-300 group cursor-default max-w-full"
+                >
+                  <div className="relative flex items-center justify-center">
+                    <span className="w-2 h-2 rounded-full bg-teal animate-pulse" />
+                    <span className="absolute w-3.5 h-3.5 rounded-full bg-teal/30 animate-ping" />
+                  </div>
+
+                  <LayoutTextFlip
+                    text="Future Yatra"
+                    words={["University Yatra", "Academic Yatra", "Medico Yatra", "ApplyVisa Yatra"]}
+                    duration={2800}
+                  />
+                </motion.div>
+
+                {/* Headline */}
+                <motion.h1
+                  initial={false}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.1, ease: easeTier1 }}
+                  className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold text-navy tracking-tight leading-[1.15]"
+                >
+                  Your Journey. <span className="text-teal">Every Stage.</span> One Company.
+                </motion.h1>
+
+                {/* Body */}
+                <motion.p
+                  initial={false}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2, ease: easeTier1 }}
+                  className="text-body sm:text-body-l text-muted leading-relaxed max-w-2xl font-normal"
+                >
+                  Future Yatra Private Limited brings together four specialist brands — study abroad
+                  admissions, test preparation, MBBS counselling, and visa documentation — so you
+                  never have to piece your journey together across unrelated consultancies.
+                </motion.p>
+
+                {/* Hero Primary Action Button with NoiseBackground */}
+                <motion.div
+                  initial={false}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3, ease: easeTier1 }}
+                  className="pt-1 sm:pt-2"
+                >
+                  <MagneticButton className="w-full sm:w-auto">
+                    <NoiseBackground
+                      containerClassName="rounded-full w-full sm:w-auto p-[3px]"
+                      gradientColors={[
+                        "rgb(45, 189, 182)",
+                        "rgb(63, 224, 214)",
+                        "rgb(34, 61, 116)",
+                      ]}
+                      speed={0.15}
+                    >
+                      <Link
+                        href="/contact"
+                        className="w-full sm:w-auto inline-flex items-center justify-center space-x-3 bg-navy text-white text-body font-semibold px-6 sm:px-8 py-3.5 sm:py-4 rounded-full hover:bg-navy-glow transition-all duration-350 shadow-md group"
+                      >
+                        <span>Book a Free Conversation</span>
+                        <ArrowRight className="w-5 h-5 text-teal-bright group-hover:translate-x-1 transition-transform duration-150" />
+                      </Link>
+                    </NoiseBackground>
+                  </MagneticButton>
+                </motion.div>
+              </div>
+
+              {/* Right Visual Collage with Auto-Rotating 2.5s Slider */}
               <motion.div
                 initial={false}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, ease: easeTier1 }}
-                className="inline-flex items-center space-x-2 bg-navy text-white px-3.5 sm:px-4 py-2 rounded-pill font-heading text-xs sm:text-micro uppercase tracking-wider font-semibold shadow-md max-w-full"
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.2, ease: easeTier1 }}
+                className="lg:col-span-5 relative mt-4 lg:mt-0"
               >
-                <Sparkles className="w-4 h-4 text-teal animate-pulse flex-shrink-0" />
-                <span className="truncate">Future Yatra Private Limited</span>
-              </motion.div>
-
-              {/* Headline */}
-              <motion.h1
-                initial={false}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1, ease: easeTier1 }}
-                className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold text-navy tracking-tight leading-[1.15]"
-              >
-                Your Journey. <span className="text-teal">Every Stage.</span> One Company.
-              </motion.h1>
-
-              {/* Body */}
-              <motion.p
-                initial={false}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2, ease: easeTier1 }}
-                className="text-body sm:text-body-l text-muted leading-relaxed max-w-2xl font-normal"
-              >
-                Future Yatra Private Limited brings together four specialist brands — study abroad
-                admissions, test preparation, MBBS counselling, and visa documentation — so you
-                never have to piece your journey together across unrelated consultancies.
-              </motion.p>
-
-              {/* Hero Primary Action Button */}
-              <motion.div
-                initial={false}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3, ease: easeTier1 }}
-                className="pt-1 sm:pt-2"
-              >
-                <MagneticButton className="w-full sm:w-auto">
-                  <Link
-                    href="/contact"
-                    className="w-full sm:w-auto inline-flex items-center justify-center space-x-3 bg-navy text-white text-body font-semibold px-6 sm:px-8 py-3.5 sm:py-4 rounded-pill hover:bg-navy-glow hover:shadow-[0_0_25px_rgba(45,189,182,0.45)] transition-all duration-350 shadow-lg group"
-                  >
-                    <span>Book a Free Conversation</span>
-                    <ArrowRight className="w-5 h-5 text-teal-bright group-hover:translate-x-1 transition-transform duration-150" />
-                  </Link>
-                </MagneticButton>
+                <HeroImageCollage />
               </motion.div>
             </div>
-
-            {/* Right Visual Collage with Auto-Rotating 2.5s Slider */}
-            <motion.div
-              initial={false}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: easeTier1 }}
-              className="lg:col-span-5 relative mt-4 lg:mt-0"
-            >
-              <HeroImageCollage />
-            </motion.div>
-          </div>
-        </section>
-      </div>
+          </section>
+        </div>
+      </BackgroundGradientAnimation>
 
       {/* ==================================================================== */}
       {/* INFINITE MOVING MARQUEE BANNER WITH CURSIVE FONTS                    */}
