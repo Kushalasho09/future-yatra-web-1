@@ -25,6 +25,7 @@ export interface PrincipleItem {
   tag: string;
   icon: React.ElementType;
   accentGradient: string;
+  badgeBg: string;
 }
 
 const principlesData: PrincipleItem[] = [
@@ -37,7 +38,8 @@ const principlesData: PrincipleItem[] = [
       "We do not guarantee admissions, visas, scholarships, or residency outcomes that are not ours to guarantee. We promise clarity, thorough preparation, and honest effort — never false certainty.",
     tag: "Zero Outcome Hype",
     icon: ShieldCheck,
-    accentGradient: "from-emerald-400 via-teal to-cyan-500",
+    accentGradient: "from-[#0D9488] via-[#0284C7] to-[#1E40AF]",
+    badgeBg: "from-[#0D9488] via-[#0284C7] to-[#1E40AF]",
   },
   {
     num: "02",
@@ -48,7 +50,8 @@ const principlesData: PrincipleItem[] = [
       "We explain the genuinely difficult parts of a pathway — financial proof requirements, visa risk factors, exam cutoffs, and regulatory changes — not just the appealing highlights.",
     tag: "100% Radical Transparency",
     icon: Target,
-    accentGradient: "from-teal via-emerald-400 to-teal-bright",
+    accentGradient: "from-[#0284C7] via-[#2563EB] to-[#4F46E5]",
+    badgeBg: "from-[#0284C7] via-[#2563EB] to-[#4F46E5]",
   },
   {
     num: "03",
@@ -59,7 +62,8 @@ const principlesData: PrincipleItem[] = [
       "Visa and immigration decisions rest solely with embassies and government authorities. Our role is meticulous application support, documentation accuracy, and interview prep.",
     tag: "Embassy-Compliant Rigor",
     icon: Award,
-    accentGradient: "from-amber-400 via-teal to-emerald-400",
+    accentGradient: "from-[#059669] via-[#0D9488] to-[#0284C7]",
+    badgeBg: "from-[#059669] via-[#0D9488] to-[#0284C7]",
   },
   {
     num: "04",
@@ -70,7 +74,8 @@ const principlesData: PrincipleItem[] = [
       "Every recommendation is made with a student's next 5 to 10 years in mind, not a quick single transaction. Your long-term success is our single measure of performance.",
     tag: "10-Year Horizon Planning",
     icon: HeartHandshake,
-    accentGradient: "from-emerald-400 via-teal-bright to-blue-500",
+    accentGradient: "from-[#2563EB] via-[#0284C7] to-[#0D9488]",
+    badgeBg: "from-[#2563EB] via-[#0284C7] to-[#0D9488]",
   },
 ];
 
@@ -117,8 +122,8 @@ export default function CorePrinciplesSection() {
             transition={{ duration: 0.5, ease: easeTier1 }}
             className="inline-flex items-center space-x-2 bg-teal-tint/60 text-navy px-4 py-1 rounded-pill border border-teal/20"
           >
-            <Sparkles className="w-4 h-4 text-teal animate-spin-slow" />
-            <span className="font-tempting text-teal text-xl sm:text-2xl font-normal">
+            <Sparkles className="w-4 h-4 text-[#0D9488] animate-spin-slow" />
+            <span className="font-tempting bg-gradient-to-r from-[#0D9488] via-[#0284C7] to-[#0F766E] bg-clip-text text-transparent text-xl sm:text-2xl font-medium">
               Our Core Commitments
             </span>
           </motion.div>
@@ -132,9 +137,9 @@ export default function CorePrinciplesSection() {
             className="font-heading text-3xl sm:text-5xl lg:text-6xl font-extrabold text-navy tracking-tight leading-tight"
           >
             Four Non-Negotiable{" "}
-            <span className="text-teal relative inline-block">
+            <span className="bg-gradient-to-r from-[#0D9488] via-[#0284C7] to-[#0F766E] bg-clip-text text-transparent relative inline-block">
               Principles
-              <svg className="absolute -bottom-2 left-0 w-full h-3 text-teal/40" viewBox="0 0 100 20" preserveAspectRatio="none">
+              <svg className="absolute -bottom-2 left-0 w-full h-3 text-[#0D9488]/40" viewBox="0 0 100 20" preserveAspectRatio="none">
                 <path d="M0,15 Q50,0 100,15" fill="none" stroke="currentColor" strokeWidth="4" />
               </svg>
             </span>
@@ -179,17 +184,17 @@ export default function CorePrinciplesSection() {
                       {/* CARD HEADER ROW: NUMBER + TAG + ROTATING ICON */}
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-3">
-                          <span className="font-heading text-3xl sm:text-4xl font-black text-navy/30 group-hover:text-teal transition-colors duration-300">
+                          <span className="font-heading text-3xl sm:text-4xl font-black text-navy/30 group-hover:text-[#0D9488] transition-colors duration-300">
                             {item.num}
                           </span>
-                          <span className="text-[11px] font-bold text-teal bg-teal-tint/80 border border-teal/20 px-3 py-1 rounded-pill">
+                          <span className="text-[11px] font-bold text-[#0D9488] bg-teal-tint/80 border border-teal/20 px-3 py-1 rounded-pill">
                             {item.tag}
                           </span>
                         </div>
 
-                        {/* Interactive Floating Icon Badge */}
-                        <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-navy to-navy-glow text-teal-bright flex items-center justify-center shadow-md group-hover:rotate-12 group-hover:scale-110 group-hover:bg-teal group-hover:text-navy transition-all duration-300">
-                          <IconComp className="w-6 h-6 stroke-[2.2]" />
+                        {/* Interactive Floating Icon Badge with High Contrast Gradient & Bright White Icon */}
+                        <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${item.badgeBg} text-white flex items-center justify-center shadow-lg group-hover:rotate-12 group-hover:scale-110 transition-all duration-300 border border-white/20`}>
+                          <IconComp className="w-6 h-6 stroke-[2.2] text-white" />
                         </div>
                       </div>
 

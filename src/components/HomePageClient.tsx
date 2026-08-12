@@ -28,7 +28,6 @@ import {
   Check,
 } from "lucide-react";
 import SignatureLine from "@/components/SignatureLine";
-import MagneticButton from "@/components/MagneticButton";
 import Card3DTilt from "@/components/Card3DTilt";
 import FaqAccordion from "@/components/FaqAccordion";
 import CursiveMarqueeBanner from "@/components/CursiveMarqueeBanner";
@@ -48,7 +47,7 @@ import { AuroraBackground } from "@/components/ui/aurora-background";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { LayoutTextFlip } from "@/components/ui/layout-text-flip";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
-import { NoiseBackground } from "@/components/ui/noise-background";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 export default function HomePageClient() {
   const easeTier1: [number, number, number, number] = [0.16, 1, 0.3, 1];
@@ -228,18 +227,18 @@ export default function HomePageClient() {
       <SignatureLine />
 
       {/* AMBIENT BACKGROUND GLOW ORBS */}
-      <div className="absolute top-10 left-10 w-96 h-96 bg-navy-glow/15 rounded-pill blur-3xl pointer-events-none animate-orb-1" />
-      <div className="absolute top-72 right-10 w-[450px] h-[450px] bg-teal/20 rounded-pill blur-3xl pointer-events-none animate-orb-2" />
+      <div className="absolute top-10 left-10 w-96 h-96 bg-navy-glow/10 rounded-pill blur-3xl pointer-events-none animate-orb-1" />
+      <div className="absolute top-72 right-10 w-[450px] h-[450px] bg-teal-tint/80 rounded-pill blur-3xl pointer-events-none animate-orb-2" />
 
       <BackgroundGradientAnimation
         gradientBackgroundStart="rgb(255, 255, 255)"
-        gradientBackgroundEnd="rgb(240, 253, 250)"
-        firstColor="45, 189, 182"
-        secondColor="63, 224, 214"
-        thirdColor="58, 94, 168"
-        fourthColor="147, 197, 253"
-        fifthColor="231, 249, 247"
-        pointerColor="45, 189, 182"
+        gradientBackgroundEnd="rgb(245, 253, 252)"
+        firstColor="170, 235, 230"
+        secondColor="185, 242, 238"
+        thirdColor="195, 220, 250"
+        fourthColor="215, 235, 255"
+        fifthColor="235, 250, 248"
+        pointerColor="170, 235, 230"
         blendingValue="soft-light"
         className="w-full min-h-screen relative z-20"
       >
@@ -277,7 +276,11 @@ export default function HomePageClient() {
                   transition={{ duration: 0.6, delay: 0.1, ease: easeTier1 }}
                   className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold text-navy tracking-tight leading-[1.15]"
                 >
-                  Your Journey. <span className="text-teal">Every Stage.</span> One Company.
+                  Your Journey.{" "}
+                  <span className="bg-gradient-to-r from-[#0D9488] via-[#0284C7] to-[#0F766E] bg-clip-text text-transparent font-extrabold">
+                    Every Stage.
+                  </span>{" "}
+                  One Company.
                 </motion.h1>
 
                 {/* Body */}
@@ -292,32 +295,24 @@ export default function HomePageClient() {
                   never have to piece your journey together across unrelated consultancies.
                 </motion.p>
 
-                {/* Hero Primary Action Button with NoiseBackground */}
+                {/* Hero Primary Action Button with HoverBorderGradient */}
                 <motion.div
                   initial={false}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.3, ease: easeTier1 }}
                   className="pt-1 sm:pt-2"
                 >
-                  <MagneticButton className="w-full sm:w-auto">
-                    <NoiseBackground
-                      containerClassName="rounded-full w-full sm:w-auto p-[3px]"
-                      gradientColors={[
-                        "rgb(45, 189, 182)",
-                        "rgb(63, 224, 214)",
-                        "rgb(34, 61, 116)",
-                      ]}
-                      speed={0.15}
+                  <Link href="/contact" className="inline-block w-full sm:w-auto">
+                    <HoverBorderGradient
+                      as="div"
+                      containerClassName="rounded-full w-full sm:w-auto"
+                      innerBgClassName="bg-navy"
+                      className="w-full sm:w-auto bg-navy hover:bg-navy-glow text-white font-semibold text-body px-6 sm:px-8 py-3.5 sm:py-4 rounded-full justify-center space-x-3 shadow-md group border border-teal/20"
                     >
-                      <Link
-                        href="/contact"
-                        className="w-full sm:w-auto inline-flex items-center justify-center space-x-3 bg-navy text-white text-body font-semibold px-6 sm:px-8 py-3.5 sm:py-4 rounded-full hover:bg-navy-glow transition-all duration-350 shadow-md group"
-                      >
-                        <span>Book a Free Conversation</span>
-                        <ArrowRight className="w-5 h-5 text-teal-bright group-hover:translate-x-1 transition-transform duration-150" />
-                      </Link>
-                    </NoiseBackground>
-                  </MagneticButton>
+                      <span className="text-white">Get Free Consultation</span>
+                      <ArrowRight className="w-5 h-5 text-teal-bright group-hover:translate-x-1 transition-transform duration-150" />
+                    </HoverBorderGradient>
+                  </Link>
                 </motion.div>
               </div>
 

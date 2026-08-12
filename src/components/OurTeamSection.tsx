@@ -204,7 +204,8 @@ export default function OurTeamSection() {
         }
         .ot-label {
           display: inline-block;
-          font-family: var(--font-great-vibes), cursive;
+          font-family: var(--font-playfair), 'Playfair Display', Georgia, serif;
+          font-style: italic;
           font-size: clamp(1.6rem, 3.5vw, 2.4rem);
           font-weight: 400;
           letter-spacing: 0.02em;
@@ -213,7 +214,7 @@ export default function OurTeamSection() {
           line-height: 1.2;
         }
         .ot-title {
-          font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+          font-family: 'Google Sans Flex', sans-serif;
           font-size: clamp(2.2rem, 5vw, 3.5rem);
           font-weight: 800;
           color: #fff;
@@ -293,6 +294,16 @@ export default function OurTeamSection() {
           object-fit: cover;
           object-position: top center;
           display: block;
+          filter: grayscale(100%) contrast(105%) brightness(92%);
+          opacity: 0.88;
+          transition: filter 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                      transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                      opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .ot-card:hover .ot-photo {
+          filter: grayscale(0%) contrast(100%) brightness(100%);
+          opacity: 1;
+          transform: scale(1.08);
         }
 
         /* ── Bottom scrim ── */
@@ -310,7 +321,7 @@ export default function OurTeamSection() {
           max-width: 148px;
         }
         .ot-name {
-          font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+          font-family: 'Google Sans Flex', sans-serif;
           font-size: 13.5px;
           font-weight: 700;
           color: #fff;

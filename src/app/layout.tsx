@@ -1,9 +1,17 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Outfit, Caveat, Pacifico, Kaushan_Script, Great_Vibes, Alex_Brush, Tangerine } from "next/font/google";
+import { Playfair_Display, Plus_Jakarta_Sans, Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HydrationFix from "@/components/HydrationFix";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  variable: "--font-playfair",
+  display: "swap",
+});
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -16,48 +24,6 @@ const outfit = Outfit({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-outfit",
-  display: "swap",
-});
-
-const caveat = Caveat({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-caveat",
-  display: "swap",
-});
-
-const pacifico = Pacifico({
-  subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-pacifico",
-  display: "swap",
-});
-
-const kaushan = Kaushan_Script({
-  subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-kaushan",
-  display: "swap",
-});
-
-const greatVibes = Great_Vibes({
-  subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-great-vibes",
-  display: "swap",
-});
-
-const alexBrush = Alex_Brush({
-  subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-alex-brush",
-  display: "swap",
-});
-
-const tangerine = Tangerine({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-tangerine",
   display: "swap",
 });
 
@@ -84,7 +50,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${plusJakarta.variable} ${outfit.variable} ${caveat.variable} ${pacifico.variable} ${kaushan.variable} ${greatVibes.variable} ${alexBrush.variable} ${tangerine.variable}`}
+      className={`${playfair.variable} ${plusJakarta.variable} ${outfit.variable}`}
     >
       <body
         suppressHydrationWarning

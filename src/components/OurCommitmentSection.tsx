@@ -20,7 +20,7 @@ const commitments: CommitmentItem[] = [
     title: "No False Guarantees",
     description:
       'We never say "guaranteed admission" or "guaranteed visa" — no company can honestly promise that.',
-    badgeBg: "from-teal-bright via-teal to-navy-glow",
+    badgeBg: "from-[#0D9488] via-[#0284C7] to-[#1E40AF]",
   },
   {
     id: "02",
@@ -28,7 +28,7 @@ const commitments: CommitmentItem[] = [
     title: "Embassy & University Authority",
     description:
       "Visa and immigration decisions rest solely with the relevant embassy or immigration authority. Our role is to help you prepare the strongest, most accurate application — never a promised outcome.",
-    badgeBg: "from-teal via-navy-glow to-navy",
+    badgeBg: "from-[#0284C7] via-[#2563EB] to-[#4F46E5]",
   },
   {
     id: "03",
@@ -36,7 +36,7 @@ const commitments: CommitmentItem[] = [
     title: "Unvarnished Reality",
     description:
       "We explain the genuinely difficult parts of a pathway — timelines, costs, exam requirements — not just the appealing parts.",
-    badgeBg: "from-teal-bright via-teal to-navy-glow",
+    badgeBg: "from-[#059669] via-[#0D9488] to-[#0284C7]",
   },
   {
     id: "04",
@@ -44,7 +44,7 @@ const commitments: CommitmentItem[] = [
     title: "Group-Wide Accountability",
     description:
       "Every advisor across every Future Yatra brand is held to the same company-wide standard of transparency.",
-    badgeBg: "from-teal via-navy-glow to-navy",
+    badgeBg: "from-[#2563EB] via-[#0284C7] to-[#0D9488]",
   },
 ];
 
@@ -73,12 +73,12 @@ export default function OurCommitmentSection() {
   return (
     <section className="py-10 sm:py-16 lg:py-20 relative overflow-hidden">
       {/* Background Container Card - Aligned strictly to Website Hero Theme (Navy & Teal) */}
-      <div className="bg-navy text-white rounded-3xl sm:rounded-[36px] p-6 sm:p-10 lg:p-14 border border-teal/30 shadow-2xl relative overflow-hidden">
+      <div className="bg-navy text-white rounded-3xl sm:rounded-[36px] p-6 sm:p-10 lg:p-14 border border-cyan-500/20 shadow-2xl relative overflow-hidden">
         
         {/* Ambient Hero Theme Glow Orbs */}
-        <div className="absolute -top-28 -left-28 w-96 h-96 bg-teal/15 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-28 -right-28 w-96 h-96 bg-navy-glow/30 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-teal/10 via-transparent to-transparent pointer-events-none" />
+        <div className="absolute -top-28 -left-28 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-28 -right-28 w-96 h-96 bg-navy-glow/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-cyan-400/10 via-transparent to-transparent pointer-events-none" />
 
         {/* Main Grid: 2 Columns on Web (lg), Stacked 1 Column on Mobile App */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center relative z-10">
@@ -90,20 +90,20 @@ export default function OurCommitmentSection() {
             <div className="relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] md:w-[380px] md:h-[380px] lg:w-[410px] lg:h-[410px] flex items-center justify-center group select-none">
               
               {/* Soft Hero Cyan Glow Behind Circle */}
-              <div className="absolute inset-4 rounded-full bg-teal/20 blur-xl group-hover:bg-teal/30 transition-colors duration-500 pointer-events-none" />
+              <div className="absolute inset-4 rounded-full bg-cyan-500/15 blur-xl group-hover:bg-cyan-500/25 transition-colors duration-500 pointer-events-none" />
 
-              {/* FIXED, PERFECTLY ALIGNED SVG GRADIENT ARC RING (MATCHES REFERENCE IMAGE 1) */}
+              {/* FIXED, PERFECTLY ALIGNED SVG GRADIENT ARC RING */}
               <svg
                 viewBox="0 0 500 500"
                 className="absolute inset-0 w-full h-full pointer-events-none z-20"
                 fill="none"
               >
                 <defs>
-                  {/* Hero Section Theme Gradient: Teal Bright (#3FE0D6) -> Teal (#2DBDB6) -> Navy Glow (#3A5EA8) */}
+                  {/* Eye-Soothing Luminous Arc Gradient (#2DD4BF -> #38BDF8 -> #60A5FA) */}
                   <linearGradient id="heroThemeArcGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#3FE0D6" />
-                    <stop offset="60%" stopColor="#2DBDB6" />
-                    <stop offset="100%" stopColor="#3A5EA8" />
+                    <stop offset="0%" stopColor="#2DD4BF" />
+                    <stop offset="50%" stopColor="#38BDF8" />
+                    <stop offset="100%" stopColor="#60A5FA" />
                   </linearGradient>
 
                   {/* Soft Arc Glow Filter */}
@@ -118,7 +118,7 @@ export default function OurCommitmentSection() {
                   cx="250"
                   cy="250"
                   r="215"
-                  stroke="#3FE0D6"
+                  stroke="#38BDF8"
                   strokeWidth="3"
                   strokeDasharray="8 12"
                   strokeOpacity="0.35"
@@ -150,31 +150,31 @@ export default function OurCommitmentSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/50 via-transparent to-transparent opacity-60 pointer-events-none" />
               </div>
 
-              {/* Floating Badge 1 (Top Right) - Hero Teal Theme */}
+              {/* Floating Badge 1 (Top Right) */}
               <motion.div
                 initial={{ opacity: 0, y: -8 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.4 }}
-                className="absolute top-2 right-2 sm:top-4 sm:right-4 bg-navy-deep/95 backdrop-blur-md text-white px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full border border-teal/40 shadow-xl flex items-center space-x-2 z-30"
+                className="absolute top-2 right-2 sm:top-4 sm:right-4 bg-navy-deep/95 backdrop-blur-md text-white px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full border border-cyan-400/30 shadow-xl flex items-center space-x-2 z-30"
               >
-                <Sparkles className="w-3.5 h-3.5 text-teal-bright animate-pulse" />
+                <Sparkles className="w-3.5 h-3.5 text-[#2DD4BF] animate-pulse" />
                 <span className="text-[11px] sm:text-xs font-semibold text-sand-tint">
                   100% Ethical
                 </span>
               </motion.div>
 
-              {/* Floating Badge 2 (Bottom Left) - Hero Teal Theme */}
+              {/* Floating Badge 2 (Bottom Left) */}
               <motion.div
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.4 }}
-                className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 bg-navy-deep/95 backdrop-blur-md text-white px-3.5 sm:px-4 py-2 rounded-2xl border border-teal/40 shadow-xl flex items-center space-x-3 z-30"
+                className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 bg-navy-deep/95 backdrop-blur-md text-white px-3.5 sm:px-4 py-2 rounded-2xl border border-cyan-400/30 shadow-xl flex items-center space-x-3 z-30"
               >
-                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-teal/20 border border-teal/40 flex items-center justify-center text-teal-bright flex-shrink-0">
-                  <ShieldCheck className="w-4 h-4 text-teal-bright" />
+                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-cyan-400/15 border border-cyan-400/30 flex items-center justify-center text-[#38BDF8] flex-shrink-0">
+                  <ShieldCheck className="w-4 h-4 text-[#38BDF8]" />
                 </div>
                 <div>
-                  <span className="text-[10px] sm:text-[11px] uppercase tracking-wider text-teal-bright font-bold block leading-none">
+                  <span className="text-[10px] sm:text-[11px] uppercase tracking-wider text-[#2DD4BF] font-bold block leading-none">
                     VERIFIED STANDARD
                   </span>
                   <span className="text-xs sm:text-small font-bold text-white block mt-0.5 leading-none">
@@ -193,7 +193,7 @@ export default function OurCommitmentSection() {
             
             {/* Header Pill & Titles */}
             <div className="space-y-2 text-center lg:text-left">
-              <span className="font-tempting text-teal-bright text-2xl sm:text-3xl font-normal block">
+              <span className="font-tempting bg-gradient-to-r from-[#2DD4BF] via-[#38BDF8] to-[#60A5FA] bg-clip-text text-transparent text-2xl sm:text-3xl font-normal block">
                 Our Standard
               </span>
 
@@ -226,25 +226,25 @@ export default function OurCommitmentSection() {
                     onMouseLeave={() => setActiveItem(null)}
                     className={`group relative rounded-2xl p-4 sm:p-5 border transition-all duration-300 ${
                       isActive
-                        ? "bg-white/10 border-teal/50 shadow-lg shadow-teal/15 scale-[1.01]"
-                        : "bg-white/[0.05] border-white/10 hover:bg-white/[0.09] hover:border-teal/30"
+                        ? "bg-white/[0.12] border-cyan-400/50 shadow-xl shadow-cyan-950/30 scale-[1.01]"
+                        : "bg-white/[0.04] border-white/10 hover:bg-white/[0.08] hover:border-cyan-400/30"
                     }`}
                   >
                     <div className="flex items-start space-x-4 sm:space-x-5">
                       
-                      {/* Hero Theme Gradient Circular Number Badge (01, 02, 03, 04) */}
+                      {/* Eye-Soothing Multi-tone Gradient Circular Number Badge */}
                       <div
-                        className={`w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-gradient-to-br ${item.badgeBg} flex items-center justify-center font-heading font-extrabold text-sm sm:text-base text-white flex-shrink-0 shadow-md transition-transform duration-300 group-hover:scale-110 mt-0.5 border border-teal/40`}
+                        className={`w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-gradient-to-br ${item.badgeBg} flex items-center justify-center font-heading font-extrabold text-sm sm:text-base text-white flex-shrink-0 shadow-md transition-transform duration-300 group-hover:scale-110 mt-0.5 border border-white/20`}
                       >
                         {item.number}
                       </div>
 
                       {/* Title & Description */}
                       <div className="space-y-1 flex-1">
-                        <h3 className="font-heading text-base sm:text-lg font-bold text-white group-hover:text-teal-bright transition-colors duration-200 flex items-center justify-between">
+                        <h3 className="font-heading text-base sm:text-lg font-bold text-white group-hover:text-[#38BDF8] transition-colors duration-200 flex items-center justify-between">
                           <span>{item.title}</span>
                           <CheckCircle2 className={`w-4 h-4 sm:w-5 sm:h-5 transition-all duration-300 ${
-                            isActive ? "text-teal-bright opacity-100 scale-110" : "text-white/20 opacity-0 group-hover:opacity-100"
+                            isActive ? "text-[#38BDF8] opacity-100 scale-110" : "text-white/20 opacity-0 group-hover:opacity-100"
                           }`} />
                         </h3>
 

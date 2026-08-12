@@ -9,6 +9,7 @@ export function HoverBorderGradient({
   children,
   containerClassName,
   className,
+  innerBgClassName,
   as: Tag = "button",
   duration = 1,
   clockwise = true,
@@ -18,6 +19,7 @@ export function HoverBorderGradient({
     as?: React.ElementType;
     containerClassName?: string;
     className?: string;
+    innerBgClassName?: string;
     duration?: number;
     clockwise?: boolean;
   } & React.HTMLAttributes<HTMLElement>
@@ -67,7 +69,7 @@ export function HoverBorderGradient({
     >
       <div
         className={cn(
-          "w-auto text-navy font-bold z-10 bg-white hover:bg-teal-tint/40 px-6 py-2.5 rounded-full font-heading text-small tracking-wide transition-colors duration-300 flex items-center justify-center space-x-2 cursor-pointer",
+          "w-auto font-bold z-10 px-6 py-2.5 rounded-full font-heading text-small tracking-wide transition-colors duration-300 flex items-center justify-center space-x-2 cursor-pointer",
           className
         )}
       >
@@ -91,7 +93,7 @@ export function HoverBorderGradient({
         }}
         transition={{ ease: "linear", duration: duration ?? 1 }}
       />
-      <div className="bg-white absolute z-1 flex-none inset-[1.5px] rounded-full pointer-events-none" />
+      <div className={cn("absolute z-1 flex-none inset-[1.5px] rounded-full pointer-events-none", innerBgClassName ?? "bg-white")} />
     </Tag>
   );
 }

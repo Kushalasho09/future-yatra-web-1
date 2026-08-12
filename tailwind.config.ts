@@ -27,8 +27,13 @@ const config: Config = {
         amber: "#E0A23F",
       },
       fontFamily: {
-        heading: ["var(--font-plus-jakarta)", "sans-serif"],
-        body: ["var(--font-outfit)", "var(--font-plus-jakarta)", "sans-serif"],
+        sans: ["'Google Sans Flex'", "var(--font-plus-jakarta)", "sans-serif"],
+        heading: ["'Google Sans Flex'", "var(--font-plus-jakarta)", "sans-serif"],
+        body: ["'Google Sans Flex'", "var(--font-outfit)", "sans-serif"],
+        playfair: ["var(--font-playfair)", "'Playfair Display'", "serif"],
+        cursive: ["var(--font-playfair)", "'Playfair Display'", "serif"],
+        tempting: ["var(--font-playfair)", "'Playfair Display'", "serif"],
+        calligraphy: ["var(--font-playfair)", "'Playfair Display'", "serif"],
       },
       fontSize: {
         display: ["56px", { lineHeight: "1.12", letterSpacing: "-0.02em" }],

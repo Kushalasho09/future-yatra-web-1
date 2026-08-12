@@ -87,7 +87,7 @@ export default function HowItWorksSection() {
         {/* SECTION HEADER                                                       */}
         {/* ==================================================================== */}
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20 space-y-2">
-          <span className="font-tempting text-teal text-2xl sm:text-3xl font-normal block">
+          <span className="font-tempting bg-gradient-to-r from-[#0D9488] via-[#0284C7] to-[#0F766E] bg-clip-text text-transparent text-2xl sm:text-3xl font-medium block">
             Simple & Transparent
           </span>
 
