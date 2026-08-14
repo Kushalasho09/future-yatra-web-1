@@ -49,7 +49,7 @@ const BRANDS_DATA = [
   {
     id: "university-yatra",
     name: "University Yatra",
-    slug: "/university-yatra/",
+    slug: "/coming-soon?brand=university-yatra",
     fallbackSlug: "/brands/brand-1/",
     tagline: "Study Abroad Admissions & Student Visa Guidance",
     badge: "Admissions & Visas",
@@ -78,7 +78,7 @@ const BRANDS_DATA = [
   {
     id: "academic-yatra",
     name: "Academic Yatra",
-    slug: "/academic-yatra/",
+    slug: "/coming-soon?brand=academic-yatra",
     fallbackSlug: "/brands/brand-2/",
     tagline: "Test Preparation & Language Training",
     badge: "Test Prep & Languages",
@@ -107,7 +107,7 @@ const BRANDS_DATA = [
   {
     id: "medico-yatra",
     name: "Medico Yatra",
-    slug: "/medico-yatra/",
+    slug: "/medico-yatra",
     fallbackSlug: "/brands/brand-3/",
     tagline: "MBBS & Healthcare Education Abroad",
     badge: "Medical & Healthcare",
@@ -136,7 +136,7 @@ const BRANDS_DATA = [
   {
     id: "applyvisa-yatra",
     name: "ApplyVisa Yatra",
-    slug: "/applyvisa-yatra/",
+    slug: "/coming-soon?brand=applyvisa-yatra",
     fallbackSlug: "/brands/brand-4/",
     tagline: "Visitor, Family & Immigration Visa Support",
     badge: "Visas & Immigration",

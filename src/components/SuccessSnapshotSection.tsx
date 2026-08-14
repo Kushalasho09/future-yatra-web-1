@@ -69,7 +69,7 @@ const impactCards: ImpactCardData[] = [
     badge2Stat: "Direct",
     badge2Label: "Faculty Links",
     floatingTag: "Healthcare Excellence",
-    linkHref: "/coming-soon?brand=medico-yatra",
+    linkHref: "/medico-yatra",
   },
   {
     id: "visas",

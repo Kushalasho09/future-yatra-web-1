@@ -28,7 +28,7 @@ import SignatureLine from "@/components/SignatureLine";
 const BRAND_DATA = [
   {
     name: "University Yatra",
-    href: "/university-yatra/",
+    href: "/coming-soon?brand=university-yatra",
     icon: GraduationCap,
     tagline: "Higher Education & Admissions",
     description: "Personalized university selection, application strategy, and direct institutional admissions.",
@@ -39,7 +39,7 @@ const BRAND_DATA = [
   },
   {
     name: "Academic Yatra",
-    href: "/academic-yatra/",
+    href: "/coming-soon?brand=academic-yatra",
     icon: BookOpen,
     tagline: "Prep & Coaching",
     description: "Standardized test preparation, academic readiness, and language proficiency mastery.",
@@ -50,7 +50,7 @@ const BRAND_DATA = [
   },
   {
     name: "Medico Yatra",
-    href: "/medico-yatra/",
+    href: "/medico-yatra",
     icon: HeartHandshake,
     tagline: "Healthcare Careers",
     description: "Specialized pathways for medical, nursing, and healthcare professionals globally.",
@@ -61,7 +61,7 @@ const BRAND_DATA = [
   },
   {
     name: "Apply Visa Yatra",
-    href: "/applyvisa-yatra/",
+    href: "/coming-soon?brand=applyvisa-yatra",
     icon: FileCheck2,
     tagline: "Visa & Legal Guidance",
     description: "Compliant student visa filing, documentation auditing, and pre-departure briefings.",

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ShieldCheck } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
@@ -15,8 +16,13 @@ import {
 } from "framer-motion";
 
 export default function Footer() {
+  const pathname = usePathname();
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
+
+  if (pathname?.startsWith("/medico-yatra")) {
+    return null;
+  }
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -62,7 +68,7 @@ export default function Footer() {
               Academic Yatra
             </Link>
             <Link
-              href="/coming-soon?brand=medico-yatra"
+              href="/medico-yatra"
               className="bg-white/10 hover:bg-teal hover:text-navy border border-white/15 px-3.5 py-1.5 rounded-full text-xs font-bold text-teal-bright transition-all duration-300 shadow-sm"
             >
               Medico Yatra
@@ -153,7 +159,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/coming-soon?brand=medico-yatra" className="hover:text-teal-bright hover:translate-x-1 inline-flex items-center space-x-1.5 transition-all duration-200">
+                <Link href="/medico-yatra" className="hover:text-teal-bright hover:translate-x-1 inline-flex items-center space-x-1.5 transition-all duration-200">
                   <span className="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0" />
                   <span>Medico Yatra</span>
                 </Link>

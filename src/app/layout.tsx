@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Plus_Jakarta_Sans, Outfit } from "next/font/google";
+import { Playfair_Display, Plus_Jakarta_Sans, Outfit, Manjari, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -27,6 +27,20 @@ const outfit = Outfit({
   display: "swap",
 });
 
+const manjari = Manjari({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-manjari",
+  display: "swap",
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-poppins",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Future Yatra | Global Education & Visa Consulting",
   description: "Enterprise study-abroad and visa consulting platform for Future Yatra.",
@@ -50,7 +64,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${playfair.variable} ${plusJakarta.variable} ${outfit.variable}`}
+      className={`${playfair.variable} ${plusJakarta.variable} ${outfit.variable} ${manjari.variable} ${poppins.variable}`}
     >
       <body
         suppressHydrationWarning

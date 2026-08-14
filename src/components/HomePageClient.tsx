@@ -70,7 +70,7 @@ export default function HomePageClient() {
     {
       name: "Medico Yatra",
       desc: "MBBS & Healthcare Education Abroad",
-      href: "/coming-soon?brand=medico-yatra",
+      href: "/medico-yatra",
       icon: Stethoscope,
       color: "bg-rose-50 text-rose-700 border-rose-200 hover:bg-rose-100",
     },
@@ -130,7 +130,7 @@ export default function HomePageClient() {
       tagline: "MBBS & Healthcare Pathways",
       description:
         "Specialist counselling for MBBS and allied healthcare education abroad, with an honest picture of the FMGE/NExT pathway back into India.",
-      link: "/coming-soon?brand=medico-yatra",
+      link: "/medico-yatra",
       icon: Stethoscope,
       accent: "from-rose-500 to-pink-600",
     },
@@ -193,33 +193,7 @@ export default function HomePageClient() {
     },
   ];
 
-  const faqItems = [
-    {
-      question: "What is Future Yatra Private Limited?",
-      answer:
-        "Future Yatra Private Limited is the parent company of four specialist brands — University Yatra, Academic Yatra, Medico Yatra, and ApplyVisa Yatra — serving Indian students and families across study abroad admissions, test preparation, MBBS counselling, and visa documentation.",
-    },
-    {
-      question: "How is Future Yatra different from other consultancies?",
-      answer:
-        "Every brand under Future Yatra follows the same company-wide standard — we never use guaranteed-outcome language, and your journey can move between our specialist brands without starting over with a new consultancy.",
-    },
-    {
-      question: "How do I know which Future Yatra brand is right for me?",
-      answer:
-        'If you need a test score, start with Academic Yatra. If you\'re applying to universities abroad, start with University Yatra. If you\'re pursuing MBBS abroad, start with Medico Yatra. If you need visa or documentation support, start with ApplyVisa Yatra. Or use "Book a Free Conversation" and we\'ll direct you.',
-    },
-    {
-      question: "Does Future Yatra guarantee admission or visa approval?",
-      answer:
-        "No. Future Yatra Private Limited and its brands provide counselling, documentation, and application support. Admission decisions rest with universities, and visa decisions rest solely with the relevant embassy or immigration authority.",
-    },
-    {
-      question: "Where does Future Yatra operate?",
-      answer:
-        "Future Yatra is based in India and primarily serves Indian students and families, with counselling coverage extending to study and visa destinations including Canada, the USA, the UK, Australia, and Europe.",
-    },
-  ];
+
 
   return (
     <div className="relative min-h-screen bg-white text-navy-deep overflow-hidden">
@@ -250,24 +224,25 @@ export default function HomePageClient() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
               {/* Left Content Column */}
               <div className="lg:col-span-7 space-y-5 sm:space-y-8">
-                {/* Ultra-Aesthetic Hero Brand Badge with Dynamic Text Flipper */}
-                <motion.div
-                  initial={false}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, ease: easeTier1 }}
-                  className="inline-flex items-center space-x-3 bg-white/90 backdrop-blur-md border border-slate-200/80 px-4 py-2 rounded-full shadow-[0_4px_20px_-4px_rgba(18,36,71,0.08)] hover:shadow-[0_6px_25px_-4px_rgba(45,189,182,0.18)] transition-all duration-300 group cursor-default max-w-full"
-                >
-                  <div className="relative flex items-center justify-center">
-                    <span className="w-2 h-2 rounded-full bg-teal animate-pulse" />
-                    <span className="absolute w-3.5 h-3.5 rounded-full bg-teal/30 animate-ping" />
-                  </div>
+                <Link href="/medico-yatra" className="inline-block max-w-full group/badge">
+                  <motion.div
+                    initial={false}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, ease: easeTier1 }}
+                    className="inline-flex items-center space-x-3 bg-white/90 backdrop-blur-md border border-slate-200/80 px-4 py-2 rounded-full shadow-[0_4px_20px_-4px_rgba(18,36,71,0.08)] hover:shadow-[0_6px_25px_-4px_rgba(45,189,182,0.25)] transition-all duration-300 cursor-pointer max-w-full hover:scale-[1.02]"
+                  >
+                    <div className="relative flex items-center justify-center">
+                      <span className="w-2 h-2 rounded-full bg-teal animate-pulse" />
+                      <span className="absolute w-3.5 h-3.5 rounded-full bg-teal/30 animate-ping" />
+                    </div>
 
-                  <LayoutTextFlip
-                    text="Future Yatra"
-                    words={["University Yatra", "Academic Yatra", "Medico Yatra", "ApplyVisa Yatra"]}
-                    duration={2800}
-                  />
-                </motion.div>
+                    <LayoutTextFlip
+                      text="Future Yatra"
+                      words={["University Yatra", "Academic Yatra", "Medico Yatra", "ApplyVisa Yatra"]}
+                      duration={2800}
+                    />
+                  </motion.div>
+                </Link>
 
                 {/* Headline */}
                 <motion.h1
@@ -295,12 +270,12 @@ export default function HomePageClient() {
                   never have to piece your journey together across unrelated consultancies.
                 </motion.p>
 
-                {/* Hero Primary Action Button with HoverBorderGradient */}
+                {/* Hero Primary Action Buttons */}
                 <motion.div
                   initial={false}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.3, ease: easeTier1 }}
-                  className="pt-1 sm:pt-2"
+                  className="pt-1 sm:pt-2 flex flex-wrap items-center gap-3"
                 >
                   <Link href="/contact" className="inline-block w-full sm:w-auto">
                     <HoverBorderGradient
@@ -312,6 +287,14 @@ export default function HomePageClient() {
                       <span className="text-white">Get Free Consultation</span>
                       <ArrowRight className="w-5 h-5 text-teal-bright group-hover:translate-x-1 transition-transform duration-150" />
                     </HoverBorderGradient>
+                  </Link>
+
+                  <Link href="/medico-yatra" className="inline-block w-full sm:w-auto">
+                    <div className="w-full sm:w-auto bg-gradient-to-r from-[#0263CC] via-[#02A7BB] to-[#4DA5EC] hover:brightness-110 text-white font-bold text-body px-6 sm:px-8 py-3.5 sm:py-4 rounded-full flex items-center justify-center space-x-2.5 shadow-lg shadow-blue-500/20 group transition-all transform hover:scale-[1.02]">
+                      <Stethoscope className="w-5 h-5 text-amber-300" />
+                      <span>Explore Medico Yatra</span>
+                      <ArrowRight className="w-4 h-4 text-white group-hover:translate-x-1 transition-transform duration-150" />
+                    </div>
                   </Link>
                 </motion.div>
               </div>

@@ -16,40 +16,43 @@ export const AuroraBackground = ({
   return (
     <div
       className={cn(
-        "relative flex flex-col items-center justify-center text-navy-deep overflow-hidden",
-        className,
+        "transition-bg relative flex flex-col items-center justify-center text-slate-950",
+        className
       )}
       {...props}
     >
-      {/* Animated Flowing Aurora Light Waves */}
       <div
-        className="absolute inset-0 overflow-hidden pointer-events-none z-0"
+        className="absolute inset-0 overflow-hidden pointer-events-none"
         style={
           {
             "--aurora":
-              "repeating-linear-gradient(100deg,#2DBDB6_10%,#3FE0D6_18%,#3A5EA8_25%,#93c5fd_32%,#2DBDB6_40%)",
+              "repeating-linear-gradient(100deg,#0263CC_10%,#02A7BB_15%,#4DA5EC_20%,#3FE0D6_25%,#005F9E_30%)",
+            "--dark-gradient":
+              "repeating-linear-gradient(100deg,#000_0%,#000_7%,transparent_10%,transparent_12%,#000_16%)",
             "--white-gradient":
               "repeating-linear-gradient(100deg,#fff_0%,#fff_7%,transparent_10%,transparent_12%,#fff_16%)",
+
+            "--blue-300": "#4DA5EC",
+            "--blue-400": "#02A7BB",
+            "--blue-500": "#0263CC",
+            "--indigo-300": "#3FE0D6",
+            "--violet-200": "#80E2EC",
+            "--black": "#000",
+            "--white": "#fff",
+            "--transparent": "transparent",
           } as React.CSSProperties
         }
       >
         <div
           className={cn(
-            `after:animate-aurora pointer-events-none absolute -inset-[10px] [background-image:var(--white-gradient),var(--aurora)] [background-size:300%,_200%] [background-position:50%_50%,50%_50%] opacity-70 blur-[16px] will-change-transform after:absolute after:inset-0 after:[background-image:var(--white-gradient),var(--aurora)] after:[background-size:200%,_100%] after:[background-attachment:fixed] after:content-[""]`,
+            `after:animate-aurora pointer-events-none absolute -inset-[10px] [background-image:var(--white-gradient),var(--aurora)] [background-size:300%,_200%] [background-position:50%_50%,50%_50%] opacity-50 blur-[10px] invert filter will-change-transform [--aurora:repeating-linear-gradient(100deg,var(--blue-500)_10%,var(--indigo-300)_15%,var(--blue-300)_20%,var(--violet-200)_25%,var(--blue-400)_30%)] [--dark-gradient:repeating-linear-gradient(100deg,var(--black)_0%,var(--black)_7%,var(--transparent)_10%,var(--transparent)_12%,var(--black)_16%)] [--white-gradient:repeating-linear-gradient(100deg,var(--white)_0%,var(--white)_7%,var(--transparent)_10%,var(--transparent)_12%,var(--white)_16%)] after:absolute after:inset-0 after:[background-image:var(--white-gradient),var(--aurora)] after:[background-size:200%,_100%] after:[background-attachment:fixed] after:mix-blend-difference after:content-[""] dark:[background-image:var(--dark-gradient),var(--aurora)] dark:invert-0 after:dark:[background-image:var(--dark-gradient),var(--aurora)]`,
+
             showRadialGradient &&
-              `[mask-image:radial-gradient(ellipse_at_100%_0%,black_30%,transparent_85%)]`,
+              `[mask-image:radial-gradient(ellipse_at_100%_0%,black_10%,var(--transparent)_70%)]`
           )}
         ></div>
       </div>
-
-      {/* Rich Glowing Ambient Light Orbs */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-        <div className="absolute -top-32 -left-20 w-[600px] h-[600px] bg-gradient-to-br from-teal-tint/80 via-teal/20 to-transparent rounded-full blur-[100px] pointer-events-none animate-orb-1" />
-        <div className="absolute top-10 right-0 w-[550px] h-[550px] bg-gradient-to-bl from-blue-100/90 via-teal-bright/25 to-transparent rounded-full blur-[110px] pointer-events-none animate-orb-2" />
-        <div className="absolute top-1/2 left-1/3 w-[450px] h-[450px] bg-gradient-to-tr from-teal-tint/60 via-blue-200/20 to-transparent rounded-full blur-[90px] pointer-events-none" />
-      </div>
-
-      <div className="relative z-10 w-full">{children}</div>
+      {children}
     </div>
   );
 };

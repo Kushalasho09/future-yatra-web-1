@@ -3,11 +3,17 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, ArrowRight, Sparkles } from "lucide-react";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  if (pathname?.startsWith("/medico-yatra")) {
+    return null;
+  }
 
   const navLinks = [
     { name: "About Us", href: "/about" },

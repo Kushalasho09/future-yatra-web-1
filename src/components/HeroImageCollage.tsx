@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import Card3DTilt from "@/components/Card3DTilt";
 import { Sparkles, ShieldCheck } from "lucide-react";
+import Link from "next/link";
 
 export default function HeroImageCollage() {
   const slides = [
@@ -12,6 +13,7 @@ export default function HeroImageCollage() {
       id: "university",
       badge: "University Yatra — Admissions",
       subtext: "Campus Admissions & Scholarships",
+      link: "/coming-soon?brand=university-yatra",
       main: { src: "/images/hero_student_journey.png", alt: "Student Walking on Oxford Campus" },
       topLeft: { src: "/images/university_top.png", alt: "Historic University Library" },
       bottomLeft: { src: "/images/university_bottom.png", alt: "Happy Graduate Student" },
@@ -20,6 +22,7 @@ export default function HeroImageCollage() {
       id: "academic",
       badge: "Academic Yatra — Test Prep",
       subtext: "IELTS, PTE, TOEFL & GRE Coaching",
+      link: "/coming-soon?brand=academic-yatra",
       main: { src: "/images/hero_test_prep.png", alt: "Student at IELTS Study Desk" },
       topLeft: { src: "/images/hero_campus_life.png", alt: "Global Student Group" },
       bottomLeft: { src: "/images/university_top.png", alt: "Study Environment" },
@@ -28,6 +31,7 @@ export default function HeroImageCollage() {
       id: "medico",
       badge: "Medico Yatra — MBBS Abroad",
       subtext: "Transparent FMGE & NExT Pathways",
+      link: "/medico-yatra",
       main: { src: "/images/hero_medical_student.png", alt: "Medical Student in Hospital Ward" },
       topLeft: { src: "/images/medico_top.png", alt: "Stethoscope & Medical Textbook" },
       bottomLeft: { src: "/images/medico_bottom.png", alt: "Medical Research Microscope Lab" },
@@ -36,6 +40,7 @@ export default function HeroImageCollage() {
       id: "visa",
       badge: "ApplyVisa Yatra — Visa Support",
       subtext: "Visitor, Spouse, Family & PR Visas",
+      link: "/coming-soon?brand=applyvisa-yatra",
       main: { src: "/images/hero_visa_passport.png", alt: "Approved Visa & Passport" },
       topLeft: { src: "/images/visa_top.png", alt: "Airplane Sunset Wing View" },
       bottomLeft: { src: "/images/visa_bottom.png", alt: "Approved Passport Handed at Airport" },
@@ -99,14 +104,16 @@ export default function HeroImageCollage() {
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className="absolute inset-0 w-full h-full"
             >
-              <Image
-                src={active.main.src}
-                alt={active.main.alt}
-                fill
-                sizes="(max-width: 768px) 100vw, 600px"
-                className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
-                priority
-              />
+              <Link href={active.link} className="block w-full h-full cursor-pointer">
+                <Image
+                  src={active.main.src}
+                  alt={active.main.alt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 600px"
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                  priority
+                />
+              </Link>
 
               {/* Soft Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/40 via-transparent to-transparent pointer-events-none" />
