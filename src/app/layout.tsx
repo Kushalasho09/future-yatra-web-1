@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HydrationFix from "@/components/HydrationFix";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -71,6 +72,7 @@ export default function RootLayout({
         className="font-body text-navy-deep bg-white antialiased min-h-screen flex flex-col selection:bg-teal selection:text-white"
       >
         <HydrationFix />
+        <ScrollToTop />
         <Navbar />
         <main className="flex-grow relative">{children}</main>
         <Footer />

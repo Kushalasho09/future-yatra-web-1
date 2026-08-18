@@ -115,7 +115,7 @@ export default function WhoWeAreSection() {
 
             {/* Primary CTA Button with Hover Border Gradient */}
             <div className="pt-2">
-              <Link href="/about-us/">
+              <Link href="/about-us">
                 <HoverBorderGradient
                   as="div"
                   containerClassName="rounded-full"

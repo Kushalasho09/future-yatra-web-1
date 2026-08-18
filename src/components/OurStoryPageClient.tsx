@@ -938,18 +938,18 @@ export default function OurStoryPageClient() {
 
         {/* Action Buttons Row */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
-          {/* Button 1: Meet the Founder */}
+          {/* Button 1: Contact Leadership */}
           <Link
-            href="/leadership/"
+            href="/contact"
             className="w-full sm:w-auto bg-navy text-white hover:bg-navy-deep transition-all duration-300 rounded-pill px-7 sm:px-8 py-3.5 sm:py-4 font-semibold text-small sm:text-body inline-flex items-center justify-center gap-3 shadow-md hover:shadow-lg group font-body"
           >
-            <span>Meet the Founder</span>
+            <span>Contact Leadership</span>
             <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
 
           {/* Button 2: Explore Our Brands */}
           <Link
-            href="/our-brands/"
+            href="/our-brands"
             className="w-full sm:w-auto bg-teal text-white hover:bg-teal-bright shadow-lg shadow-teal/30 transition-all duration-300 rounded-pill px-7 sm:px-8 py-3.5 sm:py-4 font-semibold text-small sm:text-body inline-flex items-center justify-center gap-3 group font-body"
           >
             <span>Explore Our Brands</span>
@@ -958,7 +958,7 @@ export default function OurStoryPageClient() {
 
           {/* Button 3: About Future Yatra */}
           <Link
-            href="/about-us/"
+            href="/about-us"
             className="w-full sm:w-auto bg-white border border-line text-navy-deep hover:bg-sand/50 transition-all duration-300 rounded-pill px-7 sm:px-8 py-3.5 sm:py-4 font-semibold text-small sm:text-body inline-flex items-center justify-center gap-3 shadow-sm group font-body"
           >
             <span>About Future Yatra</span>

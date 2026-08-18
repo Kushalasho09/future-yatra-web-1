@@ -113,7 +113,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-xs sm:text-small text-sand-tint/80">
               <li>
-                <Link href="/about" className="hover:text-teal-bright hover:translate-x-1 inline-block transition-all duration-200">
+                <Link href="/about-us" className="hover:text-teal-bright hover:translate-x-1 inline-block transition-all duration-200">
                   About Us
                 </Link>
               </li>
@@ -133,7 +133,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/partner" className="hover:text-teal-bright hover:translate-x-1 inline-block transition-all duration-200">
+                <Link href="/partner-with-us" className="hover:text-teal-bright hover:translate-x-1 inline-block transition-all duration-200">
                   Become a Partner
                 </Link>
               </li>
