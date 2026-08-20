@@ -220,7 +220,7 @@ export default function VisionValuesPageClient() {
   ];
 
   return (
-    <div className="relative w-full overflow-hidden bg-navy-deep text-white selection:bg-teal selection:text-navy-deep min-h-screen">
+    <div className="relative w-full overflow-hidden bg-navy-deep text-white selection:bg-teal selection:text-navy-deep min-h-screen font-sans">
       {/* 
         ========================================================================
         IMMERSIVE AMBIENT BACKGROUND VIDEO LAYER
@@ -270,8 +270,8 @@ export default function VisionValuesPageClient() {
             {/* Main Bold Title */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-heading font-extrabold tracking-tight leading-[1.12] text-white">
               Guided by Transparency, <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-bright via-teal to-sand">
-                Ethical Guidance & Long-Term Trust
+              <span className="font-playfair-italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-teal-bright via-teal to-sand">
+                Ethical Guidance &amp; Long-Term Trust
               </span>
             </h1>
 
@@ -424,7 +424,7 @@ export default function VisionValuesPageClient() {
 
             {/* Main Bold Heading */}
             <h2 className="text-4xl sm:text-5xl font-heading font-extrabold text-white tracking-tight">
-              Our Mission
+              Our <span className="font-playfair-italic font-normal text-teal-bright">Mission</span>
             </h2>
 
             {/* Subheading */}
@@ -492,7 +492,7 @@ export default function VisionValuesPageClient() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-14 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-navy via-navy-deep to-navy border border-teal/30 text-center max-w-4xl mx-auto shadow-xl"
           >
-            <p className="text-sm sm:text-base text-sand-tint/95 leading-relaxed font-medium italic">
+            <p className="text-sm sm:text-base text-sand-tint/95 leading-relaxed font-playfair-italic">
               &ldquo;This mission shapes how every brand under Future Yatra operates — from the first conversation with a student to the support that continues long after an admission letter or visa is granted.&rdquo;
             </p>
           </motion.div>
@@ -518,7 +518,7 @@ export default function VisionValuesPageClient() {
 
             {/* Main Bold Heading */}
             <h2 className="text-4xl sm:text-5xl font-heading font-extrabold text-white tracking-tight">
-              Our Core Principles
+              Our <span className="font-playfair-italic font-normal text-teal-bright">Core Principles</span>
             </h2>
 
             <p className="text-sand-tint/80 text-base sm:text-lg font-normal leading-relaxed max-w-2xl mx-auto">
@@ -664,8 +664,8 @@ export default function VisionValuesPageClient() {
               {/* Main Heading */}
               <h2 className="text-3xl sm:text-5xl lg:text-6xl font-heading font-extrabold tracking-tight text-white leading-tight">
                 Our Promise to{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-bright via-teal to-sand">
-                  Every Student & Family
+                <span className="font-playfair-italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-teal-bright via-teal to-sand">
+                  Every Student &amp; Family
                 </span>
               </h2>
 
@@ -705,7 +705,7 @@ export default function VisionValuesPageClient() {
               {/* Highlight Quote Box */}
               <div className="relative p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-navy via-navy-deep to-navy border border-white/10 text-sand-tint/95 text-sm sm:text-base leading-relaxed font-normal shadow-xl">
                 <Quote className="w-8 h-8 text-teal-bright/30 absolute top-4 left-4 pointer-events-none" />
-                <p className="relative z-10 italic max-w-3xl mx-auto">
+                <p className="relative z-10 font-playfair-italic text-base sm:text-lg max-w-3xl mx-auto text-teal-tint">
                   &ldquo;To every student, parent, partner, and institution who works with Future Yatra: we are committed to ethical guidance, transparent communication, and lifelong trust — because these decisions are among the most important of a person&apos;s life.&rdquo;
                 </p>
               </div>
@@ -750,7 +750,7 @@ export default function VisionValuesPageClient() {
             </span>
 
             <h2 className="text-4xl sm:text-5xl font-heading font-extrabold text-white tracking-tight">
-              Frequently Asked Questions
+              Frequently Asked <span className="font-playfair-italic font-normal text-teal-bright">Questions</span>
             </h2>
           </motion.div>
 

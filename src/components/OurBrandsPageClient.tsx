@@ -352,7 +352,7 @@ export default function OurBrandsPageClient() {
                 className="text-3xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-navy-deep tracking-tight leading-[1.12]"
               >
                 Guided by Transparency, <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal via-navy-glow to-coral">
+                <span className="font-playfair-italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-teal via-navy-glow to-coral">
                   Ethical Guidance &amp; Long-Term Trust
                 </span>
               </motion.h1>
@@ -377,7 +377,7 @@ export default function OurBrandsPageClient() {
                 <p>
                   A student&apos;s journey rarely stops at one decision. It usually moves through a test score, a university application, sometimes a medical entrance pathway, and almost always a visa.
                 </p>
-                <p className="text-navy-deep font-semibold text-base sm:text-lg border-l-4 border-teal pl-4 py-1.5 bg-teal-tint/40 rounded-r-xl shadow-sm">
+                <p className="text-navy-deep font-playfair-italic text-base sm:text-lg border-l-4 border-teal pl-4 py-2 bg-teal-tint/40 rounded-r-xl shadow-sm leading-relaxed">
                   Rather than building one generalist consultancy trying to do everything, Future Yatra Private Limited built four specialist brands — each focused on one part of that journey, each held to the same company-wide standard of transparency, integrity, and student-first guidance.
                 </p>
               </motion.div>
@@ -598,7 +598,7 @@ export default function OurBrandsPageClient() {
               Core Ecosystem Pillars
             </span>
             <h2 className="font-heading text-3xl sm:text-5xl font-extrabold text-navy-deep tracking-tight">
-              Why Four Specialists Under One Entity?
+              Why Four Specialists Under <span className="font-playfair-italic font-normal text-teal">One Entity</span>?
             </h2>
             <p className="text-muted text-base max-w-xl mx-auto leading-relaxed">
               Replacing sales-driven generalist agencies with deep domain mastery, unified student records, and direct founder accountability.
@@ -655,7 +655,7 @@ export default function OurBrandsPageClient() {
                       <div className="w-12 h-12 rounded-2xl bg-teal-tint text-teal border border-teal/30 flex items-center justify-center group-hover:bg-navy group-hover:text-teal-bright transition-colors duration-300 shadow-sm">
                         <IconComp className="w-6 h-6" />
                       </div>
-                      <span className="text-xs font-mono font-bold text-teal bg-teal-tint/50 px-2.5 py-1 rounded-full border border-teal/20">
+                      <span className="text-xs font-heading font-bold text-teal bg-teal-tint/50 px-2.5 py-1 rounded-full border border-teal/20">
                         {pillar.badge}
                       </span>
                     </div>
@@ -689,7 +689,7 @@ export default function OurBrandsPageClient() {
               Specialist Divisions
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-navy-deep tracking-tight">
-              Designed for Every Step of Your Journey.
+              Designed for <span className="font-playfair-italic font-normal text-teal">Every Step</span> of Your Journey.
             </h2>
             <p className="text-muted text-base sm:text-lg">
               Click into any brand to view dedicated guidance, course offerings, university lists, and visa support.
@@ -829,7 +829,7 @@ export default function OurBrandsPageClient() {
                 Interactive Goal Selector
               </span>
               <h2 className="text-2xl sm:text-4xl font-heading font-extrabold text-navy-deep tracking-tight">
-                Not Sure Where to Start Your Journey?
+                Not Sure Where to <span className="font-playfair-italic font-normal text-teal">Start</span> Your Journey?
               </h2>
               <p className="text-muted text-sm sm:text-base">
                 Select your current primary goal below, and we will highlight the exact specialist brand for your needs.
@@ -876,7 +876,7 @@ export default function OurBrandsPageClient() {
                   className="bg-white rounded-2xl p-6 sm:p-8 border border-teal/40 shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6"
                 >
                   <div className="space-y-2 max-w-xl">
-                    <span className="text-xs font-mono uppercase tracking-wider text-teal font-bold flex items-center gap-1.5">
+                    <span className="text-xs font-heading font-bold uppercase tracking-wider text-teal flex items-center gap-1.5">
                       <Sparkle className="w-3.5 h-3.5 text-teal" />
                       Recommended Specialist Brand:
                     </span>
@@ -913,7 +913,7 @@ export default function OurBrandsPageClient() {
               Unified Journey Roadmap
             </span>
             <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-navy-deep tracking-tight">
-              How Our Ecosystem Connects Your Story
+              How Our Ecosystem <span className="font-playfair-italic font-normal text-teal">Connects</span> Your Story
             </h2>
             <p className="text-muted text-base">
               Moving through multiple steps? Because all four specialist brands belong to Future Yatra Private Limited, your documentation flows seamlessly.
@@ -966,7 +966,7 @@ export default function OurBrandsPageClient() {
                   >
                     {st.step}
                   </span>
-                  <span className="text-xs font-mono font-bold text-teal bg-teal-tint/60 px-2.5 py-1 rounded-full border border-teal/20">
+                  <span className="text-xs font-heading font-bold text-teal bg-teal-tint/60 px-2.5 py-1 rounded-full border border-teal/20">
                     Step {st.step}
                   </span>
                 </div>
@@ -992,7 +992,7 @@ export default function OurBrandsPageClient() {
               Clear Answers
             </span>
             <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-navy-deep tracking-tight">
-              Understanding Future Yatra&apos;s Multi-Brand Model
+              Understanding Future Yatra&apos;s <span className="font-playfair-italic font-normal text-teal">Multi-Brand Model</span>
             </h2>
           </div>
 
