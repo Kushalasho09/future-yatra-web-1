@@ -289,7 +289,7 @@ export default function PartnerWithUsPageClient() {
   ];
 
   return (
-    <div className="relative min-h-screen bg-white text-navy-deep overflow-hidden">
+    <div className="relative min-h-screen bg-white text-navy-deep overflow-hidden font-sans">
       {/* SIGNATURE BACKGROUND LINES & GLOW ORBS */}
       <SignatureLine />
       <div className="absolute top-12 left-1/4 w-[500px] h-[500px] bg-teal/10 rounded-full blur-[140px] pointer-events-none animate-orb-1" />
@@ -312,10 +312,10 @@ export default function PartnerWithUsPageClient() {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: easeTier1 }}
-                className="inline-flex items-center space-x-2.5 bg-navy text-white px-4 py-2 rounded-pill font-heading text-xs sm:text-micro uppercase tracking-wider font-semibold shadow-md"
+                className="inline-flex items-center space-x-2.5 bg-navy text-white px-4 py-2 rounded-pill font-heading text-xs sm:text-micro uppercase tracking-wider font-bold shadow-md"
               >
                 <Sparkles className="w-4 h-4 text-teal-bright animate-pulse" />
-                <span>B2B & Institutional Alliances</span>
+                <span>B2B &amp; Institutional Alliances</span>
               </motion.div>
 
               {/* H1 Headline */}
@@ -325,7 +325,7 @@ export default function PartnerWithUsPageClient() {
                 transition={{ duration: 0.6, delay: 0.1, ease: easeTier1 }}
                 className="font-heading text-4xl sm:text-5xl lg:text-display font-extrabold text-navy-deep leading-tight tracking-tight"
               >
-                Become a Partner — <br className="hidden sm:inline" />
+                Become a <span className="font-playfair-italic font-normal text-teal">Partner</span> — <br className="hidden sm:inline" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-navy via-teal to-navy-glow">
                   Future Yatra Private Limited
                 </span>
@@ -336,9 +336,9 @@ export default function PartnerWithUsPageClient() {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.15, ease: easeTier1 }}
-                className="font-tempting text-2xl sm:text-3xl text-teal font-normal -mt-2"
+                className="font-tempting bg-gradient-to-r from-[#0D9488] via-[#0284C7] to-[#0F766E] bg-clip-text text-transparent text-2xl sm:text-3xl font-medium -mt-2"
               >
-                Building Global Synergy & Student Success Together
+                Building Global Synergy &amp; Student Success Together
               </motion.p>
 
               {/* Main Body Paragraph */}
@@ -361,7 +361,7 @@ export default function PartnerWithUsPageClient() {
                 <MagneticButton>
                   <a
                     href="#enquiry-form-section"
-                    className="inline-flex items-center justify-center space-x-3 bg-navy hover:bg-navy-glow text-white font-heading text-body font-semibold px-8 py-4 rounded-pill shadow-lg hover:shadow-[0_0_25px_rgba(45,189,182,0.4)] transition-all duration-350 group"
+                    className="inline-flex items-center justify-center space-x-3 bg-navy hover:bg-navy-glow text-white font-heading text-body font-bold px-8 py-4 rounded-pill shadow-lg hover:shadow-[0_0_25px_rgba(45,189,182,0.4)] transition-all duration-350 group"
                   >
                     <span>Submit Partner Enquiry</span>
                     <ArrowRight className="w-5 h-5 text-teal-bright group-hover:translate-x-1 transition-transform duration-200" />
@@ -370,7 +370,7 @@ export default function PartnerWithUsPageClient() {
 
                 <a
                   href="#direct-contact"
-                  className="inline-flex items-center justify-center space-x-2 bg-teal-tint/80 hover:bg-teal-tint text-navy font-heading text-body font-semibold px-7 py-4 rounded-pill border border-teal/40 hover:border-teal transition-all duration-200"
+                  className="inline-flex items-center justify-center space-x-2 bg-teal-tint/80 hover:bg-teal-tint text-navy font-heading text-body font-bold px-7 py-4 rounded-pill border border-teal/40 hover:border-teal transition-all duration-200"
                 >
                   <PhoneCall className="w-4 h-4 text-teal" />
                   <span>Talk Directly to Team</span>
@@ -382,7 +382,7 @@ export default function PartnerWithUsPageClient() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="pt-4 flex flex-wrap items-center gap-6 text-xs text-muted font-medium border-t border-line/60"
+                className="pt-4 flex flex-wrap items-center gap-6 text-xs text-muted font-heading font-semibold border-t border-line/60"
               >
                 <div className="flex items-center space-x-2">
                   <ShieldCheck className="w-4 h-4 text-teal flex-shrink-0" />
@@ -416,13 +416,13 @@ export default function PartnerWithUsPageClient() {
                   {/* Glassmorphic Overlay Card */}
                   <div className="absolute bottom-6 left-6 right-6 p-5 glass-card-navy rounded-2xl text-white space-y-2 border border-teal/30">
                     <div className="flex items-center justify-between">
-                      <span className="text-micro uppercase font-extrabold tracking-widest text-teal-bright">
+                      <span className="font-heading text-micro uppercase font-extrabold tracking-widest text-teal-bright">
                         Future Yatra B2B Synergy
                       </span>
                       <span className="w-2 h-2 rounded-full bg-teal-bright animate-ping" />
                     </div>
                     <h3 className="font-heading text-lg font-bold text-white">
-                      Institutional & Strategic Collaborations
+                      Institutional &amp; Strategic Collaborations
                     </h3>
                     <p className="text-xs text-sand-tint/80 leading-relaxed font-normal">
                       Partnering with universities, schools, agents, and financial leaders to streamline student journeys globally.
@@ -455,11 +455,11 @@ export default function PartnerWithUsPageClient() {
         <section className="py-16 sm:py-24 border-t border-line/80 relative">
           
           <div className="text-center max-w-3xl mx-auto space-y-2 mb-16">
-            <span className="font-tempting text-teal text-2xl sm:text-3xl font-normal block">
+            <span className="font-tempting bg-gradient-to-r from-[#0D9488] via-[#0284C7] to-[#0F766E] bg-clip-text text-transparent text-2xl sm:text-3xl font-medium block">
               Partner Ecosystem
             </span>
             <h2 className="font-heading text-3xl sm:text-5xl font-extrabold text-navy-deep tracking-tight">
-              Who Can Partner With Us
+              Who Can <span className="font-playfair-italic font-normal text-teal">Partner</span> With Us
             </h2>
             <p className="text-body-l sm:text-lg text-muted leading-relaxed font-normal pt-2">
               We welcome partnership enquiries from diverse organizations across the education, financial, and student support value chain. Select your category to submit a tailored enquiry.
@@ -482,7 +482,7 @@ export default function PartnerWithUsPageClient() {
                       <div className={`p-3.5 rounded-2xl bg-gradient-to-br ${cat.color} text-navy-deep`}>
                         <IconComponent className="w-6 h-6 text-navy" />
                       </div>
-                      <span className={`text-micro font-extrabold px-3 py-1 rounded-full ${cat.badgeBg}`}>
+                      <span className={`font-heading text-micro font-extrabold px-3 py-1 rounded-full ${cat.badgeBg}`}>
                         {cat.tagline}
                       </span>
                     </div>
@@ -498,7 +498,7 @@ export default function PartnerWithUsPageClient() {
                     </div>
 
                     {/* Key Bullet Points */}
-                    <ul className="space-y-2 pt-2 border-t border-line/60 text-xs text-muted">
+                    <ul className="space-y-2 pt-2 border-t border-line/60 text-xs text-muted font-normal">
                       {cat.points.map((pt, idx) => (
                         <li key={idx} className="flex items-center space-x-2">
                           <Check className="w-3.5 h-3.5 text-teal flex-shrink-0" />
@@ -513,7 +513,7 @@ export default function PartnerWithUsPageClient() {
                   <div className="pt-6 mt-6 border-t border-line/60">
                     <button
                       onClick={() => selectCategoryAndScroll(cat.id)}
-                      className="w-full inline-flex items-center justify-center space-x-2 bg-sand-tint/70 hover:bg-navy hover:text-white text-navy font-heading text-xs font-semibold py-3 rounded-xl transition-all duration-200 group/btn"
+                      className="w-full inline-flex items-center justify-center space-x-2 bg-sand-tint/70 hover:bg-navy hover:text-white text-navy font-heading text-xs font-bold py-3 rounded-xl transition-all duration-200 group/btn"
                     >
                       <span>Enquire as {cat.title}</span>
                       <ArrowRight className="w-4 h-4 text-teal group-hover/btn:text-teal-bright group-hover/btn:translate-x-1 transition-all duration-200" />
@@ -541,7 +541,7 @@ export default function PartnerWithUsPageClient() {
               One Ecosystem • Four Brands
             </span>
             <h2 className="font-heading text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-              Why Organizations Choose Future Yatra
+              Why Organizations <span className="font-playfair-italic font-normal text-teal-bright">Choose</span> Future Yatra
             </h2>
             <p className="text-body-l sm:text-lg text-sand-tint/90 leading-relaxed font-normal pt-2">
               Future Yatra Private Limited is built on transparency, accountability, and end-to-end student support. Partnering with us grants your organization access to a unified, multi-specialty education group.
@@ -559,10 +559,10 @@ export default function PartnerWithUsPageClient() {
                 <h3 className="font-heading text-lg font-bold text-white">
                   {brand.name}
                 </h3>
-                <span className="text-micro font-semibold text-teal-bright block">
+                <span className="font-heading text-micro font-bold text-teal-bright block">
                   {brand.focus}
                 </span>
-                <p className="text-xs text-sand-tint/80 leading-relaxed">
+                <p className="text-xs text-sand-tint/80 leading-relaxed font-normal">
                   {brand.desc}
                 </p>
               </div>
@@ -576,7 +576,7 @@ export default function PartnerWithUsPageClient() {
                 <ShieldCheck className="w-5 h-5 text-teal-bright" />
                 <span>100% Ethical SOPs</span>
               </div>
-              <p className="text-xs text-sand-tint/80 leading-relaxed">
+              <p className="text-xs text-sand-tint/80 leading-relaxed font-normal">
                 Zero artificial admission guarantees, zero hidden commission cuts. Everything is backed by formal, compliant MoUs.
               </p>
             </div>
@@ -586,7 +586,7 @@ export default function PartnerWithUsPageClient() {
                 <Globe2 className="w-5 h-5 text-teal-bright" />
                 <span>Nationwide Reach</span>
               </div>
-              <p className="text-xs text-sand-tint/80 leading-relaxed">
+              <p className="text-xs text-sand-tint/80 leading-relaxed font-normal">
                 Empowering students from tier-1, tier-2, and tier-3 Indian cities with direct access to global institutions.
               </p>
             </div>
@@ -596,7 +596,7 @@ export default function PartnerWithUsPageClient() {
                 <HeartHandshake className="w-5 h-5 text-teal-bright" />
                 <span>Founder-Led Oversight</span>
               </div>
-              <p className="text-xs text-sand-tint/80 leading-relaxed">
+              <p className="text-xs text-sand-tint/80 leading-relaxed font-normal">
                 Direct accountability to our senior leadership team — ensuring fast decision-making and genuine institutional relationships.
               </p>
             </div>
@@ -610,11 +610,11 @@ export default function PartnerWithUsPageClient() {
         <section className="py-16 sm:py-24 border-t border-line/80 relative">
           
           <div className="text-center max-w-3xl mx-auto space-y-2 mb-16">
-            <span className="font-tempting text-teal text-2xl sm:text-3xl font-normal block">
+            <span className="font-tempting bg-gradient-to-r from-[#0D9488] via-[#0284C7] to-[#0F766E] bg-clip-text text-transparent text-2xl sm:text-3xl font-medium block">
               Simple 3-Step Journey
             </span>
             <h2 className="font-heading text-3xl sm:text-5xl font-extrabold text-navy-deep tracking-tight">
-              How It Works
+              How It <span className="font-playfair-italic font-normal text-teal">Works</span>
             </h2>
             <p className="text-body-l sm:text-lg text-muted leading-relaxed font-normal pt-2">
               Connecting with Future Yatra Private Limited is straightforward, efficient, and transparent.
@@ -634,7 +634,7 @@ export default function PartnerWithUsPageClient() {
                   <span className="w-14 h-14 rounded-2xl bg-navy text-teal-bright font-heading text-2xl font-extrabold flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
                     {step.number}
                   </span>
-                  <span className="text-micro font-bold bg-teal-tint text-navy px-3 py-1 rounded-full">
+                  <span className="font-heading text-micro font-bold bg-teal-tint text-navy px-3 py-1 rounded-full">
                     {step.badge}
                   </span>
                 </div>
@@ -648,7 +648,7 @@ export default function PartnerWithUsPageClient() {
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-line/60 flex items-center text-xs font-semibold text-teal">
+                <div className="pt-4 border-t border-line/60 flex items-center text-xs font-heading font-semibold text-teal">
                   <span>Step {idx + 1} of 3</span>
                   <ArrowRight className="w-3.5 h-3.5 ml-1.5 group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -659,10 +659,10 @@ export default function PartnerWithUsPageClient() {
 
           {/* Direct Phone Call Reminder Note */}
           <div className="mt-12 text-center bg-sand-tint/60 rounded-2xl p-6 border border-amber/30 max-w-2xl mx-auto space-y-2">
-            <p className="text-small text-navy font-medium">
-              <span className="font-bold text-navy-deep">Prefer to talk directly?</span> You are always welcome to call our partnerships desk directly.
+            <p className="text-small text-navy font-normal">
+              <span className="font-heading font-bold text-navy-deep">Prefer to talk directly?</span> You are always welcome to call our partnerships desk directly.
             </p>
-            <div className="flex justify-center items-center space-x-2 text-small font-bold text-teal">
+            <div className="flex justify-center items-center space-x-2 text-small font-heading font-bold text-teal">
               <Phone className="w-4 h-4 text-teal" />
               <a href="tel:+918800000000" className="hover:underline">
                 +91 88000 00000
@@ -683,13 +683,13 @@ export default function PartnerWithUsPageClient() {
             <div className="lg:col-span-7 bg-white rounded-section p-6 sm:p-10 border border-line shadow-xl relative overflow-hidden">
               
               <div className="space-y-2 mb-8">
-                <span className="font-tempting text-teal text-2xl font-normal block">
+                <span className="font-tempting bg-gradient-to-r from-[#0D9488] via-[#0284C7] to-[#0F766E] bg-clip-text text-transparent text-2xl sm:text-3xl font-medium block">
                   Official Form
                 </span>
                 <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-navy-deep">
-                  Partnership Enquiry Form
+                  Partnership <span className="font-playfair-italic font-normal text-teal">Enquiry Form</span>
                 </h2>
-                <p className="text-small text-muted">
+                <p className="text-small text-muted font-normal">
                   Fill out the fields below. Your enquiry will be routed directly to our leadership team.
                 </p>
               </div>
@@ -706,12 +706,12 @@ export default function PartnerWithUsPageClient() {
                   <h3 className="font-heading text-2xl font-bold text-navy-deep">
                     Enquiry Submitted Successfully!
                   </h3>
-                  <p className="text-small text-muted max-w-md mx-auto leading-relaxed">
+                  <p className="text-small text-muted max-w-md mx-auto leading-relaxed font-normal">
                     Thank you for reaching out to Future Yatra Private Limited. Our partnerships director will review your enquiry and connect with you shortly.
                   </p>
                   <button
                     onClick={() => setFormStatus("idle")}
-                    className="inline-flex items-center space-x-2 bg-navy text-white text-xs font-semibold px-6 py-2.5 rounded-pill hover:bg-navy-glow transition-all"
+                    className="inline-flex items-center space-x-2 bg-navy text-white text-xs font-heading font-semibold px-6 py-2.5 rounded-pill hover:bg-navy-glow transition-all"
                   >
                     <span>Submit Another Enquiry</span>
                   </button>
@@ -721,7 +721,7 @@ export default function PartnerWithUsPageClient() {
                   
                   {/* Organization Name */}
                   <div className="space-y-2">
-                    <label className="block text-xs uppercase tracking-wider font-extrabold text-navy">
+                    <label className="block text-xs font-heading uppercase tracking-wider font-extrabold text-navy">
                       Organization Name <span className="text-coral">*</span>
                     </label>
                     <input
@@ -738,7 +738,7 @@ export default function PartnerWithUsPageClient() {
 
                   {/* Contact Person Name */}
                   <div className="space-y-2">
-                    <label className="block text-xs uppercase tracking-wider font-extrabold text-navy">
+                    <label className="block text-xs font-heading uppercase tracking-wider font-extrabold text-navy">
                       Contact Person Name <span className="text-coral">*</span>
                     </label>
                     <input
@@ -756,7 +756,7 @@ export default function PartnerWithUsPageClient() {
                   {/* Grid for Email & Phone */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label className="block text-xs uppercase tracking-wider font-extrabold text-navy">
+                      <label className="block text-xs font-heading uppercase tracking-wider font-extrabold text-navy">
                         Email Address <span className="text-coral">*</span>
                       </label>
                       <input
@@ -770,7 +770,7 @@ export default function PartnerWithUsPageClient() {
                     </div>
 
                     <div className="space-y-2">
-                      <label className="block text-xs uppercase tracking-wider font-extrabold text-navy">
+                      <label className="block text-xs font-heading uppercase tracking-wider font-extrabold text-navy">
                         Phone Number <span className="text-coral">*</span>
                       </label>
                       <input
@@ -786,7 +786,7 @@ export default function PartnerWithUsPageClient() {
 
                   {/* Partner Category Interactive Selector */}
                   <div className="space-y-3">
-                    <label className="block text-xs uppercase tracking-wider font-extrabold text-navy">
+                    <label className="block text-xs font-heading uppercase tracking-wider font-extrabold text-navy">
                       I am partnering as a: <span className="text-coral">*</span>
                     </label>
                     <div className="flex flex-wrap gap-2">
@@ -805,7 +805,7 @@ export default function PartnerWithUsPageClient() {
                           type="button"
                           key={cat}
                           onClick={() => setSelectedCategory(cat)}
-                          className={`px-3.5 py-2 rounded-pill text-xs font-bold transition-all duration-200 ${
+                          className={`px-3.5 py-2 rounded-pill text-xs font-heading font-bold transition-all duration-200 ${
                             selectedCategory === cat
                               ? "bg-navy text-teal-bright shadow-md scale-105"
                               : "bg-sand-tint/70 text-navy hover:bg-line/60"
@@ -819,8 +819,8 @@ export default function PartnerWithUsPageClient() {
 
                   {/* Brief Message */}
                   <div className="space-y-2">
-                    <label className="block text-xs uppercase tracking-wider font-extrabold text-navy">
-                      Brief Message & Partnership Interest <span className="text-coral">*</span>
+                    <label className="block text-xs font-heading uppercase tracking-wider font-extrabold text-navy">
+                      Brief Message &amp; Partnership Interest <span className="text-coral">*</span>
                     </label>
                     <textarea
                       required
@@ -836,7 +836,7 @@ export default function PartnerWithUsPageClient() {
                   <button
                     type="submit"
                     disabled={formStatus === "submitting"}
-                    className="w-full inline-flex items-center justify-center space-x-2 bg-navy hover:bg-navy-glow text-white font-heading text-body font-semibold py-4 rounded-pill shadow-lg hover:shadow-[0_0_20px_rgba(45,189,182,0.35)] transition-all duration-300"
+                    className="w-full inline-flex items-center justify-center space-x-2 bg-navy hover:bg-navy-glow text-white font-heading text-body font-bold py-4 rounded-pill shadow-lg hover:shadow-[0_0_20px_rgba(45,189,182,0.35)] transition-all duration-300"
                   >
                     {formStatus === "submitting" ? (
                       <span>Submitting Enquiry...</span>
@@ -848,7 +848,7 @@ export default function PartnerWithUsPageClient() {
                     )}
                   </button>
 
-                  <p className="text-micro text-center text-muted">
+                  <p className="text-micro text-center text-muted font-normal">
                     Your details are processed securely according to our Privacy Policy.
                   </p>
 
@@ -865,13 +865,13 @@ export default function PartnerWithUsPageClient() {
                 <div className="absolute top-0 right-0 w-48 h-48 bg-teal/15 rounded-full blur-3xl pointer-events-none" />
 
                 <div className="space-y-2">
-                  <span className="text-micro font-extrabold uppercase tracking-widest text-teal-bright">
+                  <span className="font-heading text-micro font-extrabold uppercase tracking-widest text-teal-bright">
                     Direct Channel
                   </span>
                   <h3 className="font-heading text-2xl font-extrabold text-white">
-                    Prefer to Talk Directly?
+                    Prefer to Talk <span className="font-playfair-italic font-normal text-teal-bright">Directly?</span>
                   </h3>
-                  <p className="text-xs text-sand-tint/80 leading-relaxed">
+                  <p className="text-xs text-sand-tint/80 leading-relaxed font-normal">
                     Skip the form and speak directly with our senior partnerships desk. We are available Monday to Saturday.
                   </p>
                 </div>
@@ -926,11 +926,11 @@ export default function PartnerWithUsPageClient() {
 
                 {/* Office Info */}
                 <div className="pt-4 border-t border-white/10 space-y-2 text-xs text-sand-tint/80">
-                  <div className="flex items-center space-x-2">
+                  <div className="flex items-center space-x-2 font-heading font-medium">
                     <Clock className="w-3.5 h-3.5 text-teal-bright" />
                     <span>Mon – Sat: 10:00 AM – 6:30 PM IST</span>
                   </div>
-                  <div className="flex items-start space-x-2">
+                  <div className="flex items-start space-x-2 font-heading font-medium">
                     <MapPin className="w-3.5 h-3.5 text-teal-bright flex-shrink-0 mt-0.5" />
                     <span>Registered HQ: MG Road, CBD, Bengaluru, Karnataka, India</span>
                   </div>
@@ -940,11 +940,11 @@ export default function PartnerWithUsPageClient() {
 
               {/* Founder Governance Card */}
               <div className="rounded-card p-6 bg-sand-tint/60 border border-amber/30 space-y-3">
-                <div className="flex items-center space-x-2 text-navy font-bold text-small">
+                <div className="flex items-center space-x-2 text-navy font-heading font-bold text-small">
                   <ShieldCheck className="w-4 h-4 text-amber" />
                   <span>Direct Accountability Guarantee</span>
                 </div>
-                <p className="text-xs text-muted leading-relaxed">
+                <p className="text-xs text-muted leading-relaxed font-normal">
                   Every partnership proposal is directly reviewed by our founder and executive board to maintain absolute brand compliance and service standards.
                 </p>
               </div>
@@ -961,11 +961,11 @@ export default function PartnerWithUsPageClient() {
         <section className="py-16 sm:py-24 border-t border-line/80 relative">
           
           <div className="text-center max-w-3xl mx-auto space-y-2 mb-16">
-            <span className="font-tempting text-teal text-2xl sm:text-3xl font-normal block">
-              Questions & Answers
+            <span className="font-tempting bg-gradient-to-r from-[#0D9488] via-[#0284C7] to-[#0F766E] bg-clip-text text-transparent text-2xl sm:text-3xl font-medium block">
+              Questions &amp; Answers
             </span>
             <h2 className="font-heading text-3xl sm:text-5xl font-extrabold text-navy-deep tracking-tight">
-              Frequently Asked Questions
+              Frequently Asked <span className="font-playfair-italic font-normal text-teal">Questions</span>
             </h2>
             <p className="text-body-l sm:text-lg text-muted leading-relaxed font-normal pt-2">
               Everything you need to know about partnering with Future Yatra Private Limited.
@@ -1019,13 +1019,13 @@ export default function PartnerWithUsPageClient() {
         <section className="py-16 sm:py-20 border-t border-line/80">
           
           <div className="text-center max-w-2xl mx-auto mb-12 space-y-1">
-            <span className="font-tempting text-teal text-2xl font-normal block">
+            <span className="font-tempting bg-gradient-to-r from-[#0D9488] via-[#0284C7] to-[#0F766E] bg-clip-text text-transparent text-2xl sm:text-3xl font-medium block">
               Seamless Navigation
             </span>
             <h3 className="font-heading text-2xl sm:text-3xl font-extrabold text-navy-deep">
-              Explore More of Future Yatra
+              Explore More of <span className="font-playfair-italic font-normal text-teal">Future Yatra</span>
             </h3>
-            <p className="text-small text-muted">
+            <p className="text-small text-muted font-normal">
               Learn about our vision, specialist brands, or get in touch directly.
             </p>
           </div>
@@ -1044,11 +1044,11 @@ export default function PartnerWithUsPageClient() {
                 <h4 className="font-heading text-lg font-bold text-navy-deep group-hover:text-navy">
                   About Future Yatra
                 </h4>
-                <p className="text-xs text-muted mt-1 leading-relaxed">
+                <p className="text-xs text-muted mt-1 leading-relaxed font-normal">
                   Discover our founding vision, single-entity structure, and leadership ethos.
                 </p>
               </div>
-              <div className="inline-flex items-center space-x-1 text-xs font-bold text-teal group-hover:translate-x-1 transition-transform">
+              <div className="inline-flex items-center space-x-1 text-xs font-heading font-bold text-teal group-hover:translate-x-1 transition-transform">
                 <span>View About Us</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </div>
@@ -1066,11 +1066,11 @@ export default function PartnerWithUsPageClient() {
                 <h4 className="font-heading text-lg font-bold text-navy-deep group-hover:text-navy">
                   Our Brands
                 </h4>
-                <p className="text-xs text-muted mt-1 leading-relaxed">
+                <p className="text-xs text-muted mt-1 leading-relaxed font-normal">
                   Explore University Yatra, Academic Yatra, Medico Yatra, and ApplyVisa Yatra.
                 </p>
               </div>
-              <div className="inline-flex items-center space-x-1 text-xs font-bold text-teal group-hover:translate-x-1 transition-transform">
+              <div className="inline-flex items-center space-x-1 text-xs font-heading font-bold text-teal group-hover:translate-x-1 transition-transform">
                 <span>View Specialist Brands</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </div>
@@ -1088,11 +1088,11 @@ export default function PartnerWithUsPageClient() {
                 <h4 className="font-heading text-lg font-bold text-navy-deep group-hover:text-navy">
                   Contact Us
                 </h4>
-                <p className="text-xs text-muted mt-1 leading-relaxed">
+                <p className="text-xs text-muted mt-1 leading-relaxed font-normal">
                   Get general student counseling support or locate our headquarters.
                 </p>
               </div>
-              <div className="inline-flex items-center space-x-1 text-xs font-bold text-teal group-hover:translate-x-1 transition-transform">
+              <div className="inline-flex items-center space-x-1 text-xs font-heading font-bold text-teal group-hover:translate-x-1 transition-transform">
                 <span>View Contact Details</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </div>

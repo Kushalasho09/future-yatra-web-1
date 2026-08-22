@@ -274,7 +274,7 @@ export default function ContactUsPageClient() {
   ];
 
   return (
-    <div className="relative min-h-screen bg-white text-navy-deep overflow-hidden selection:bg-teal selection:text-white">
+    <div className="relative min-h-screen bg-white text-navy-deep overflow-hidden selection:bg-teal selection:text-white font-sans">
       
       {/* 🌊 SVG BACKGROUND CONTINUITY PATH THREAD */}
       <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden opacity-30">
@@ -325,12 +325,12 @@ export default function ContactUsPageClient() {
             <div className="space-y-2">
               <h1 className="font-heading text-4xl sm:text-5xl lg:text-display font-extrabold tracking-tight text-navy-deep leading-[1.1]">
                 Let’s Find Your <br className="hidden sm:inline" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal via-navy to-navy-glow">
+                <span className="font-playfair-italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#0D9488] via-[#0284C7] to-[#0F766E]">
                   Right Starting Point
                 </span>
               </h1>
               
-              <p className="font-tempting text-teal text-2xl sm:text-3xl font-normal tracking-wide">
+              <p className="font-tempting bg-gradient-to-r from-[#0D9488] via-[#0284C7] to-[#0F766E] bg-clip-text text-transparent text-2xl sm:text-3xl font-medium tracking-wide">
                 A journey begins with a real conversation.
               </p>
             </div>
@@ -454,13 +454,13 @@ export default function ContactUsPageClient() {
           {/* Header & Live Status Badge */}
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-line pb-8">
             <div className="space-y-3">
-              <span className="font-tempting text-teal text-2xl font-normal block">
+              <span className="font-tempting bg-gradient-to-r from-[#0D9488] via-[#0284C7] to-[#0F766E] bg-clip-text text-transparent text-2xl sm:text-3xl font-medium block">
                 Direct Communication
               </span>
-              <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-navy-deep">
-                Reach Us Directly
+              <h2 className="font-heading text-3xl sm:text-5xl font-extrabold text-navy-deep tracking-tight">
+                Reach Us <span className="font-playfair-italic font-normal text-teal">Directly</span>
               </h2>
-              <p className="text-muted text-body max-w-xl">
+              <p className="text-muted text-body max-w-xl font-normal">
                 Choose the channel that best suits your comfort. We value direct, prompt human connection over automated forms.
               </p>
             </div>
@@ -472,7 +472,7 @@ export default function ContactUsPageClient() {
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-success"></span>
               </span>
               <div>
-                <span className="block text-xs font-bold text-navy">Advisors Active Now</span>
+                <span className="block text-xs font-bold text-navy font-heading">Advisors Active Now</span>
                 <span className="text-[11px] text-muted">Average Response Time: Under 2 Hours</span>
               </div>
             </div>
@@ -490,7 +490,7 @@ export default function ContactUsPageClient() {
                 <div className="w-12 h-12 rounded-2xl bg-teal/15 text-teal flex items-center justify-center group-hover:scale-110 group-hover:bg-teal group-hover:text-white transition-all duration-300">
                   <Phone className="w-6 h-6 group-hover:animate-bounce" />
                 </div>
-                <span className="text-[11px] font-bold uppercase tracking-wider bg-white px-2.5 py-1 rounded-md text-muted border border-line">
+                <span className="text-[11px] font-heading font-bold uppercase tracking-wider bg-white px-2.5 py-1 rounded-md text-muted border border-line">
                   Voice Call
                 </span>
               </div>
@@ -513,7 +513,7 @@ export default function ContactUsPageClient() {
 
               <a
                 href="tel:+919876543210"
-                className="w-full inline-flex items-center justify-center space-x-2 bg-navy text-white text-xs font-semibold py-2.5 rounded-xl hover:bg-navy-glow transition-colors"
+                className="w-full inline-flex items-center justify-center space-x-2 bg-navy text-white text-xs font-heading font-semibold py-2.5 rounded-xl hover:bg-navy-glow transition-colors"
               >
                 <PhoneCall className="w-3.5 h-3.5" />
                 <span>Call Now</span>
@@ -529,7 +529,7 @@ export default function ContactUsPageClient() {
                 <div className="w-12 h-12 rounded-2xl bg-navy/15 text-navy flex items-center justify-center group-hover:scale-110 group-hover:bg-navy group-hover:text-white transition-all duration-300">
                   <Mail className="w-6 h-6" />
                 </div>
-                <span className="text-[11px] font-bold uppercase tracking-wider bg-white px-2.5 py-1 rounded-md text-muted border border-line">
+                <span className="text-[11px] font-heading font-bold uppercase tracking-wider bg-white px-2.5 py-1 rounded-md text-muted border border-line">
                   General Email
                 </span>
               </div>
@@ -554,7 +554,7 @@ export default function ContactUsPageClient() {
 
               <a
                 href="mailto:info@futureyatra.com"
-                className="w-full inline-flex items-center justify-center space-x-2 bg-navy text-white text-xs font-semibold py-2.5 rounded-xl hover:bg-navy-glow transition-colors"
+                className="w-full inline-flex items-center justify-center space-x-2 bg-navy text-white text-xs font-heading font-semibold py-2.5 rounded-xl hover:bg-navy-glow transition-colors"
               >
                 <Mail className="w-3.5 h-3.5" />
                 <span>Compose Email</span>
@@ -570,7 +570,7 @@ export default function ContactUsPageClient() {
                 <div className="w-12 h-12 rounded-2xl bg-emerald-500 text-white flex items-center justify-center group-hover:scale-110 shadow-md transition-all duration-300">
                   <MessageSquare className="w-6 h-6 fill-white/20" />
                 </div>
-                <span className="text-[11px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800 px-2.5 py-1 rounded-md">
+                <span className="text-[11px] font-heading font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800 px-2.5 py-1 rounded-md">
                   Fastest Support
                 </span>
               </div>
@@ -589,7 +589,7 @@ export default function ContactUsPageClient() {
                 href="https://wa.me/919876543210"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center space-x-2 bg-emerald-600 text-white text-xs font-semibold py-2.5 rounded-xl hover:bg-emerald-700 transition-colors shadow-sm"
+                className="w-full inline-flex items-center justify-center space-x-2 bg-emerald-600 text-white text-xs font-heading font-semibold py-2.5 rounded-xl hover:bg-emerald-700 transition-colors shadow-sm"
               >
                 <ExternalLink className="w-3.5 h-3.5" />
                 <span>Open WhatsApp Chat</span>
@@ -604,25 +604,25 @@ export default function ContactUsPageClient() {
 
             {/* Office Address */}
             <div className="lg:col-span-7 space-y-3">
-              <div className="inline-flex items-center space-x-2 text-teal-bright text-xs font-bold uppercase tracking-wider">
+              <div className="inline-flex items-center space-x-2 text-teal-bright text-xs font-heading font-bold uppercase tracking-wider">
                 <MapPin className="w-4 h-4" />
                 <span>Registered Office Address</span>
               </div>
               <h3 className="font-heading text-xl font-bold text-white">
                 [Registered Office Address] Future Yatra Private Limited
               </h3>
-              <p className="text-xs sm:text-small text-slate-300 leading-relaxed max-w-xl">
+              <p className="text-xs sm:text-small text-slate-300 leading-relaxed max-w-xl font-normal">
                 4th Floor, Tech Hub Towers, MG Road, Central Business District, Bengaluru, Karnataka 560001, India
               </p>
             </div>
 
             {/* Business Hours */}
             <div className="lg:col-span-5 border-t lg:border-t-0 lg:border-l border-slate-800 pt-6 lg:pt-0 lg:pl-8 space-y-3 flex flex-col justify-center">
-              <div className="inline-flex items-center space-x-2 text-teal-bright text-xs font-bold uppercase tracking-wider">
+              <div className="inline-flex items-center space-x-2 text-teal-bright text-xs font-heading font-bold uppercase tracking-wider">
                 <Clock className="w-4 h-4" />
                 <span>Business Hours</span>
               </div>
-              <p className="font-heading text-lg font-bold text-white">
+              <p className="font-heading text-lg font-bold text-teal-bright">
                 [Business Hours] Mon–Sat: 10:00 AM – 7:00 PM IST
               </p>
               <p className="text-xs text-slate-400">
@@ -644,13 +644,13 @@ export default function ContactUsPageClient() {
           {/* Header Title */}
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-line pb-6">
             <div className="space-y-2">
-              <span className="font-tempting text-teal text-2xl font-normal block">
+              <span className="font-tempting bg-gradient-to-r from-[#0D9488] via-[#0284C7] to-[#0F766E] bg-clip-text text-transparent text-2xl sm:text-3xl font-medium block">
                 Geographic Presence & Trust
               </span>
-              <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-navy-deep">
-                Where We’re Based
+              <h2 className="font-heading text-3xl sm:text-5xl font-extrabold text-navy-deep tracking-tight">
+                Where We’re <span className="font-playfair-italic font-normal text-teal">Based</span>
               </h2>
-              <p className="text-muted text-body max-w-xl">
+              <p className="text-muted text-body max-w-xl font-normal">
                 Future Yatra Private Limited is proudly headquartered in Bengaluru, India — serving students & families across all 28 states & 8 UTs.
               </p>
             </div>
@@ -661,7 +661,7 @@ export default function ContactUsPageClient() {
                 <button
                   key={loc.id}
                   onClick={() => setActiveLocationId(loc.id)}
-                  className={`text-xs font-bold px-4 py-2 rounded-xl transition-all duration-300 flex items-center space-x-1.5 ${
+                  className={`text-xs font-heading font-bold px-4 py-2 rounded-xl transition-all duration-300 flex items-center space-x-1.5 ${
                     activeLocationId === loc.id
                       ? "bg-navy text-white shadow-md scale-105"
                       : "text-muted hover:text-navy hover:bg-white"
@@ -681,7 +681,7 @@ export default function ContactUsPageClient() {
             <div className="lg:col-span-4 space-y-4 flex flex-col justify-between">
               
               <div className="space-y-3">
-                <p className="text-xs font-bold uppercase tracking-wider text-muted">
+                <p className="text-xs font-heading font-bold uppercase tracking-wider text-muted">
                   Select Regional Hub to View Map
                 </p>
                 {officeLocations.map((loc) => {
@@ -700,20 +700,20 @@ export default function ContactUsPageClient() {
                         <span className={`font-heading text-small font-bold ${isSelected ? "text-navy" : "text-navy-deep"}`}>
                           {loc.name}
                         </span>
-                        <span className={`text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-md ${
+                        <span className={`text-[10px] font-heading font-extrabold uppercase px-2 py-0.5 rounded-md ${
                           isSelected ? "bg-teal-tint text-teal" : "bg-white text-muted border border-line"
                         }`}>
                           {loc.id === "bengaluru" ? "HQ" : "Desk"}
                         </span>
                       </div>
 
-                      <p className="text-xs text-muted leading-relaxed line-clamp-2">
+                      <p className="text-xs text-muted leading-relaxed line-clamp-2 font-normal">
                         {loc.address}
                       </p>
 
                       <div className="pt-1 flex items-center justify-between text-[11px]">
-                        <span className="text-teal font-semibold">{loc.hours}</span>
-                        {isSelected && <span className="text-navy font-bold flex items-center">Active Map <ArrowRight className="w-3 h-3 ml-1" /></span>}
+                        <span className="text-teal font-heading font-semibold">{loc.hours}</span>
+                        {isSelected && <span className="text-navy font-heading font-bold flex items-center">Active Map <ArrowRight className="w-3 h-3 ml-1" /></span>}
                       </div>
                     </button>
                   );
@@ -722,11 +722,11 @@ export default function ContactUsPageClient() {
 
               {/* Founder Trust Box */}
               <div className="p-4 rounded-2xl bg-gradient-to-r from-navy to-navy-deep text-white text-xs space-y-2 shadow-lg">
-                <div className="flex items-center space-x-2 text-teal-bright font-bold">
+                <div className="flex items-center space-x-2 text-teal-bright font-heading font-bold">
                   <ShieldCheck className="w-4 h-4" />
                   <span>Pan-India Virtual & In-Person Advisory</span>
                 </div>
-                <p className="text-[11px] text-sand-tint/80 leading-relaxed">
+                <p className="text-[11px] text-sand-tint/80 leading-relaxed font-normal">
                   Visitors and parents are welcome to schedule an in-person discovery session at our Bengaluru registered office.
                 </p>
               </div>
@@ -739,7 +739,7 @@ export default function ContactUsPageClient() {
                 
                 {/* Top Glass Control Bar over Map */}
                 <div className="px-4 sm:px-6 py-2.5 sm:py-3 bg-white/95 backdrop-blur-md border-b border-line flex flex-col sm:flex-row sm:items-center justify-between gap-2 z-20">
-                  <div className="flex items-center space-x-2 text-xs font-bold text-navy">
+                  <div className="flex items-center space-x-2 text-xs font-heading font-bold text-navy">
                     <Globe className="w-4 h-4 text-teal flex-shrink-0" />
                     <span className="truncate">{selectedLocation.tag}</span>
                   </div>
@@ -752,7 +752,7 @@ export default function ContactUsPageClient() {
                       href={selectedLocation.directUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center space-x-1 text-xs font-bold text-teal hover:text-navy transition-colors bg-teal-tint px-2.5 py-1 rounded-lg flex-shrink-0"
+                      className="inline-flex items-center space-x-1 text-xs font-heading font-bold text-teal hover:text-navy transition-colors bg-teal-tint px-2.5 py-1 rounded-lg flex-shrink-0"
                     >
                       <span>Open Maps</span>
                       <ExternalLink className="w-3 h-3" />
@@ -785,22 +785,22 @@ export default function ContactUsPageClient() {
                           {selectedLocation.name} — Future Yatra
                         </h4>
                       </div>
-                      <span className="text-[10px] text-muted font-bold bg-white px-2 py-0.5 rounded border border-line flex-shrink-0 whitespace-nowrap">
+                      <span className="text-[10px] text-muted font-heading font-bold bg-white px-2 py-0.5 rounded border border-line flex-shrink-0 whitespace-nowrap">
                         Live Location
                       </span>
                     </div>
 
-                    <p className="text-[11px] sm:text-xs text-muted leading-relaxed line-clamp-2">
+                    <p className="text-[11px] sm:text-xs text-muted leading-relaxed line-clamp-2 font-normal">
                       {selectedLocation.address}
                     </p>
 
                     <div className="pt-1.5 flex items-center justify-between border-t border-line/60 text-[11px] sm:text-xs">
-                      <span className="text-navy font-semibold truncate mr-2">📞 {selectedLocation.phone}</span>
+                      <span className="text-navy font-heading font-semibold truncate mr-2">📞 {selectedLocation.phone}</span>
                       <a
                         href={selectedLocation.directUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center space-x-1 font-bold text-teal hover:underline flex-shrink-0"
+                        className="inline-flex items-center space-x-1 font-heading font-bold text-teal hover:underline flex-shrink-0"
                       >
                         <span>Get Directions</span>
                         <ArrowUpRight className="w-3.5 h-3.5" />
@@ -826,13 +826,13 @@ export default function ContactUsPageClient() {
         <div className="max-w-7xl mx-auto">
           
           <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-            <span className="font-tempting text-teal text-3xl font-normal block">
+            <span className="font-tempting bg-gradient-to-r from-[#0D9488] via-[#0284C7] to-[#0F766E] bg-clip-text text-transparent text-2xl sm:text-3xl font-medium block">
               Founder-Led Reassurance
             </span>
-            <h2 className="font-heading text-3xl sm:text-5xl font-extrabold text-navy-deep">
-              Send Us a Message
+            <h2 className="font-heading text-3xl sm:text-5xl font-extrabold text-navy-deep tracking-tight">
+              Send Us a <span className="font-playfair-italic font-normal text-teal">Message</span>
             </h2>
-            <p className="text-body-l text-muted">
+            <p className="text-body-l text-muted font-normal">
               We read every message personally. Tell us about your goals or questions, and we’ll respond with clear, honest direction.
             </p>
           </div>
@@ -862,14 +862,14 @@ export default function ContactUsPageClient() {
 
               <div className="relative z-10 space-y-8">
                 {/* Brand Badge */}
-                <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/15 text-xs text-teal-bright font-bold">
+                <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/15 text-xs text-teal-bright font-heading font-bold">
                   <ShieldCheck className="w-4 h-4 text-teal-bright" />
                   <span>Direct Founder & Advisor Access</span>
                 </div>
 
                 <div className="space-y-4">
-                  <h3 className="font-heading text-2xl sm:text-3xl font-bold text-white leading-tight">
-                    "We read every message personally — no automated dead ends."
+                  <h3 className="font-heading text-2xl sm:text-3xl font-bold text-white leading-tight font-playfair-italic">
+                    &ldquo;We read every message personally — no automated dead ends.&rdquo;
                   </h3>
                   <p className="text-xs sm:text-small text-sand-tint/80 leading-relaxed font-normal">
                     Whether you are an ambitious student aiming for Ivy League admission, a medical student looking for MBBS abroad, or a partner organisation — your enquiry receives real human attention.
@@ -895,7 +895,7 @@ export default function ContactUsPageClient() {
 
               {/* Founder quote at bottom */}
               <div className="relative z-10 pt-8 border-t border-white/15 mt-8 space-y-2">
-                <p className="font-tempting text-teal-bright text-xl font-normal">
+                <p className="font-tempting text-teal-bright text-2xl font-normal">
                   — The Future Yatra Team
                 </p>
                 <p className="text-[11px] text-sand-tint/70">
@@ -923,12 +923,12 @@ export default function ContactUsPageClient() {
                     <h3 className="font-heading text-2xl font-bold text-navy-deep">
                       Enquiry Received!
                     </h3>
-                    <p className="text-body text-muted max-w-md mx-auto">
+                    <p className="text-body text-muted max-w-md mx-auto font-normal">
                       Thank you, <strong className="text-navy">{formData.fullName}</strong>. Your message has been logged in our priority queue. A specialist from Future Yatra will reach out shortly.
                     </p>
                   </div>
 
-                  <div className="p-4 rounded-2xl bg-teal-tint/50 border border-teal/30 text-xs text-navy max-w-md mx-auto">
+                  <div className="p-4 rounded-2xl bg-teal-tint/50 border border-teal/30 text-xs text-navy max-w-md mx-auto font-heading font-semibold">
                     📧 Confirmation sent to: <span className="font-bold text-teal">{formData.email}</span>
                   </div>
 
@@ -943,7 +943,7 @@ export default function ContactUsPageClient() {
                         message: "",
                       });
                     }}
-                    className="inline-flex items-center space-x-2 bg-navy text-white text-xs font-semibold px-6 py-3 rounded-pill hover:bg-navy-glow transition-colors"
+                    className="inline-flex items-center space-x-2 bg-navy text-white text-xs font-heading font-semibold px-6 py-3 rounded-pill hover:bg-navy-glow transition-colors"
                   >
                     <span>Send Another Message</span>
                   </button>
@@ -956,7 +956,7 @@ export default function ContactUsPageClient() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {/* Full Name */}
                     <div className="space-y-2">
-                      <label htmlFor="fullName" className="block text-xs font-bold uppercase tracking-wider text-navy">
+                      <label htmlFor="fullName" className="block text-xs font-heading font-bold uppercase tracking-wider text-navy">
                         Full Name <span className="text-coral">*</span>
                       </label>
                       <input
@@ -973,7 +973,7 @@ export default function ContactUsPageClient() {
 
                     {/* Email Address */}
                     <div className="space-y-2">
-                      <label htmlFor="email" className="block text-xs font-bold uppercase tracking-wider text-navy">
+                      <label htmlFor="email" className="block text-xs font-heading font-bold uppercase tracking-wider text-navy">
                         Email Address <span className="text-coral">*</span>
                       </label>
                       <input
@@ -991,7 +991,7 @@ export default function ContactUsPageClient() {
 
                   {/* Phone Number */}
                   <div className="space-y-2">
-                    <label htmlFor="phone" className="block text-xs font-bold uppercase tracking-wider text-navy">
+                    <label htmlFor="phone" className="block text-xs font-heading font-bold uppercase tracking-wider text-navy">
                       Phone Number <span className="text-muted font-normal">(With WhatsApp)</span>
                     </label>
                     <input
@@ -1007,7 +1007,7 @@ export default function ContactUsPageClient() {
 
                   {/* Segmented Brand / Category Interest Selector */}
                   <div className="space-y-3">
-                    <label htmlFor="interest" className="block text-xs font-bold uppercase tracking-wider text-navy">
+                    <label htmlFor="interest" className="block text-xs font-heading font-bold uppercase tracking-wider text-navy">
                       I'm interested in: <span className="text-coral">*</span>
                     </label>
                     
@@ -1018,7 +1018,7 @@ export default function ContactUsPageClient() {
                           key={option.id}
                           type="button"
                           onClick={() => setFormData((prev) => ({ ...prev, interest: option.label }))}
-                          className={`text-xs font-semibold px-3.5 py-2 rounded-full border transition-all duration-200 flex items-center space-x-1.5 ${
+                          className={`text-xs font-heading font-semibold px-3.5 py-2 rounded-full border transition-all duration-200 flex items-center space-x-1.5 ${
                             formData.interest === option.label
                               ? "bg-navy text-white border-navy shadow-sm scale-105"
                               : "bg-slate-50 text-muted border-line hover:border-teal hover:text-navy"
@@ -1048,7 +1048,7 @@ export default function ContactUsPageClient() {
 
                   {/* Message Textarea */}
                   <div className="space-y-2">
-                    <label htmlFor="message" className="block text-xs font-bold uppercase tracking-wider text-navy">
+                    <label htmlFor="message" className="block text-xs font-heading font-bold uppercase tracking-wider text-navy">
                       Your Message <span className="text-coral">*</span>
                     </label>
                     <textarea
@@ -1067,7 +1067,7 @@ export default function ContactUsPageClient() {
                   <button
                     type="submit"
                     disabled={formState === "submitting"}
-                    className="w-full inline-flex items-center justify-center space-x-3 bg-gradient-to-r from-navy via-navy to-navy-glow text-white text-body font-bold px-8 py-4 rounded-pill hover:shadow-[0_0_30px_rgba(45,189,182,0.4)] transition-all duration-300 disabled:opacity-75 shadow-lg group"
+                    className="w-full inline-flex items-center justify-center space-x-3 bg-gradient-to-r from-navy via-navy to-navy-glow text-white text-body font-heading font-bold px-8 py-4 rounded-pill hover:shadow-[0_0_30px_rgba(45,189,182,0.4)] transition-all duration-300 disabled:opacity-75 shadow-lg group"
                   >
                     {formState === "submitting" ? (
                       <>
@@ -1112,10 +1112,10 @@ export default function ContactUsPageClient() {
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 border-b border-white/10 pb-8">
             <div className="space-y-3">
               <span className="font-tempting text-teal-bright text-3xl font-normal block">
-                Portals & Pathways
+                Portals &amp; Pathways
               </span>
               <h2 className="font-heading text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-                Looking for Something Specific?
+                Looking for <span className="font-playfair-italic font-normal text-teal-bright">Something Specific?</span>
               </h2>
               <p className="text-sand-tint/80 text-body max-w-xl font-normal">
                 Swipe or select a category below to explore dedicated gateways for our specialist brands, global alliances, and direct founder access.
@@ -1204,7 +1204,7 @@ export default function ContactUsPageClient() {
                             <span className="text-base">{item.icon}</span>
                             <span className="truncate">{item.label}</span>
                           </span>
-                          <span className="text-[10px] text-teal-bright font-bold uppercase ml-2 flex-shrink-0">
+                          <span className="text-[10px] text-teal-bright font-heading font-bold uppercase ml-2 flex-shrink-0">
                             {item.type}
                           </span>
                         </div>
@@ -1220,7 +1220,7 @@ export default function ContactUsPageClient() {
                   {currentSlide.ctaLink.startsWith("#") ? (
                     <button
                       onClick={scrollToForm}
-                      className={`inline-flex items-center justify-center space-x-3 px-8 py-4 rounded-full font-extrabold text-xs sm:text-small transition-all duration-300 shadow-xl group ${currentSlide.ctaColor}`}
+                      className={`inline-flex items-center justify-center space-x-3 px-8 py-4 rounded-full font-heading font-extrabold text-xs sm:text-small transition-all duration-300 shadow-xl group ${currentSlide.ctaColor}`}
                     >
                       <span>{currentSlide.ctaText}</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -1228,7 +1228,7 @@ export default function ContactUsPageClient() {
                   ) : (
                     <Link
                       href={currentSlide.ctaLink}
-                      className={`inline-flex items-center justify-center space-x-3 px-8 py-4 rounded-full font-extrabold text-xs sm:text-small transition-all duration-300 shadow-xl group ${currentSlide.ctaColor}`}
+                      className={`inline-flex items-center justify-center space-x-3 px-8 py-4 rounded-full font-heading font-extrabold text-xs sm:text-small transition-all duration-300 shadow-xl group ${currentSlide.ctaColor}`}
                     >
                       <span>{currentSlide.ctaText}</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -1273,13 +1273,13 @@ export default function ContactUsPageClient() {
         <div className="max-w-7xl mx-auto space-y-16">
           
           <div className="text-center max-w-3xl mx-auto space-y-3">
-            <span className="font-tempting text-teal text-3xl font-normal block">
+            <span className="font-tempting bg-gradient-to-r from-[#0D9488] via-[#0284C7] to-[#0F766E] bg-clip-text text-transparent text-2xl sm:text-3xl font-medium block">
               Transparent Workflow
             </span>
-            <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-navy-deep">
-              What Happens Next
+            <h2 className="font-heading text-3xl sm:text-5xl font-extrabold text-navy-deep tracking-tight">
+              What Happens <span className="font-playfair-italic font-normal text-teal">Next</span>
             </h2>
-            <p className="text-muted text-body">
+            <p className="text-muted text-body font-normal">
               No endless waiting or automated silence. Here is our step-by-step commitment when you submit an enquiry.
             </p>
           </div>
@@ -1299,7 +1299,7 @@ export default function ContactUsPageClient() {
                   <h3 className="font-heading text-lg font-bold text-navy">
                     Message Received & Logged
                   </h3>
-                  <p className="text-xs sm:text-small text-muted leading-relaxed">
+                  <p className="text-xs sm:text-small text-muted leading-relaxed font-normal">
                     Your request enters our central intake desk immediately. If you selected a specific brand (e.g. University Yatra or ApplyVisa Yatra), it is routed directly to that specialist team.
                   </p>
                 </div>
@@ -1314,7 +1314,7 @@ export default function ContactUsPageClient() {
                   <h3 className="font-heading text-lg font-bold text-navy">
                     Specialist Review
                   </h3>
-                  <p className="text-xs sm:text-small text-muted leading-relaxed">
+                  <p className="text-xs sm:text-small text-muted leading-relaxed font-normal">
                     A dedicated senior advisor or founder lead reviews your background, preferences, or questions to ensure tailored responses rather than canned templates.
                   </p>
                 </div>
@@ -1329,7 +1329,7 @@ export default function ContactUsPageClient() {
                   <h3 className="font-heading text-lg font-bold text-navy">
                     Direct Response & Discovery Call
                   </h3>
-                  <p className="text-xs sm:text-small text-muted leading-relaxed">
+                  <p className="text-xs sm:text-small text-muted leading-relaxed font-normal">
                     You receive a personal email or phone/WhatsApp message within 1–2 business days with clear next steps and an option to schedule a free 1-on-1 discovery call.
                   </p>
                 </div>
@@ -1348,10 +1348,10 @@ export default function ContactUsPageClient() {
                   className="w-full h-[400px] object-cover"
                 />
                 <div className="p-6 bg-navy text-white space-y-2">
-                  <p className="font-tempting text-teal-bright text-2xl font-normal">
-                    "Honesty over hype — always."
+                  <p className="font-tempting text-teal-bright text-2xl font-normal font-playfair-italic">
+                    &ldquo;Honesty over hype — always.&rdquo;
                   </p>
-                  <p className="text-xs text-sand-tint/80 leading-relaxed">
+                  <p className="text-xs text-sand-tint/80 leading-relaxed font-normal">
                     We tell you what you need to know about universities, visas, and costs, never just what sounds nice.
                   </p>
                 </div>
@@ -1371,13 +1371,13 @@ export default function ContactUsPageClient() {
         <div className="max-w-4xl mx-auto space-y-12">
           
           <div className="text-center space-y-3">
-            <span className="font-tempting text-teal text-3xl font-normal block">
+            <span className="font-tempting bg-gradient-to-r from-[#0D9488] via-[#0284C7] to-[#0F766E] bg-clip-text text-transparent text-2xl sm:text-3xl font-medium block">
               Clear Answers
             </span>
-            <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-navy-deep">
-              Frequently Asked Questions
+            <h2 className="font-heading text-3xl sm:text-5xl font-extrabold text-navy-deep tracking-tight">
+              Frequently Asked <span className="font-playfair-italic font-normal text-teal">Questions</span>
             </h2>
-            <p className="text-muted text-body">
+            <p className="text-muted text-body font-normal">
               Everything you need to know before getting in touch.
             </p>
           </div>
@@ -1418,7 +1418,7 @@ export default function ContactUsPageClient() {
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="px-6 pb-6 text-xs sm:text-small text-muted leading-relaxed border-t border-teal/20 pt-4"
+                        className="px-6 pb-6 text-xs sm:text-small text-muted leading-relaxed border-t border-teal/20 pt-4 font-normal"
                       >
                         {faq.a}
                       </motion.div>
@@ -1458,22 +1458,22 @@ export default function ContactUsPageClient() {
 
           <div className="space-y-4">
             <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
-              Start the Conversation Today
+              Start the <span className="font-playfair-italic font-normal text-teal-bright">Conversation Today</span>
             </h2>
             
             <p className="font-tempting text-teal-bright text-3xl sm:text-4xl font-normal">
-              Reach out — we're ready when you are.
+              Reach out — we&apos;re ready when you are.
             </p>
           </div>
 
-          <p className="text-body-l sm:text-lg text-sand-tint/90 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-body-l sm:text-lg text-sand-tint/90 max-w-2xl mx-auto leading-relaxed font-normal">
             Whether you need admissions guidance, test preparation, medical university consultation, or visa advice — Future Yatra is here to walk every step with you.
           </p>
 
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={scrollToForm}
-              className="w-full sm:w-auto inline-flex items-center justify-center space-x-3 bg-teal text-navy text-body font-extrabold px-8 py-4 rounded-pill hover:bg-teal-bright hover:shadow-[0_0_35px_rgba(63,224,214,0.6)] transition-all duration-300 shadow-xl group"
+              className="w-full sm:w-auto inline-flex items-center justify-center space-x-3 bg-teal text-navy text-body font-heading font-extrabold px-8 py-4 rounded-pill hover:bg-teal-bright hover:shadow-[0_0_35px_rgba(63,224,214,0.6)] transition-all duration-300 shadow-xl group"
             >
               <span>Fill Contact Form</span>
               <ArrowRight className="w-5 h-5 text-navy group-hover:translate-x-1 transition-transform" />
@@ -1481,7 +1481,7 @@ export default function ContactUsPageClient() {
 
             <a
               href="tel:+919876543210"
-              className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white text-body font-semibold px-8 py-4 rounded-pill transition-all duration-300"
+              className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white text-body font-heading font-semibold px-8 py-4 rounded-pill transition-all duration-300"
             >
               <Phone className="w-4 h-4 text-teal-bright" />
               <span>Call +91 98765 43210</span>
