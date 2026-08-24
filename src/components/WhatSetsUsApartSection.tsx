@@ -1,36 +1,36 @@
 "use client";
 
 import React from "react";
-import { Layers, ShieldCheck, FileCheck2, Clock } from "lucide-react";
+import { ShieldCheck, FileCheck2, UserCheck, Compass } from "lucide-react";
 
 export default function WhatSetsUsApartSection() {
   const items = [
     {
       num: "01",
-      icon: Layers,
-      title: "One Company, Four Specialties",
-      description: "Every stage of your journey, under one roof — admissions, test prep, healthcare, and visas.",
+      icon: ShieldCheck,
+      title: "No False Promises",
+      description: "We don't promise admissions, visas or scholarships that are decided by universities or authorities.",
       gradient: "from-blue-600 via-indigo-600 to-teal",
     },
     {
       num: "02",
-      icon: ShieldCheck,
-      title: "Direct Accountability",
-      description: "One company standard across every brand, every advisor, and every student interaction.",
+      icon: FileCheck2,
+      title: "Clear Information",
+      description: "We explain requirements, costs, timelines and challenges before you make a decision.",
       gradient: "from-teal via-teal-bright to-navy-glow",
     },
     {
       num: "03",
-      icon: FileCheck2,
-      title: "Compliance-First",
-      description: "We never promise an admission, visa, or outcome we can't legitimately guarantee.",
+      icon: UserCheck,
+      title: "Direct Support",
+      description: "You get guidance from people responsible for your application and decisions.",
       gradient: "from-indigo-600 via-teal to-blue-500",
     },
     {
       num: "04",
-      icon: Clock,
-      title: "Transparent Process",
-      description: "You'll always know exactly what happens next with clear timelines and real-time updates.",
+      icon: Compass,
+      title: "Long-Term Thinking",
+      description: "We consider where your education choice can take you, not just getting you through one application.",
       gradient: "from-teal via-navy-glow to-navy",
     },
   ];
@@ -46,11 +46,11 @@ export default function WhatSetsUsApartSection() {
         {/* SECTION HEADER WITH TEMPTING CALLIGRAPHY FONT SUBTITLE */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 space-y-2 sm:space-y-3">
           <span className="font-tempting bg-gradient-to-r from-[#0D9488] via-[#0284C7] to-[#0F766E] bg-clip-text text-transparent text-2xl sm:text-3xl font-medium block">
-            Distinct Standard
+            Why Future Yatra
           </span>
 
           <h2 className="font-heading text-3xl sm:text-5xl font-extrabold text-navy tracking-tight drop-shadow-xs">
-            What Sets Us Apart
+            Honest Guidance Before You Decide
           </h2>
 
           <p className="text-muted text-small sm:text-body max-w-xl mx-auto leading-relaxed font-normal">

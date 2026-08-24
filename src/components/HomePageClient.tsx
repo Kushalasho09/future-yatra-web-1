@@ -32,6 +32,7 @@ import Card3DTilt from "@/components/Card3DTilt";
 import FaqAccordion from "@/components/FaqAccordion";
 import CursiveMarqueeBanner from "@/components/CursiveMarqueeBanner";
 import HeroImageCollage from "@/components/HeroImageCollage";
+import HeroGraduateShowcase from "@/components/HeroGraduateShowcase";
 import TopStudyDestinations from "@/components/TopStudyDestinations";
 import WhatSetsUsApartSection from "@/components/WhatSetsUsApartSection";
 import WhoWeAreSection from "@/components/WhoWeAreSection";
@@ -111,7 +112,7 @@ export default function HomePageClient() {
       name: "University Yatra",
       tagline: "Admissions & Student Visas",
       description:
-        "Study abroad admissions and student visa guidance for Canada, the USA, the UK, Australia, and Europe.",
+        "Choose the right course and university, understand your options and get support with your application.",
       link: "/coming-soon?brand=university-yatra",
       icon: GraduationCap,
       accent: "from-blue-600 to-indigo-600",
@@ -120,7 +121,7 @@ export default function HomePageClient() {
       name: "Academic Yatra",
       tagline: "Test Preparation & Languages",
       description:
-        "Test preparation for IELTS, PTE, CELPIP, TOEFL, GRE, GMAT, and language training for German and French.",
+        "Prepare for IELTS, PTE, DSAT, French and German with structured preparation.",
       link: "/coming-soon?brand=academic-yatra",
       icon: BookOpen,
       accent: "from-teal to-emerald-600",
@@ -129,7 +130,7 @@ export default function HomePageClient() {
       name: "Medico Yatra",
       tagline: "MBBS & Healthcare Pathways",
       description:
-        "Specialist counselling for MBBS and allied healthcare education abroad, with an honest picture of the FMGE/NExT pathway back into India.",
+        "Get guidance on MBBS and healthcare education options abroad.",
       link: "/medico-yatra",
       icon: Stethoscope,
       accent: "from-rose-500 to-pink-600",
@@ -138,7 +139,7 @@ export default function HomePageClient() {
       name: "ApplyVisa Yatra",
       tagline: "Visitor & Family Visas",
       description:
-        "Documentation and application support for visitor, spouse, parent, and family visas, and permanent residency guidance.",
+        "Get support with visa documentation, application preparation and filing.",
       link: "/coming-soon?brand=applyvisa-yatra",
       icon: FileCheck2,
       accent: "from-amber-500 to-orange-600",
@@ -258,16 +259,24 @@ export default function HomePageClient() {
                   One Company.
                 </motion.h1>
 
-                {/* Body */}
+                {/* Subheading */}
+                <motion.h2
+                  initial={false}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.15, ease: easeTier1 }}
+                  className="text-lg sm:text-xl md:text-2xl font-semibold text-teal-dark tracking-tight"
+                >
+                  Planning a Study Abroad Future With Clarity
+                </motion.h2>
+
+                {/* Body / Description */}
                 <motion.p
                   initial={false}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2, ease: easeTier1 }}
                   className="text-body sm:text-body-l text-muted leading-relaxed max-w-2xl font-normal"
                 >
-                  Future Yatra Private Limited brings together four specialist brands — study abroad
-                  admissions, test preparation, MBBS counselling, and visa documentation — so you
-                  never have to piece your journey together across unrelated consultancies.
+                  Get clear guidance on what to study, where to study, how to prepare and how to apply, based on your profile, goals and budget.
                 </motion.p>
 
                 {/* Hero Primary Action Buttons */}
@@ -299,14 +308,18 @@ export default function HomePageClient() {
                 </motion.div>
               </div>
 
-              {/* Right Visual Collage with Auto-Rotating 2.5s Slider */}
+              {/* Hero Right Visual: Backgroundless Graduate with Faded Bottom & 4 Floating Capsules */}
               <motion.div
                 initial={false}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.2, ease: easeTier1 }}
-                className="lg:col-span-5 relative mt-4 lg:mt-0"
+                className="lg:col-span-5 relative mt-6 lg:mt-0 flex items-center justify-center"
               >
-                <HeroImageCollage />
+                {/* 
+                  PREVIOUS HERO IMAGE COLLAGE (COMMENTED AS REQUESTED):
+                  <HeroImageCollage />
+                */}
+                <HeroGraduateShowcase />
               </motion.div>
             </div>
           </section>

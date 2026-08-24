@@ -13,9 +13,9 @@ export interface TopStudyDestinationsProps {
 }
 
 export default function TopStudyDestinations({
-  eyebrow = "Four Specialist Verticals",
-  title = "Our Brands",
-  description = "Four specialist teams working together under one accountable parent company.",
+  eyebrow = "Our Services",
+  title = "The Right Support for Your Plans",
+  description,
 }: TopStudyDestinationsProps = {}) {
   const brands = [
     {
@@ -23,52 +23,52 @@ export default function TopStudyDestinations({
       name: "UNIVERSITY YATRA",
       tagline: "STUDY ABROAD ADMISSIONS & SCHOLARSHIPS",
       subtitle: "DIRECT UNIVERSITY APPLICATIONS & SCHOLARSHIP COUNSELLING",
-      description: "Direct university applications, official scholarship guidance, and end-to-end admission counselling across top UK, USA, Canada & European universities.",
+      description: "Choose the right course and university, understand your options and get support with your application.",
       image: "/images/hero_student_journey.png",
       personImage: "/images/person_university.png",
       icon: GraduationCap,
       badge: "Study Abroad Admissions",
       flags: "🇬🇧 🇺🇸 🇨🇦 🇦🇺",
-      link: "/brands/brand-1",
+      link: "/coming-soon?brand=university-yatra",
     },
     {
       id: "academic",
       name: "ACADEMIC YATRA",
       tagline: "IELTS, PTE, TOEFL & GRE COACHING",
       subtitle: "RESULT-DRIVEN TEST PREP & BAND SCORE IMPROVEMENT",
-      description: "Comprehensive test prep coaching with unlimited mock practice exams, certified expert faculty, and score improvement strategies.",
+      description: "Prepare for IELTS, PTE, DSAT, French and German with structured preparation.",
       image: "/images/hero_test_prep.png",
       personImage: "/images/person_academic.png",
       icon: BookOpen,
       badge: "Language & Test Prep",
       flags: "🇬🇧 🇺🇸 🇨🇦 🇦🇺",
-      link: "/brands/brand-2",
+      link: "/coming-soon?brand=academic-yatra",
     },
     {
       id: "medico",
       name: "MEDICO YATRA",
       tagline: "MBBS ABROAD & HEALTHCARE PATHWAYS",
       subtitle: "NMC APPROVED UNIVERSITIES & TRANSPARENT FEE GUARANTEE",
-      description: "NMC-compliant medical university admissions, FMG/NEXT support, and 100% transparent tuition fee structures with on-ground teams.",
+      description: "Get guidance on MBBS and healthcare education options abroad.",
       image: "/images/hero_medical_student.png",
       personImage: "/images/person_medico.png",
       icon: Stethoscope,
       badge: "Medical Study Abroad",
       flags: "🇬🇧 🇺🇸 🇪🇺",
-      link: "/brands/brand-3",
+      link: "/medico-yatra",
     },
     {
       id: "visa",
       name: "APPLYVISA YATRA",
       tagline: "VISITOR, SPOUSE, FAMILY & PR VISAS",
       subtitle: "EXPERT EMBASSY FILING & HIGHEST APPROVAL RATE",
-      description: "Expert visa documentation, embassy interview preparation, financial proof verification, and end-to-end immigration support.",
+      description: "Get support with visa documentation, application preparation and filing.",
       image: "/images/hero_visa_passport.png",
       personImage: "/images/person_visa.png",
       icon: FileCheck2,
       badge: "Visa Consulting",
       flags: "🇬🇧 🇺🇸 🇨🇦 🇪🇺",
-      link: "/brands/brand-4",
+      link: "/coming-soon?brand=applyvisa-yatra",
     },
   ];
 
@@ -96,7 +96,7 @@ export default function TopStudyDestinations({
 
   return (
     <section className="py-10 sm:py-20 border-t border-line/60 bg-gradient-to-b from-white via-sand-tint/30 to-white">
-      
+
       {/* SECTION HEADER OUTSIDE CARD */}
       <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-12 space-y-1.5 sm:space-y-2 px-4">
         <span className="font-tempting text-teal text-xl sm:text-3xl font-normal block">
@@ -107,9 +107,11 @@ export default function TopStudyDestinations({
           {title}
         </h2>
 
-        <p className="text-muted text-xs sm:text-body max-w-xl mx-auto font-normal">
-          {description}
-        </p>
+        {description && (
+          <p className="text-muted text-xs sm:text-body max-w-xl mx-auto font-normal">
+            {description}
+          </p>
+        )}
       </div>
 
       {/* FEATURED BANNER CONTAINER */}
@@ -134,7 +136,7 @@ export default function TopStudyDestinations({
             <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#091526]/95 via-[#091526]/85 to-[#091526]/40 z-0" />
 
             {/* RIGHT PERSON OVERLAY FOR DESKTOP */}
-            <div 
+            <div
               className="absolute right-0 bottom-0 h-full w-[45%] max-w-[480px] pointer-events-none z-10 hidden md:block"
               style={{
                 WebkitMaskImage: "linear-gradient(to left, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%), linear-gradient(to top, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%)",
@@ -176,7 +178,7 @@ export default function TopStudyDestinations({
 
             {/* CONTENT AREA */}
             <div className="absolute inset-0 flex flex-col justify-center items-center md:items-start text-center md:text-left px-5 sm:px-14 md:pl-24 md:pr-[46%] py-10 z-20 space-y-3 sm:space-y-4">
-              
+
               {/* Tagline Subtitle */}
               <p className="font-heading font-extrabold text-teal-bright text-[10px] sm:text-xs md:text-sm tracking-widest uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] max-w-full">
                 {active.tagline}
@@ -192,8 +194,8 @@ export default function TopStudyDestinations({
                 {active.subtitle}
               </p>
 
-              {/* Description Paragraph (Visible on sm & up) */}
-              <p className="text-white text-xs sm:text-small max-w-lg leading-relaxed font-semibold drop-shadow-[0_2px_6px_rgba(0,0,0,0.95)] hidden sm:block">
+              {/* Description Paragraph (Visible on mobile & desktop) */}
+              <p className="text-white/90 text-[11px] sm:text-small max-w-xs sm:max-w-lg leading-relaxed font-medium drop-shadow-[0_2px_6px_rgba(0,0,0,0.95)] block">
                 {active.description}
               </p>
 
@@ -262,11 +264,10 @@ export default function TopStudyDestinations({
                     <button
                       key={b.id}
                       onClick={() => setCurrentIndex(idx)}
-                      className={`px-4 py-2 rounded-full text-xs font-bold transition-all duration-300 flex items-center space-x-1.5 whitespace-nowrap ${
-                        isActive
-                          ? "bg-teal text-navy shadow-md scale-105"
-                          : "text-white/80 hover:text-white hover:bg-white/10"
-                      }`}
+                      className={`px-4 py-2 rounded-full text-xs font-bold transition-all duration-300 flex items-center space-x-1.5 whitespace-nowrap ${isActive
+                        ? "bg-teal text-navy shadow-md scale-105"
+                        : "text-white/80 hover:text-white hover:bg-white/10"
+                        }`}
                     >
                       <BIcon className={`w-3.5 h-3.5 ${isActive ? "text-navy" : "text-teal-bright"}`} />
                       <span>{b.name}</span>

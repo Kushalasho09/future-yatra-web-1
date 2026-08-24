@@ -68,25 +68,21 @@ export default function WhoWeAreSection() {
             {/* Subtitle in Tempting Calligraphy Font */}
             <div className="space-y-2">
               <span className="font-tempting bg-gradient-to-r from-[#0D9488] via-[#0284C7] to-[#0F766E] bg-clip-text text-transparent text-2xl sm:text-3xl font-medium block">
-                Who We Are
+                Our Story
               </span>
 
               <h2 className="font-heading text-3xl sm:text-5xl font-extrabold text-navy leading-tight tracking-tight">
-                Built for the Complete Study Abroad & Visa Journey
+                Built Because Students Deserve Better Guidance
               </h2>
             </div>
 
-            {/* Preserved Original Content Paragraphs */}
-            <div className="space-y-4 text-small sm:text-body text-muted leading-relaxed font-normal">
+            {/* Description Paragraphs */}
+            <div className="space-y-3.5 text-small sm:text-body text-muted leading-relaxed font-normal">
               <p>
-                Future Yatra Private Limited exists because a study abroad journey is rarely just
-                one decision. It moves through a test score, a university application, sometimes
-                a medical entrance pathway, and almost always a visa.
+                Our founder experienced misleading advice and incomplete information while planning his own move to Canada. After moving there, he saw many international students facing similar problems.
               </p>
               <p>
-                Instead of building one generalist consultancy, we built four specialist brands —
-                each focused on one part of that journey, each held to the same company-wide
-                standard of transparent, ethical counselling.
+                That experience led to a simple belief: Students need honest answers before they make decisions that affect their education, finances and future.
               </p>
             </div>
 
@@ -115,13 +111,13 @@ export default function WhoWeAreSection() {
 
             {/* Primary CTA Button with Hover Border Gradient */}
             <div className="pt-2">
-              <Link href="/about-us">
+              <Link href="/our-story">
                 <HoverBorderGradient
                   as="div"
                   containerClassName="rounded-full"
                   className="bg-white hover:bg-teal-tint/40 text-navy hover:text-teal font-extrabold text-small px-7 py-3 rounded-full border border-teal/20 shadow-sm"
                 >
-                  <span>Read Our Full Story</span>
+                  <span>Read Our Story</span>
                 </HoverBorderGradient>
               </Link>
             </div>

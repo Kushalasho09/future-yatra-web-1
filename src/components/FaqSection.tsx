@@ -16,37 +16,51 @@ const faqData: FaqItemData[] = [
   {
     id: "faq-1",
     number: "01",
-    question: "What is Future Yatra Private Limited?",
+    question: "Which countries can I study in?",
     answer:
-      "Future Yatra Private Limited is the single accountable parent company operating four specialist brands — University Yatra, Academic Yatra, Medico Yatra, and ApplyVisa Yatra — serving Indian students and families across study abroad admissions, test preparation, MBBS counselling, and visa documentation.",
+      "We currently help students explore options across Canada, the USA, UK, Australia and Europe.",
   },
   {
     id: "faq-2",
     number: "02",
-    question: "How is Future Yatra different from other consultancies?",
+    question: "Can you help me choose a university?",
     answer:
-      "Unlike traditional agencies that operate through unverified franchises or push sponsored university lists, Future Yatra operates with 100% direct company accountability, zero franchise handoffs, transparent fee structures, and dedicated specialists for each stage of your journey.",
+      "Yes. We can help you evaluate universities based on your academic profile, course, destination and budget.",
   },
   {
     id: "faq-3",
     number: "03",
-    question: "How do I know which Future Yatra brand is right for me?",
+    question: "Can you check my eligibility?",
     answer:
-      "Depending on your goal: University Yatra handles university applications & admissions; Academic Yatra provides test preparation (IELTS, PTE, GRE); Medico Yatra specializes in MBBS abroad with FMGE/NExT screening support; and ApplyVisa Yatra manages visa & residency documentation.",
+      "Yes. We review your academic profile against relevant admission requirements.",
   },
   {
     id: "faq-4",
     number: "04",
-    question: "Does Future Yatra guarantee admission or visa approval?",
+    question: "Do you provide scholarship guidance?",
     answer:
-      "No ethical company can guarantee university admissions or embassy visa outcomes. Future Yatra guarantees 100% accurate, compliant, and transparent application preparation with zero hidden claims.",
+      "Yes. We help you understand relevant scholarship opportunities and eligibility requirements.",
   },
   {
     id: "faq-5",
     number: "05",
-    question: "Where does Future Yatra operate?",
+    question: "Do you provide test preparation?",
     answer:
-      "Future Yatra provides direct online counselling and application management nationwide across India, as well as in-person consulting at our corporate headquarters.",
+      "Academic Yatra provides preparation for IELTS, PTE, DSAT, French and German.",
+  },
+  {
+    id: "faq-6",
+    number: "06",
+    question: "Do you provide visa assistance?",
+    answer:
+      "Yes. ApplyVisa Yatra provides support with visa documentation and application preparation.",
+  },
+  {
+    id: "faq-7",
+    number: "07",
+    question: "Do you guarantee admission or visa approval?",
+    answer:
+      "No. Admission and visa decisions are made by universities and government authorities. We provide guidance and application support.",
   },
 ];
 
@@ -76,11 +90,11 @@ export default function FaqSection() {
             <div className="space-y-2 text-center lg:text-left">
               {/* Calligraphy Subtitle */}
               <span className="font-tempting text-teal text-3xl sm:text-4xl font-normal block">
-                Clear Answers
+                Frequently Asked Questions
               </span>
 
               <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy tracking-tight leading-tight">
-                Frequently Asked Questions
+                Clear Answers to Common Questions
               </h2>
 
               <p className="text-xs sm:text-body text-muted leading-relaxed font-normal pt-1 max-w-md mx-auto lg:mx-0">

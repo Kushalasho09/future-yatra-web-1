@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, ShieldCheck, Clock, CheckCircle2, MessageSquare } from "lucide-react";
+import { ArrowRight, ShieldCheck, CheckCircle2, MessageSquare } from "lucide-react";
 
 export default function GrandCtaBannerSection() {
   return (
@@ -41,50 +41,39 @@ export default function GrandCtaBannerSection() {
                   Your Next Step
                 </span>
                 <h2 className="font-heading text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight tracking-tight">
-                  Start With a Free, No-Obligation Conversation
+                  Planning Your Study Abroad Future?
                 </h2>
               </div>
 
               {/* Description Paragraph */}
               <p className="text-xs sm:text-body text-sand-tint/90 leading-relaxed font-normal max-w-xl mx-auto lg:mx-0">
-                No pressure, no sales pitch — just an honest first conversation about your goals, study abroad aspirations, and how Future Yatra can build your roadmap.
+                Tell us about your academic background, course preference, destination and plans. We&apos;ll help you understand your options.
               </p>
 
-              {/* Feature Badges Grid */}
-              <div className="grid grid-cols-2 gap-2.5 sm:gap-3 pt-1 max-w-lg mx-auto lg:mx-0">
-                <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-xs px-3 sm:px-3.5 py-2 rounded-2xl border border-white/10 text-[11px] sm:text-xs font-medium text-sand-tint">
-                  <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-teal-bright flex-shrink-0" />
-                  <span className="truncate">100% Free Counsel</span>
-                </div>
-                <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-xs px-3 sm:px-3.5 py-2 rounded-2xl border border-white/10 text-[11px] sm:text-xs font-medium text-sand-tint">
-                  <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-teal-bright flex-shrink-0" />
-                  <span className="truncate">Zero Sales Push</span>
-                </div>
-                <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-xs px-3 sm:px-3.5 py-2 rounded-2xl border border-white/10 text-[11px] sm:text-xs font-medium text-sand-tint">
+              {/* Feature Badges */}
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 sm:gap-3 pt-1">
+                <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-xs px-3.5 py-2 rounded-2xl border border-white/10 text-[11px] sm:text-xs font-medium text-sand-tint">
                   <MessageSquare className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-teal-bright flex-shrink-0" />
-                  <span className="truncate">1-on-1 Specialist</span>
+                  <span>Free Initial Conversation</span>
                 </div>
-                <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-xs px-3 sm:px-3.5 py-2 rounded-2xl border border-white/10 text-[11px] sm:text-xs font-medium text-sand-tint">
-                  <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-teal-bright flex-shrink-0" />
-                  <span className="truncate">Personal Roadmap</span>
+                <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-xs px-3.5 py-2 rounded-2xl border border-white/10 text-[11px] sm:text-xs font-medium text-sand-tint">
+                  <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-teal-bright flex-shrink-0" />
+                  <span>Clear Guidance</span>
+                </div>
+                <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-xs px-3.5 py-2 rounded-2xl border border-white/10 text-[11px] sm:text-xs font-medium text-sand-tint">
+                  <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-teal-bright flex-shrink-0" />
+                  <span>No False Promises</span>
                 </div>
               </div>
 
-              {/* Dual Action Buttons */}
-              <div className="pt-3 flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3">
+              {/* Action Button */}
+              <div className="pt-3 flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start">
                 <Link
                   href="/contact"
                   className="inline-flex items-center justify-center space-x-3 bg-teal text-navy hover:bg-teal-bright px-7 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-xs sm:text-small transition-all duration-300 shadow-xl hover:shadow-teal/40 group"
                 >
-                  <span>Book a Free Conversation</span>
+                  <span>Get Free Consultation</span>
                   <ArrowRight className="w-4 h-4 text-navy group-hover:translate-x-1 transition-transform duration-200" />
-                </Link>
-
-                <Link
-                  href="/coming-soon?section=brands"
-                  className="inline-flex items-center justify-center space-x-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white px-6 py-3.5 sm:py-4 rounded-full font-semibold text-xs sm:text-small transition-all duration-300"
-                >
-                  <span>Explore Specialist Brands</span>
                 </Link>
               </div>
 

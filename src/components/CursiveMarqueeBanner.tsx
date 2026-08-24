@@ -23,8 +23,8 @@ export default function CursiveMarqueeBanner() {
         <div className="flex w-max animate-marquee space-x-12 sm:space-x-16 items-center">
           {[...marqueeItems, ...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, idx) => (
             <div key={idx} className="flex items-center space-x-12 sm:space-x-16 flex-shrink-0 group">
-              {/* Pure Tempting Calligraphy Font Text */}
-              <span className="font-tempting text-3xl sm:text-4xl lg:text-[42px] font-normal text-navy leading-none tracking-wide group-hover:text-teal transition-colors duration-200">
+              {/* Google Sans Flex Font Text */}
+              <span className="font-sans text-2xl sm:text-3xl lg:text-4xl font-bold text-navy leading-none tracking-tight group-hover:text-teal transition-colors duration-200">
                 {item}
               </span>
 
