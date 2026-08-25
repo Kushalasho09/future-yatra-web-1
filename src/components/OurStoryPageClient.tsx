@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import Card3DTilt from "@/components/Card3DTilt";
 import SignatureLine from "@/components/SignatureLine";
+import RotatingGuidanceShowcase from "@/components/RotatingGuidanceShowcase";
 
 // Brand definitions for Section 6
 const BRAND_DATA = [
@@ -30,8 +31,8 @@ const BRAND_DATA = [
     name: "University Yatra",
     href: "/coming-soon?brand=university-yatra",
     icon: GraduationCap,
-    tagline: "Higher Education & Admissions",
-    description: "Personalized university selection, application strategy, and direct institutional admissions.",
+    tagline: "Universities · Courses · Admissions",
+    description: "Find suitable universities and build a stronger application.",
     gradientClass: "from-teal/20 via-teal-tint to-white",
     borderGlow: "border-teal/40",
     badgeBg: "bg-teal-tint text-teal",
@@ -41,8 +42,8 @@ const BRAND_DATA = [
     name: "Academic Yatra",
     href: "/coming-soon?brand=academic-yatra",
     icon: BookOpen,
-    tagline: "Prep & Coaching",
-    description: "Standardized test preparation, academic readiness, and language proficiency mastery.",
+    tagline: "IELTS · PTE · DSAT · French · German",
+    description: "Prepare for the tests and language requirements you need.",
     gradientClass: "from-navy-glow/20 via-navy/5 to-white",
     borderGlow: "border-navy-glow/40",
     badgeBg: "bg-navy/10 text-navy",
@@ -52,8 +53,8 @@ const BRAND_DATA = [
     name: "Medico Yatra",
     href: "/medico-yatra",
     icon: HeartHandshake,
-    tagline: "Healthcare Careers",
-    description: "Specialized pathways for medical, nursing, and healthcare professionals globally.",
+    tagline: "Medical · Nursing · Healthcare",
+    description: "Explore education pathways for healthcare careers abroad.",
     gradientClass: "from-coral/20 via-coral/5 to-white",
     borderGlow: "border-coral/40",
     badgeBg: "bg-coral/10 text-coral",
@@ -63,8 +64,8 @@ const BRAND_DATA = [
     name: "Apply Visa Yatra",
     href: "/coming-soon?brand=applyvisa-yatra",
     icon: FileCheck2,
-    tagline: "Visa & Legal Guidance",
-    description: "Compliant student visa filing, documentation auditing, and pre-departure briefings.",
+    tagline: "Visa · Documents · Application",
+    description: "Prepare your visa application with greater clarity and care.",
     gradientClass: "from-amber/20 via-amber/5 to-white",
     borderGlow: "border-amber/40",
     badgeBg: "bg-amber/10 text-amber",
@@ -136,44 +137,42 @@ export default function OurStoryPageClient() {
   const section3Cards = [
     {
       num: "01",
-      pill: "THE ARRIVAL",
+      pill: "CLARITY",
       pillBg: "bg-teal-tint text-teal",
-      title: "Settling in Canada",
-      description: "The problem turned out to be bigger than one difficult experience.",
+      title: "From Confusion to Clarity",
+      description: "Understand your options before making a major decision.",
       image: "/images/story_canada_settling.jpg",
-      alt: "International student settling in Canada",
+      alt: "Understand your options before making a major decision",
       footerIcon: Globe2,
-      footerText: "Firsthand International Context",
+      footerText: "Informed Decision Making",
       cardStyle: "glass-card-light border-line text-navy-deep",
       numColor: "text-teal/30",
       accentColor: "text-teal",
     },
     {
       num: "02",
-      pill: "THE PATTERN",
+      pill: "HONESTY",
       pillBg: "bg-teal-bright/20 text-teal-bright border border-teal-bright/30",
-      title: "The Single-Focus Trap",
-      description:
-        "After settling in Canada, he met student after student struggling with the same pattern: guided by consultants who focused only on getting them admitted or getting them a visa...",
+      title: "From Promises to Honest Advice",
+      description: "Know the realities, risks and requirements before you commit.",
       image: "/images/story_single_focus_trap.jpg",
-      alt: "International student overwhelmed by admission forms",
+      alt: "Know the realities, risks and requirements before you commit",
       footerIcon: ShieldCheck,
-      footerText: "Systemic Industry Pattern",
+      footerText: "Transparent Assessment",
       cardStyle: "glass-card-navy border-teal-bright/30 text-white",
       numColor: "text-teal-bright/30",
       accentColor: "text-teal-bright",
     },
     {
       num: "03",
-      pill: "THE GAP",
+      pill: "BIGGER PICTURE",
       pillBg: "bg-coral/10 text-coral",
-      title: "The Complete Journey",
-      description:
-        "...with almost no one helping them understand the complete journey — from choosing the right career to building a genuinely successful life post-graduation.",
+      title: "From One Step to the Bigger Picture",
+      description: "Think beyond admission and consider where your decision can take you.",
       image: "/images/story_complete_journey.jpg",
-      alt: "Successful international graduate walking in career district",
+      alt: "Think beyond admission and consider where your decision can take you",
       footerIcon: Award,
-      footerText: "Long-Term Value Creation",
+      footerText: "Lifelong Trajectory",
       cardStyle: "glass-card-light border-line text-navy-deep",
       numColor: "text-coral/30",
       accentColor: "text-coral",
@@ -302,7 +301,7 @@ export default function OurStoryPageClient() {
               className="space-y-2"
             >
               <span className="font-tempting text-teal text-3xl sm:text-4xl font-normal block">
-                Founder's Genesis
+                Our Story
               </span>
               <h2 className="text-2xl sm:text-3xl md:text-h1 font-heading font-extrabold text-navy-deep tracking-tight leading-tight">
                 The Story Behind{" "}
@@ -314,7 +313,7 @@ export default function OurStoryPageClient() {
               <div className="w-[80px] h-[6px] bg-gradient-to-r from-teal to-teal-bright rounded-full mt-4" />
 
               <p className="text-small sm:text-body text-muted mt-4 sm:mt-6 max-w-sm font-body leading-relaxed">
-                Built from lived experience to fix the structural gaps in global education consulting.
+                Future Yatra began with a simple question:
               </p>
             </motion.div>
           </div>
@@ -329,7 +328,7 @@ export default function OurStoryPageClient() {
               custom={0.1}
             >
               <p className="border-l-4 border-teal pl-4 sm:pl-6 font-medium text-navy-deep/90 text-body sm:text-body-l md:text-xl leading-relaxed font-body">
-                Future Yatra was not created because someone wanted to start another consultancy. It was created because our founder experienced the problems of this industry firsthand.
+                Why is it so difficult for students to get clear, honest advice about their future?
               </p>
             </motion.div>
 
@@ -339,9 +338,16 @@ export default function OurStoryPageClient() {
               whileInView="visible"
               viewport={{ once: true, amount: 0 }}
               custom={0.2}
+              className="space-y-4"
             >
               <p className="text-muted text-body sm:text-body-l leading-relaxed font-body">
-                While planning his own move to Canada, he spent months researching countries, education pathways, immigration options, and career opportunities. Along the way, he encountered misleading advice, incomplete information, and unrealistic promises from multiple sources.
+                While planning his own move to Canada, our founder experienced the confusion firsthand. Too much information. Conflicting advice. Promises that sounded better than reality.
+              </p>
+              <p className="text-muted text-body sm:text-body-l leading-relaxed font-body">
+                After moving to Canada, he saw many other students facing the same problems.
+              </p>
+              <p className="text-muted text-body sm:text-body-l leading-relaxed font-body">
+                They were getting help with admissions and visas, but still struggling to understand what to study, where to go, what they could afford, and what came next.
               </p>
             </motion.div>
 
@@ -353,14 +359,14 @@ export default function OurStoryPageClient() {
               custom={0.3}
               className="bg-sand/60 p-5 sm:p-8 rounded-card border border-line text-navy font-semibold text-body sm:text-body-l leading-relaxed shadow-sm hover:shadow-md transition-shadow font-body"
             >
-              "Those mistakes cost real time, real money, and real opportunities."
+              "We believed it could be better."
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* ==================================================================== */}
-      {/* SECTION 3: What He Saw After Moving to Canada (App Native View)       */}
+      {/* SECTION 3: What We Set Out to Change (App Native View)              */}
       {/* ==================================================================== */}
       <section className="relative bg-gradient-to-b from-sand/40 via-white to-white py-14 sm:py-24 md:py-28 border-b border-line">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -368,14 +374,14 @@ export default function OurStoryPageClient() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 md:gap-6 mb-8 sm:mb-16">
             <div className="space-y-1.5 sm:space-y-2">
               <span className="font-tempting text-teal text-3xl sm:text-4xl font-normal block">
-                Observational Grounding
+                The Core Shift
               </span>
               <h2 className="text-2xl sm:text-3xl md:text-h1 font-heading font-extrabold text-navy-deep tracking-tight">
-                What He Saw After Moving to Canada
+                What We Set Out to Change
               </h2>
             </div>
             <p className="text-muted text-small sm:text-body-l max-w-md font-body leading-relaxed">
-              Firsthand insights from interacting with hundreds of international students navigating settlement realities.
+              Replacing standard consultancy shortcuts with clarity, honesty, and a complete view of your future.
             </p>
           </div>
 
@@ -718,7 +724,7 @@ export default function OurStoryPageClient() {
             Specialization & Integrity
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-h1 font-heading font-extrabold text-navy-deep tracking-tight">
-            Why Four Brands, Not One
+            Built Around What Students Actually Need
           </h2>
           <p className="text-muted text-body sm:text-body-l mt-2 font-body leading-relaxed">
             Instead of a generic single consultancy, we built focused specialist divisions under one accountable parent entity.
@@ -874,7 +880,7 @@ export default function OurStoryPageClient() {
       </section>
 
       {/* ==================================================================== */}
-      {/* SECTION 8: How We Measure Success (Kinetic Metric Section)          */}
+      {/* SECTION 8: A Young Company. A Clear Purpose.                        */}
       {/* ==================================================================== */}
       <section
         ref={section8Ref}
@@ -882,30 +888,29 @@ export default function OurStoryPageClient() {
       >
         <div className="max-w-3xl mx-auto mb-8 sm:mb-12 space-y-2">
           <span className="font-tempting text-teal text-3xl sm:text-4xl font-normal block">
-            The Metric That Matters
+            Authentic Foundation
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-h1 font-heading font-extrabold text-navy-deep tracking-tight">
-            How We Measure Success
+            A Young Company. A Clear Purpose.
           </h2>
         </div>
 
         {/* Interactive Focal Card */}
-        <div className="bg-white rounded-section border border-line p-6 sm:p-12 md:p-16 shadow-sm max-w-4xl mx-auto text-center relative overflow-hidden">
-          {/* Top Line with animated strikethrough */}
-          <p className="text-body sm:text-h3 font-medium text-navy-deep/80 leading-relaxed font-body">
-            We don't measure success by{" "}
-            <span className="relative inline-block text-coral line-through decoration-coral decoration-2 font-semibold">
-              [applications submitted]
-            </span>{" "}
-            or{" "}
-            <span className="relative inline-block text-coral line-through decoration-coral decoration-2 font-semibold">
-              [visas approved]
-            </span>
-            .
-          </p>
+        <div className="bg-white rounded-section border border-line p-6 sm:p-12 md:p-16 shadow-sm max-w-4xl mx-auto text-center relative overflow-hidden space-y-5">
+          <div className="space-y-3 max-w-2xl mx-auto">
+            <p className="text-body sm:text-body-l font-semibold text-teal font-heading">
+              Future Yatra Private Limited was officially registered in 2025.
+            </p>
+            <p className="text-body sm:text-h3 font-medium text-navy-deep/90 leading-relaxed font-body">
+              We are not here to claim decades of experience we don't have.
+            </p>
+            <p className="text-small sm:text-body text-muted leading-relaxed font-body">
+              We are here to build something students and families can trust, one conversation at a time.
+            </p>
+          </div>
 
           {/* Divider Line */}
-          <div className="border-t border-line my-5 sm:my-8 w-1/2 mx-auto" />
+          <div className="border-t border-line my-4 sm:my-6 w-1/2 mx-auto" />
 
           {/* Bottom Line */}
           <motion.div
@@ -913,18 +918,21 @@ export default function OurStoryPageClient() {
             animate={isSection8InView || !mounted ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-xl sm:text-4xl md:text-display text-teal font-extrabold font-heading tracking-tight leading-tight">
-              We measure it by the futures we help people build.
+            <p className="text-xl sm:text-3xl md:text-4xl text-teal font-extrabold font-heading tracking-tight leading-tight">
+              Your future deserves an informed decision.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* ==================================================================== */}
-      {/* SECTION 9: Explore Further (CTA Row)                                 */}
+      {/* SECTION 9: Explore Further (Rotating Guidance Showcase + CTA Row)   */}
       {/* ==================================================================== */}
-      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 md:py-28 border-b border-line text-center">
-        <div className="max-w-2xl mx-auto mb-8 sm:mb-12 space-y-2">
+      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-24 border-b border-line text-center overflow-x-clip">
+        {/* Continuous Rotating Capsule Orbit Visual with Centered Student */}
+        <RotatingGuidanceShowcase />
+
+        <div className="max-w-2xl mx-auto mb-8 sm:mb-12 space-y-2 mt-4 sm:mt-6">
           <span className="font-tempting text-teal text-3xl sm:text-4xl font-normal block">
             Next Steps
           </span>
