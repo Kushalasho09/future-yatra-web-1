@@ -617,16 +617,16 @@ function GlobalTimeZonesClock() {
                   </div>
                 </div>
 
-                {/* Info Below Image: Country Name & Live Time (HIDDEN WHEN STACKED, REVEALED ON EXPAND) */}
+                {/* Info Below Image: Country Name & Live Time (INDIA VISIBLE BY DEFAULT, OTHERS REVEALED ON EXPAND) */}
                 <div
                   className={cn(
                     "text-center space-y-0.5 max-w-[140px] transition-all duration-300",
-                    isContainerHovered
+                    isContainerHovered || isIndia
                       ? "opacity-100 translate-y-0 pointer-events-auto"
                       : "opacity-0 translate-y-3 pointer-events-none hidden"
                   )}
                 >
-                  <p className="font-heading font-extrabold text-sm sm:text-base text-white tracking-wide flex items-center justify-center space-x-1">
+                  <p className="font-heading font-extrabold text-sm sm:text-base text-white tracking-wide flex items-center justify-center space-x-1.5">
                     <span>{item.country}</span>
                     {isIndia && (
                       <span className="relative flex h-2 w-2">
@@ -639,14 +639,14 @@ function GlobalTimeZonesClock() {
                   <p
                     className={cn(
                       "font-sans font-bold text-xs sm:text-small tracking-normal",
-                      isIndia ? "text-[#38BDF8] drop-shadow-sm" : "text-[#2DD4BF]"
+                      isIndia ? "text-[#38BDF8] drop-shadow-sm font-extrabold" : "text-[#2DD4BF]"
                     )}
                   >
                     {displayTime}
                   </p>
 
                   {isIndia && (
-                    <span className="inline-block mt-1 bg-[#2DD4BF]/20 text-[#2DD4BF] text-[9px] font-extrabold px-2 py-0.5 rounded-full border border-[#2DD4BF]/40 uppercase tracking-widest">
+                    <span className="inline-block mt-0.5 bg-[#2DD4BF]/20 text-[#2DD4BF] text-[9px] font-extrabold px-2.5 py-0.5 rounded-full border border-[#2DD4BF]/40 uppercase tracking-widest shadow-sm">
                       HQ • IST
                     </span>
                   )}
