@@ -303,7 +303,7 @@ export default function PartnerWithUsPageClient() {
     {
       question: "Can I contact Future Yatra about a partnership without filling the form?",
       answer:
-        "Yes. You're welcome to call us directly using the phone number listed on this page (+91 88000 00000) or email our partnerships desk at partnerships@futureyatra.com.",
+        "Yes. You're welcome to call us directly using the phone number listed on this page (+91 9286844550) or email our partnerships desk at partnerships@futureyatra.com.",
     },
     {
       question: "How does Future Yatra ensure compliance and ethical transparency in B2B partnerships?",
@@ -693,8 +693,8 @@ export default function PartnerWithUsPageClient() {
             </p>
             <div className="flex justify-center items-center space-x-2 text-small font-heading font-bold text-teal">
               <Phone className="w-4 h-4 text-teal" />
-              <a href="tel:+918800000000" className="hover:underline">
-                +91 88000 00000
+              <a href="tel:+919286844550" className="hover:underline">
+                +91 9286844550
               </a>
             </div>
           </div>
@@ -805,7 +805,7 @@ export default function PartnerWithUsPageClient() {
                       <input
                         type="tel"
                         required
-                        placeholder="+91 98765 43210"
+                        placeholder="+91 9286844550"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full px-4 py-3.5 rounded-input border border-line focus:border-teal focus:ring-2 focus:ring-teal/20 outline-none text-small transition-all bg-sand-tint/20"
@@ -915,13 +915,13 @@ export default function PartnerWithUsPageClient() {
                       </div>
                       <div>
                         <div className="text-micro text-sand-tint/70 font-medium">Direct Phone Line</div>
-                        <a href="tel:+918800000000" className="font-heading text-body font-bold text-white hover:text-teal-bright transition-colors">
-                          +91 88000 00000
+                        <a href="tel:+919286844550" className="font-heading text-body font-bold text-white hover:text-teal-bright transition-colors">
+                          +91 9286844550
                         </a>
                       </div>
                     </div>
                     <button
-                      onClick={() => handleCopy("+91 88000 00000", "phone")}
+                      onClick={() => handleCopy("+91 9286844550", "phone")}
                       aria-label="Copy phone number"
                       className="p-2 rounded-lg bg-white/10 hover:bg-teal hover:text-navy text-white transition-all"
                     >
@@ -961,7 +961,7 @@ export default function PartnerWithUsPageClient() {
                   </div>
                   <div className="flex items-start space-x-2 font-heading font-medium">
                     <MapPin className="w-3.5 h-3.5 text-teal-bright flex-shrink-0 mt-0.5" />
-                    <span>Registered HQ: MG Road, CBD, Bengaluru, Karnataka, India</span>
+                    <span>Registered HQ: Central Business Tower, Connaught Place, New Delhi, Delhi 110001, India</span>
                   </div>
                 </div>
 

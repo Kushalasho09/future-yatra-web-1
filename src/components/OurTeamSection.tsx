@@ -5,55 +5,64 @@ import React from "react";
 /* ─────────────────────────────────────────────────────────────── */
 /* Team data — real Unsplash professional portraits                */
 /* ─────────────────────────────────────────────────────────────── */
-const teamMembers = [
+interface TeamMember {
+  name: string;
+  role: string;
+  photo: string;
+  delay: number;
+  bobDir: number;
+  isCeo?: boolean;
+  imgStyle?: React.CSSProperties;
+}
+
+/* ─────────────────────────────────────────────────────────────── */
+/* Industry-standard department sequence:                           */
+/* [Admissions / Counselling] ── [Leadership / Ops] ── [Tech Team] */
+/* ─────────────────────────────────────────────────────────────── */
+const teamMembers: TeamMember[] = [
   {
-    name: "Arjun Mehta",
-    role: "Founder & CEO",
-    photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=560&fit=crop&crop=faces,top",
+    name: "Talha Khan",
+    role: "Counsellor",
+    photo: "/images/WhatsApp_Image_2026-09-07_at_12.32.44_PM-removebg-preview.png",
     delay: 0,
-    bobDir: -1,   // starts high → bobs up first
+    bobDir: -1,
   },
   {
-    name: "Priya Sharma",
-    role: "Head of UK & Europe",
-    photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=560&fit=crop&crop=faces,top",
+    name: "Kashish Munjal",
+    role: "Counsellor",
+    photo: "/images/WhatsApp_Image_2026-09-07_at_2.35.45_PM-removebg-preview.png",
+    delay: 0.2,
+    bobDir: 1,
+    imgStyle: { transform: "scale(1.24)", transformOrigin: "top center" },
+  },
+  {
+    name: "Kashif Qamar Siddiqui",
+    role: "Founder & CEO",
+    photo: "/images/file_0000000027c082089b3f33a558e10a09-removebg-preview.png",
     delay: 0.4,
-    bobDir: 1,    // starts low → bobs down first
+    bobDir: -1,
+    isCeo: true,
   },
   {
-    name: "Rahul Nair",
-    role: "Director — Visa Services",
-    photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=560&fit=crop&crop=faces,top",
+    name: "Madhumita Biswas",
+    role: "Operations Manager",
+    photo: "/images/WhatsApp_Image_2026-09-07_at_5.01.34_PM-removebg-preview.png",
+    delay: 0.6,
+    bobDir: 1,
+  },
+  {
+    name: "Kushal Asodia",
+    role: "Full Stack Developer",
+    photo: "/images/WhatsApp_Image_2026-09-07_at_7.23.49_PM-removebg-preview.png",
     delay: 0.8,
     bobDir: -1,
   },
   {
-    name: "Sneha Iyer",
-    role: "Test Prep Lead",
-    photo: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=560&fit=crop&crop=faces,top",
-    delay: 0.2,
-    bobDir: 1,
-  },
-  {
-    name: "Kavya Reddy",
-    role: "Medical Admissions",
-    photo: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=400&h=560&fit=crop&crop=faces,top",
-    delay: 0.6,
-    bobDir: -1,
-  },
-  {
-    name: "Siddharth Joshi",
-    role: "Student Success Manager",
-    photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=560&fit=crop&crop=faces,top",
+    name: "Tabrej Zayan",
+    role: "Web Developer",
+    photo: "/images/WhatsApp_Image_2026-09-07_at_12.32.43_PM-removebg-preview.png",
     delay: 1.0,
     bobDir: 1,
-  },
-  {
-    name: "Ananya Pillai",
-    role: "Head — Canada",
-    photo: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=560&fit=crop&crop=faces,top",
-    delay: 0.5,
-    bobDir: -1,
   },
 ];
 
@@ -88,7 +97,7 @@ export default function OurTeamSection() {
               <div key={i} className="ot-card-wrap">
                 {/* The card bobs — give it extra padding top/bottom so the pill never clips */}
                 <div
-                  className={`ot-card ${m.bobDir === 1 ? "ot-bob-down" : "ot-bob-up"}`}
+                  className={`ot-card ${m.bobDir === 1 ? "ot-bob-down" : "ot-bob-up"} ${m.isCeo ? "ot-ceo-card" : ""}`}
                   style={{ animationDelay: `${m.delay}s` }}
                 >
                   <div className="ot-pill">
@@ -97,6 +106,7 @@ export default function OurTeamSection() {
                       src={m.photo}
                       alt={m.name}
                       className="ot-photo"
+                      style={m.imgStyle}
                       loading="lazy"
                       decoding="async"
                     />
@@ -269,20 +279,36 @@ export default function OurTeamSection() {
           height: 220px;
           border-radius: 9999px;
           overflow: hidden;
+          background: radial-gradient(ellipse at 50% 28%, #1f3a57 0%, #0d1e30 60%, #060f1a 100%);
           border: 1.5px solid rgba(45,189,182,0.30);
           box-shadow:
             0 0 0 1px rgba(45,189,182,0.10),
             0 12px 40px rgba(0,0,0,0.55),
             inset 0 1px 0 rgba(255,255,255,0.07);
-          transition: border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
+          transition: border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, background 0.35s ease;
         }
         .ot-card:hover .ot-pill {
           border-color: rgba(45,189,182,0.70);
+          background: radial-gradient(ellipse at 50% 28%, #27486d 0%, #11263d 60%, #081320 100%);
           box-shadow:
             0 0 0 2.5px rgba(45,189,182,0.22),
             0 20px 60px rgba(0,0,0,0.70),
             0 0 40px rgba(45,189,182,0.25);
           transform: scale(1.04);
+        }
+
+        /* ── CEO Card Accent ── */
+        .ot-ceo-card .ot-pill {
+          border-color: rgba(45,189,182,0.55);
+          box-shadow:
+            0 0 0 1px rgba(45,189,182,0.25),
+            0 0 20px rgba(45,189,182,0.18),
+            0 14px 45px rgba(0,0,0,0.60),
+            inset 0 1px 0 rgba(255,255,255,0.10);
+        }
+        .ot-ceo-card .ot-role {
+          color: #38E5DB;
+          font-weight: 600;
         }
 
         /* ── Photo ── */

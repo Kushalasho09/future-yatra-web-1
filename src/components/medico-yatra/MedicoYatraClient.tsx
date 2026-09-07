@@ -632,7 +632,7 @@ export default function MedicoYatraClient() {
               Apply Now
             </button>
             <a
-              href="https://wa.me/919876543210?text=Hi%20Medico%20Yatra,%20I%20want%20to%20know%20more%20about%20healthcare%20courses%20abroad"
+              href="https://wa.me/919286844550?text=Hi%20Medico%20Yatra,%20I%20want%20to%20know%20more%20about%20healthcare%20courses%20abroad"
               target="_blank"
               rel="noopener noreferrer"
               className="px-7 py-4 bg-[#10B981] hover:bg-[#059669] text-white font-bold text-sm rounded-full shadow-md transition-all flex items-center gap-2 transform hover:scale-105"
@@ -769,7 +769,7 @@ export default function MedicoYatraClient() {
           <span>Free Counselling</span>
         </button>
         <a
-          href="https://wa.me/919876543210?text=Hi%20Medico%20Yatra,%20I%20want%20to%20know%20more%20about%20healthcare%20courses"
+          href="https://wa.me/919286844550?text=Hi%20Medico%20Yatra,%20I%20want%20to%20know%20more%20about%20healthcare%20courses"
           target="_blank"
           rel="noopener noreferrer"
           className="flex-1 py-3 bg-emerald-600 text-white font-bold text-xs rounded-xl shadow flex items-center justify-center gap-1.5"

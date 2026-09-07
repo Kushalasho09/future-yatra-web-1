@@ -1117,7 +1117,7 @@ export default function OurBrandsPageClient() {
                       <input
                         type="tel"
                         required
-                        placeholder="+91 98765 43210"
+                        placeholder="+91 9286844550"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full px-4 py-2.5 rounded-xl border border-line bg-teal-tint/30 text-sm focus:outline-none focus:border-teal"

@@ -54,52 +54,19 @@ export default function ContactUsPageClient() {
   // Office locations data for real interactive map switcher
   const officeLocations = [
     {
-      id: "bengaluru",
-      name: "Bengaluru (HQ)",
-      tag: "Registered Office & HQ",
-      address: "4th Floor, Tech Hub Towers, MG Road, Central Business District, Bengaluru, Karnataka 560001",
-      mapUrl: "https://maps.google.com/maps?q=MG+Road,+Bengaluru,+Karnataka,+India&t=&z=15&ie=UTF8&iwloc=&output=embed",
-      directUrl: "https://maps.google.com/?q=MG+Road,+Bengaluru,+Karnataka,+India",
-      hours: "Mon–Sat: 10:00 AM – 7:00 PM IST",
-      phone: "+91 98765 43210",
-      status: "🟢 Registered HQ • Open for In-Person Visits",
-    },
-    {
       id: "delhi",
-      name: "Delhi NCR",
-      tag: "North India Regional Hub",
+      name: "Delhi NCR (HQ)",
+      tag: "Registered Office & Corporate HQ",
       address: "Central Business Tower, Connaught Place, New Delhi, Delhi 110001",
       mapUrl: "https://maps.google.com/maps?q=Connaught+Place,+New+Delhi,+India&t=&z=15&ie=UTF8&iwloc=&output=embed",
       directUrl: "https://maps.google.com/?q=Connaught+Place,+New+Delhi,+India",
       hours: "Mon–Sat: 10:00 AM – 7:00 PM IST",
-      phone: "+91 98765 43210",
-      status: "🟢 North India Desk • In-Person & Virtual",
-    },
-    {
-      id: "mumbai",
-      name: "Mumbai",
-      tag: "Western Region Desk",
-      address: "Financial Center, Bandra Kurla Complex (BKC), Mumbai, Maharashtra 400051",
-      mapUrl: "https://maps.google.com/maps?q=Bandra+Kurla+Complex,+Mumbai,+India&t=&z=15&ie=UTF8&iwloc=&output=embed",
-      directUrl: "https://maps.google.com/?q=Bandra+Kurla+Complex,+Mumbai,+India",
-      hours: "Mon–Sat: 10:00 AM – 7:00 PM IST",
-      phone: "+91 98765 43210",
-      status: "🟢 Western Region • Virtual & By Appointment",
-    },
-    {
-      id: "hyderabad",
-      name: "Hyderabad",
-      tag: "South Tech & Student Desk",
-      address: "Cyber Heights, HITEC City, Hyderabad, Telangana 500081",
-      mapUrl: "https://maps.google.com/maps?q=HITEC+City,+Hyderabad,+India&t=&z=15&ie=UTF8&iwloc=&output=embed",
-      directUrl: "https://maps.google.com/?q=HITEC+City,+Hyderabad,+India",
-      hours: "Mon–Sat: 10:00 AM – 7:00 PM IST",
-      phone: "+91 98765 43210",
-      status: "🟢 Student Desk • Virtual Advisory Active",
+      phone: "+91 9286844550",
+      status: "🟢 Registered HQ • In-Person & Virtual",
     },
   ];
 
-  const [activeLocationId, setActiveLocationId] = useState("bengaluru");
+  const [activeLocationId, setActiveLocationId] = useState("delhi");
   const selectedLocation = officeLocations.find((loc) => loc.id === activeLocationId) || officeLocations[0];
 
   // Carousel slides data for interactive visual showcase
@@ -294,7 +261,7 @@ export default function ContactUsPageClient() {
     },
     {
       q: "Can I speak to someone by phone instead of filling the form?",
-      a: "Yes! You can call us directly at +91 98765 43210 during business hours (Mon–Sat, 10 AM–7 PM IST), or start a direct WhatsApp chat using the link above.",
+      a: "Yes! You can call us directly at +91 9286844550 during business hours (Mon–Sat, 10 AM–7 PM IST), or start a direct WhatsApp chat using the link above.",
     },
     {
       q: "Are initial counselling sessions free of charge?",
@@ -379,26 +346,26 @@ export default function ContactUsPageClient() {
                 onClick={scrollToForm}
                 className="inline-flex items-center space-x-2.5 bg-navy text-white text-small font-semibold px-6 py-3.5 rounded-pill hover:bg-navy-glow hover:shadow-[0_0_25px_rgba(45,189,182,0.4)] transition-all duration-300 shadow-md group"
               >
-                <span>Send Us a Message</span>
+                <span>Email Us</span>
                 <ArrowRight className="w-4 h-4 text-teal-bright group-hover:translate-x-1 transition-transform" />
               </button>
 
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/919286844550"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 bg-teal-tint/80 border border-teal/40 text-navy hover:bg-teal hover:text-navy text-small font-semibold px-5 py-3.5 rounded-pill transition-all duration-300 shadow-sm"
               >
                 <MessageSquare className="w-4 h-4 text-teal fill-teal/20" />
-                <span>WhatsApp Now</span>
+                <span>WhatsApp</span>
               </a>
 
               <a
-                href="tel:+919876543210"
+                href="tel:+919286844550"
                 className="inline-flex items-center space-x-2 bg-white border border-line text-muted hover:text-navy hover:border-navy text-small font-semibold px-5 py-3.5 rounded-pill transition-all duration-300 shadow-sm"
               >
                 <PhoneCall className="w-4 h-4 text-navy" />
-                <span>+91 98765 43210</span>
+                <span>Call</span>
               </a>
             </div>
 
@@ -451,7 +418,7 @@ export default function ContactUsPageClient() {
                     </div>
                     <div>
                       <p className="text-xs font-bold text-navy">Future Yatra Central Desk</p>
-                      <p className="text-[11px] text-muted">Bengaluru HQ • Supporting All 4 Specialist Brands</p>
+                      <p className="text-[11px] text-muted">Delhi NCR HQ • Supporting All 4 Specialist Brands</p>
                     </div>
                   </div>
                 </div>
@@ -534,9 +501,9 @@ export default function ContactUsPageClient() {
               </div>
 
               <div className="pt-2 flex items-center justify-between bg-white p-3 rounded-xl border border-line">
-                <span className="font-heading text-base font-bold text-navy-deep">[Phone Number] +91 98765 43210</span>
+                <span className="font-heading text-base font-bold text-navy-deep">[Phone Number] +91 9286844550</span>
                 <button
-                  onClick={() => handleCopy("+91 98765 43210", "phone")}
+                  onClick={() => handleCopy("+91 9286844550", "phone")}
                   className="p-1.5 text-muted hover:text-teal transition-colors"
                   title="Copy Phone Number"
                 >
@@ -545,7 +512,7 @@ export default function ContactUsPageClient() {
               </div>
 
               <a
-                href="tel:+919876543210"
+                href="tel:+919286844550"
                 className="w-full inline-flex items-center justify-center space-x-2 bg-navy text-white text-xs font-heading font-semibold py-2.5 rounded-xl hover:bg-navy-glow transition-colors"
               >
                 <PhoneCall className="w-3.5 h-3.5" />
@@ -614,12 +581,12 @@ export default function ContactUsPageClient() {
               </div>
 
               <div className="pt-2 flex items-center justify-between bg-white p-3 rounded-xl border border-emerald-200">
-                <span className="font-heading text-base font-bold text-emerald-900">[WhatsApp] +91 98765 43210</span>
+                <span className="font-heading text-base font-bold text-emerald-900">[WhatsApp] +91 9286844550</span>
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping" />
               </div>
 
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/919286844550"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center space-x-2 bg-emerald-600 text-white text-xs font-heading font-semibold py-2.5 rounded-xl hover:bg-emerald-700 transition-colors shadow-sm"
@@ -645,7 +612,7 @@ export default function ContactUsPageClient() {
                 [Registered Office Address] Future Yatra Private Limited
               </h3>
               <p className="text-xs sm:text-small text-slate-300 leading-relaxed max-w-xl font-normal">
-                4th Floor, Tech Hub Towers, MG Road, Central Business District, Bengaluru, Karnataka 560001, India
+                Central Business Tower, Connaught Place, New Delhi, Delhi 110001, India
               </p>
             </div>
 
@@ -684,7 +651,7 @@ export default function ContactUsPageClient() {
                 Where We’re <span className="font-playfair-italic font-normal text-teal">Based</span>
               </h2>
               <p className="text-muted text-body max-w-xl font-normal">
-                Future Yatra Private Limited is proudly headquartered in Bengaluru, India — serving students & families across all 28 states & 8 UTs.
+                Future Yatra Private Limited is proudly headquartered in Delhi NCR, India — serving students & families across all 28 states & 8 UTs.
               </p>
             </div>
 
@@ -736,7 +703,7 @@ export default function ContactUsPageClient() {
                         <span className={`text-[10px] font-heading font-extrabold uppercase px-2 py-0.5 rounded-md ${
                           isSelected ? "bg-teal-tint text-teal" : "bg-white text-muted border border-line"
                         }`}>
-                          {loc.id === "bengaluru" ? "HQ" : "Desk"}
+                          HQ
                         </span>
                       </div>
 
@@ -760,7 +727,7 @@ export default function ContactUsPageClient() {
                   <span>Pan-India Virtual & In-Person Advisory</span>
                 </div>
                 <p className="text-[11px] text-sand-tint/80 leading-relaxed font-normal">
-                  Visitors and parents are welcome to schedule an in-person discovery session at our Bengaluru registered office.
+                  Visitors and parents are welcome to schedule an in-person discovery session at our Delhi NCR registered office.
                 </p>
               </div>
 
@@ -932,7 +899,7 @@ export default function ContactUsPageClient() {
                   — The Future Yatra Team
                 </p>
                 <p className="text-[11px] text-sand-tint/70">
-                  Future Yatra Private Limited • Bengaluru, India
+                  Future Yatra Private Limited • Delhi NCR, India
                 </p>
               </div>
 
@@ -1039,7 +1006,7 @@ export default function ContactUsPageClient() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 9286844550"
                       className="w-full px-4 py-3 rounded-input border border-line focus:border-teal focus:ring-2 focus:ring-teal/20 outline-none text-small transition-all"
                     />
                   </div>
@@ -1519,11 +1486,11 @@ export default function ContactUsPageClient() {
             </button>
 
             <a
-              href="tel:+919876543210"
+              href="tel:+919286844550"
               className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white text-body font-heading font-semibold px-8 py-4 rounded-pill transition-all duration-300"
             >
               <Phone className="w-4 h-4 text-teal-bright" />
-              <span>Call +91 98765 43210</span>
+              <span>Call +91 9286844550</span>
             </a>
           </div>
 

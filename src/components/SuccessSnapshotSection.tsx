@@ -128,7 +128,7 @@ export default function SuccessSnapshotSection() {
           </span>
 
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy tracking-tight leading-tight">
-            From Inspiration to Measurable Success
+            Inspiration to Proven Success
           </h2>
 
           <p className="text-xs sm:text-body text-muted leading-relaxed font-normal max-w-xl mx-auto pt-1">
