@@ -75,14 +75,43 @@ export default function PartnerWithUsPageClient() {
   };
 
   // Handle form submission
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormStatus("submitting");
 
-    // Simulate direct secure routing to partnerships team
-    setTimeout(() => {
-      setFormStatus("success");
-    }, 1200);
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "d0b32cc1-b949-48a0-8620-ffd9a749f089";
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          from_name: "Future Yatra Website",
+          subject: `[Partnership Inquiry] ${selectedCategory} - ${formData.organizationName || formData.contactPerson}`,
+          category: selectedCategory,
+          organization: formData.organizationName,
+          contact_person: formData.contactPerson,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+        }),
+      });
+
+      const data = await res.json();
+      if (data.success) {
+        setFormStatus("success");
+      } else {
+        setFormStatus("idle");
+        alert(data.message || "Failed to send partnership inquiry. Please try again.");
+      }
+    } catch (err) {
+      setFormStatus("idle");
+      alert("Network error. Please try again later.");
+    }
   };
 
   // Copy to clipboard helper

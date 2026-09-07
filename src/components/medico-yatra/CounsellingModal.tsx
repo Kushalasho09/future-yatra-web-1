@@ -31,13 +31,43 @@ export default function CounsellingModal({
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
+
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "d0b32cc1-b949-48a0-8620-ffd9a749f089";
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          from_name: "Future Yatra Website",
+          subject: `[Counselling Request] ${formData.career} - ${formData.name}`,
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          career: formData.career,
+          budget: formData.budget,
+          message: formData.message,
+        }),
+      });
+
+      const data = await res.json();
       setLoading(false);
-      setSubmitted(true);
-    }, 600);
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        alert(data.message || "Failed to submit counselling request. Please try again.");
+      }
+    } catch (err) {
+      setLoading(false);
+      alert("Network error. Please try again later.");
+    }
   };
 
   const handleReset = () => {

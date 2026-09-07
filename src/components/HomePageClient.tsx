@@ -298,6 +298,7 @@ export default function HomePageClient() {
                     </HoverBorderGradient>
                   </Link>
 
+                  {/*
                   <Link href="/medico-yatra" className="inline-block w-full sm:w-auto">
                     <div className="w-full sm:w-auto bg-gradient-to-r from-[#0263CC] via-[#02A7BB] to-[#4DA5EC] hover:brightness-110 text-white font-bold text-body px-6 sm:px-8 py-3.5 sm:py-4 rounded-full flex items-center justify-center space-x-2.5 shadow-lg shadow-blue-500/20 group transition-all transform hover:scale-[1.02]">
                       <Stethoscope className="w-5 h-5 text-amber-300" />
@@ -305,6 +306,7 @@ export default function HomePageClient() {
                       <ArrowRight className="w-4 h-4 text-white group-hover:translate-x-1 transition-transform duration-150" />
                     </div>
                   </Link>
+                  */}
                 </motion.div>
               </div>
 

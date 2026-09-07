@@ -44,7 +44,8 @@ export default function ContactUsPageClient() {
     message: "",
   });
 
-  const [formState, setFormState] = useState<"idle" | "submitting" | "success">("idle");
+  const [formState, setFormState] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [copiedPhone, setCopiedPhone] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
@@ -220,14 +221,46 @@ export default function ContactUsPageClient() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.fullName || !formData.email || !formData.message) return;
 
     setFormState("submitting");
-    setTimeout(() => {
-      setFormState("success");
-    }, 1200);
+    setErrorMessage("");
+
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "d0b32cc1-b949-48a0-8620-ffd9a749f089";
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          from_name: "Future Yatra Website",
+          subject: `[New Inquiry] ${formData.interest} - ${formData.fullName}`,
+          name: formData.fullName,
+          email: formData.email,
+          phone: formData.phone || "Not provided",
+          interest: formData.interest,
+          message: formData.message,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        setFormState("success");
+      } else {
+        setFormState("error");
+        setErrorMessage(data.message || "Failed to send message. Please try again.");
+      }
+    } catch (err: any) {
+      setFormState("error");
+      setErrorMessage("Network error. Please check your connection or try again later.");
+    }
   };
 
   const handleCopy = (text: string, type: "email" | "phone") => {
@@ -951,6 +984,12 @@ export default function ContactUsPageClient() {
               ) : (
                 /* Interactive Form Fields */
                 <form onSubmit={handleFormSubmit} className="space-y-6">
+                  {formState === "error" && (
+                    <div className="p-4 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs font-semibold flex items-center space-x-2">
+                      <span>⚠️</span>
+                      <span>{errorMessage || "Failed to send message. Please try again or check SMTP configuration."}</span>
+                    </div>
+                  )}
                   
                   {/* Full Name & Email Row */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
