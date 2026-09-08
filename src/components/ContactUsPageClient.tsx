@@ -501,7 +501,7 @@ export default function ContactUsPageClient() {
               </div>
 
               <div className="pt-2 flex items-center justify-between bg-white p-3 rounded-xl border border-line">
-                <span className="font-heading text-base font-bold text-navy-deep">[Phone Number] +91 9286844550</span>
+                <span className="font-heading text-base font-bold text-navy-deep">+91 9286844550</span>
                 <button
                   onClick={() => handleCopy("+91 9286844550", "phone")}
                   className="p-1.5 text-muted hover:text-teal transition-colors"
@@ -541,7 +541,7 @@ export default function ContactUsPageClient() {
 
               <div className="pt-2 flex items-center justify-between bg-white p-3 rounded-xl border border-line">
                 <span className="font-heading text-sm font-bold text-navy-deep truncate mr-2">
-                  [General Email] info@futureyatra.com
+                  info@futureyatra.com
                 </span>
                 <button
                   onClick={() => handleCopy("info@futureyatra.com", "email")}
@@ -581,7 +581,7 @@ export default function ContactUsPageClient() {
               </div>
 
               <div className="pt-2 flex items-center justify-between bg-white p-3 rounded-xl border border-emerald-200">
-                <span className="font-heading text-base font-bold text-emerald-900">[WhatsApp] +91 9286844550</span>
+                <span className="font-heading text-base font-bold text-emerald-900">+91 9286844550</span>
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping" />
               </div>
 
@@ -609,7 +609,7 @@ export default function ContactUsPageClient() {
                 <span>Registered Office Address</span>
               </div>
               <h3 className="font-heading text-xl font-bold text-white">
-                [Registered Office Address] Future Yatra Private Limited
+                Future Yatra Private Limited
               </h3>
               <p className="text-xs sm:text-small text-slate-300 leading-relaxed max-w-xl font-normal">
                 Central Business Tower, Connaught Place, New Delhi, Delhi 110001, India
@@ -623,7 +623,7 @@ export default function ContactUsPageClient() {
                 <span>Business Hours</span>
               </div>
               <p className="font-heading text-lg font-bold text-teal-bright">
-                [Business Hours] Mon–Sat: 10:00 AM – 7:00 PM IST
+                Mon–Sat: 10:00 AM – 7:00 PM IST
               </p>
               <p className="text-xs text-slate-400">
                 Closed on Sundays & National Holidays. Online enquiries are monitored 24/7.
