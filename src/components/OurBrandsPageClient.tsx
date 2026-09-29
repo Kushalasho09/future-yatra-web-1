@@ -167,19 +167,19 @@ const BRANDS_DATA = [
 // --- FAQS DATA ---
 const BRAND_FAQS = [
   {
-    question: "Why did Future Yatra create four specialist brands instead of one agency?",
+    question: "Why did Future Yatra™ create four specialist brands instead of one agency?",
     answer:
-      "A student's journey moves through distinct phases — test preparation, university selection, medical registration, and visa processing. A single generalist agency often treats these as sales steps. By building four specialist brands under Future Yatra Private Limited, each brand focuses strictly on its core domain with specialized advisors, while maintaining company-wide transparency and ethics.",
+      "A student's journey moves through distinct phases — test preparation, university selection, medical registration, and visa processing. A single generalist agency often treats these as sales steps. By building four specialist brands under Future Yatra™ Private Limited, each brand focuses strictly on its core domain with specialized advisors, while maintaining company-wide transparency and ethics.",
   },
   {
     question: "Can I use multiple brands for my journey?",
     answer:
-      "Absolutely. In fact, most students move seamlessly through our ecosystem — starting with Academic Yatra for IELTS/PTE coaching, moving to University Yatra for admissions and student visa guidance, and later using ApplyVisa Yatra to bring parents for graduation. Because all four brands belong to Future Yatra Private Limited, your records and preferences are unified without repeating yourself.",
+      "Absolutely. In fact, most students move seamlessly through our ecosystem — starting with Academic Yatra for IELTS/PTE coaching, moving to University Yatra for admissions and student visa guidance, and later using ApplyVisa Yatra to bring parents for graduation. Because all four brands belong to Future Yatra™ Private Limited, your records and preferences are unified without repeating yourself.",
   },
   {
-    question: "Does Future Yatra guarantee university admissions or visas?",
+    question: "Does Future Yatra™ guarantee university admissions or visas?",
     answer:
-      "No. Future Yatra Private Limited and all four brands strictly prohibit guaranteed-outcome claims. University admissions rest solely with university committees, and visa approvals rest exclusively with government embassies. We guarantee thorough documentation, honest evaluation, transparent fee disclosures, and zero hidden agent fees.",
+      "No. Future Yatra™ Private Limited and all four brands strictly prohibit guaranteed-outcome claims. University admissions rest solely with university committees, and visa approvals rest exclusively with government embassies. We guarantee thorough documentation, honest evaluation, transparent fee disclosures, and zero hidden agent fees.",
   },
   {
     question: "How do I know which brand is right for me?",
@@ -293,7 +293,7 @@ export default function OurBrandsPageClient() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-teal"></span>
             </span>
-            <span className="font-bold text-navy tracking-tight">Future Yatra Ecosystem</span>
+            <span className="font-bold text-navy tracking-tight">Future Yatra™ Ecosystem</span>
             <span className="hidden sm:inline text-muted">• 4 Specialist Brands</span>
           </div>
 
@@ -364,7 +364,7 @@ export default function OurBrandsPageClient() {
                 transition={{ duration: 0.6, ease: easeTier1, delay: 0.25 }}
                 className="text-muted text-base sm:text-lg font-medium leading-relaxed max-w-2xl"
               >
-                Future Yatra Private Limited — Parent company to University Yatra, Academic Yatra, Medico Yatra, and ApplyVisa Yatra.
+                Future Yatra™ Private Limited — Parent company to University Yatra, Academic Yatra, Medico Yatra, and ApplyVisa Yatra.
               </motion.p>
 
               {/* Ecosystem Concept Narrative */}
@@ -378,7 +378,7 @@ export default function OurBrandsPageClient() {
                   A student&apos;s journey rarely stops at one decision. It usually moves through a test score, a university application, sometimes a medical entrance pathway, and almost always a visa.
                 </p>
                 <p className="text-navy-deep font-playfair-italic text-base sm:text-lg border-l-4 border-teal pl-4 py-2 bg-teal-tint/40 rounded-r-xl shadow-sm leading-relaxed">
-                  Rather than building one generalist consultancy trying to do everything, Future Yatra Private Limited built four specialist brands — each focused on one part of that journey, each held to the same company-wide standard of transparency, integrity, and student-first guidance.
+                  Rather than building one generalist consultancy trying to do everything, Future Yatra™ Private Limited built four specialist brands — each focused on one part of that journey, each held to the same company-wide standard of transparency, integrity, and student-first guidance.
                 </p>
               </motion.div>
 
@@ -612,7 +612,7 @@ export default function OurBrandsPageClient() {
                 icon: Layers,
                 title: "Unified Student File",
                 description:
-                  "All 4 brands operate under Future Yatra Private Limited. Your test prep, admission files, and visa papers remain unified under one account.",
+                  "All 4 brands operate under Future Yatra™ Private Limited. Your test prep, admission files, and visa papers remain unified under one account.",
                 badge: "One Platform",
               },
               {
@@ -916,7 +916,7 @@ export default function OurBrandsPageClient() {
               How Our Ecosystem <span className="font-playfair-italic font-normal text-teal">Connects</span> Your Story
             </h2>
             <p className="text-muted text-base">
-              Moving through multiple steps? Because all four specialist brands belong to Future Yatra Private Limited, your documentation flows seamlessly.
+              Moving through multiple steps? Because all four specialist brands belong to Future Yatra™ Private Limited, your documentation flows seamlessly.
             </p>
           </div>
 
@@ -992,7 +992,7 @@ export default function OurBrandsPageClient() {
               Clear Answers
             </span>
             <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-navy-deep tracking-tight">
-              Understanding Future Yatra&apos;s <span className="font-playfair-italic font-normal text-teal">Multi-Brand Model</span>
+              Understanding Future Yatra™&apos;s <span className="font-playfair-italic font-normal text-teal">Multi-Brand Model</span>
             </h2>
           </div>
 

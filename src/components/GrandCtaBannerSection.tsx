@@ -109,7 +109,7 @@ export default function GrandCtaBannerSection() {
                   {/* Team Advisors Image */}
                   <Image
                     src="/images/our_commitment_advisors.png"
-                    alt="Future Yatra Education Advisors"
+                    alt="Future Yatra™ Education Advisors"
                     fill
                     sizes="(max-width: 640px) 260px, 310px"
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"

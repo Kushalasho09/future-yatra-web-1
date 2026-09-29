@@ -286,7 +286,7 @@ export default function GlobalDestinationsSection() {
             transition={{ duration: 0.6, delay: 0.15, ease: easeTier1 }}
             className="text-xs sm:text-body-l text-sand-tint/80 leading-relaxed font-normal max-w-2xl mx-auto"
           >
-            Based in India, Future Yatra primarily serves Indian students and families. We specialize in five major study destinations with deep institutional knowledge.
+            Based in India, Future Yatra™ primarily serves Indian students and families. We specialize in five major study destinations with deep institutional knowledge.
           </motion.p>
 
         </div>

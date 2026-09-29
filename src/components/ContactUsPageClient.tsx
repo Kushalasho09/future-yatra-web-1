@@ -97,7 +97,7 @@ export default function ContactUsPageClient() {
       category: "Partner Alliances",
       tag: "Institutional Growth",
       cursiveSubtitle: "Global Ecosystem",
-      title: "Partner With Future Yatra Group",
+      title: "Partner With Future Yatra™ Group",
       description: "Are you a global university, high school, agent, or test prep center? Collaborate with India's most transparent, founder-led consulting group.",
       image: "/images/carousel_partner_alliances.png",
       badgeColor: "bg-amber/20 text-amber border-amber/40",
@@ -117,7 +117,7 @@ export default function ContactUsPageClient() {
       id: "careers",
       category: "Careers & Culture",
       tag: "Join Our Mission",
-      cursiveSubtitle: "Life at Future Yatra",
+      cursiveSubtitle: "Life at Future Yatra™",
       title: "Build Your Career With Us",
       description: "Join four specialist teams under one accountable company. We are looking for counselors, visa strategists, and growth leaders who value honesty.",
       image: "/images/carousel_careers_team.png",
@@ -256,7 +256,7 @@ export default function ContactUsPageClient() {
       a: "We read every message personally. You can expect a direct response within 1–2 business days. For urgent queries, reaching us via WhatsApp or phone often yields an answer within hours during working time.",
     },
     {
-      q: "I'm not sure which Future Yatra brand I need — can I still contact you here?",
+      q: "I'm not sure which Future Yatra™ brand I need — can I still contact you here?",
       a: "Absolutely! Simply select 'Something Else' or describe your goals in the message area. Our central team will evaluate your request and immediately connect you with the appropriate brand specialist.",
     },
     {
@@ -265,7 +265,7 @@ export default function ContactUsPageClient() {
     },
     {
       q: "Are initial counselling sessions free of charge?",
-      a: "Yes, your initial discovery and orientation call with Future Yatra is 100% free with complete transparency and zero obligation.",
+      a: "Yes, your initial discovery and orientation call with Future Yatra™ is 100% free with complete transparency and zero obligation.",
     },
     {
       q: "Can parents join the consultation session?",
@@ -337,7 +337,7 @@ export default function ContactUsPageClient() {
 
             {/* Emotional Paragraph */}
             <p className="text-body-l sm:text-lg text-muted max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
-              Have a question, or not sure which Future Yatra brand fits your goals? Reach out — we’ll either answer directly or connect you with the right team.
+              Have a question, or not sure which Future Yatra™ brand fits your goals? Reach out — we’ll either answer directly or connect you with the right team.
             </p>
 
             {/* Quick Contact Chips Action Bar */}
@@ -403,7 +403,7 @@ export default function ContactUsPageClient() {
               <div className="relative rounded-card overflow-hidden shadow-2xl border border-white/40 bg-white">
                 <Image
                   src="/images/contact_hero_conversation.png"
-                  alt="A student having a warm conversation with a Future Yatra advisor"
+                  alt="A student having a warm conversation with a Future Yatra™ advisor"
                   width={600}
                   height={600}
                   priority
@@ -417,7 +417,7 @@ export default function ContactUsPageClient() {
                       FY
                     </div>
                     <div>
-                      <p className="text-xs font-bold text-navy">Future Yatra Central Desk</p>
+                      <p className="text-xs font-bold text-navy">Future Yatra™ Central Desk</p>
                       <p className="text-[11px] text-muted">Delhi NCR HQ • Supporting All 4 Specialist Brands</p>
                     </div>
                   </div>
@@ -609,7 +609,7 @@ export default function ContactUsPageClient() {
                 <span>Registered Office Address</span>
               </div>
               <h3 className="font-heading text-xl font-bold text-white">
-                Future Yatra Private Limited
+                Future Yatra™ Private Limited
               </h3>
               <p className="text-xs sm:text-small text-slate-300 leading-relaxed max-w-xl font-normal">
                 Central Business Tower, Connaught Place, New Delhi, Delhi 110001, India
@@ -651,7 +651,7 @@ export default function ContactUsPageClient() {
                 Where We’re <span className="font-playfair-italic font-normal text-teal">Based</span>
               </h2>
               <p className="text-muted text-body max-w-xl font-normal">
-                Future Yatra Private Limited is proudly headquartered in Delhi NCR, India — serving students & families across all 28 states & 8 UTs.
+                Future Yatra™ Private Limited is proudly headquartered in Delhi NCR, India — serving students & families across all 28 states & 8 UTs.
               </p>
             </div>
 
@@ -782,7 +782,7 @@ export default function ContactUsPageClient() {
                           FY
                         </div>
                         <h4 className="font-heading text-xs sm:text-small font-bold text-navy truncate">
-                          {selectedLocation.name} — Future Yatra
+                          {selectedLocation.name} — Future Yatra™
                         </h4>
                       </div>
                       <span className="text-[10px] text-muted font-heading font-bold bg-white px-2 py-0.5 rounded border border-line flex-shrink-0 whitespace-nowrap">
@@ -896,10 +896,10 @@ export default function ContactUsPageClient() {
               {/* Founder quote at bottom */}
               <div className="relative z-10 pt-8 border-t border-white/15 mt-8 space-y-2">
                 <p className="font-tempting text-teal-bright text-2xl font-normal">
-                  — The Future Yatra Team
+                  — The Future Yatra™ Team
                 </p>
                 <p className="text-[11px] text-sand-tint/70">
-                  Future Yatra Private Limited • Delhi NCR, India
+                  Future Yatra™ Private Limited • Delhi NCR, India
                 </p>
               </div>
 
@@ -924,7 +924,7 @@ export default function ContactUsPageClient() {
                       Enquiry Received!
                     </h3>
                     <p className="text-body text-muted max-w-md mx-auto font-normal">
-                      Thank you, <strong className="text-navy">{formData.fullName}</strong>. Your message has been logged in our priority queue. A specialist from Future Yatra will reach out shortly.
+                      Thank you, <strong className="text-navy">{formData.fullName}</strong>. Your message has been logged in our priority queue. A specialist from Future Yatra™ will reach out shortly.
                     </p>
                   </div>
 
@@ -1348,7 +1348,7 @@ export default function ContactUsPageClient() {
               <div className="relative rounded-card overflow-hidden border border-white/60 shadow-2xl bg-white">
                 <Image
                   src="/images/contact_trust_human.png"
-                  alt="Future Yatra advisor listening attentively to student and parent"
+                  alt="Future Yatra™ advisor listening attentively to student and parent"
                   width={600}
                   height={600}
                   className="w-full h-[400px] object-cover"
@@ -1473,7 +1473,7 @@ export default function ContactUsPageClient() {
           </div>
 
           <p className="text-body-l sm:text-lg text-sand-tint/90 max-w-2xl mx-auto leading-relaxed font-normal">
-            Whether you need admissions guidance, test preparation, medical university consultation, or visa advice — Future Yatra is here to walk every step with you.
+            Whether you need admissions guidance, test preparation, medical university consultation, or visa advice — Future Yatra™ is here to walk every step with you.
           </p>
 
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">

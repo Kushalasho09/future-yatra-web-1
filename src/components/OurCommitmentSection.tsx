@@ -43,7 +43,7 @@ const commitments: CommitmentItem[] = [
     number: "04",
     title: "Group-Wide Accountability",
     description:
-      "Every advisor across every Future Yatra brand is held to the same company-wide standard of transparency.",
+      "Every advisor across every Future Yatra™ brand is held to the same company-wide standard of transparency.",
     badgeBg: "from-[#2563EB] via-[#0284C7] to-[#0D9488]",
   },
 ];
@@ -141,7 +141,7 @@ export default function OurCommitmentSection() {
               <div className="relative w-[78%] h-[78%] rounded-full overflow-hidden border-4 border-white/20 shadow-2xl z-10 bg-navy-deep group-hover:scale-[1.02] transition-transform duration-500">
                 <Image
                   src="/images/our_commitment_advisors.png"
-                  alt="Future Yatra Transparent Counselling"
+                  alt="Future Yatra™ Transparent Counselling"
                   fill
                   sizes="(max-width: 640px) 240px, (max-width: 1024px) 320px, 360px"
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
@@ -202,7 +202,7 @@ export default function OurCommitmentSection() {
               </h2>
 
               <p className="text-sm sm:text-body text-sand-tint/90 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
-                Education and visa consulting in India has a trust problem. Future Yatra holds
+                Education and visa consulting in India has a trust problem. Future Yatra™ holds
                 itself to a clear standard, across every brand:
               </p>
             </div>

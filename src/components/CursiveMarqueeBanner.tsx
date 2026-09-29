@@ -8,7 +8,7 @@ export default function CursiveMarqueeBanner() {
     "Academic Yatra",
     "Medico Yatra",
     "ApplyVisa Yatra",
-    "Future Yatra Group",
+    "Future Yatra™ Group",
     "Global Student Pathways",
   ];
 

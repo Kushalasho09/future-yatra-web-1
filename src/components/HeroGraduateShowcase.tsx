@@ -84,7 +84,7 @@ export default function HeroGraduateShowcase() {
         >
           <Image
             src="/images/graduate_hero_cutout.png"
-            alt="Successful Graduate Student - Future Yatra"
+            alt="Successful Graduate Student - Future Yatra™"
             width={682}
             height={1024}
             priority

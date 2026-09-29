@@ -190,7 +190,7 @@ export default function PartnerWithUsPageClient() {
       title: "Agents & Advisors",
       tagline: "Transparent B2B Ecosystem",
       description:
-        "Work within the trusted Future Yatra ecosystem with ethical standard operating procedures, sub-agency clarity, and shared growth.",
+        "Work within the trusted Future Yatra™ ecosystem with ethical standard operating procedures, sub-agency clarity, and shared growth.",
       icon: Users,
       color: "from-teal/15 to-emerald-500/10",
       accentBorder: "group-hover:border-teal-bright",
@@ -291,9 +291,9 @@ export default function PartnerWithUsPageClient() {
   // FAQ Data
   const faqs = [
     {
-      question: "What kind of organizations does Future Yatra partner with?",
+      question: "What kind of organizations does Future Yatra™ partner with?",
       answer:
-        "Future Yatra welcomes partnership enquiries from universities, schools, colleges, institutes, agents, financial institutions, and other organizations interested in working with our ecosystem.",
+        "Future Yatra™ welcomes partnership enquiries from universities, schools, colleges, institutes, agents, financial institutions, and other organizations interested in working with our ecosystem.",
     },
     {
       question: "What happens after I submit a partnership enquiry?",
@@ -301,14 +301,14 @@ export default function PartnerWithUsPageClient() {
         "Your enquiry is sent directly to our team, and we'll reach out to you to understand your goals and discuss next steps.",
     },
     {
-      question: "Can I contact Future Yatra about a partnership without filling the form?",
+      question: "Can I contact Future Yatra™ about a partnership without filling the form?",
       answer:
         "Yes. You're welcome to call us directly using the phone number listed on this page (+91 9286844550) or email our partnerships desk at partnerships@futureyatra.com.",
     },
     {
-      question: "How does Future Yatra ensure compliance and ethical transparency in B2B partnerships?",
+      question: "How does Future Yatra™ ensure compliance and ethical transparency in B2B partnerships?",
       answer:
-        "Future Yatra Private Limited operates under strict corporate compliance and zero-misrepresentation policies. All partnership terms are backed by formal Memorandums of Understanding (MoUs) or clear contractual frameworks with transparent standard operating procedures.",
+        "Future Yatra™ Private Limited operates under strict corporate compliance and zero-misrepresentation policies. All partnership terms are backed by formal Memorandums of Understanding (MoUs) or clear contractual frameworks with transparent standard operating procedures.",
     },
     {
       question: "Is there any fee or financial commitment required to submit an enquiry?",
@@ -356,7 +356,7 @@ export default function PartnerWithUsPageClient() {
               >
                 Become a <span className="font-playfair-italic font-normal text-teal">Partner</span> — <br className="hidden sm:inline" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-navy via-teal to-navy-glow">
-                  Future Yatra Private Limited
+                  Future Yatra™ Private Limited
                 </span>
               </motion.h1>
 
@@ -377,7 +377,7 @@ export default function PartnerWithUsPageClient() {
                 transition={{ duration: 0.6, delay: 0.2, ease: easeTier1 }}
                 className="text-body-l sm:text-lg text-muted leading-relaxed max-w-2xl font-normal"
               >
-                Future Yatra Private Limited works with a wide range of organizations to support students and families across education, test preparation, healthcare careers, and visa guidance. If your organization is interested in working with us, we&apos;d like to hear from you.
+                Future Yatra™ Private Limited works with a wide range of organizations to support students and families across education, test preparation, healthcare careers, and visa guidance. If your organization is interested in working with us, we&apos;d like to hear from you.
               </motion.p>
 
               {/* CTAs */}
@@ -435,7 +435,7 @@ export default function PartnerWithUsPageClient() {
                 <div className="relative rounded-card overflow-hidden shadow-2xl border border-teal/20 bg-navy-deep group">
                   <Image
                     src="/images/partner_hero_b2b.png"
-                    alt="Future Yatra Partnership Alliance"
+                    alt="Future Yatra™ Partnership Alliance"
                     width={800}
                     height={800}
                     priority
@@ -446,7 +446,7 @@ export default function PartnerWithUsPageClient() {
                   <div className="absolute bottom-6 left-6 right-6 p-5 glass-card-navy rounded-2xl text-white space-y-2 border border-teal/30">
                     <div className="flex items-center justify-between">
                       <span className="font-heading text-micro uppercase font-extrabold tracking-widest text-teal-bright">
-                        Future Yatra B2B Synergy
+                        Future Yatra™ B2B Synergy
                       </span>
                       <span className="w-2 h-2 rounded-full bg-teal-bright animate-ping" />
                     </div>
@@ -570,10 +570,10 @@ export default function PartnerWithUsPageClient() {
               One Ecosystem • Four Brands
             </span>
             <h2 className="font-heading text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-              Why Organizations <span className="font-playfair-italic font-normal text-teal-bright">Choose</span> Future Yatra
+              Why Organizations <span className="font-playfair-italic font-normal text-teal-bright">Choose</span> Future Yatra™
             </h2>
             <p className="text-body-l sm:text-lg text-sand-tint/90 leading-relaxed font-normal pt-2">
-              Future Yatra Private Limited is built on transparency, accountability, and end-to-end student support. Partnering with us grants your organization access to a unified, multi-specialty education group.
+              Future Yatra™ Private Limited is built on transparency, accountability, and end-to-end student support. Partnering with us grants your organization access to a unified, multi-specialty education group.
             </p>
           </div>
 
@@ -646,7 +646,7 @@ export default function PartnerWithUsPageClient() {
               How It <span className="font-playfair-italic font-normal text-teal">Works</span>
             </h2>
             <p className="text-body-l sm:text-lg text-muted leading-relaxed font-normal pt-2">
-              Connecting with Future Yatra Private Limited is straightforward, efficient, and transparent.
+              Connecting with Future Yatra™ Private Limited is straightforward, efficient, and transparent.
             </p>
           </div>
 
@@ -736,7 +736,7 @@ export default function PartnerWithUsPageClient() {
                     Enquiry Submitted Successfully!
                   </h3>
                   <p className="text-small text-muted max-w-md mx-auto leading-relaxed font-normal">
-                    Thank you for reaching out to Future Yatra Private Limited. Our partnerships director will review your enquiry and connect with you shortly.
+                    Thank you for reaching out to Future Yatra™ Private Limited. Our partnerships director will review your enquiry and connect with you shortly.
                   </p>
                   <button
                     onClick={() => setFormStatus("idle")}
@@ -997,7 +997,7 @@ export default function PartnerWithUsPageClient() {
               Frequently Asked <span className="font-playfair-italic font-normal text-teal">Questions</span>
             </h2>
             <p className="text-body-l sm:text-lg text-muted leading-relaxed font-normal pt-2">
-              Everything you need to know about partnering with Future Yatra Private Limited.
+              Everything you need to know about partnering with Future Yatra™ Private Limited.
             </p>
           </div>
 
@@ -1052,7 +1052,7 @@ export default function PartnerWithUsPageClient() {
               Seamless Navigation
             </span>
             <h3 className="font-heading text-2xl sm:text-3xl font-extrabold text-navy-deep">
-              Explore More of <span className="font-playfair-italic font-normal text-teal">Future Yatra</span>
+              Explore More of <span className="font-playfair-italic font-normal text-teal">Future Yatra™</span>
             </h3>
             <p className="text-small text-muted font-normal">
               Learn about our vision, specialist brands, or get in touch directly.
@@ -1071,7 +1071,7 @@ export default function PartnerWithUsPageClient() {
               </div>
               <div>
                 <h4 className="font-heading text-lg font-bold text-navy-deep group-hover:text-navy">
-                  About Future Yatra
+                  About Future Yatra™
                 </h4>
                 <p className="text-xs text-muted mt-1 leading-relaxed font-normal">
                   Discover our founding vision, single-entity structure, and leadership ethos.
@@ -1137,7 +1137,7 @@ export default function PartnerWithUsPageClient() {
         <section className="py-8">
           <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-navy-deep via-navy to-navy-deep border border-teal/30 text-center shadow-lg max-w-4xl mx-auto">
             <p className="text-white text-xs sm:text-small font-medium leading-relaxed">
-              Future Yatra Private Limited provides educational counselling and application support services. We do not guarantee admission, visa approval, scholarship, employment outcomes, or permanent residency. All information provided is for guidance purposes only.
+              Future Yatra™ Private Limited provides educational counselling and application support services. We do not guarantee admission, visa approval, scholarship, employment outcomes, or permanent residency. All information provided is for guidance purposes only.
             </p>
           </div>
         </section>

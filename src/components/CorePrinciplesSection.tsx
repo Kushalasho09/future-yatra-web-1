@@ -153,7 +153,7 @@ export default function CorePrinciplesSection() {
             transition={{ duration: 0.6, delay: 0.15, ease: easeTier1 }}
             className="text-body sm:text-body-l text-muted leading-relaxed font-normal max-w-2xl mx-auto"
           >
-            Every advisor across every Future Yatra brand operates under these four foundational commitments — protecting students with radical transparency.
+            Every advisor across every Future Yatra™ brand operates under these four foundational commitments — protecting students with radical transparency.
           </motion.p>
 
         </div>
@@ -219,7 +219,7 @@ export default function CorePrinciplesSection() {
                     <div className="pt-6 border-t border-line/60 mt-6 flex items-center justify-between text-xs text-navy font-bold">
                       <div className="flex items-center space-x-2">
                         <CheckCircle2 className="w-4 h-4 text-teal group-hover:scale-110 transition-transform" />
-                        <span>Verified Future Yatra Commitment</span>
+                        <span>Verified Future Yatra™ Commitment</span>
                       </div>
                       <Zap className="w-4 h-4 text-amber-500 opacity-0 group-hover:opacity-100 transition-opacity" />
                     </div>

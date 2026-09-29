@@ -99,7 +99,7 @@ export default function LookingAheadSection() {
                 transition={{ duration: 0.6, delay: 0.15, ease: easeTier1 }}
                 className="text-body sm:text-body-l text-sand-tint/90 leading-relaxed font-normal"
               >
-                Future Yatra is early in its journey. As we grow, our goal is to expand the reach of our four specialist brands, deepen destination program partnerships, and introduce tech-enabled tracking tools for students — while maintaining strict founder-led accountability.
+                Future Yatra™ is early in its journey. As we grow, our goal is to expand the reach of our four specialist brands, deepen destination program partnerships, and introduce tech-enabled tracking tools for students — while maintaining strict founder-led accountability.
               </motion.p>
 
               {/* ACTION BUTTONS ROW */}

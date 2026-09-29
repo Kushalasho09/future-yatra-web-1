@@ -150,7 +150,7 @@ export default function HomePageClient() {
     'We never say "guaranteed admission" or "guaranteed visa" — no company can honestly promise that.',
     "Visa and immigration decisions rest solely with the relevant embassy or immigration authority. Our role is to help you prepare the strongest, most accurate application — never a promised outcome.",
     "We explain the genuinely difficult parts of a pathway — timelines, costs, exam requirements — not just the appealing parts.",
-    "Every advisor across every Future Yatra brand is held to the same company-wide standard of transparency.",
+    "Every advisor across every Future Yatra™ brand is held to the same company-wide standard of transparency.",
   ];
 
   const howItWorks = [
@@ -162,7 +162,7 @@ export default function HomePageClient() {
     {
       step: "02",
       title: "Get a personalised roadmap.",
-      desc: "Based on your profile, budget, and timeline, across the relevant Future Yatra brand — admissions, test prep, MBBS, or visa.",
+      desc: "Based on your profile, budget, and timeline, across the relevant Future Yatra™ brand — admissions, test prep, MBBS, or visa.",
     },
     {
       step: "03",
@@ -174,7 +174,7 @@ export default function HomePageClient() {
   const whyFutureYatra = [
     {
       title: "Honest by Design",
-      desc: "No promised admissions or visas. Every brand under Future Yatra is built around accurate, verifiable information — even when that means telling you something you didn't want to hear.",
+      desc: "No promised admissions or visas. Every brand under Future Yatra™ is built around accurate, verifiable information — even when that means telling you something you didn't want to hear.",
       icon: ShieldCheck,
     },
     {
@@ -184,7 +184,7 @@ export default function HomePageClient() {
     },
     {
       title: "An Integrated Ecosystem",
-      desc: "Most students need more than one service across their journey — a test score, an admission, a visa. Under Future Yatra, that journey can move between specialist teams without starting over with a new consultancy each time.",
+      desc: "Most students need more than one service across their journey — a test score, an admission, a visa. Under Future Yatra™, that journey can move between specialist teams without starting over with a new consultancy each time.",
       icon: Layers,
     },
     {
@@ -238,7 +238,7 @@ export default function HomePageClient() {
                     </div>
 
                     <LayoutTextFlip
-                      text="Future Yatra"
+                      text="Future Yatra™"
                       words={["University Yatra", "Academic Yatra", "Medico Yatra", "ApplyVisa Yatra"]}
                       duration={2800}
                     />

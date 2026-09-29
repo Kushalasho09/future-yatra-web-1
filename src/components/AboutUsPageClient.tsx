@@ -49,24 +49,24 @@ export default function AboutUsPageClient() {
   // Section 7: FAQs
   const faqs = [
     {
-      question: "Is Future Yatra a new company?",
+      question: "Is Future Yatra™ a new company?",
       answer:
-        "Yes. Future Yatra Private Limited was officially registered in 2025. We choose to be upfront about this rather than claiming artificial legacy. The company was founded to solve a real problem: eliminating fragmented, commission-driven sales tactics in the study abroad sector by unifying four specialist brands under one founder-led, accountable entity.",
+        "Yes. Future Yatra™ Private Limited was officially registered in 2025. We choose to be upfront about this rather than claiming artificial legacy. The company was founded to solve a real problem: eliminating fragmented, commission-driven sales tactics in the study abroad sector by unifying four specialist brands under one founder-led, accountable entity.",
     },
     {
-      question: "What's the difference between Future Yatra and its four brands?",
+      question: "What's the difference between Future Yatra™ and its four brands?",
       answer:
-        "Future Yatra Private Limited is the parent entity that governs company-wide quality, compliance, ethics, and operations. The four brands — University Yatra, Academic Yatra, Medico Yatra, and ApplyVisa Yatra — are dedicated specialist divisions, each focused on one specific phase of your journey with specialized advisors.",
+        "Future Yatra™ Private Limited is the parent entity that governs company-wide quality, compliance, ethics, and operations. The four brands — University Yatra, Academic Yatra, Medico Yatra, and ApplyVisa Yatra — are dedicated specialist divisions, each focused on one specific phase of your journey with specialized advisors.",
     },
     {
-      question: "How big is the Future Yatra team?",
+      question: "How big is the Future Yatra™ team?",
       answer:
         "We maintain a small, highly focused team by deliberate choice. Rather than scaling up call centers or hiring aggressive tele-callers, we keep our operations lean so that every student file remains directly accountable to our founder and senior advisors.",
     },
     {
-      question: "Does Future Yatra guarantee admissions or visas?",
+      question: "Does Future Yatra™ guarantee admissions or visas?",
       answer:
-        "No. Future Yatra Private Limited and all its brands strictly prohibit guaranteed-outcome claims. University admissions decisions rest solely with university admissions committees, and visa decisions rest exclusively with government embassies. We guarantee rigorous documentation, honest guidance, and complete transparency.",
+        "No. Future Yatra™ Private Limited and all its brands strictly prohibit guaranteed-outcome claims. University admissions decisions rest solely with university admissions committees, and visa decisions rest exclusively with government embassies. We guarantee rigorous documentation, honest guidance, and complete transparency.",
     },
   ];
 
@@ -99,7 +99,7 @@ export default function AboutUsPageClient() {
                 className="inline-flex items-center space-x-2.5 bg-navy text-white px-4 py-2 rounded-pill font-heading text-xs sm:text-micro uppercase tracking-wider font-semibold shadow-md max-w-full"
               >
                 <Sparkles className="w-4 h-4 text-teal animate-pulse flex-shrink-0" />
-                <span className="truncate">Parent Company • Future Yatra Private Limited</span>
+                <span className="truncate">Parent Company • Future Yatra™ Private Limited</span>
               </motion.div>
 
               {/* Main Headline */}
@@ -119,7 +119,7 @@ export default function AboutUsPageClient() {
                 transition={{ duration: 0.6, delay: 0.15, ease: easeTier1 }}
                 className="text-body-l sm:text-xl text-navy font-semibold leading-relaxed"
               >
-                Future Yatra Private Limited is the parent company behind four specialist brands —{" "}
+                Future Yatra™ Private Limited is the parent company behind four specialist brands —{" "}
                 <span className="text-teal font-bold">University Yatra</span>,{" "}
                 <span className="text-emerald-600 font-bold">Academic Yatra</span>,{" "}
                 <span className="text-rose-600 font-bold">Medico Yatra</span>, and{" "}
@@ -134,7 +134,7 @@ export default function AboutUsPageClient() {
                 className="text-body sm:text-body-l text-muted leading-relaxed max-w-2xl font-normal"
               >
                 Officially registered in 2025, we offer no pretense of decades-old legacy or inflated
-                vanity statistics. Future Yatra was built around one simple conviction: a student's global
+                vanity statistics. Future Yatra™ was built around one simple conviction: a student's global
                 education journey deserves one accountable, transparent company — not scattered services
                 each chasing a fast commission.
               </motion.p>
@@ -202,7 +202,7 @@ export default function AboutUsPageClient() {
                   <div className="relative rounded-section overflow-hidden border border-line shadow-2xl bg-navy group">
                     <Image
                       src="/images/our_commitment_advisors.png"
-                      alt="Future Yatra Founder and Counselling Team"
+                      alt="Future Yatra™ Founder and Counselling Team"
                       width={600}
                       height={680}
                       className="w-full h-[360px] sm:h-[480px] object-cover object-top group-hover:scale-105 transition-transform duration-700"
@@ -281,7 +281,7 @@ export default function AboutUsPageClient() {
                   In an industry dominated by massive call-centers pushing monthly quotas, remaining a small, focused team is not a limitation — it is our greatest strategic strength.
                 </p>
                 <p>
-                  When you work with Future Yatra, your profile is never handed off to junior interns or outsourced tele-callers. Every application, strategy session, and document check remains under direct founder-led supervision.
+                  When you work with Future Yatra™, your profile is never handed off to junior interns or outsourced tele-callers. Every application, strategy session, and document check remains under direct founder-led supervision.
                 </p>
               </div>
 
@@ -331,7 +331,7 @@ export default function AboutUsPageClient() {
                   <div className="pt-4 border-t border-white/15 flex items-center justify-between">
                     <div>
                       <span className="font-heading text-small font-bold text-white block">
-                        Future Yatra Leadership
+                        Future Yatra™ Leadership
                       </span>
                       <span className="text-xs text-teal-bright font-medium">
                         Founding Director Note
@@ -371,7 +371,7 @@ export default function AboutUsPageClient() {
             </h2>
 
             <p className="text-body sm:text-body-l text-muted font-normal">
-              Everything you need to know about Future Yatra Private Limited and how we operate.
+              Everything you need to know about Future Yatra™ Private Limited and how we operate.
             </p>
           </div>
 

@@ -57,7 +57,7 @@ export default function PartnerAndCareersSection() {
                   Institutional Network
                 </span>
                 <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white leading-tight">
-                  Partner With Future Yatra Group
+                  Partner With Future Yatra™ Group
                 </h3>
               </div>
 
@@ -122,7 +122,7 @@ export default function PartnerAndCareersSection() {
               {/* Calligraphy Subtitle & Main Title */}
               <div className="space-y-1.5">
                 <span className="font-tempting text-teal text-2xl sm:text-3xl font-normal block">
-                  Life at Future Yatra
+                  Life at Future Yatra™
                 </span>
                 <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy leading-tight">
                   Build Your Career With Us

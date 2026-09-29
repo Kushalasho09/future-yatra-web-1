@@ -91,7 +91,7 @@ export default function Footer() {
             <Link href="/" className="inline-block">
               <Image
                 src="/images/Future-Yatra-New-Logo-white.png"
-                alt="Future Yatra Logo"
+                alt="Future Yatra™ Logo"
                 width={220}
                 height={45}
                 className="h-10 w-auto object-contain"
@@ -202,13 +202,13 @@ export default function Footer() {
         {/* Mandatory Compliance Disclaimer Banner */}
         <div className="my-8 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-[#101f3d] via-navy to-[#101f3d] border border-teal/25 text-center shadow-lg max-w-4xl mx-auto">
           <p className="text-white text-xs sm:text-small font-medium leading-relaxed">
-            Future Yatra Private Limited provides educational counselling and application support services. We do not guarantee admission, visa approval, scholarship, employment outcomes, or permanent residency. All information provided is for guidance purposes only.
+            Future Yatra™ Private Limited provides educational counselling and application support services. We do not guarantee admission, visa approval, scholarship, employment outcomes, or permanent residency. All information provided is for guidance purposes only.
           </p>
         </div>
 
         {/* Bottom copyright row */}
         <div className="pt-4 pb-6 flex flex-col sm:flex-row items-center justify-between text-xs text-sand-tint/70 gap-2 border-b border-white/10">
-          <p>© 2026 Future Yatra Private Limited. All rights reserved.</p>
+          <p>© 2026 Future Yatra™ Private Limited. All rights reserved.</p>
           <p className="font-semibold text-teal-bright">
             Study Abroad • Test Prep • MBBS • Visa Consulting Group
           </p>
@@ -246,7 +246,7 @@ export default function Footer() {
 
         <div className="relative z-10 w-full overflow-hidden px-0">
           <h2 className="font-heading font-black text-[17.5vw] sm:text-[18.5vw] lg:text-[19.2vw] tracking-tighter leading-none whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-b from-white/18 via-teal/10 to-transparent transition-all duration-700 group-hover/brand:from-teal-bright/70 group-hover/brand:via-teal/35 group-hover/brand:to-transparent group-hover/brand:drop-shadow-[0_-4px_22px_rgba(63,224,214,0.25)] transform group-hover/brand:scale-[1.01] block w-full text-center">
-            Future Yatra
+            Future Yatra™
           </h2>
         </div>
       </div>

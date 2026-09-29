@@ -39,7 +39,7 @@ const steps: StepItem[] = [
     title: "Personalised Roadmap",
     subtitle: "Get a clear, tailored execution plan.",
     description:
-      "Based on your profile, budget, and timeline, receive a customized roadmap across the relevant Future Yatra brand — admissions, test prep, MBBS, or visa.",
+      "Based on your profile, budget, and timeline, receive a customized roadmap across the relevant Future Yatra™ brand — admissions, test prep, MBBS, or visa.",
     icon: Compass,
   },
   {
@@ -96,7 +96,7 @@ export default function HowItWorksSection() {
           </h2>
 
           <p className="text-sm sm:text-body text-muted leading-relaxed font-normal max-w-xl mx-auto pt-1">
-            Your journey across Future Yatra in three clear, transparent steps — zero hidden clauses, zero false promises.
+            Your journey across Future Yatra™ in three clear, transparent steps — zero hidden clauses, zero false promises.
           </p>
         </div>
 

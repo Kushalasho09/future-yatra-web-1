@@ -46,7 +46,7 @@ export default function WhatSetsUsApartSection() {
         {/* SECTION HEADER WITH TEMPTING CALLIGRAPHY FONT SUBTITLE */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 space-y-2 sm:space-y-3">
           <span className="font-tempting bg-gradient-to-r from-[#0D9488] via-[#0284C7] to-[#0F766E] bg-clip-text text-transparent text-2xl sm:text-3xl font-medium block">
-            Why Future Yatra
+            Why Future Yatra™
           </span>
 
           <h2 className="font-heading text-3xl sm:text-5xl font-extrabold text-navy tracking-tight drop-shadow-xs">

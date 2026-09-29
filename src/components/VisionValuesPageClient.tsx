@@ -206,15 +206,15 @@ export default function VisionValuesPageClient() {
 
   const faqs = [
     {
-      q: "What is Future Yatra's mission?",
-      a: "To replace confusion with clarity, false promises with transparency, and fragmented services with one trusted ecosystem — applied consistently across all four specialist brands under Future Yatra Private Limited.",
+      q: "What is Future Yatra™'s mission?",
+      a: "To replace confusion with clarity, false promises with transparency, and fragmented services with one trusted ecosystem — applied consistently across all four specialist brands under Future Yatra™ Private Limited.",
     },
     {
-      q: "What makes Future Yatra's values different from a typical consultancy?",
+      q: "What makes Future Yatra™'s values different from a typical consultancy?",
       a: "Built around practical commitments rather than buzzwords: e.g., prioritizing integrity over revenue, stating upfront costs and risks honestly, and defining long-term commitment as support that continues long after an admission letter or visa is granted.",
     },
     {
-      q: "What is Future Yatra's long-term vision?",
+      q: "What is Future Yatra™'s long-term vision?",
       a: "Extending its ecosystem approach beyond education to support more of life's meaningful journeys over time, while maintaining the exact same commitment to transparency, ethics, trust, and student-first guidance.",
     },
   ];
@@ -277,7 +277,7 @@ export default function VisionValuesPageClient() {
 
             {/* Subtext */}
             <p className="text-sand-tint/80 text-base sm:text-lg max-w-2xl mx-auto font-normal leading-relaxed">
-              Future Yatra Private Limited — Parent company to University Yatra, Academic Yatra, Medico Yatra, and ApplyVisa Yatra.
+              Future Yatra™ Private Limited — Parent company to University Yatra, Academic Yatra, Medico Yatra, and ApplyVisa Yatra.
             </p>
 
             {/* 4 Specialist Brands Pill Row */}
@@ -325,13 +325,13 @@ export default function VisionValuesPageClient() {
 
                 <div className="relative pl-4 border-l-2 border-teal-bright/40 space-y-4">
                   <p className="text-sm sm:text-base text-sand-tint/95 leading-relaxed font-normal">
-                    Today, Future Yatra&apos;s primary focus is helping students through education, career development, language training, healthcare education, and visa guidance — delivered through four specialized brands operating under one accountable company.
+                    Today, Future Yatra™&apos;s primary focus is helping students through education, career development, language training, healthcare education, and visa guidance — delivered through four specialized brands operating under one accountable company.
                   </p>
                   <p className="text-sm sm:text-base text-sand-tint/95 leading-relaxed font-normal">
-                    Looking ahead, Future Yatra is positioned as a long-term ecosystem, not a single service offering — as student and family needs evolve, the vision is to extend the same ecosystem to support more of life&apos;s meaningful journeys, guided by the same transparency, ethics, trust, and informed decision-making that define it today.
+                    Looking ahead, Future Yatra™ is positioned as a long-term ecosystem, not a single service offering — as student and family needs evolve, the vision is to extend the same ecosystem to support more of life&apos;s meaningful journeys, guided by the same transparency, ethics, trust, and informed decision-making that define it today.
                   </p>
                   <p className="text-sm sm:text-base text-teal-bright font-medium leading-relaxed">
-                    This vision isn&apos;t measured in specific future ventures or unearned promises — it&apos;s measured by one standard: wherever Future Yatra goes next, the same commitment to honest, student-first guidance goes with it.
+                    This vision isn&apos;t measured in specific future ventures or unearned promises — it&apos;s measured by one standard: wherever Future Yatra™ goes next, the same commitment to honest, student-first guidance goes with it.
                   </p>
                 </div>
               </div>
@@ -393,7 +393,7 @@ export default function VisionValuesPageClient() {
                   {/* Floating Eco System Badge */}
                   <div className="absolute top-3 left-3 bg-navy-deep/85 backdrop-blur-md border border-teal/40 px-3 py-1 rounded-full text-micro text-teal-bright font-bold tracking-wide uppercase flex items-center space-x-1.5 shadow-md">
                     <span className="w-2 h-2 rounded-full bg-teal-bright animate-ping" />
-                    <span>Future Yatra Ecosystem</span>
+                    <span>Future Yatra™ Ecosystem</span>
                   </div>
                 </div>
               </div>
@@ -493,7 +493,7 @@ export default function VisionValuesPageClient() {
             className="mt-14 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-navy via-navy-deep to-navy border border-teal/30 text-center max-w-4xl mx-auto shadow-xl"
           >
             <p className="text-sm sm:text-base text-sand-tint/95 leading-relaxed font-playfair-italic">
-              &ldquo;This mission shapes how every brand under Future Yatra operates — from the first conversation with a student to the support that continues long after an admission letter or visa is granted.&rdquo;
+              &ldquo;This mission shapes how every brand under Future Yatra™ operates — from the first conversation with a student to the support that continues long after an admission letter or visa is granted.&rdquo;
             </p>
           </motion.div>
         </section>
@@ -522,7 +522,7 @@ export default function VisionValuesPageClient() {
             </h2>
 
             <p className="text-sand-tint/80 text-base sm:text-lg font-normal leading-relaxed max-w-2xl mx-auto">
-              Practical principles visible in how Future Yatra actually operates every single day.
+              Practical principles visible in how Future Yatra™ actually operates every single day.
             </p>
           </motion.div>
 
@@ -611,7 +611,7 @@ export default function VisionValuesPageClient() {
 
                     <div className="pt-3 border-t border-white/10 mt-3 flex items-center justify-between flex-shrink-0">
                       <span className="text-micro font-bold text-teal-bright tracking-wider uppercase">
-                        Future Yatra Operational Standard
+                        Future Yatra™ Operational Standard
                       </span>
                       <CheckCircle2 className="w-4 h-4 text-teal-bright" />
                     </div>
@@ -706,7 +706,7 @@ export default function VisionValuesPageClient() {
               <div className="relative p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-navy via-navy-deep to-navy border border-white/10 text-sand-tint/95 text-sm sm:text-base leading-relaxed font-normal shadow-xl">
                 <Quote className="w-8 h-8 text-teal-bright/30 absolute top-4 left-4 pointer-events-none" />
                 <p className="relative z-10 font-playfair-italic text-base sm:text-lg max-w-3xl mx-auto text-teal-tint">
-                  &ldquo;To every student, parent, partner, and institution who works with Future Yatra: we are committed to ethical guidance, transparent communication, and lifelong trust — because these decisions are among the most important of a person&apos;s life.&rdquo;
+                  &ldquo;To every student, parent, partner, and institution who works with Future Yatra™: we are committed to ethical guidance, transparent communication, and lifelong trust — because these decisions are among the most important of a person&apos;s life.&rdquo;
                 </p>
               </div>
 

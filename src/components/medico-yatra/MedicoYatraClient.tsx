@@ -289,7 +289,7 @@ export default function MedicoYatraClient() {
               <div className="inline-flex items-center justify-center gap-1.5 sm:gap-2.5 px-3 sm:px-4 py-1.5 sm:py-2 bg-white/90 backdrop-blur-md border border-blue-200/80 rounded-full shadow-[0_4px_20px_-4px_rgba(2,99,204,0.12)] max-w-full">
                 <Stethoscope className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#02A7BB] flex-shrink-0" />
                 <span className="text-[10px] sm:text-xs font-bold text-slate-800 tracking-wider uppercase font-poppins whitespace-nowrap">
-                  A Future Yatra brand
+                  A Future Yatra™ brand
                 </span>
                 <span className="text-slate-300 text-xs">·</span>
                 <span className="font-playfair italic text-xs sm:text-sm font-bold text-[#0B2545] whitespace-nowrap">
@@ -693,12 +693,12 @@ export default function MedicoYatraClient() {
                 <div>
                   <span className="font-bold text-white font-manjari text-lg block">MEDICO YATRA</span>
                   <span className="text-[10px] text-[#4DA5EC] uppercase font-bold tracking-widest block">
-                    Future Yatra Private Limited
+                    Future Yatra™ Private Limited
                   </span>
                 </div>
               </div>
               <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
-                Guiding future healthcare professionals beyond borders. A Future Yatra Private Limited brand. Dedicated to honest, NMC-compliant healthcare education abroad.
+                Guiding future healthcare professionals beyond borders. A Future Yatra™ Private Limited brand. Dedicated to honest, NMC-compliant healthcare education abroad.
               </p>
             </div>
 
@@ -744,7 +744,7 @@ export default function MedicoYatraClient() {
           {/* Mandatory Full Legal Disclaimer Box */}
           <div className="bg-slate-900 border border-slate-800 p-5 rounded-2xl text-[11px] text-slate-400 leading-relaxed space-y-2">
             <strong className="text-slate-200 font-bold block uppercase tracking-wider">
-              Legal Compliance & Disclaimer (Future Yatra Private Limited):
+              Legal Compliance & Disclaimer (Future Yatra™ Private Limited):
             </strong>
             <p>
               Medico Yatra provides educational guidance and does not guarantee admission, visa, scholarship, examination, job, salary, or PR outcomes. Salary figures shown are illustrative, approximate, and require licensing/registration and immigration eligibility to achieve. The Country Finder tool provides general matching based on self-reported answers, not a personalised assessment — book a free counselling session for guidance tailored to your specific profile. University recognition and regulations change — verify the current NMC-approved list and applicable rules (nmc.org.in, natboard.edu.in) before enrolling. Guidance, not legal advice.
@@ -752,7 +752,7 @@ export default function MedicoYatraClient() {
           </div>
 
           <div className="pt-4 text-center text-xs text-slate-500 border-t border-slate-900">
-            © {new Date().getFullYear()} Medico Yatra · Future Yatra Private Limited. All rights reserved.
+            © {new Date().getFullYear()} Medico Yatra · Future Yatra™ Private Limited. All rights reserved.
           </div>
         </div>
       </footer>

@@ -76,17 +76,17 @@ const BRAND_DATA = [
 // FAQ items for Section 10
 const FAQ_DATA = [
   {
-    question: "Why was Future Yatra founded?",
+    question: "Why was Future Yatra™ founded?",
     answer:
-      "Future Yatra was founded after its founder experienced misleading advice and incomplete information while planning his own move to Canada, and later saw international students facing the same problem — guided only toward admission or a visa, without support for their complete journey.",
+      "Future Yatra™ was founded after its founder experienced misleading advice and incomplete information while planning his own move to Canada, and later saw international students facing the same problem — guided only toward admission or a visa, without support for their complete journey.",
   },
   {
-    question: "Why does Future Yatra operate as four separate brands instead of one?",
+    question: "Why does Future Yatra™ operate as four separate brands instead of one?",
     answer:
       "Each brand — University Yatra, Academic Yatra, Medico Yatra, and Apply Visa Yatra — focuses on one part of a student's journey, so guidance stays specialized rather than generic, while all four share the same underlying standard of transparency and ethics.",
   },
   {
-    question: "What does the name 'Future Yatra' mean?",
+    question: "What does the name 'Future Yatra™' mean?",
     answer:
       "'Yatra' means journey. The name reflects the belief that every student's path toward their future is a distinct journey — one that deserves honest, complete guidance rather than a single transaction.",
   },
@@ -182,7 +182,7 @@ export default function OurStoryPageClient() {
   return (
     <div className="w-full min-h-screen bg-white text-navy-deep font-body selection:bg-teal selection:text-white overflow-x-hidden">
       {/* ==================================================================== */}
-      {/* SECTION 1: Hero "The Story Behind Future Yatra"                     */}
+      {/* SECTION 1: Hero "The Story Behind Future Yatra™"                     */}
       {/* ==================================================================== */}
       <section className="relative min-h-[88vh] sm:min-h-[92vh] flex flex-col justify-center items-center bg-navy-deep text-white px-4 sm:px-6 lg:px-8 py-16 sm:py-20 overflow-hidden">
         {/* Ambient Blur Orbs */}
@@ -211,8 +211,8 @@ export default function OurStoryPageClient() {
 
           {/* Kinetic Headline: Word-by-word reveal sliding up from 100% with stagger */}
           <h1 className="text-3xl sm:text-5xl md:text-display font-extrabold font-heading tracking-tight text-white leading-tight sm:leading-none">
-            {["The", "Story", "Behind", "Future Yatra"].map((word, idx) => {
-              const isBrand = word === "Future Yatra";
+            {["The", "Story", "Behind", "Future Yatra™"].map((word, idx) => {
+              const isBrand = word === "Future Yatra™";
               return (
                 <span key={idx} className="inline-block overflow-hidden mr-[0.25em] align-top py-1">
                   <motion.span
@@ -243,7 +243,7 @@ export default function OurStoryPageClient() {
             transition={{ duration: 0.7, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
             className="text-body sm:text-body-l md:text-xl text-white/80 max-w-xl text-center mt-5 font-body font-normal leading-relaxed"
           >
-            Why Future Yatra Private Limited exists.
+            Why Future Yatra™ Private Limited exists.
           </motion.p>
 
           {/* Action Link Button */}
@@ -283,7 +283,7 @@ export default function OurStoryPageClient() {
       </section>
 
       {/* ==================================================================== */}
-      {/* SECTION 2: The Story Behind Future Yatra (Sticky Editorial)         */}
+      {/* SECTION 2: The Story Behind Future Yatra™ (Sticky Editorial)         */}
       {/* ==================================================================== */}
       <section
         id="founder-story"
@@ -306,14 +306,14 @@ export default function OurStoryPageClient() {
               <h2 className="text-2xl sm:text-3xl md:text-h1 font-heading font-extrabold text-navy-deep tracking-tight leading-tight">
                 The Story Behind{" "}
                 <span className="bg-gradient-to-r from-teal via-navy to-navy-deep bg-clip-text text-transparent">
-                  Future Yatra
+                  Future Yatra™
                 </span>
               </h2>
               {/* 20x6px teal gradient underline bar */}
               <div className="w-[80px] h-[6px] bg-gradient-to-r from-teal to-teal-bright rounded-full mt-4" />
 
               <p className="text-small sm:text-body text-muted mt-4 sm:mt-6 max-w-sm font-body leading-relaxed">
-                Future Yatra began with a simple question:
+                Future Yatra™ began with a simple question:
               </p>
             </motion.div>
           </div>
@@ -784,7 +784,7 @@ export default function OurStoryPageClient() {
         >
           <p className="text-body sm:text-body-l md:text-[20px] leading-relaxed text-white/90 font-body">
             Together, these brands operate under{" "}
-            <span className="text-teal-bright font-bold">Future Yatra Private Limited</span> as one integrated ecosystem where every service has a clear purpose, while all four share the same values:{" "}
+            <span className="text-teal-bright font-bold">Future Yatra™ Private Limited</span> as one integrated ecosystem where every service has a clear purpose, while all four share the same values:{" "}
             <span className="text-sand font-semibold">transparency, integrity, professionalism, and a student-first approach.</span>
           </p>
         </motion.div>
@@ -899,7 +899,7 @@ export default function OurStoryPageClient() {
         <div className="bg-white rounded-section border border-line p-6 sm:p-12 md:p-16 shadow-sm max-w-4xl mx-auto text-center relative overflow-hidden space-y-5">
           <div className="space-y-3 max-w-2xl mx-auto">
             <p className="text-body sm:text-body-l font-semibold text-teal font-heading">
-              Future Yatra Private Limited was officially registered in 2025.
+              Future Yatra™ Private Limited was officially registered in 2025.
             </p>
             <p className="text-body sm:text-h3 font-medium text-navy-deep/90 leading-relaxed font-body">
               We are not here to claim decades of experience we don't have.
@@ -964,12 +964,12 @@ export default function OurStoryPageClient() {
             <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
 
-          {/* Button 3: About Future Yatra */}
+          {/* Button 3: About Future Yatra™ */}
           <Link
             href="/about-us"
             className="w-full sm:w-auto bg-white border border-line text-navy-deep hover:bg-sand/50 transition-all duration-300 rounded-pill px-7 sm:px-8 py-3.5 sm:py-4 font-semibold text-small sm:text-body inline-flex items-center justify-center gap-3 shadow-sm group font-body"
           >
-            <span>About Future Yatra</span>
+            <span>About Future Yatra™</span>
             <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
@@ -1046,7 +1046,7 @@ export default function OurStoryPageClient() {
       <footer className="relative bg-sand/30 border-t border-line py-6 sm:py-8 px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <p className="text-micro sm:text-small text-muted/70 leading-relaxed font-normal font-body">
-            Future Yatra Private Limited is an independent education and career guidance ecosystem. Services provided under University Yatra, Academic Yatra, Medico Yatra, and Apply Visa Yatra adhere to strict ethical and transparent operational standards across all jurisdictions.
+            Future Yatra™ Private Limited is an independent education and career guidance ecosystem. Services provided under University Yatra, Academic Yatra, Medico Yatra, and Apply Visa Yatra adhere to strict ethical and transparent operational standards across all jurisdictions.
           </p>
         </div>
       </footer>

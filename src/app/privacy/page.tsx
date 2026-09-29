@@ -31,7 +31,7 @@ export default function PrivacyPolicyPage() {
             },
             {
               title: "[Placeholder: 2. Data Protection & Security]",
-              content: "[Placeholder: Technical standards, encryption protocols, and access controls implemented across Future Yatra platforms.]",
+              content: "[Placeholder: Technical standards, encryption protocols, and access controls implemented across Future Yatra™ platforms.]",
             },
             {
               title: "[Placeholder: 3. Third-Party Sharing & Compliance]",

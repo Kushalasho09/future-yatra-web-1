@@ -82,7 +82,7 @@ export default function OurTeamSection() {
       <div className="ot-inner">
         {/* ── Heading ── */}
         <div className="ot-heading">
-          <span className="ot-label">The People Behind Future Yatra</span>
+          <span className="ot-label">The People Behind Future Yatra™</span>
           <h2 className="ot-title">Our Team</h2>
 
           <p className="ot-subtitle">

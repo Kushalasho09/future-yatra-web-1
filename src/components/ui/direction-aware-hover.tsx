@@ -85,7 +85,7 @@ export const DirectionAwareHover = ({
             }}
           >
             <img
-              alt="Future Yatra Student Life"
+              alt="Future Yatra™ Student Life"
               className={cn(
                 "h-full w-full object-cover scale-[1.05] group-hover/card:scale-110 transition-transform duration-500",
                 imageClassName
