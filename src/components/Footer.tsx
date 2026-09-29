@@ -90,10 +90,10 @@ export default function Footer() {
           <div className="space-y-4 lg:col-span-1">
             <Link href="/" className="inline-block">
               <Image
-                src="/images/logo-white.png"
+                src="/images/Future-Yatra-New-Logo-white.png"
                 alt="Future Yatra Logo"
                 width={220}
-                height={46}
+                height={45}
                 className="h-10 w-auto object-contain"
               />
             </Link>

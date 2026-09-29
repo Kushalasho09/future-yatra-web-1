@@ -33,9 +33,9 @@ export default function Navbar() {
         {/* Brand Logo */}
         <Link href="/" className="flex items-center group/logo flex-shrink-0">
           <Image
-            src="/images/logo.png"
+            src="/images/Future-Yatra-New-Logo.png"
             alt="Future Yatra Logo"
-            width={240}
+            width={246}
             height={50}
             priority
             className="h-9 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover/logo:scale-105"
