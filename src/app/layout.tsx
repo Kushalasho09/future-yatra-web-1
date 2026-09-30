@@ -43,6 +43,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://futureyatra.com"),
   title: "Future Yatra™ | Global Education & Visa Consulting",
   description: "Enterprise study-abroad and visa consulting platform for Future Yatra™.",
   icons: {
