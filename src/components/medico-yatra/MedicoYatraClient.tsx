@@ -93,7 +93,7 @@ export default function MedicoYatraClient() {
   return (
     <div className="bg-[#F4F8FD] min-h-screen text-slate-800 font-poppins selection:bg-[#0263CC] selection:text-white">
       {/* -------------------------------------------------------------------------- */}
-      {/* FLOATING GLASSMOPRHIC CAPSULE NAVBAR FOR MEDICO YATRA */}
+      {/* FLOATING GLASSMOPRHIC CAPSULE NAVBAR FOR MEDICO YATRA™ */}
       {/* -------------------------------------------------------------------------- */}
       <header className="fixed top-0 left-0 right-0 z-50 w-full pt-3 sm:pt-4 px-3 sm:px-6 lg:px-8 pointer-events-none transition-all duration-300 font-poppins">
         {/* Floating Glassmorphic Capsule Island */}
@@ -559,7 +559,7 @@ export default function MedicoYatraClient() {
       </section>
 
       {/* -------------------------------------------------------------------------- */}
-      {/* SECTION 5: HOW MEDICO YATRA HELPS — US VS A TYPICAL AGENT */}
+      {/* SECTION 5: HOW MEDICO YATRA™ HELPS — US VS A TYPICAL AGENT */}
       {/* -------------------------------------------------------------------------- */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#F4F8FD]">
         <AgentComparisonSection onOpenCounselling={() => handleOpenCounselling()} />
@@ -691,7 +691,7 @@ export default function MedicoYatraClient() {
                   MY
                 </div>
                 <div>
-                  <span className="font-bold text-white font-manjari text-lg block">MEDICO YATRA</span>
+                  <span className="font-bold text-white font-manjari text-lg block">MEDICO YATRA™</span>
                   <span className="text-[10px] text-[#4DA5EC] uppercase font-bold tracking-widest block">
                     Future Yatra™ Private Limited
                   </span>

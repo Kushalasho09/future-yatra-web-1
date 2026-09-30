@@ -20,7 +20,7 @@ export default function TopStudyDestinations({
   const brands = [
     {
       id: "university",
-      name: "UNIVERSITY YATRA",
+      name: "UNIVERSITY YATRA™",
       tagline: "STUDY ABROAD ADMISSIONS & SCHOLARSHIPS",
       subtitle: "DIRECT UNIVERSITY APPLICATIONS & SCHOLARSHIP COUNSELLING",
       description: "Choose the right course and university, understand your options and get support with your application.",
@@ -33,7 +33,7 @@ export default function TopStudyDestinations({
     },
     {
       id: "academic",
-      name: "ACADEMIC YATRA",
+      name: "ACADEMIC YATRA™",
       tagline: "IELTS, PTE, TOEFL & GRE COACHING",
       subtitle: "RESULT-DRIVEN TEST PREP & BAND SCORE IMPROVEMENT",
       description: "Prepare for IELTS, PTE, DSAT, French and German with structured preparation.",
@@ -46,7 +46,7 @@ export default function TopStudyDestinations({
     },
     {
       id: "medico",
-      name: "MEDICO YATRA",
+      name: "MEDICO YATRA™",
       tagline: "MBBS ABROAD & HEALTHCARE PATHWAYS",
       subtitle: "NMC APPROVED UNIVERSITIES & TRANSPARENT FEE GUARANTEE",
       description: "Get guidance on MBBS and healthcare education options abroad.",
@@ -59,7 +59,7 @@ export default function TopStudyDestinations({
     },
     {
       id: "visa",
-      name: "APPLYVISA YATRA",
+      name: "APPLYVISA YATRA™",
       tagline: "VISITOR, SPOUSE, FAMILY & PR VISAS",
       subtitle: "EXPERT EMBASSY FILING & HIGHEST APPROVAL RATE",
       description: "Get support with visa documentation, application preparation and filing.",

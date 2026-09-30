@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import MedicoYatraClient from "@/components/medico-yatra/MedicoYatraClient";
 
 export const metadata: Metadata = {
-  title: "Study Healthcare Courses Abroad (MBBS, Nursing & more) | Medico Yatra",
+  title: "Study Healthcare Courses Abroad (MBBS, Nursing & more) | Medico Yatra™",
   description:
     "Specialist guidance for healthcare careers abroad — MBBS, Dentistry, Nursing, Pharmacy, Physiotherapy & more. Find your country in 30 seconds, or book free counselling. NMC-recognised universities, FMGE/NExT & USMLE coaching.",
   keywords: [

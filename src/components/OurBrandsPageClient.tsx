@@ -326,7 +326,7 @@ export default function OurBrandsPageClient() {
 
           {/* WATERMARK BACKGROUND TEXT */}
           <div className="absolute left-1/2 -translate-x-1/2 top-12 pointer-events-none select-none text-navy/5 font-extrabold text-[8rem] sm:text-[14rem] leading-none uppercase tracking-tighter whitespace-nowrap z-0">
-            FUTURE YATRA
+            FUTURE YATRA™
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center relative z-10">
@@ -590,7 +590,7 @@ export default function OurBrandsPageClient() {
         <CursiveMarqueeBanner />
 
         {/* ==================================================================== */}
-        {/* SECTION 2: THE FUTURE YATRA ECOSYSTEM STANDARD                     */}
+        {/* SECTION 2: THE FUTURE YATRA™ ECOSYSTEM STANDARD                     */}
         {/* ==================================================================== */}
         <section className="py-16 sm:py-20 relative overflow-hidden">
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 space-y-3">

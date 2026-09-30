@@ -43,8 +43,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Future Yatra | Global Education & Visa Consulting",
-  description: "Enterprise study-abroad and visa consulting platform for Future Yatra.",
+  title: "Future Yatra™ | Global Education & Visa Consulting",
+  description: "Enterprise study-abroad and visa consulting platform for Future Yatra™.",
   icons: {
     icon: [
       { url: "/favicon.ico" },

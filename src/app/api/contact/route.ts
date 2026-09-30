@@ -50,7 +50,7 @@ export async function POST(request: Request) {
     const htmlContent = `
       <div style="font-family: Arial, Helvetica, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; border: 1px solid #eaeaea; border-radius: 12px; background-color: #ffffff;">
         <div style="background: linear-gradient(135deg, #0F172A, #0284C7); padding: 20px; border-radius: 8px; text-align: center; color: #ffffff;">
-          <h2 style="margin: 0; font-size: 22px; letter-spacing: 0.5px;">Future Yatra</h2>
+          <h2 style="margin: 0; font-size: 22px; letter-spacing: 0.5px;">Future Yatra™</h2>
           <p style="margin: 4px 0 0; font-size: 13px; opacity: 0.85;">New Website Inquiry Received</p>
         </div>
 

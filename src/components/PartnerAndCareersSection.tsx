@@ -86,7 +86,7 @@ export default function PartnerAndCareersSection() {
                 href="/coming-soon?section=partner"
                 className="inline-flex items-center justify-between w-full bg-teal text-navy hover:bg-teal-bright px-6 py-3.5 rounded-full font-bold text-xs sm:text-small transition-all duration-300 shadow-lg group-hover:shadow-teal/30"
               >
-                <span>PARTNER WITH FUTURE YATRA</span>
+                <span>PARTNER WITH FUTURE YATRA™</span>
                 <ArrowRight className="w-4 h-4 text-navy group-hover:translate-x-1 transition-transform duration-200" />
               </Link>
             </div>

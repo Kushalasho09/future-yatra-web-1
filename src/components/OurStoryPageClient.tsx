@@ -61,7 +61,7 @@ const BRAND_DATA = [
     accentColor: "#E8604C",
   },
   {
-    name: "Apply Visa Yatra",
+    name: "Apply Visa Yatra™",
     href: "/coming-soon?brand=applyvisa-yatra",
     icon: FileCheck2,
     tagline: "Visa · Documents · Application",
@@ -83,7 +83,7 @@ const FAQ_DATA = [
   {
     question: "Why does Future Yatra™ operate as four separate brands instead of one?",
     answer:
-      "Each brand — University Yatra™, Academic Yatra™, Medico Yatra™, and Apply Visa Yatra — focuses on one part of a student's journey, so guidance stays specialized rather than generic, while all four share the same underlying standard of transparency and ethics.",
+      "Each brand — University Yatra™, Academic Yatra™, Medico Yatra™, and Apply Visa Yatra™ — focuses on one part of a student's journey, so guidance stays specialized rather than generic, while all four share the same underlying standard of transparency and ethics.",
   },
   {
     question: "What does the name 'Future Yatra™' mean?",
@@ -597,7 +597,7 @@ export default function OurStoryPageClient() {
           >
             <div className="w-24 h-1 bg-gradient-to-r from-transparent via-teal-bright to-transparent rounded-full mb-6" />
             <span className="text-teal-bright text-micro tracking-[0.18em] font-bold uppercase text-center max-w-lg font-body px-2">
-              THAT REALIZATION BECAME THE FOUNDATION OF FUTURE YATRA.
+              THAT REALIZATION BECAME THE FOUNDATION OF FUTURE YATRA™.
             </span>
           </motion.div>
         </div>
@@ -1046,7 +1046,7 @@ export default function OurStoryPageClient() {
       <footer className="relative bg-sand/30 border-t border-line py-6 sm:py-8 px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <p className="text-micro sm:text-small text-muted/70 leading-relaxed font-normal font-body">
-            Future Yatra™ Private Limited is an independent education and career guidance ecosystem. Services provided under University Yatra™, Academic Yatra™, Medico Yatra™, and Apply Visa Yatra adhere to strict ethical and transparent operational standards across all jurisdictions.
+            Future Yatra™ Private Limited is an independent education and career guidance ecosystem. Services provided under University Yatra™, Academic Yatra™, Medico Yatra™, and Apply Visa Yatra™ adhere to strict ethical and transparent operational standards across all jurisdictions.
           </p>
         </div>
       </footer>
