@@ -87,14 +87,14 @@ export async function POST(request: Request) {
         </div>
 
         <div style="border-top: 1px solid #e2e8f0; padding-top: 16px; text-align: center; font-size: 12px; color: #94a3b8;">
-          Sent from Future Yatra Website Contact API &bull; Received at ${new Date().toLocaleString()}
+          Sent from Future Yatra™ Website Contact API &bull; Received at ${new Date().toLocaleString()}
         </div>
       </div>
     `;
 
     // Send email via Hostinger SMTP
     await transporter.sendMail({
-      from: `"Future Yatra Portal" <${user}>`,
+      from: `"Future Yatra™ Portal" <${user}>`,
       to: toEmail,
       replyTo: email,
       subject: emailSubject,
