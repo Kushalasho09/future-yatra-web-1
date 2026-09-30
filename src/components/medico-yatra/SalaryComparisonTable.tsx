@@ -185,7 +185,7 @@ export default function SalaryComparisonTable({
 
       {/* Honest Framing Line */}
       <p className="text-xs text-slate-600 leading-relaxed bg-white p-4 rounded-2xl border border-slate-200">
-        <strong className="text-slate-900">Honest Framing:</strong> These are possibilities for licensed professionals, not guarantees. To work in these countries you'll typically need to clear local licensing/registration exams — for example USMLE (physicians, USA), NCLEX (nurses, USA/Canada), PLAB / UKMLA (doctors, UK), AMC (doctors, Australia), and equivalents for other professions — plus meet visa/immigration rules. This is exactly where Medico Yatra helps — we plan the licensing pathway with you from the start.
+        <strong className="text-slate-900">Honest Framing:</strong> These are possibilities for licensed professionals, not guarantees. To work in these countries you'll typically need to clear local licensing/registration exams — for example USMLE (physicians, USA), NCLEX (nurses, USA/Canada), PLAB / UKMLA (doctors, UK), AMC (doctors, Australia), and equivalents for other professions — plus meet visa/immigration rules. This is exactly where Medico Yatra™ helps — we plan the licensing pathway with you from the start.
       </p>
 
       {/* CTA Inside Section */}

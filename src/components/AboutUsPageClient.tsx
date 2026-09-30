@@ -56,7 +56,7 @@ export default function AboutUsPageClient() {
     {
       question: "What's the difference between Future Yatra™ and its four brands?",
       answer:
-        "Future Yatra™ Private Limited is the parent entity that governs company-wide quality, compliance, ethics, and operations. The four brands — University Yatra, Academic Yatra, Medico Yatra, and ApplyVisa Yatra — are dedicated specialist divisions, each focused on one specific phase of your journey with specialized advisors.",
+        "Future Yatra™ Private Limited is the parent entity that governs company-wide quality, compliance, ethics, and operations. The four brands — University Yatra™, Academic Yatra™, Medico Yatra™, and ApplyVisa Yatra™ — are dedicated specialist divisions, each focused on one specific phase of your journey with specialized advisors.",
     },
     {
       question: "How big is the Future Yatra™ team?",
@@ -120,10 +120,10 @@ export default function AboutUsPageClient() {
                 className="text-body-l sm:text-xl text-navy font-semibold leading-relaxed"
               >
                 Future Yatra™ Private Limited is the parent company behind four specialist brands —{" "}
-                <span className="text-teal font-bold">University Yatra</span>,{" "}
-                <span className="text-emerald-600 font-bold">Academic Yatra</span>,{" "}
-                <span className="text-rose-600 font-bold">Medico Yatra</span>, and{" "}
-                <span className="text-amber-600 font-bold">ApplyVisa Yatra</span>.
+                <span className="text-teal font-bold">University Yatra™</span>,{" "}
+                <span className="text-emerald-600 font-bold">Academic Yatra™</span>,{" "}
+                <span className="text-rose-600 font-bold">Medico Yatra™</span>, and{" "}
+                <span className="text-amber-600 font-bold">ApplyVisa Yatra™</span>.
               </motion.p>
 
               {/* Honest Founder-Voice Paragraph */}

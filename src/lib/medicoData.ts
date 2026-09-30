@@ -625,7 +625,7 @@ export const TESTIMONIALS_DATA = [
     type: "student",
     name: "Dr. Ananya Sharma",
     role: "MBBS Graduate, Georgia",
-    quote: "Unlike local agents who disappeared after visa stamping, Medico Yatra provided NExT coaching modules right from my 2nd year. Cleared FMGE in my first attempt!",
+    quote: "Unlike local agents who disappeared after visa stamping, Medico Yatra™ provided NExT coaching modules right from my 2nd year. Cleared FMGE in my first attempt!",
     country: "Georgia 🇬🇪",
     avatar: "https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?auto=format&fit=crop&w=400&q=80",
     video: false,
@@ -643,7 +643,7 @@ export const TESTIMONIALS_DATA = [
     type: "parent",
     name: "Rajeshwar & Sunita Rao",
     role: "Parents of Priya Rao (MBBS Student, Russia)",
-    quote: "As parents, safety and degree recognition were our primary concerns. Medico Yatra invited us to every zoom session, verified NMC listings in front of us, and connected us with senior parents.",
+    quote: "As parents, safety and degree recognition were our primary concerns. Medico Yatra™ invited us to every zoom session, verified NMC listings in front of us, and connected us with senior parents.",
     country: "Russia 🇷🇺",
     avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
     video: false,
@@ -653,7 +653,7 @@ export const TESTIMONIALS_DATA = [
     type: "video",
     name: "Dr. Vikramaditya Singh",
     role: "MD Physician, Uzbekistan",
-    quote: "Watch Vikramaditya explain how Medico Yatra helped him choose Uzbekistan over high-cost private Indian colleges.",
+    quote: "Watch Vikramaditya explain how Medico Yatra™ helped him choose Uzbekistan over high-cost private Indian colleges.",
     country: "Uzbekistan 🇺🇿",
     avatar: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=200&q=80",
     video: true,
@@ -663,7 +663,7 @@ export const TESTIMONIALS_DATA = [
     type: "student",
     name: "Priyanka Patel",
     role: "BSc Physiotherapy, Germany",
-    quote: "Zero tuition at public university plus German language orientation done in India. Medico Yatra took care of my block account and embassy visa interview without any hassle.",
+    quote: "Zero tuition at public university plus German language orientation done in India. Medico Yatra™ took care of my block account and embassy visa interview without any hassle.",
     country: "Germany 🇩🇪",
     avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80",
     video: false,
@@ -681,7 +681,7 @@ export const TESTIMONIALS_DATA = [
 
 export const FAQ_ITEMS = [
   {
-    question: "Does Medico Yatra only help with MBBS?",
+    question: "Does Medico Yatra™ only help with MBBS?",
     answer: "No — we guide many healthcare careers: MBBS, Dentistry (BDS), Nursing, Pharmacy, Physiotherapy, Respiratory Therapy, Medical Lab Technology and more.",
   },
   {
@@ -701,7 +701,7 @@ export const FAQ_ITEMS = [
     answer: "Those are illustrative averages for qualified and licensed professionals. You'd need to clear local licensing exams (USMLE, PLAB, NCLEX, AMC) and meet immigration rules — which we help you plan. No salary is guaranteed.",
   },
   {
-    question: "How is Medico Yatra actually different from a regular admission agent?",
+    question: "How is Medico Yatra™ actually different from a regular admission agent?",
     answer: "In short, we stay involved through licensing and early career, work only with NMC-recognised institutions, and plan your FMGE/NExT or USMLE pathway from day one rather than treating it as an afterthought.",
   },
   {

@@ -238,25 +238,25 @@ export default function PartnerWithUsPageClient() {
   // 4 Specialist Brands Overview
   const specialistBrands = [
     {
-      name: "University Yatra",
+      name: "University Yatra™",
       focus: "Undergraduate & Postgraduate Admissions",
       desc: "Direct partner university placements, profile evaluation, and SOP craftsmanship.",
       color: "border-teal/40 bg-teal-tint/50",
     },
     {
-      name: "Academic Yatra",
+      name: "Academic Yatra™",
       focus: "Standardized Test Prep & Academic Mentorship",
       desc: "IELTS, PTE, TOEFL, and GRE coaching with personalized learning roadmaps.",
       color: "border-navy/30 bg-navy/5",
     },
     {
-      name: "Medico Yatra",
+      name: "Medico Yatra™",
       focus: "Global MBBS & Healthcare Careers",
       desc: "NMC/WDOMS approved medical university admissions across Russia, Georgia, Kazakhstan & beyond.",
       color: "border-coral/40 bg-coral/5",
     },
     {
-      name: "ApplyVisa Yatra",
+      name: "ApplyVisa Yatra™",
       focus: "Visa Guidance & Documentation",
       desc: "End-to-end student, spouse, and visitor visa documentation auditing.",
       color: "border-amber/40 bg-amber/5",
@@ -303,7 +303,7 @@ export default function PartnerWithUsPageClient() {
     {
       question: "Can I contact Future Yatra™ about a partnership without filling the form?",
       answer:
-        "Yes. You're welcome to call us directly using the phone number listed on this page (+91 9286844550) or email our partnerships desk at partnerships@futureyatra.com.",
+        "Yes. You're welcome to call us directly using the phone number listed on this page (+91 9217368750) or email our partnerships desk at partnerships@futureyatra.com.",
     },
     {
       question: "How does Future Yatra™ ensure compliance and ethical transparency in B2B partnerships?",
@@ -693,8 +693,8 @@ export default function PartnerWithUsPageClient() {
             </p>
             <div className="flex justify-center items-center space-x-2 text-small font-heading font-bold text-teal">
               <Phone className="w-4 h-4 text-teal" />
-              <a href="tel:+919286844550" className="hover:underline">
-                +91 9286844550
+              <a href="tel:+919217368750" className="hover:underline">
+                +91 9217368750
               </a>
             </div>
           </div>
@@ -805,7 +805,7 @@ export default function PartnerWithUsPageClient() {
                       <input
                         type="tel"
                         required
-                        placeholder="+91 9286844550"
+                        placeholder="+91 9217368750"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full px-4 py-3.5 rounded-input border border-line focus:border-teal focus:ring-2 focus:ring-teal/20 outline-none text-small transition-all bg-sand-tint/20"
@@ -915,13 +915,13 @@ export default function PartnerWithUsPageClient() {
                       </div>
                       <div>
                         <div className="text-micro text-sand-tint/70 font-medium">Direct Phone Line</div>
-                        <a href="tel:+919286844550" className="font-heading text-body font-bold text-white hover:text-teal-bright transition-colors">
-                          +91 9286844550
+                        <a href="tel:+919217368750" className="font-heading text-body font-bold text-white hover:text-teal-bright transition-colors">
+                          +91 9217368750
                         </a>
                       </div>
                     </div>
                     <button
-                      onClick={() => handleCopy("+91 9286844550", "phone")}
+                      onClick={() => handleCopy("+91 9217368750", "phone")}
                       aria-label="Copy phone number"
                       className="p-2 rounded-lg bg-white/10 hover:bg-teal hover:text-navy text-white transition-all"
                     >
@@ -1096,7 +1096,7 @@ export default function PartnerWithUsPageClient() {
                   Our Brands
                 </h4>
                 <p className="text-xs text-muted mt-1 leading-relaxed font-normal">
-                  Explore University Yatra, Academic Yatra, Medico Yatra, and ApplyVisa Yatra.
+                  Explore University Yatra™, Academic Yatra™, Medico Yatra™, and ApplyVisa Yatra™.
                 </p>
               </div>
               <div className="inline-flex items-center space-x-1 text-xs font-heading font-bold text-teal group-hover:translate-x-1 transition-transform">

@@ -48,7 +48,7 @@ import GrandCtaBannerSection from "@/components/GrandCtaBannerSection";
 const BRANDS_DATA = [
   {
     id: "university-yatra",
-    name: "University Yatra",
+    name: "University Yatra™",
     slug: "/coming-soon?brand=university-yatra",
     fallbackSlug: "/brands/brand-1/",
     tagline: "Study Abroad Admissions & Student Visa Guidance",
@@ -62,7 +62,7 @@ const BRANDS_DATA = [
     gradientFrom: "from-teal/25",
     gradientTo: "to-navy-deep/80",
     description:
-      "University Yatra helps students navigate university selection, applications, and admissions across Canada, the USA, the UK, Australia, and Europe — from shortlisting the right institutions to preparing a compelling Statement of Purpose and managing the student visa process.",
+      "University Yatra™ helps students navigate university selection, applications, and admissions across Canada, the USA, the UK, Australia, and Europe — from shortlisting the right institutions to preparing a compelling Statement of Purpose and managing the student visa process.",
     bestFor:
       "Students ready to apply to universities abroad, or exploring which countries and programs fit their goals and budget.",
     destinations: ["Canada", "USA", "UK", "Australia", "Europe"],
@@ -77,7 +77,7 @@ const BRANDS_DATA = [
   },
   {
     id: "academic-yatra",
-    name: "Academic Yatra",
+    name: "Academic Yatra™",
     slug: "/coming-soon?brand=academic-yatra",
     fallbackSlug: "/brands/brand-2/",
     tagline: "Test Preparation & Language Training",
@@ -91,7 +91,7 @@ const BRANDS_DATA = [
     gradientFrom: "from-amber/25",
     gradientTo: "to-navy-deep/80",
     description:
-      "Academic Yatra provides structured coaching for IELTS, PTE, CELPIP, TOEFL, Duolingo, GRE, and GMAT, along with German and French language training for students targeting Europe. The focus is on genuine skill-building, not shortcuts or guaranteed-score claims.",
+      "Academic Yatra™ provides structured coaching for IELTS, PTE, CELPIP, TOEFL, Duolingo, GRE, and GMAT, along with German and French language training for students targeting Europe. The focus is on genuine skill-building, not shortcuts or guaranteed-score claims.",
     bestFor:
       "Students who need a qualifying test score before applying abroad, or who are building language skills for a specific destination.",
     destinations: ["IELTS", "PTE", "CELPIP", "TOEFL", "GRE", "German A1-B2"],
@@ -106,7 +106,7 @@ const BRANDS_DATA = [
   },
   {
     id: "medico-yatra",
-    name: "Medico Yatra",
+    name: "Medico Yatra™",
     slug: "/medico-yatra",
     fallbackSlug: "/brands/brand-3/",
     tagline: "MBBS & Healthcare Education Abroad",
@@ -120,7 +120,7 @@ const BRANDS_DATA = [
     gradientFrom: "from-coral/25",
     gradientTo: "to-navy-deep/80",
     description:
-      "Medico Yatra specializes in counselling for MBBS and allied healthcare education at WHO-recognised institutions abroad, with transparent cost breakdowns and honest guidance on the FMGE/NExT pathway required to practice in India afterward.",
+      "Medico Yatra™ specializes in counselling for MBBS and allied healthcare education at WHO-recognised institutions abroad, with transparent cost breakdowns and honest guidance on the FMGE/NExT pathway required to practice in India afterward.",
     bestFor:
       "Students pursuing a medical or healthcare career who need destination, institution, and pathway guidance specific to healthcare education.",
     destinations: ["WHO Recognized Universities", "NMC Compliant Pathways", "FMGE / NExT Roadmap"],
@@ -135,7 +135,7 @@ const BRANDS_DATA = [
   },
   {
     id: "applyvisa-yatra",
-    name: "ApplyVisa Yatra",
+    name: "ApplyVisa Yatra™",
     slug: "/coming-soon?brand=applyvisa-yatra",
     fallbackSlug: "/brands/brand-4/",
     tagline: "Visitor, Family & Immigration Visa Support",
@@ -149,7 +149,7 @@ const BRANDS_DATA = [
     gradientFrom: "from-navy-glow/25",
     gradientTo: "to-navy-deep/80",
     description:
-      "ApplyVisa Yatra handles documentation and application support for visitor visas, spouse and parent visas, and permanent residency guidance — helping families prepare accurate, complete applications for the relevant embassy or immigration authority to review.",
+      "ApplyVisa Yatra™ handles documentation and application support for visitor visas, spouse and parent visas, and permanent residency guidance — helping families prepare accurate, complete applications for the relevant embassy or immigration authority to review.",
     bestFor:
       "Families and individuals who need visa or immigration documentation support, independent of a study program.",
     destinations: ["Visitor Visas", "Spouse Visas", "Parent Super Visas", "PR Pathways"],
@@ -174,7 +174,7 @@ const BRAND_FAQS = [
   {
     question: "Can I use multiple brands for my journey?",
     answer:
-      "Absolutely. In fact, most students move seamlessly through our ecosystem — starting with Academic Yatra for IELTS/PTE coaching, moving to University Yatra for admissions and student visa guidance, and later using ApplyVisa Yatra to bring parents for graduation. Because all four brands belong to Future Yatra™ Private Limited, your records and preferences are unified without repeating yourself.",
+      "Absolutely. In fact, most students move seamlessly through our ecosystem — starting with Academic Yatra™ for IELTS/PTE coaching, moving to University Yatra™ for admissions and student visa guidance, and later using ApplyVisa Yatra™ to bring parents for graduation. Because all four brands belong to Future Yatra™ Private Limited, your records and preferences are unified without repeating yourself.",
   },
   {
     question: "Does Future Yatra™ guarantee university admissions or visas?",
@@ -184,7 +184,7 @@ const BRAND_FAQS = [
   {
     question: "How do I know which brand is right for me?",
     answer:
-      "If you are preparing for exams like IELTS or GRE, start with Academic Yatra. If you want to apply for Bachelor's or Master's degrees, start with University Yatra. If you are pursuing MBBS abroad, start with Medico Yatra. If you need tourist, spouse, or parent visas, start with ApplyVisa Yatra. You can also click 'Book Free Consultation' and our team will connect you to the right specialist.",
+      "If you are preparing for exams like IELTS or GRE, start with Academic Yatra™. If you want to apply for Bachelor's or Master's degrees, start with University Yatra™. If you are pursuing MBBS abroad, start with Medico Yatra™. If you need tourist, spouse, or parent visas, start with ApplyVisa Yatra™. You can also click 'Book Free Consultation' and our team will connect you to the right specialist.",
   },
 ];
 
@@ -364,7 +364,7 @@ export default function OurBrandsPageClient() {
                 transition={{ duration: 0.6, ease: easeTier1, delay: 0.25 }}
                 className="text-muted text-base sm:text-lg font-medium leading-relaxed max-w-2xl"
               >
-                Future Yatra™ Private Limited — Parent company to University Yatra, Academic Yatra, Medico Yatra, and ApplyVisa Yatra.
+                Future Yatra™ Private Limited — Parent company to University Yatra™, Academic Yatra™, Medico Yatra™, and ApplyVisa Yatra™.
               </motion.p>
 
               {/* Ecosystem Concept Narrative */}
@@ -839,10 +839,10 @@ export default function OurBrandsPageClient() {
             {/* Goal Selector Buttons */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
               {[
-                { id: "university", label: "Apply to Universities", icon: GraduationCap, brand: "University Yatra" },
-                { id: "academic", label: "IELTS / PTE / Test Prep", icon: BookOpen, brand: "Academic Yatra" },
-                { id: "medico", label: "Study MBBS Abroad", icon: Stethoscope, brand: "Medico Yatra" },
-                { id: "visa", label: "Visitor & Family Visas", icon: FileCheck2, brand: "ApplyVisa Yatra" },
+                { id: "university", label: "Apply to Universities", icon: GraduationCap, brand: "University Yatra™" },
+                { id: "academic", label: "IELTS / PTE / Test Prep", icon: BookOpen, brand: "Academic Yatra™" },
+                { id: "medico", label: "Study MBBS Abroad", icon: Stethoscope, brand: "Medico Yatra™" },
+                { id: "visa", label: "Visitor & Family Visas", icon: FileCheck2, brand: "ApplyVisa Yatra™" },
               ].map((goal) => (
                 <button
                   key={goal.id}
@@ -924,28 +924,28 @@ export default function OurBrandsPageClient() {
             {[
               {
                 step: "01",
-                brand: "Academic Yatra",
+                brand: "Academic Yatra™",
                 title: "Qualifying Score",
                 desc: "Get your IELTS, PTE, or language score built through transparent coaching.",
                 color: "#E0A23F",
               },
               {
                 step: "02",
-                brand: "University Yatra",
+                brand: "University Yatra™",
                 title: "University Offer",
                 desc: "Shortlist institutions, submit SOPs, and secure your official offer letter.",
                 color: "#2DBDB6",
               },
               {
                 step: "03",
-                brand: "ApplyVisa Yatra",
+                brand: "ApplyVisa Yatra™",
                 title: "Student Visa",
                 desc: "File your student visa application with audited financial documentation.",
                 color: "#3A5EA8",
               },
               {
                 step: "04",
-                brand: "ApplyVisa Yatra",
+                brand: "ApplyVisa Yatra™",
                 title: "Family Visitors",
                 desc: "Bring your parents for graduation or vacation with family visitor visas.",
                 color: "#E8604C",
@@ -1117,7 +1117,7 @@ export default function OurBrandsPageClient() {
                       <input
                         type="tel"
                         required
-                        placeholder="+91 9286844550"
+                        placeholder="+91 9217368750"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full px-4 py-2.5 rounded-xl border border-line bg-teal-tint/30 text-sm focus:outline-none focus:border-teal"
@@ -1135,10 +1135,10 @@ export default function OurBrandsPageClient() {
                       className="w-full px-4 py-2.5 rounded-xl border border-line bg-teal-tint/30 text-sm focus:outline-none focus:border-teal font-medium"
                     >
                       <option value="General / Not Sure">General / Not Sure (Guide Me)</option>
-                      <option value="University Yatra">University Yatra (Admissions & Visas)</option>
-                      <option value="Academic Yatra">Academic Yatra (Test Prep & Languages)</option>
-                      <option value="Medico Yatra">Medico Yatra (MBBS Abroad)</option>
-                      <option value="ApplyVisa Yatra">ApplyVisa Yatra (Visitor & Immigration)</option>
+                      <option value="University Yatra™">University Yatra™ (Admissions & Visas)</option>
+                      <option value="Academic Yatra™">Academic Yatra™ (Test Prep & Languages)</option>
+                      <option value="Medico Yatra™">Medico Yatra™ (MBBS Abroad)</option>
+                      <option value="ApplyVisa Yatra™">ApplyVisa Yatra™ (Visitor & Immigration)</option>
                     </select>
                   </div>
 

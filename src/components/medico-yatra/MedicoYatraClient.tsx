@@ -99,11 +99,11 @@ export default function MedicoYatraClient() {
         {/* Floating Glassmorphic Capsule Island */}
         <div className="pointer-events-auto max-w-7xl mx-auto bg-white/85 backdrop-blur-2xl border border-white/70 shadow-[0_10px_30px_-10px_rgba(2,99,204,0.15)] hover:shadow-[0_15px_35px_-8px_rgba(2,167,187,0.25)] rounded-full px-4 sm:px-6 h-16 sm:h-18 flex items-center justify-between transition-all duration-300 group/nav">
           
-          {/* Brand Logo with Official Medico Yatra PNG */}
+          {/* Brand Logo with Official Medico Yatra™ PNG */}
           <Link href="/medico-yatra" className="flex items-center group/logo flex-shrink-0">
             <Image
               src="/Logo Files/PNG/MEDICO YATRA LOGO final logo with TM.png"
-              alt="Medico Yatra Logo"
+              alt="Medico Yatra™ Logo"
               width={220}
               height={50}
               priority
@@ -306,7 +306,7 @@ export default function MedicoYatraClient() {
               </h1>
 
               <p className="text-sm sm:text-base lg:text-lg text-slate-600 leading-relaxed font-poppins max-w-3xl mx-auto">
-                Medico Yatra isn't a general study-abroad agency. We specialise in healthcare careers — <strong className="text-slate-900 font-semibold">MBBS, Dentistry, Nursing, Pharmacy, Physiotherapy, Respiratory Therapy, Medical Lab Technology</strong> and other allied-health courses — with NMC-recognised universities, honest counselling, and licensing support (FMGE / NExT & USMLE) built in.
+                Medico Yatra™ isn't a general study-abroad agency. We specialise in healthcare careers — <strong className="text-slate-900 font-semibold">MBBS, Dentistry, Nursing, Pharmacy, Physiotherapy, Respiratory Therapy, Medical Lab Technology</strong> and other allied-health courses — with NMC-recognised universities, honest counselling, and licensing support (FMGE / NExT & USMLE) built in.
               </p>
 
               {/* Micro-trust Line */}
@@ -632,7 +632,7 @@ export default function MedicoYatraClient() {
               Apply Now
             </button>
             <a
-              href="https://wa.me/919286844550?text=Hi%20Medico%20Yatra,%20I%20want%20to%20know%20more%20about%20healthcare%20courses%20abroad"
+              href="https://wa.me/919217368750?text=Hi%20Medico%20Yatra,%20I%20want%20to%20know%20more%20about%20healthcare%20courses%20abroad"
               target="_blank"
               rel="noopener noreferrer"
               className="px-7 py-4 bg-[#10B981] hover:bg-[#059669] text-white font-bold text-sm rounded-full shadow-md transition-all flex items-center gap-2 transform hover:scale-105"
@@ -747,12 +747,12 @@ export default function MedicoYatraClient() {
               Legal Compliance & Disclaimer (Future Yatra™ Private Limited):
             </strong>
             <p>
-              Medico Yatra provides educational guidance and does not guarantee admission, visa, scholarship, examination, job, salary, or PR outcomes. Salary figures shown are illustrative, approximate, and require licensing/registration and immigration eligibility to achieve. The Country Finder tool provides general matching based on self-reported answers, not a personalised assessment — book a free counselling session for guidance tailored to your specific profile. University recognition and regulations change — verify the current NMC-approved list and applicable rules (nmc.org.in, natboard.edu.in) before enrolling. Guidance, not legal advice.
+              Medico Yatra™ provides educational guidance and does not guarantee admission, visa, scholarship, examination, job, salary, or PR outcomes. Salary figures shown are illustrative, approximate, and require licensing/registration and immigration eligibility to achieve. The Country Finder tool provides general matching based on self-reported answers, not a personalised assessment — book a free counselling session for guidance tailored to your specific profile. University recognition and regulations change — verify the current NMC-approved list and applicable rules (nmc.org.in, natboard.edu.in) before enrolling. Guidance, not legal advice.
             </p>
           </div>
 
           <div className="pt-4 text-center text-xs text-slate-500 border-t border-slate-900">
-            © {new Date().getFullYear()} Medico Yatra · Future Yatra™ Private Limited. All rights reserved.
+            © {new Date().getFullYear()} Medico Yatra™ · Future Yatra™ Private Limited. All rights reserved.
           </div>
         </div>
       </footer>
@@ -769,7 +769,7 @@ export default function MedicoYatraClient() {
           <span>Free Counselling</span>
         </button>
         <a
-          href="https://wa.me/919286844550?text=Hi%20Medico%20Yatra,%20I%20want%20to%20know%20more%20about%20healthcare%20courses"
+          href="https://wa.me/919217368750?text=Hi%20Medico%20Yatra,%20I%20want%20to%20know%20more%20about%20healthcare%20courses"
           target="_blank"
           rel="noopener noreferrer"
           className="flex-1 py-3 bg-emerald-600 text-white font-bold text-xs rounded-xl shadow flex items-center justify-center gap-1.5"

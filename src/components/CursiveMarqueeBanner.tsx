@@ -4,10 +4,10 @@ import React from "react";
 
 export default function CursiveMarqueeBanner() {
   const marqueeItems = [
-    "University Yatra",
-    "Academic Yatra",
-    "Medico Yatra",
-    "ApplyVisa Yatra",
+    "University Yatra™",
+    "Academic Yatra™",
+    "Medico Yatra™",
+    "ApplyVisa Yatra™",
     "Future Yatra™ Group",
     "Global Student Pathways",
   ];

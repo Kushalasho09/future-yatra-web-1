@@ -59,25 +59,25 @@ export default function Footer() {
               href="/coming-soon?brand=university-yatra"
               className="bg-white/10 hover:bg-teal hover:text-navy border border-white/15 px-3.5 py-1.5 rounded-full text-xs font-bold text-teal-bright transition-all duration-300 shadow-sm"
             >
-              University Yatra
+              University Yatra™
             </Link>
             <Link
               href="/coming-soon?brand=academic-yatra"
               className="bg-white/10 hover:bg-teal hover:text-navy border border-white/15 px-3.5 py-1.5 rounded-full text-xs font-bold text-teal-bright transition-all duration-300 shadow-sm"
             >
-              Academic Yatra
+              Academic Yatra™
             </Link>
             <Link
               href="/medico-yatra"
               className="bg-white/10 hover:bg-teal hover:text-navy border border-white/15 px-3.5 py-1.5 rounded-full text-xs font-bold text-teal-bright transition-all duration-300 shadow-sm"
             >
-              Medico Yatra
+              Medico Yatra™
             </Link>
             <Link
               href="/coming-soon?brand=applyvisa-yatra"
               className="bg-white/10 hover:bg-teal hover:text-navy border border-white/15 px-3.5 py-1.5 rounded-full text-xs font-bold text-teal-bright transition-all duration-300 shadow-sm"
             >
-              ApplyVisa Yatra
+              ApplyVisa Yatra™
             </Link>
           </div>
 
@@ -149,25 +149,25 @@ export default function Footer() {
               <li>
                 <Link href="/coming-soon?brand=university-yatra" className="hover:text-teal-bright hover:translate-x-1 inline-flex items-center space-x-1.5 transition-all duration-200">
                   <span className="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0" />
-                  <span>University Yatra</span>
+                  <span>University Yatra™</span>
                 </Link>
               </li>
               <li>
                 <Link href="/coming-soon?brand=academic-yatra" className="hover:text-teal-bright hover:translate-x-1 inline-flex items-center space-x-1.5 transition-all duration-200">
                   <span className="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0" />
-                  <span>Academic Yatra</span>
+                  <span>Academic Yatra™</span>
                 </Link>
               </li>
               <li>
                 <Link href="/medico-yatra" className="hover:text-teal-bright hover:translate-x-1 inline-flex items-center space-x-1.5 transition-all duration-200">
                   <span className="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0" />
-                  <span>Medico Yatra</span>
+                  <span>Medico Yatra™</span>
                 </Link>
               </li>
               <li>
                 <Link href="/coming-soon?brand=applyvisa-yatra" className="hover:text-teal-bright hover:translate-x-1 inline-flex items-center space-x-1.5 transition-all duration-200">
                   <span className="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0" />
-                  <span>ApplyVisa Yatra</span>
+                  <span>ApplyVisa Yatra™</span>
                 </Link>
               </li>
             </ul>

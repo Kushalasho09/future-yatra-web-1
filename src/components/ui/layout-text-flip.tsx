@@ -12,7 +12,7 @@ interface LayoutTextFlipProps {
 
 export const LayoutTextFlip = ({
   text,
-  words = ["University Yatra", "Academic Yatra", "Medico Yatra", "ApplyVisa Yatra"],
+  words = ["University Yatra™", "Academic Yatra™", "Medico Yatra™", "ApplyVisa Yatra™"],
   duration = 2800,
   className,
 }: LayoutTextFlipProps) => {

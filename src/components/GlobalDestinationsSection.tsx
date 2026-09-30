@@ -79,7 +79,7 @@ const destinationsData: DestinationData[] = [
       "Provincial Nominee Program (PNP) aligned course selection",
     ],
     fullGuideDesc:
-      "Canada remains a premier destination for Indian students due to high academic standards, safe multicultural campuses, and welcoming post-study work permits. Our University Yatra team guides you through SDS visa requirements, GIC financial verification, and institution shortlisting.",
+      "Canada remains a premier destination for Indian students due to high academic standards, safe multicultural campuses, and welcoming post-study work permits. Our University Yatra™ team guides you through SDS visa requirements, GIC financial verification, and institution shortlisting.",
     financialReq: "GIC Deposit (CAD $20,635) + 1 Year Tuition Proof",
   },
   {

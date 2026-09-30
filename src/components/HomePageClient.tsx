@@ -55,28 +55,28 @@ export default function HomePageClient() {
 
   const brandPills = [
     {
-      name: "University Yatra",
+      name: "University Yatra™",
       desc: "Study Abroad & Admissions",
       href: "/coming-soon?brand=university-yatra",
       icon: GraduationCap,
       color: "bg-blue-50 text-blue-700 border-blue-200 hover:bg-blue-100",
     },
     {
-      name: "Academic Yatra",
+      name: "Academic Yatra™",
       desc: "IELTS, PTE & Test Prep",
       href: "/coming-soon?brand=academic-yatra",
       icon: BookOpen,
       color: "bg-emerald-50 text-emerald-700 border-emerald-200 hover:bg-emerald-100",
     },
     {
-      name: "Medico Yatra",
+      name: "Medico Yatra™",
       desc: "MBBS & Healthcare Education Abroad",
       href: "/medico-yatra",
       icon: Stethoscope,
       color: "bg-rose-50 text-rose-700 border-rose-200 hover:bg-rose-100",
     },
     {
-      name: "ApplyVisa Yatra",
+      name: "ApplyVisa Yatra™",
       desc: "Visitor, Family & Immigration Visas",
       href: "/coming-soon?brand=applyvisa-yatra",
       icon: FileCheck2,
@@ -109,7 +109,7 @@ export default function HomePageClient() {
 
   const ourBrands = [
     {
-      name: "University Yatra",
+      name: "University Yatra™",
       tagline: "Admissions & Student Visas",
       description:
         "Choose the right course and university, understand your options and get support with your application.",
@@ -118,7 +118,7 @@ export default function HomePageClient() {
       accent: "from-blue-600 to-indigo-600",
     },
     {
-      name: "Academic Yatra",
+      name: "Academic Yatra™",
       tagline: "Test Preparation & Languages",
       description:
         "Prepare for IELTS, PTE, DSAT, French and German with structured preparation.",
@@ -127,7 +127,7 @@ export default function HomePageClient() {
       accent: "from-teal to-emerald-600",
     },
     {
-      name: "Medico Yatra",
+      name: "Medico Yatra™",
       tagline: "MBBS & Healthcare Pathways",
       description:
         "Get guidance on MBBS and healthcare education options abroad.",
@@ -136,7 +136,7 @@ export default function HomePageClient() {
       accent: "from-rose-500 to-pink-600",
     },
     {
-      name: "ApplyVisa Yatra",
+      name: "ApplyVisa Yatra™",
       tagline: "Visitor & Family Visas",
       description:
         "Get support with visa documentation, application preparation and filing.",
@@ -239,7 +239,7 @@ export default function HomePageClient() {
 
                     <LayoutTextFlip
                       text="Future Yatra™"
-                      words={["University Yatra", "Academic Yatra", "Medico Yatra", "ApplyVisa Yatra"]}
+                      words={["University Yatra™", "Academic Yatra™", "Medico Yatra™", "ApplyVisa Yatra™"]}
                       duration={2800}
                     />
                   </motion.div>
@@ -302,7 +302,7 @@ export default function HomePageClient() {
                   <Link href="/medico-yatra" className="inline-block w-full sm:w-auto">
                     <div className="w-full sm:w-auto bg-gradient-to-r from-[#0263CC] via-[#02A7BB] to-[#4DA5EC] hover:brightness-110 text-white font-bold text-body px-6 sm:px-8 py-3.5 sm:py-4 rounded-full flex items-center justify-center space-x-2.5 shadow-lg shadow-blue-500/20 group transition-all transform hover:scale-[1.02]">
                       <Stethoscope className="w-5 h-5 text-amber-300" />
-                      <span>Explore Medico Yatra</span>
+                      <span>Explore Medico Yatra™</span>
                       <ArrowRight className="w-4 h-4 text-white group-hover:translate-x-1 transition-transform duration-150" />
                     </div>
                   </Link>

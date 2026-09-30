@@ -147,7 +147,7 @@ export default function VisionValuesPageClient() {
       icon: Layers,
       image: "/images/value_05_one_ecosystem.png",
       description:
-        "University Yatra, Academic Yatra, Medico Yatra, and ApplyVisa Yatra under one accountable parent company, giving students the right expertise at every stage with a consistent standard of quality, ethics, and service.",
+        "University Yatra™, Academic Yatra™, Medico Yatra™, and ApplyVisa Yatra™ under one accountable parent company, giving students the right expertise at every stage with a consistent standard of quality, ethics, and service.",
       color: "from-teal/30 via-navy-glow/30 to-teal-bright/20",
       border: "border-teal/50",
       accent: "text-teal-bright",
@@ -277,22 +277,22 @@ export default function VisionValuesPageClient() {
 
             {/* Subtext */}
             <p className="text-sand-tint/80 text-base sm:text-lg max-w-2xl mx-auto font-normal leading-relaxed">
-              Future Yatra™ Private Limited — Parent company to University Yatra, Academic Yatra, Medico Yatra, and ApplyVisa Yatra.
+              Future Yatra™ Private Limited — Parent company to University Yatra™, Academic Yatra™, Medico Yatra™, and ApplyVisa Yatra™.
             </p>
 
             {/* 4 Specialist Brands Pill Row */}
             <div className="pt-4 flex flex-wrap justify-center gap-2 sm:gap-3 text-xs sm:text-small font-bold">
               <span className="bg-white/10 backdrop-blur-md border border-teal/40 px-4 py-1.5 rounded-full text-teal-bright shadow-sm hover:bg-teal hover:text-navy-deep transition-all duration-300">
-                University Yatra
+                University Yatra™
               </span>
               <span className="bg-white/10 backdrop-blur-md border border-teal/40 px-4 py-1.5 rounded-full text-teal-bright shadow-sm hover:bg-teal hover:text-navy-deep transition-all duration-300">
-                Academic Yatra
+                Academic Yatra™
               </span>
               <span className="bg-white/10 backdrop-blur-md border border-teal/40 px-4 py-1.5 rounded-full text-teal-bright shadow-sm hover:bg-teal hover:text-navy-deep transition-all duration-300">
-                Medico Yatra
+                Medico Yatra™
               </span>
               <span className="bg-white/10 backdrop-blur-md border border-teal/40 px-4 py-1.5 rounded-full text-teal-bright shadow-sm hover:bg-teal hover:text-navy-deep transition-all duration-300">
-                ApplyVisa Yatra
+                ApplyVisa Yatra™
               </span>
             </div>
           </motion.div>

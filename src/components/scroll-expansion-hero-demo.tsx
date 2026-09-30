@@ -36,7 +36,7 @@ const sampleMediaContent: MediaContentCollection = {
       overview:
         'Experience hands-on clinical training and modern medical laboratories at top NMC-recognised universities across Georgia, UK, Germany, and Uzbekistan.',
       conclusion:
-        'Medico Yatra provides complete guidance from admission and documentation to licensing coaching and clinical placements.',
+        'Medico Yatra™ provides complete guidance from admission and documentation to licensing coaching and clinical placements.',
     },
   },
   image: {
@@ -50,7 +50,7 @@ const sampleMediaContent: MediaContentCollection = {
       overview:
         'Explore European medical education with 100% English-medium instruction and direct USMLE / NExT licensing preparation from Year 1.',
       conclusion:
-        'Join hundreds of students and families who trust Medico Yatra for transparent, end-to-end medical guidance.',
+        'Join hundreds of students and families who trust Medico Yatra™ for transparent, end-to-end medical guidance.',
     },
   },
 };

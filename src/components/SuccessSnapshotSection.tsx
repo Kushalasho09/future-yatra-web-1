@@ -26,12 +26,12 @@ const impactCards: ImpactCardData[] = [
   {
     id: "students",
     category: "STUDENTS & ADMISSIONS",
-    brandName: "University Yatra",
+    brandName: "University Yatra™",
     title: "Global Campus Admissions",
     description:
       "Comprehensive admissions guidance, university shortlisting, and scholarship preparation for top global destinations.",
     imageSrc: "/images/person_university.png",
-    imageAlt: "University Yatra Student Advisor",
+    imageAlt: "University Yatra™ Student Advisor",
     badge1Stat: "98%",
     badge1Label: "Accuracy Index",
     badge2Stat: "Top 100",
@@ -42,12 +42,12 @@ const impactCards: ImpactCardData[] = [
   {
     id: "testprep",
     category: "TEST PREP & LANGUAGES",
-    brandName: "Academic Yatra",
+    brandName: "Academic Yatra™",
     title: "IELTS, PTE & Language Coaching",
     description:
       "Structured coaching for IELTS, PTE, TOEFL & GRE with personalised study plans to reach target score requirements.",
     imageSrc: "/images/person_academic.png",
-    imageAlt: "Academic Yatra Test Prep Mentor",
+    imageAlt: "Academic Yatra™ Test Prep Mentor",
     badge1Stat: "8.0+",
     badge1Label: "IELTS Band Target",
     badge2Stat: "95%",
@@ -58,12 +58,12 @@ const impactCards: ImpactCardData[] = [
   {
     id: "medico",
     category: "MBBS & HEALTHCARE",
-    brandName: "Medico Yatra",
+    brandName: "Medico Yatra™",
     title: "Transparent MBBS Pathways",
     description:
       "Honest counselling for MBBS abroad with clear, transparent FMGE and NExT screening exam pathways back into India.",
     imageSrc: "/images/person_medico.png",
-    imageAlt: "Medico Yatra MBBS Consultant",
+    imageAlt: "Medico Yatra™ MBBS Consultant",
     badge1Stat: "100%",
     badge1Label: "FMGE Track",
     badge2Stat: "Direct",
@@ -74,12 +74,12 @@ const impactCards: ImpactCardData[] = [
   {
     id: "visas",
     category: "VISAS & DOCUMENTATION",
-    brandName: "ApplyVisa Yatra",
+    brandName: "ApplyVisa Yatra™",
     title: "Visa & Residency Support",
     description:
       "Accurate application documentation and filing support for visitor, family, spouse, and permanent residency visas.",
     imageSrc: "/images/person_visa.png",
-    imageAlt: "ApplyVisa Yatra Visa Specialist",
+    imageAlt: "ApplyVisa Yatra™ Visa Specialist",
     badge1Stat: "100%",
     badge1Label: "Embassy Compliant",
     badge2Stat: "Zero",

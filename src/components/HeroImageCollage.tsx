@@ -11,7 +11,7 @@ export default function HeroImageCollage() {
   const slides = [
     {
       id: "university",
-      badge: "University Yatra — Admissions",
+      badge: "University Yatra™ — Admissions",
       subtext: "Campus Admissions & Scholarships",
       link: "/coming-soon?brand=university-yatra",
       main: { src: "/images/hero_student_journey.png", alt: "Student Walking on Oxford Campus" },
@@ -20,7 +20,7 @@ export default function HeroImageCollage() {
     },
     {
       id: "academic",
-      badge: "Academic Yatra — Test Prep",
+      badge: "Academic Yatra™ — Test Prep",
       subtext: "IELTS, PTE, TOEFL & GRE Coaching",
       link: "/coming-soon?brand=academic-yatra",
       main: { src: "/images/hero_test_prep.png", alt: "Student at IELTS Study Desk" },
@@ -29,7 +29,7 @@ export default function HeroImageCollage() {
     },
     {
       id: "medico",
-      badge: "Medico Yatra — MBBS Abroad",
+      badge: "Medico Yatra™ — MBBS Abroad",
       subtext: "Transparent FMGE & NExT Pathways",
       link: "/medico-yatra",
       main: { src: "/images/hero_medical_student.png", alt: "Medical Student in Hospital Ward" },
@@ -38,7 +38,7 @@ export default function HeroImageCollage() {
     },
     {
       id: "visa",
-      badge: "ApplyVisa Yatra — Visa Support",
+      badge: "ApplyVisa Yatra™ — Visa Support",
       subtext: "Visitor, Spouse, Family & PR Visas",
       link: "/coming-soon?brand=applyvisa-yatra",
       main: { src: "/images/hero_visa_passport.png", alt: "Approved Visa & Passport" },

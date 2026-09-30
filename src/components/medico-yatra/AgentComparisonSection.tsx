@@ -68,7 +68,7 @@ export default function AgentComparisonSection({ onOpenCounselling }: AgentCompa
               </span>
             </div>
 
-            {/* Medico Yatra Header */}
+            {/* Medico Yatra™ Header */}
             <div className="bg-gradient-to-r from-[#0263CC] to-[#02A7BB] p-5 sm:p-6 flex items-center justify-between text-white shadow-md">
               <div className="flex items-center gap-3">
                 <div className="w-9 h-9 rounded-xl bg-white/20 border border-white/30 flex items-center justify-center flex-shrink-0 backdrop-blur-md">
@@ -76,7 +76,7 @@ export default function AgentComparisonSection({ onOpenCounselling }: AgentCompa
                 </div>
                 <div>
                   <h3 className="font-heading text-white font-bold text-base sm:text-lg leading-tight">
-                    Medico Yatra
+                    Medico Yatra™
                   </h3>
                   <span className="text-xs text-cyan-100 font-normal block">Single Accountable Standard</span>
                 </div>
@@ -108,7 +108,7 @@ export default function AgentComparisonSection({ onOpenCounselling }: AgentCompa
                   </p>
                 </div>
 
-                {/* Right Side: Medico Yatra */}
+                {/* Right Side: Medico Yatra™ */}
                 <div className="p-5 sm:p-6 text-slate-900 bg-[#0263CC]/[0.03] flex items-start gap-3.5 group-hover:bg-[#0263CC]/[0.07] transition-colors duration-200">
                   <div className="w-5 h-5 rounded-full bg-emerald-100 border border-emerald-300 text-emerald-600 flex items-center justify-center flex-shrink-0 mt-0.5 shadow-xs">
                     <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 stroke-[2.5]" />
@@ -139,12 +139,12 @@ export default function AgentComparisonSection({ onOpenCounselling }: AgentCompa
               transition={{ duration: 0.3, delay: idx * 0.05 }}
               className="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-3"
             >
-              {/* Medico Yatra Row */}
+              {/* Medico Yatra™ Row */}
               <div className="p-3.5 rounded-xl bg-gradient-to-r from-blue-50/90 to-teal-50/90 border border-blue-200/80 space-y-1.5">
                 <div className="flex items-center justify-between">
                   <span className="text-[11px] font-extrabold text-[#0263CC] uppercase tracking-wider flex items-center gap-1.5">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                    Medico Yatra
+                    Medico Yatra™
                   </span>
                   <span className="text-[10px] font-extrabold text-white bg-gradient-to-r from-[#0263CC] to-[#02A7BB] px-2.5 py-0.5 rounded-full shadow-xs">
                     Specialist Standard

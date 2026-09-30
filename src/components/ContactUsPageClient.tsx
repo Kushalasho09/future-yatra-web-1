@@ -40,7 +40,7 @@ export default function ContactUsPageClient() {
     fullName: "",
     email: "",
     phone: "",
-    interest: "University Yatra – Admissions",
+    interest: "University Yatra™ – Admissions",
     message: "",
   });
 
@@ -61,7 +61,7 @@ export default function ContactUsPageClient() {
       mapUrl: "https://maps.google.com/maps?q=Connaught+Place,+New+Delhi,+India&t=&z=15&ie=UTF8&iwloc=&output=embed",
       directUrl: "https://maps.google.com/?q=Connaught+Place,+New+Delhi,+India",
       hours: "Mon–Sat: 10:00 AM – 7:00 PM IST",
-      phone: "+91 9286844550",
+      phone: "+91 9217368750",
       status: "🟢 Registered HQ • In-Person & Virtual",
     },
   ];
@@ -86,10 +86,10 @@ export default function ContactUsPageClient() {
       ctaLink: "/brands",
       ctaColor: "bg-teal text-navy hover:bg-teal-bright",
       highlights: [
-        { label: "University Yatra", type: "Admissions", icon: "🎓" },
-        { label: "Academic Yatra", type: "Test Prep", icon: "📚" },
-        { label: "Medico Yatra", type: "MBBS Abroad", icon: "🩺" },
-        { label: "ApplyVisa Yatra", type: "Visa Guidance", icon: "🛂" },
+        { label: "University Yatra™", type: "Admissions", icon: "🎓" },
+        { label: "Academic Yatra™", type: "Test Prep", icon: "📚" },
+        { label: "Medico Yatra™", type: "MBBS Abroad", icon: "🩺" },
+        { label: "ApplyVisa Yatra™", type: "Visa Guidance", icon: "🛂" },
       ],
     },
     {
@@ -172,10 +172,10 @@ export default function ContactUsPageClient() {
 
   // Interest options as specified in prompt
   const interestOptions = [
-    { id: "uni", label: "University Yatra – Admissions", icon: "🎓" },
-    { id: "acad", label: "Academic Yatra – Test Prep", icon: "📚" },
-    { id: "med", label: "Medico Yatra – MBBS & Healthcare", icon: "🩺" },
-    { id: "visa", label: "ApplyVisa Yatra – Visa Guidance", icon: "🛂" },
+    { id: "uni", label: "University Yatra™ – Admissions", icon: "🎓" },
+    { id: "acad", label: "Academic Yatra™ – Test Prep", icon: "📚" },
+    { id: "med", label: "Medico Yatra™ – MBBS & Healthcare", icon: "🩺" },
+    { id: "visa", label: "ApplyVisa Yatra™ – Visa Guidance", icon: "🛂" },
     { id: "partner", label: "Partnership Enquiry", icon: "🤝" },
     { id: "careers", label: "Careers", icon: "💼" },
     { id: "other", label: "Something Else", icon: "💬" },
@@ -261,7 +261,7 @@ export default function ContactUsPageClient() {
     },
     {
       q: "Can I speak to someone by phone instead of filling the form?",
-      a: "Yes! You can call us directly at +91 9286844550 during business hours (Mon–Sat, 10 AM–7 PM IST), or start a direct WhatsApp chat using the link above.",
+      a: "Yes! You can call us directly at +91 9217368750 during business hours (Mon–Sat, 10 AM–7 PM IST), or start a direct WhatsApp chat using the link above.",
     },
     {
       q: "Are initial counselling sessions free of charge?",
@@ -351,21 +351,13 @@ export default function ContactUsPageClient() {
               </button>
 
               <a
-                href="https://wa.me/919286844550"
+                href="https://wa.me/919217368750"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 bg-teal-tint/80 border border-teal/40 text-navy hover:bg-teal hover:text-navy text-small font-semibold px-5 py-3.5 rounded-pill transition-all duration-300 shadow-sm"
               >
                 <MessageSquare className="w-4 h-4 text-teal fill-teal/20" />
                 <span>WhatsApp</span>
-              </a>
-
-              <a
-                href="tel:+919286844550"
-                className="inline-flex items-center space-x-2 bg-white border border-line text-muted hover:text-navy hover:border-navy text-small font-semibold px-5 py-3.5 rounded-pill transition-all duration-300 shadow-sm"
-              >
-                <PhoneCall className="w-4 h-4 text-navy" />
-                <span>Call</span>
               </a>
             </div>
 
@@ -501,9 +493,9 @@ export default function ContactUsPageClient() {
               </div>
 
               <div className="pt-2 flex items-center justify-between bg-white p-3 rounded-xl border border-line">
-                <span className="font-heading text-base font-bold text-navy-deep">+91 9286844550</span>
+                <span className="font-heading text-base font-bold text-navy-deep">+91 9217368750</span>
                 <button
-                  onClick={() => handleCopy("+91 9286844550", "phone")}
+                  onClick={() => handleCopy("+91 9217368750", "phone")}
                   className="p-1.5 text-muted hover:text-teal transition-colors"
                   title="Copy Phone Number"
                 >
@@ -512,7 +504,7 @@ export default function ContactUsPageClient() {
               </div>
 
               <a
-                href="tel:+919286844550"
+                href="tel:+919217368750"
                 className="w-full inline-flex items-center justify-center space-x-2 bg-navy text-white text-xs font-heading font-semibold py-2.5 rounded-xl hover:bg-navy-glow transition-colors"
               >
                 <PhoneCall className="w-3.5 h-3.5" />
@@ -581,12 +573,12 @@ export default function ContactUsPageClient() {
               </div>
 
               <div className="pt-2 flex items-center justify-between bg-white p-3 rounded-xl border border-emerald-200">
-                <span className="font-heading text-base font-bold text-emerald-900">+91 9286844550</span>
+                <span className="font-heading text-base font-bold text-emerald-900">+91 9217368750</span>
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping" />
               </div>
 
               <a
-                href="https://wa.me/919286844550"
+                href="https://wa.me/919217368750"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center space-x-2 bg-emerald-600 text-white text-xs font-heading font-semibold py-2.5 rounded-xl hover:bg-emerald-700 transition-colors shadow-sm"
@@ -939,7 +931,7 @@ export default function ContactUsPageClient() {
                         fullName: "",
                         email: "",
                         phone: "",
-                        interest: "University Yatra – Admissions",
+                        interest: "University Yatra™ – Admissions",
                         message: "",
                       });
                     }}
@@ -1006,7 +998,7 @@ export default function ContactUsPageClient() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      placeholder="+91 9286844550"
+                      placeholder="+91 9217368750"
                       className="w-full px-4 py-3 rounded-input border border-line focus:border-teal focus:ring-2 focus:ring-teal/20 outline-none text-small transition-all"
                     />
                   </div>
@@ -1306,7 +1298,7 @@ export default function ContactUsPageClient() {
                     Message Received & Logged
                   </h3>
                   <p className="text-xs sm:text-small text-muted leading-relaxed font-normal">
-                    Your request enters our central intake desk immediately. If you selected a specific brand (e.g. University Yatra or ApplyVisa Yatra), it is routed directly to that specialist team.
+                    Your request enters our central intake desk immediately. If you selected a specific brand (e.g. University Yatra™ or ApplyVisa Yatra™), it is routed directly to that specialist team.
                   </p>
                 </div>
               </div>
@@ -1486,11 +1478,11 @@ export default function ContactUsPageClient() {
             </button>
 
             <a
-              href="tel:+919286844550"
+              href="tel:+919217368750"
               className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white text-body font-heading font-semibold px-8 py-4 rounded-pill transition-all duration-300"
             >
               <Phone className="w-4 h-4 text-teal-bright" />
-              <span>Call +91 9286844550</span>
+              <span>Call +91 9217368750</span>
             </a>
           </div>
 

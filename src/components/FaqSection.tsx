@@ -46,14 +46,14 @@ const faqData: FaqItemData[] = [
     number: "05",
     question: "Do you provide test preparation?",
     answer:
-      "Academic Yatra provides preparation for IELTS, PTE, DSAT, French and German.",
+      "Academic Yatra™ provides preparation for IELTS, PTE, DSAT, French and German.",
   },
   {
     id: "faq-6",
     number: "06",
     question: "Do you provide visa assistance?",
     answer:
-      "Yes. ApplyVisa Yatra provides support with visa documentation and application preparation.",
+      "Yes. ApplyVisa Yatra™ provides support with visa documentation and application preparation.",
   },
   {
     id: "faq-7",

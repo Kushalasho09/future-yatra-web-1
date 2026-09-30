@@ -71,7 +71,7 @@ export default function MedicoTestimonialsSection({
             TESTIMONIAL
           </h2>
           <p className="text-xs sm:text-sm text-sky-100/80 font-poppins max-w-md mx-auto pt-1">
-            Real stories from students and parents who evaluated Medico Yatra&apos;s guidance.
+            Real stories from students and parents who evaluated Medico Yatra™&apos;s guidance.
           </p>
         </div>
 

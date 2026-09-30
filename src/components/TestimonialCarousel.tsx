@@ -24,7 +24,7 @@ export default function TestimonialCarousel() {
       university: "Stanford University",
       country: "United States 🇺🇸",
       image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80",
-      quote: "University Yatra and ApplyVisa Yatra transformed my dream into reality. From SOP refining to securing my F-1 visa on the first attempt, their guidance was invaluable!",
+      quote: "University Yatra™ and ApplyVisa Yatra™ transformed my dream into reality. From SOP refining to securing my F-1 visa on the first attempt, their guidance was invaluable!",
       rating: 5,
     },
     {
@@ -34,7 +34,7 @@ export default function TestimonialCarousel() {
       university: "King's College London",
       country: "United Kingdom 🇬🇧",
       image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=300&q=80",
-      quote: "Medico Yatra made my UK medical placement seamless. Their team handled complex eligibility checks, PLAB prep advice, and visa filing with zero stress.",
+      quote: "Medico Yatra™ made my UK medical placement seamless. Their team handled complex eligibility checks, PLAB prep advice, and visa filing with zero stress.",
       rating: 5,
     },
     {
@@ -44,7 +44,7 @@ export default function TestimonialCarousel() {
       university: "INSEAD Singapore",
       country: "Singapore 🇸🇬",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
-      quote: "Academic Yatra's GMAT coaching helped me score 750+, while the executive consulting team helped position my career profile for INSEAD merit scholarships.",
+      quote: "Academic Yatra™'s GMAT coaching helped me score 750+, while the executive consulting team helped position my career profile for INSEAD merit scholarships.",
       rating: 5,
     },
   ];
