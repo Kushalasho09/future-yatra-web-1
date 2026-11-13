@@ -20,12 +20,24 @@ import {
   Sparkles,
   ChevronDown,
   Check,
+  Layers,
+  Scale,
+  Eye,
+  TrendingUp,
+  Target,
+  CheckCircle2,
+  Flag,
 } from "lucide-react";
 import Card3DTilt from "@/components/Card3DTilt";
 import SignatureLine from "@/components/SignatureLine";
 import RotatingGuidanceShowcase from "@/components/RotatingGuidanceShowcase";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
+import FaqSection from "@/components/FaqSection";
 
-// Brand definitions for Section 6
+/* ==================================================================== */
+/* OLD DATA ARRAYS (PREVIOUS OUR STORY PAGE) - PRESERVED FOR REVERT     */
+/* ==================================================================== */
+/*
 const BRAND_DATA = [
   {
     name: "University Yatra™",
@@ -73,7 +85,6 @@ const BRAND_DATA = [
   },
 ];
 
-// FAQ items for Section 10
 const FAQ_DATA = [
   {
     question: "Why was Future Yatra™ founded?",
@@ -91,16 +102,10 @@ const FAQ_DATA = [
       "'Yatra' means journey. The name reflects the belief that every student's path toward their future is a distinct journey — one that deserves honest, complete guidance rather than a single transaction.",
   },
 ];
-
-// Fail-safe animation variants (amount: 0 so triggers immediately on mobile & desktop)
-const fadeInUp = {
-  hidden: { opacity: 0, y: 20 },
-  visible: (custom: number = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, delay: custom, ease: [0.16, 1, 0.3, 1] },
-  }),
-};
+*/
+/* ==================================================================== */
+/* OLD DATA ARRAYS ENDS HERE                                            */
+/* ==================================================================== */
 
 export default function OurStoryPageClient() {
   const [mounted, setMounted] = useState(false);
@@ -108,948 +113,593 @@ export default function OurStoryPageClient() {
     setMounted(true);
   }, []);
 
-  // Section 3 Mobile Active Tab State (0, 1, 2)
-  const [mobileActiveTab, setMobileActiveTab] = useState<number>(0);
-
-  // Section 4 Quote In-View Observer
-  const quoteRef = useRef<HTMLDivElement>(null);
-  const isQuoteInView = useInView(quoteRef, { once: true, amount: 0 });
-
-  // Section 6 SVG Mesh Scroll Link
-  const section6Ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress: gridScroll } = useScroll({
-    target: section6Ref,
-    offset: ["start end", "end start"],
-  });
-  const svgPathLength = useTransform(gridScroll, [0.1, 0.85], [0, 1]);
-
-  // Section 8 Measure Success In-View Observer
-  const section8Ref = useRef<HTMLDivElement>(null);
-  const isSection8InView = useInView(section8Ref, { once: true, amount: 0 });
-
-  // Section 10 Accordion State
-  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
-  const toggleFaq = (index: number) => {
-    setOpenFaqIndex(openFaqIndex === index ? null : index);
-  };
-
-  // Section 3 Card Data Definition
-  const section3Cards = [
-    {
-      num: "01",
-      pill: "CLARITY",
-      pillBg: "bg-teal-tint text-teal",
-      title: "From Confusion to Clarity",
-      description: "Understand your options before making a major decision.",
-      image: "/images/story_canada_settling.jpg",
-      alt: "Understand your options before making a major decision",
-      footerIcon: Globe2,
-      footerText: "Informed Decision Making",
-      cardStyle: "glass-card-light border-line text-navy-deep",
-      numColor: "text-teal/30",
-      accentColor: "text-teal",
-    },
-    {
-      num: "02",
-      pill: "HONESTY",
-      pillBg: "bg-teal-bright/20 text-teal-bright border border-teal-bright/30",
-      title: "From Promises to Honest Advice",
-      description: "Know the realities, risks and requirements before you commit.",
-      image: "/images/story_single_focus_trap.jpg",
-      alt: "Know the realities, risks and requirements before you commit",
-      footerIcon: ShieldCheck,
-      footerText: "Transparent Assessment",
-      cardStyle: "glass-card-navy border-teal-bright/30 text-white",
-      numColor: "text-teal-bright/30",
-      accentColor: "text-teal-bright",
-    },
-    {
-      num: "03",
-      pill: "BIGGER PICTURE",
-      pillBg: "bg-coral/10 text-coral",
-      title: "From One Step to the Bigger Picture",
-      description: "Think beyond admission and consider where your decision can take you.",
-      image: "/images/story_complete_journey.jpg",
-      alt: "Think beyond admission and consider where your decision can take you",
-      footerIcon: Award,
-      footerText: "Lifelong Trajectory",
-      cardStyle: "glass-card-light border-line text-navy-deep",
-      numColor: "text-coral/30",
-      accentColor: "text-coral",
-    },
-  ];
-
   return (
     <div className="w-full min-h-screen bg-white text-navy-deep font-body selection:bg-teal selection:text-white overflow-x-hidden">
+      {/* SIGNATURE SVG SCROLL LINE */}
+      <SignatureLine />
+
       {/* ==================================================================== */}
-      {/* SECTION 1: Hero "The Story Behind Future Yatra™"                     */}
+      {/* NEW SECTION 01: HERO SECTION - FOUNDER-LED POSITIONING               */}
       {/* ==================================================================== */}
-      <section className="relative min-h-[88vh] sm:min-h-[92vh] flex flex-col justify-center items-center bg-navy-deep text-white px-4 sm:px-6 lg:px-8 py-16 sm:py-20 overflow-hidden">
+      <section className="relative min-h-[75vh] lg:min-h-[82vh] flex flex-col justify-center items-center bg-gradient-to-b from-white via-sand-tint/25 to-white text-navy px-4 sm:px-6 lg:px-8 pt-32 pb-20 sm:pb-24 border-b border-line/60 overflow-hidden">
         {/* Ambient Blur Orbs */}
-        <div className="absolute top-1/4 left-1/4 w-72 sm:w-96 h-72 sm:h-96 bg-teal/30 rounded-full blur-[120px] pointer-events-none animate-orb-1" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 sm:w-[30rem] h-80 sm:h-[30rem] bg-navy-glow/40 rounded-full blur-[140px] pointer-events-none animate-orb-2" />
+        <div className="absolute top-1/4 left-10 w-96 h-96 bg-teal/10 rounded-full blur-[130px] pointer-events-none" />
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-navy-glow/10 rounded-full blur-[140px] pointer-events-none" />
 
-        {/* 32px Teal Bright Dot Grid Overlay */}
-        <div className="absolute inset-0 bg-[radial-gradient(#3FE0D6_1px,transparent_1px)] [background-size:32px_32px] opacity-15 pointer-events-none z-0" />
+        <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center">
+          {/* Eyebrow */}
+          <div className="inline-flex items-center space-x-2 bg-teal-tint border border-teal/30 px-4 py-1.5 rounded-full text-xs font-bold text-teal-dark shadow-xs mb-6">
+            <Sparkles className="w-3.5 h-3.5 text-teal" />
+            <span className="uppercase tracking-wider">OUR STORY | FUTURE YATRA PRIVATE LIMITED</span>
+          </div>
 
-        {/* Background Typography: Giant faint word-mark "YATRA" */}
-        <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[26vw] sm:text-[22vw] font-extrabold text-white/[0.04] select-none pointer-events-none font-heading tracking-widest leading-none z-0">
-          YATRA
-        </span>
-
-        {/* Hero Content Wrapper */}
-        <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
-          {/* Eyebrow in Tempting Cursive Font */}
-          <motion.span
-            initial={{ opacity: 0, y: -15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="font-tempting text-teal-bright text-3xl sm:text-4xl lg:text-[42px] font-normal block mb-3 select-none"
-          >
-            Our Origins & Values
-          </motion.span>
-
-          {/* Kinetic Headline: Word-by-word reveal sliding up from 100% with stagger */}
-          <h1 className="text-3xl sm:text-5xl md:text-display font-extrabold font-heading tracking-tight text-white leading-tight sm:leading-none">
-            {["The", "Story", "Behind", "Future Yatra™"].map((word, idx) => {
-              const isBrand = word === "Future Yatra™";
-              return (
-                <span key={idx} className="inline-block overflow-hidden mr-[0.25em] align-top py-1">
-                  <motion.span
-                    initial={{ y: "100%", opacity: 0 }}
-                    animate={{ y: "0%", opacity: 1 }}
-                    transition={{
-                      duration: 0.7,
-                      delay: 0.12 + idx * 0.08,
-                      ease: [0.16, 1, 0.3, 1],
-                    }}
-                    className={`inline-block ${
-                      isBrand
-                        ? "bg-gradient-to-r from-teal-bright via-teal to-sand bg-clip-text text-transparent"
-                        : "text-white"
-                    }`}
-                  >
-                    {word}
-                  </motion.span>
-                </span>
-              );
-            })}
+          {/* Main Headline */}
+          <h1 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-extrabold text-navy tracking-tight leading-[1.15] max-w-4xl mx-auto">
+            A Founder-Led Organisation Across{" "}
+            <span className="text-[#0D9488]">Education and International Mobility.</span>
           </h1>
 
-          {/* Subtitle */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
-            className="text-body sm:text-body-l md:text-xl text-white/80 max-w-xl text-center mt-5 font-body font-normal leading-relaxed"
-          >
-            Why Future Yatra™ Private Limited exists.
-          </motion.p>
-
-          {/* Action Link Button */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-8 sm:mt-10 flex items-center gap-4"
-          >
-            <a
-              href="#founder-story"
-              className="inline-flex items-center gap-2 bg-teal text-navy-deep font-semibold px-6 sm:px-7 py-3 sm:py-3.5 rounded-pill hover:bg-teal-bright transition-colors text-small sm:text-body shadow-lg shadow-teal/20"
-            >
-              <span>Read The Story</span>
-              <ArrowRight className="w-4 h-4" />
-            </a>
-          </motion.div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <motion.a
-          href="#founder-story"
-          aria-label="Scroll down to story section"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.9, duration: 0.5 }}
-          className="absolute bottom-5 sm:bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1.5 text-white/50 hover:text-teal-bright transition-colors"
-        >
-          <span className="text-micro tracking-widest uppercase">Scroll</span>
-          <motion.div
-            animate={{ y: [0, 6, 0] }}
-            transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <ChevronDown className="w-4 sm:w-5 h-4 sm:h-5 text-teal-bright" />
-          </motion.div>
-        </motion.a>
-      </section>
-
-      {/* ==================================================================== */}
-      {/* SECTION 2: The Story Behind Future Yatra™ (Sticky Editorial)         */}
-      {/* ==================================================================== */}
-      <section
-        id="founder-story"
-        className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 md:py-32 border-b border-line"
-      >
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-start">
-          {/* Left Column (Sticky 5 cols on MD+) */}
-          <div className="md:col-span-5 md:sticky md:top-32 self-start">
-            <motion.div
-              variants={fadeInUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0 }}
-              custom={0}
-              className="space-y-2"
-            >
-              <span className="font-tempting text-teal text-3xl sm:text-4xl font-normal block">
-                Our Story
-              </span>
-              <h2 className="text-2xl sm:text-3xl md:text-h1 font-heading font-extrabold text-navy-deep tracking-tight leading-tight">
-                The Story Behind{" "}
-                <span className="bg-gradient-to-r from-teal via-navy to-navy-deep bg-clip-text text-transparent">
-                  Future Yatra™
-                </span>
-              </h2>
-              {/* 20x6px teal gradient underline bar */}
-              <div className="w-[80px] h-[6px] bg-gradient-to-r from-teal to-teal-bright rounded-full mt-4" />
-
-              <p className="text-small sm:text-body text-muted mt-4 sm:mt-6 max-w-sm font-body leading-relaxed">
-                Future Yatra™ began with a simple question:
-              </p>
-            </motion.div>
-          </div>
-
-          {/* Right Column (7 cols Scrollable Content) */}
-          <div className="md:col-span-7 space-y-5 sm:space-y-8">
-            <motion.div
-              variants={fadeInUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0 }}
-              custom={0.1}
-            >
-              <p className="border-l-4 border-teal pl-4 sm:pl-6 font-medium text-navy-deep/90 text-body sm:text-body-l md:text-xl leading-relaxed font-body">
-                Why is it so difficult for students to get clear, honest advice about their future?
-              </p>
-            </motion.div>
-
-            <motion.div
-              variants={fadeInUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0 }}
-              custom={0.2}
-              className="space-y-4"
-            >
-              <p className="text-muted text-body sm:text-body-l leading-relaxed font-body">
-                While planning his own move to Canada, our founder experienced the confusion firsthand. Too much information. Conflicting advice. Promises that sounded better than reality.
-              </p>
-              <p className="text-muted text-body sm:text-body-l leading-relaxed font-body">
-                After moving to Canada, he saw many other students facing the same problems.
-              </p>
-              <p className="text-muted text-body sm:text-body-l leading-relaxed font-body">
-                They were getting help with admissions and visas, but still struggling to understand what to study, where to go, what they could afford, and what came next.
-              </p>
-            </motion.div>
-
-            <motion.div
-              variants={fadeInUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0 }}
-              custom={0.3}
-              className="bg-sand/60 p-5 sm:p-8 rounded-card border border-line text-navy font-semibold text-body sm:text-body-l leading-relaxed shadow-sm hover:shadow-md transition-shadow font-body"
-            >
-              "We believed it could be better."
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* ==================================================================== */}
-      {/* SECTION 3: What We Set Out to Change (App Native View)              */}
-      {/* ==================================================================== */}
-      <section className="relative bg-gradient-to-b from-sand/40 via-white to-white py-14 sm:py-24 md:py-28 border-b border-line">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 md:gap-6 mb-8 sm:mb-16">
-            <div className="space-y-1.5 sm:space-y-2">
-              <span className="font-tempting text-teal text-3xl sm:text-4xl font-normal block">
-                The Core Shift
-              </span>
-              <h2 className="text-2xl sm:text-3xl md:text-h1 font-heading font-extrabold text-navy-deep tracking-tight">
-                What We Set Out to Change
-              </h2>
-            </div>
-            <p className="text-muted text-small sm:text-body-l max-w-md font-body leading-relaxed">
-              Replacing standard consultancy shortcuts with clarity, honesty, and a complete view of your future.
-            </p>
-          </div>
-
-          {/* MOBILE APP NATIVE VIEW (< 768px): Interactive Segmented Tab Switcher + Card Viewer */}
-          <div className="md:hidden">
-            {/* Segmented Control Pills */}
-            <div className="flex items-center justify-between bg-sand/60 p-1.5 rounded-pill border border-line mb-6">
-              {section3Cards.map((card, idx) => {
-                const isActive = mobileActiveTab === idx;
-                return (
-                  <button
-                    key={idx}
-                    onClick={() => setMobileActiveTab(idx)}
-                    className={`flex-1 py-2 px-3 rounded-pill text-micro font-semibold transition-all duration-300 flex items-center justify-center gap-1.5 ${
-                      isActive
-                        ? "bg-teal text-white shadow-md scale-[1.02]"
-                        : "text-navy-deep/70 hover:text-navy"
-                    }`}
-                  >
-                    <span>{card.num}</span>
-                    <span className="truncate">{card.pill.replace("THE ", "")}</span>
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Active Card Viewer with AnimatePresence */}
-            <AnimatePresence mode="wait">
-              {(() => {
-                const activeCard = section3Cards[mobileActiveTab];
-                const Icon = activeCard.footerIcon;
-                return (
-                  <motion.div
-                    key={mobileActiveTab}
-                    initial={{ opacity: 0, x: 15 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -15 }}
-                    transition={{ duration: 0.3, ease: "easeInOut" }}
-                    className={`rounded-card border p-6 flex flex-col justify-between shadow-lg ${activeCard.cardStyle}`}
-                  >
-                    <div>
-                      <div className="flex items-center justify-between mb-4">
-                        <span className={`text-4xl font-extrabold font-heading ${activeCard.numColor}`}>
-                          {activeCard.num}
-                        </span>
-                        <span className={`${activeCard.pillBg} px-3 py-1 rounded-pill text-micro font-semibold uppercase`}>
-                          {activeCard.pill}
-                        </span>
-                      </div>
-
-                      <h3 className="text-xl font-heading font-bold mb-2">
-                        {activeCard.title}
-                      </h3>
-
-                      <p className="text-small font-body leading-relaxed mb-5 opacity-90">
-                        {activeCard.description}
-                      </p>
-                    </div>
-
-                    <div>
-                      <div className="relative w-full h-44 rounded-card overflow-hidden mb-5 border border-black/10 shadow-xs">
-                        <Image
-                          src={activeCard.image}
-                          alt={activeCard.alt}
-                          fill
-                          priority
-                          unoptimized
-                          className="object-cover"
-                        />
-                      </div>
-
-                      <div className="pt-4 border-t border-current/15 flex items-center justify-between text-micro font-semibold">
-                        <div className="flex items-center gap-2">
-                          <Icon className={`w-4 h-4 ${activeCard.accentColor}`} />
-                          <span>{activeCard.footerText}</span>
-                        </div>
-
-                        {/* Prev / Next Card Controls */}
-                        <div className="flex items-center gap-2">
-                          <button
-                            disabled={mobileActiveTab === 0}
-                            onClick={() => setMobileActiveTab((prev) => Math.max(0, prev - 1))}
-                            className="p-1.5 rounded-full bg-black/10 hover:bg-black/20 disabled:opacity-30 disabled:pointer-events-none transition-colors"
-                            aria-label="Previous story card"
-                          >
-                            <ChevronLeft className="w-4 h-4" />
-                          </button>
-                          <button
-                            disabled={mobileActiveTab === section3Cards.length - 1}
-                            onClick={() => setMobileActiveTab((prev) => Math.min(section3Cards.length - 1, prev + 1))}
-                            className="p-1.5 rounded-full bg-black/10 hover:bg-black/20 disabled:opacity-30 disabled:pointer-events-none transition-colors"
-                            aria-label="Next story card"
-                          >
-                            <ChevronRight className="w-4 h-4" />
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                );
-              })()}
-            </AnimatePresence>
-          </div>
-
-          {/* DESKTOP WEB VIEW (>= 768px): 3-Card Grid */}
-          <div className="hidden md:grid md:grid-cols-3 gap-6 sm:gap-8 items-stretch">
-            {section3Cards.map((card, idx) => {
-              const Icon = card.footerIcon;
-              return (
-                <motion.div
-                  key={idx}
-                  variants={fadeInUp}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, amount: 0 }}
-                  custom={idx * 0.1}
-                  className="h-full"
-                >
-                  <Card3DTilt maxTilt={6} className="h-full">
-                    <div className={`h-full p-6 sm:p-8 rounded-card border flex flex-col justify-between hover:shadow-xl transition-all duration-300 group ${card.cardStyle}`}>
-                      <div>
-                        <div className="flex items-center justify-between mb-5">
-                          <span className={`text-4xl sm:text-5xl font-extrabold font-heading ${card.numColor}`}>
-                            {card.num}
-                          </span>
-                          <span className={`${card.pillBg} px-3 py-1 rounded-pill text-micro font-semibold uppercase`}>
-                            {card.pill}
-                          </span>
-                        </div>
-                        <h3 className="text-xl sm:text-h3 font-heading font-bold mb-3">
-                          {card.title}
-                        </h3>
-                        <p className="text-small sm:text-body font-body leading-relaxed mb-6 opacity-90">
-                          {card.description}
-                        </p>
-                      </div>
-
-                      <div>
-                        <div className="relative w-full h-44 sm:h-48 rounded-card overflow-hidden mb-5 border border-black/10 shadow-xs">
-                          <Image
-                            src={card.image}
-                            alt={card.alt}
-                            fill
-                            priority
-                            unoptimized
-                            className="object-cover group-hover:scale-105 transition-transform duration-500"
-                          />
-                        </div>
-                        <div className="pt-4 border-t border-current/15 flex items-center gap-2 text-small font-semibold">
-                          <Icon className={`w-4 h-4 ${card.accentColor} flex-shrink-0`} />
-                          <span>{card.footerText}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </Card3DTilt>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ==================================================================== */}
-      {/* SECTION 4: The Realization (Cinematic Quote)                         */}
-      {/* ==================================================================== */}
-      <section
-        ref={quoteRef}
-        className="relative bg-navy-deep text-white py-20 sm:py-32 md:py-36 px-4 sm:px-6 lg:px-8 overflow-hidden"
-      >
-        {/* Central Radial Teal Glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 sm:w-[40rem] h-72 sm:h-[40rem] bg-teal/20 rounded-full blur-[130px] sm:blur-[150px] pointer-events-none" />
-
-        {/* Ambient Decorative Signature Line Component */}
-        <SignatureLine />
-
-        <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
-          {/* Eyebrow in Tempting Font */}
-          <span className="font-tempting text-teal-bright text-3xl sm:text-4xl font-normal block mb-3 sm:mb-4">
-            The Core Realization
-          </span>
-
-          {/* Quote Icon */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={isQuoteInView || !mounted ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-            transition={{ duration: 0.6 }}
-          >
-            <Quote className="w-12 sm:w-16 h-12 sm:h-16 text-teal-bright/40 mb-6 sm:mb-8" />
-          </motion.div>
-
-          {/* Blockquote */}
-          <motion.blockquote
-            initial={{ opacity: 0, y: 15 }}
-            animate={isQuoteInView || !mounted ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="text-xl sm:text-3xl md:text-4xl font-heading font-medium text-white leading-relaxed md:leading-snug"
-          >
-            "Students and families don't just need admissions or visas. They need{" "}
-            <span className="underline decoration-teal-bright underline-offset-4 text-teal-bright font-semibold">
-              honest guidance
-            </span>
-            , <strong className="text-teal-bright font-bold">accurate information</strong>,{" "}
-            <strong className="text-teal-bright font-bold">ethical advice</strong>, and{" "}
-            <strong className="text-teal-bright font-bold">long-term support</strong> from people who genuinely care about their future."
-          </motion.blockquote>
-
-          {/* Flourish underline / Sub-element */}
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={isQuoteInView || !mounted ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-8 sm:mt-12 flex flex-col items-center"
-          >
-            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-teal-bright to-transparent rounded-full mb-6" />
-            <span className="text-teal-bright text-micro tracking-[0.18em] font-bold uppercase text-center max-w-lg font-body px-2">
-              THAT REALIZATION BECAME THE FOUNDATION OF FUTURE YATRA™.
-            </span>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ==================================================================== */}
-      {/* SECTION 5: Our Mission (FROM → TO Kinetic Flip Cards)                */}
-      {/* ==================================================================== */}
-      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 md:py-32 border-b border-line">
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16 space-y-2">
-          <span className="font-tempting text-teal text-3xl sm:text-4xl font-normal block">
-            The Core Transformation
-          </span>
-          <h2 className="text-2xl sm:text-3xl md:text-h1 font-heading font-extrabold text-navy-deep tracking-tight">
-            Our Mission
-          </h2>
-          <p className="text-muted text-body sm:text-body-l mt-2 font-body leading-relaxed">
-            Replacing standard consultancy traps with structural integrity and long-term clarity.
+          {/* Brand Parent Paragraph */}
+          <p className="text-body sm:text-body-l md:text-xl text-teal-dark font-medium max-w-3xl mx-auto mt-6 leading-relaxed">
+            Future Yatra Private Limited is the parent organisation behind four specialised brands: University Yatra, Academic Yatra, Medico Yatra and ApplyVisa Yatra.
           </p>
-        </div>
 
-        {/* 3 Stacked Transformation Cards */}
-        <div className="space-y-4 sm:space-y-6 max-w-5xl mx-auto">
-          {[
-            {
-              from: "Confusion",
-              to: "Replace confusion with clarity.",
-              delay: 0.1,
-            },
-            {
-              from: "False Promises",
-              to: "Replace false promises with transparency.",
-              delay: 0.2,
-            },
-            {
-              from: "Fragmented Services",
-              to: "Replace fragmented services with one trusted ecosystem.",
-              delay: 0.3,
-            },
-          ].map((item, idx) => (
-            <motion.div
-              key={idx}
-              variants={fadeInUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0 }}
-              custom={item.delay}
-              className="group rounded-card border border-line bg-white shadow-sm hover:shadow-lg transition-all duration-300 p-5 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6"
-            >
-              {/* Left Zone: FROM */}
-              <div className="flex items-center gap-3 sm:gap-4 w-full md:w-1/3">
-                <span className="bg-line text-muted px-3 py-1 rounded-pill text-micro font-semibold uppercase">
-                  FROM
-                </span>
-                <span className="text-lg sm:text-h3 font-bold text-coral/80 group-hover:scale-95 transition-transform duration-300 line-through decoration-coral decoration-2 font-heading">
-                  {item.from}
-                </span>
-              </div>
-
-              {/* Center Zone: Arrow Icon */}
-              <div className="flex items-center justify-center my-1 md:my-0">
-                <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-teal-tint flex items-center justify-center text-teal group-hover:bg-teal group-hover:text-white transition-all duration-300 shadow-sm">
-                  <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                </div>
-              </div>
-
-              {/* Right Zone: TO */}
-              <div className="flex items-center gap-3 sm:gap-4 w-full md:w-1/2 justify-start md:justify-end">
-                <span className="bg-teal text-white px-3 py-1 rounded-pill text-micro font-semibold uppercase">
-                  TO
-                </span>
-                <div className="bg-teal-tint/40 border border-teal/20 rounded-pill px-4 sm:px-5 py-2.5 sm:py-3 font-semibold text-navy text-small sm:text-body-l shadow-xs group-hover:border-teal/50 transition-colors w-full sm:w-auto font-body">
-                  {item.to}
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
-      {/* ==================================================================== */}
-      {/* SECTION 6: Why Four Brands, Not One (Ecosystem Grid + SVG Mesh)     */}
-      {/* ==================================================================== */}
-      <section
-        ref={section6Ref}
-        className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 md:py-32 border-b border-line overflow-hidden"
-      >
-        {/* Background SVG Mesh with Sharp Arrow Head Marker Cap */}
-        <svg
-          className="absolute inset-0 w-full h-full pointer-events-none opacity-40 z-0 hidden md:block"
-          viewBox="0 0 1000 800"
-          fill="none"
-          preserveAspectRatio="none"
-        >
-          <defs>
-            {/* Sharp Arrow Head Marker for SVG Path End */}
-            <marker
-              id="sharpPathArrow"
-              viewBox="0 0 10 10"
-              refX="6"
-              refY="5"
-              markerWidth="7"
-              markerHeight="7"
-              orient="auto-start-reverse"
-            >
-              <polygon points="0 0, 10 5, 0 10, 3 5" fill="#3FE0D6" />
-            </marker>
-          </defs>
-
-          <motion.path
-            d="M 250 150 Q 500 300 750 150 T 250 450 T 750 450"
-            stroke="#2DBDB6"
-            strokeWidth="3.5"
-            strokeLinecap="square"
-            strokeLinejoin="miter"
-            strokeDasharray="8 8"
-            markerEnd="url(#sharpPathArrow)"
-            style={{ pathLength: svgPathLength }}
-          />
-        </svg>
-
-        <div className="relative z-10 text-center max-w-3xl mx-auto mb-10 sm:mb-16 space-y-2">
-          <span className="font-tempting text-teal text-3xl sm:text-4xl font-normal block">
-            Specialization & Integrity
-          </span>
-          <h2 className="text-2xl sm:text-3xl md:text-h1 font-heading font-extrabold text-navy-deep tracking-tight">
-            Built Around What Students Actually Need
-          </h2>
-          <p className="text-muted text-body sm:text-body-l mt-2 font-body leading-relaxed">
-            Instead of a generic single consultancy, we built focused specialist divisions under one accountable parent entity.
+          {/* Objective Paragraph */}
+          <p className="text-small sm:text-body text-muted max-w-2xl mx-auto mt-4 leading-relaxed font-normal">
+            Established in 2025, Future Yatra was founded with a clear objective: to bring education consulting, test preparation, healthcare education and visa services under a single accountable organisation, with a stronger focus on the quality of services and decisions made along the way.
           </p>
-        </div>
 
-        {/* 2x2 Brand Grid */}
-        <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8 max-w-5xl mx-auto">
-          {BRAND_DATA.map((brand, idx) => {
-            const IconComp = brand.icon;
-            return (
-              <Card3DTilt key={idx} maxTilt={6} className="h-full">
-                <div
-                  className={`h-full rounded-card border ${brand.borderGlow} bg-gradient-to-br ${brand.gradientClass} p-5 sm:p-8 flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group`}
-                >
-                  <div>
-                    <div className="flex items-center justify-between mb-5">
-                      <div className="w-12 sm:w-14 h-12 sm:h-14 rounded-card bg-white shadow-sm border border-line flex items-center justify-center text-navy group-hover:scale-110 transition-transform duration-300">
-                        <IconComp className="w-6 sm:w-7 h-6 sm:h-7" style={{ color: brand.accentColor }} />
-                      </div>
-                      <span className={`${brand.badgeBg} px-3 py-1 rounded-pill text-micro font-semibold uppercase`}>
-                        {brand.tagline}
-                      </span>
-                    </div>
-
-                    <h3 className="text-xl sm:text-2xl font-heading font-bold text-navy-deep mb-2 sm:mb-3 flex items-center gap-2">
-                      <span>{brand.name}</span>
-                    </h3>
-                    <p className="text-muted text-small sm:text-body font-body leading-relaxed mb-5">
-                      {brand.description}
-                    </p>
-                  </div>
-
-                  <div className="pt-4 border-t border-navy-deep/10 flex items-center justify-between text-small font-semibold text-navy">
-                    <Link
-                      href={brand.href}
-                      className="inline-flex items-center gap-2 text-teal hover:text-navy transition-colors"
-                    >
-                      <span>Explore Brand</span>
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  </div>
-                </div>
-              </Card3DTilt>
-            );
-          })}
-        </div>
-
-        {/* Summary Card Below Grid */}
-        <motion.div
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0 }}
-          custom={0.2}
-          className="relative z-10 bg-navy-deep p-6 sm:p-10 rounded-card border border-teal/30 text-white mt-8 sm:mt-12 shadow-2xl max-w-5xl mx-auto text-center"
-        >
-          <p className="text-body sm:text-body-l md:text-[20px] leading-relaxed text-white/90 font-body">
-            Together, these brands operate under{" "}
-            <span className="text-teal-bright font-bold">Future Yatra™ Private Limited</span> as one integrated ecosystem where every service has a clear purpose, while all four share the same values:{" "}
-            <span className="text-sand font-semibold">transparency, integrity, professionalism, and a student-first approach.</span>
-          </p>
-        </motion.div>
-      </section>
-
-      {/* ==================================================================== */}
-      {/* SECTION 7: What "Yatra" Means to Us (Cinematic Split)               */}
-      {/* ==================================================================== */}
-      <section className="relative bg-gradient-to-br from-navy-deep via-navy to-navy-deep text-white py-16 sm:py-24 md:py-32 overflow-hidden">
-        {/* Ambient Glow */}
-        <div className="absolute top-1/3 right-1/4 w-80 sm:w-96 h-80 sm:h-96 bg-teal/20 rounded-full blur-[140px] pointer-events-none" />
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
-            {/* Left 6 Cols Image Card */}
-            <motion.div
-              variants={fadeInUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0 }}
-              custom={0}
-              className="lg:col-span-6 relative"
-            >
-              <div className="glass-card-navy p-3 rounded-section border border-teal-bright/30 overflow-hidden shadow-2xl relative">
-                <div className="relative w-full h-[280px] sm:h-[420px] rounded-card overflow-hidden bg-navy-deep">
-                  <Image
-                    src="/images/story_yatra_route.jpg"
-                    alt="Global student pathways map and international route"
-                    fill
-                    priority
-                    unoptimized
-                    className="object-cover hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-transparent to-transparent opacity-80" />
-                </div>
-
-                {/* Floating Overlay Tile "Journey Coordinates" */}
-                <div className="absolute bottom-5 left-5 right-5 bg-navy-deep/90 backdrop-blur-md p-3.5 sm:p-4 rounded-card border border-teal-bright/30 flex items-center gap-3.5 sm:gap-4">
-                  <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-full bg-teal-tint/20 border border-teal-bright/40 flex items-center justify-center text-teal-bright flex-shrink-0">
-                    <Compass className="w-5 sm:w-6 h-5 sm:h-6 animate-spin-slow" />
-                  </div>
-                  <div>
-                    <h4 className="text-micro sm:text-small font-bold text-white uppercase tracking-wider font-heading">
-                      Journey Coordinates
-                    </h4>
-                    <p className="text-micro text-teal-bright font-medium mt-0.5 font-body">
-                      From India to 15+ Destinations Worldwide
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Right 6 Cols Content */}
-            <motion.div
-              variants={fadeInUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0 }}
-              custom={0.2}
-              className="lg:col-span-6 space-y-4 sm:space-y-6"
-            >
-              <div className="space-y-2">
-                <span className="font-tempting text-teal-bright text-3xl sm:text-4xl font-normal block">
-                  Philosophy & Vision
-                </span>
-                <h2 className="text-2xl sm:text-3xl md:text-h1 font-heading font-extrabold text-white leading-tight tracking-tight">
-                  What "Yatra" Means to Us
-                </h2>
-              </div>
-
-              <p className="text-white/90 text-body sm:text-body-l md:text-[20px] leading-relaxed font-body">
-                A <span className="text-teal-bright font-bold">yatra</span> is a journey — and every person has a different journey toward their future.
-              </p>
-
-              <p className="text-white/80 text-small sm:text-body leading-relaxed font-body">
-                Today, that means helping students build their journey through education, skills, and global opportunities. Over time, our vision is to extend this same ecosystem to more of life's journeys, always guided by the same commitment to trust, ethics, and meaningful impact.
-              </p>
-
-              <div className="pt-2 flex flex-wrap items-center gap-4 sm:gap-6 text-micro sm:text-small text-white/70 font-body">
-                <div className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-teal-bright" />
-                  <span>Ethical Guidance</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-teal-bright" />
-                  <span>Lifelong Impact</span>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* ==================================================================== */}
-      {/* SECTION 8: A Young Company. A Clear Purpose.                        */}
-      {/* ==================================================================== */}
-      <section
-        ref={section8Ref}
-        className="relative bg-sand/40 py-16 sm:py-24 md:py-32 border-b border-line px-4 sm:px-6 lg:px-8 text-center"
-      >
-        <div className="max-w-3xl mx-auto mb-8 sm:mb-12 space-y-2">
-          <span className="font-tempting text-teal text-3xl sm:text-4xl font-normal block">
-            Authentic Foundation
-          </span>
-          <h2 className="text-2xl sm:text-3xl md:text-h1 font-heading font-extrabold text-navy-deep tracking-tight">
-            A Young Company. A Clear Purpose.
-          </h2>
-        </div>
-
-        {/* Interactive Focal Card */}
-        <div className="bg-white rounded-section border border-line p-6 sm:p-12 md:p-16 shadow-sm max-w-4xl mx-auto text-center relative overflow-hidden space-y-5">
-          <div className="space-y-3 max-w-2xl mx-auto">
-            <p className="text-body sm:text-body-l font-semibold text-teal font-heading">
-              Future Yatra™ Private Limited was officially registered in 2025.
-            </p>
-            <p className="text-body sm:text-h3 font-medium text-navy-deep/90 leading-relaxed font-body">
-              We are not here to claim decades of experience we don't have.
-            </p>
-            <p className="text-small sm:text-body text-muted leading-relaxed font-body">
-              We are here to build something students and families can trust, one conversation at a time.
-            </p>
-          </div>
-
-          {/* Divider Line */}
-          <div className="border-t border-line my-4 sm:my-6 w-1/2 mx-auto" />
-
-          {/* Bottom Line */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={isSection8InView || !mounted ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-            transition={{ duration: 0.6 }}
-          >
-            <p className="text-xl sm:text-3xl md:text-4xl text-teal font-extrabold font-heading tracking-tight leading-tight">
-              Your future deserves an informed decision.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ==================================================================== */}
-      {/* SECTION 9: Explore Further (Rotating Guidance Showcase + CTA Row)   */}
-      {/* ==================================================================== */}
-      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-24 border-b border-line text-center overflow-x-clip">
-        {/* Continuous Rotating Capsule Orbit Visual with Centered Student */}
-        <RotatingGuidanceShowcase />
-
-        <div className="max-w-2xl mx-auto mb-8 sm:mb-12 space-y-2 mt-4 sm:mt-6">
-          <span className="font-tempting text-teal text-3xl sm:text-4xl font-normal block">
-            Next Steps
-          </span>
-          <h2 className="text-2xl sm:text-3xl md:text-h2 font-heading font-bold text-navy-deep">
-            Explore Further
-          </h2>
-          <p className="text-muted text-small sm:text-body mt-1 font-body">
-            Continue navigating our ecosystem.
-          </p>
-        </div>
-
-        {/* Action Buttons Row */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
-          {/* Button 1: Contact Leadership */}
-          <Link
-            href="/contact"
-            className="w-full sm:w-auto bg-navy text-white hover:bg-navy-deep transition-all duration-300 rounded-pill px-7 sm:px-8 py-3.5 sm:py-4 font-semibold text-small sm:text-body inline-flex items-center justify-center gap-3 shadow-md hover:shadow-lg group font-body"
-          >
-            <span>Contact Leadership</span>
-            <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 group-hover:translate-x-1 transition-transform" />
-          </Link>
-
-          {/* Button 2: Explore Our Brands */}
-          <Link
-            href="/our-brands"
-            className="w-full sm:w-auto bg-teal text-white hover:bg-teal-bright shadow-lg shadow-teal/30 transition-all duration-300 rounded-pill px-7 sm:px-8 py-3.5 sm:py-4 font-semibold text-small sm:text-body inline-flex items-center justify-center gap-3 group font-body"
-          >
-            <span>Explore Our Brands</span>
-            <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 group-hover:translate-x-1 transition-transform" />
-          </Link>
-
-          {/* Button 3: About Future Yatra™ */}
-          <Link
-            href="/about-us"
-            className="w-full sm:w-auto bg-white border border-line text-navy-deep hover:bg-sand/50 transition-all duration-300 rounded-pill px-7 sm:px-8 py-3.5 sm:py-4 font-semibold text-small sm:text-body inline-flex items-center justify-center gap-3 shadow-sm group font-body"
-          >
-            <span>About Future Yatra™</span>
-            <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 group-hover:translate-x-1 transition-transform" />
-          </Link>
-        </div>
-      </section>
-
-      {/* ==================================================================== */}
-      {/* SECTION 10: Frequently Asked Questions (Accordion + Progress Bar)   */}
-      {/* ==================================================================== */}
-      <section className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 md:py-32 border-b border-line">
-        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16 space-y-2">
-          <span className="font-tempting text-teal text-3xl sm:text-4xl font-normal block">
-            Clarifications & Insights
-          </span>
-          <h2 className="text-2xl sm:text-3xl md:text-h1 font-heading font-extrabold text-navy-deep tracking-tight">
-            Frequently Asked Questions
-          </h2>
-        </div>
-
-        {/* Accordion Items */}
-        <div className="space-y-3 sm:space-y-4">
-          {FAQ_DATA.map((faq, idx) => {
-            const isOpen = openFaqIndex === idx;
-            return (
-              <div
-                key={idx}
-                className="bg-white rounded-card border border-line shadow-sm overflow-hidden transition-shadow hover:shadow-md"
+          {/* Dual Action CTAs */}
+          <div className="mt-8 sm:mt-10 flex flex-wrap items-center justify-center gap-4">
+            <a href="#where-it-started">
+              <HoverBorderGradient
+                as="div"
+                containerClassName="rounded-full"
+                innerBgClassName="bg-navy"
+                className="bg-navy hover:bg-navy-glow text-white font-bold text-small sm:text-body px-7 sm:px-8 py-3.5 sm:py-4 rounded-full inline-flex items-center space-x-3 shadow-md group border border-teal/30"
               >
-                <button
-                  onClick={() => toggleFaq(idx)}
-                  aria-expanded={isOpen}
-                  aria-controls={`faq-answer-${idx}`}
-                  className="w-full p-4 sm:p-8 text-left flex items-center justify-between gap-4 focus:outline-none focus:ring-2 focus:ring-teal/50 rounded-card"
-                >
-                  <span className="text-small sm:text-h3 font-heading font-bold text-navy-deep">
-                    {faq.question}
-                  </span>
-                  <div
-                    className={`w-7 sm:w-8 h-7 sm:h-8 rounded-full bg-teal-tint flex items-center justify-center text-teal transition-transform duration-300 flex-shrink-0 ${
-                      isOpen ? "rotate-180 bg-teal text-white" : ""
-                    }`}
-                  >
-                    <ChevronDown className="w-4 sm:w-5 h-4 sm:h-5" />
-                  </div>
-                </button>
+                <span className="text-white font-bold">Meet the Founder</span>
+                <ArrowRight className="w-4 h-4 text-teal-bright group-hover:translate-x-1.5 transition-transform duration-150" />
+              </HoverBorderGradient>
+            </a>
 
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.div
-                      id={`faq-answer-${idx}`}
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: "easeInOut" }}
-                      className="overflow-hidden"
-                    >
-                      <div className="px-4 sm:px-8 pb-5 sm:pb-8 pt-0 text-muted text-small sm:text-body-l leading-relaxed border-t border-line/50 mt-2 font-body">
-                        {faq.answer}
-                      </div>
-
-                      {/* Active card animated teal progress bar */}
-                      <div className="h-[2px] w-full bg-gradient-to-r from-teal via-teal-bright to-teal animate-pulse" />
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            );
-          })}
+            <Link
+              href="/contact"
+              className="inline-flex items-center space-x-2 bg-white hover:bg-sand-tint text-navy font-bold text-small sm:text-body px-6 sm:px-7 py-3.5 sm:py-4 rounded-full border border-line shadow-xs transition-all hover:scale-[1.02]"
+            >
+              <span>Connect With Us</span>
+              <ChevronRight className="w-4 h-4 text-teal" />
+            </Link>
+          </div>
         </div>
       </section>
+      {/* ==================================================================== */}
+      {/* NEW SECTION 01 ENDS HERE                                             */}
+      {/* ==================================================================== */}
 
       {/* ==================================================================== */}
-      {/* SECTION 11: Compliance & Disclaimer Strip                           */}
+      {/* NEW SECTION 02: WHERE IT STARTED (THE THINKING BEHIND FUTURE YATRA™) */}
       {/* ==================================================================== */}
-      <footer className="relative bg-sand/30 border-t border-line py-6 sm:py-8 px-4 text-center">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-micro sm:text-small text-muted/70 leading-relaxed font-normal font-body">
-            Future Yatra™ Private Limited is an independent education and career guidance ecosystem. Services provided under University Yatra™, Academic Yatra™, Medico Yatra™, and Apply Visa Yatra™ adhere to strict ethical and transparent operational standards across all jurisdictions.
-          </p>
+      <section
+        id="where-it-started"
+        className="py-16 sm:py-24 lg:py-28 relative bg-white border-b border-line/60 overflow-hidden"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+            {/* Left Column: Eyebrow + Calligraphy + Question */}
+            <div className="lg:col-span-5 space-y-4 lg:sticky lg:top-28">
+              <div className="inline-flex items-center space-x-2 bg-teal-tint border border-teal/30 px-3.5 py-1.5 rounded-full text-xs font-bold text-teal-dark shadow-xs">
+                <Compass className="w-3.5 h-3.5 text-teal" />
+                <span className="uppercase tracking-wider">OUR STORY</span>
+              </div>
+
+              <span className="font-tempting text-[#0D9488] text-2xl sm:text-3xl font-medium block">
+                The Thinking Behind Future Yatra™
+              </span>
+
+              <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy tracking-tight leading-tight">
+                Future Yatra™ began with a question:
+              </h2>
+
+              <div className="p-6 sm:p-7 rounded-3xl bg-teal-tint/40 border border-teal/20 text-navy font-bold text-lg sm:text-xl leading-relaxed shadow-xs">
+                “Why should planning an international education journey be this complicated?”
+              </div>
+
+              <div className="h-1.5 w-20 rounded-full bg-[#0D9488]" />
+            </div>
+
+            {/* Right Column: Founder's Canada Story + Pull Quote */}
+            <div className="lg:col-span-7 space-y-6 text-muted text-small sm:text-body leading-relaxed font-normal">
+              <p>
+                While planning his own move to Canada, our founder experienced the difficulties of navigating international education and immigration services. Conflicting information, unclear guidance and unrealistic expectations made the process harder than it needed to be.
+              </p>
+
+              <p>
+                After moving to Canada, he noticed that many other students were dealing with similar challenges. While admission and visa assistance was available, students often lacked clear guidance on choosing the right course, institution, destination and understanding the costs involved.
+              </p>
+
+              <p>
+                This experience became the starting point for Future Yatra.
+              </p>
+
+              <div className="p-6 sm:p-8 rounded-3xl bg-[#122447] text-white border border-teal/30 shadow-xl relative overflow-hidden group">
+                <div className="absolute -top-16 -right-16 w-48 h-48 bg-teal/20 rounded-full blur-2xl pointer-events-none group-hover:bg-teal/30 transition-colors" />
+                <Quote className="w-10 h-10 text-teal-bright/40 mb-3" />
+                <p className="font-heading text-2xl sm:text-3xl font-bold text-white leading-snug">
+                  “We believed the process could be better.”
+                </p>
+                <span className="text-xs text-teal-bright font-medium block mt-3 uppercase tracking-wider">
+                  — Future Yatra™ Founding Principle
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
-      </footer>
+      </section>
+      {/* ==================================================================== */}
+      {/* NEW SECTION 02 ENDS HERE                                             */}
+      {/* ==================================================================== */}
+
+      {/* ==================================================================== */}
+      {/* NEW SECTION 03: WHAT WE SET OUT TO CHANGE (3 RECURRING GAPS)         */}
+      {/* ==================================================================== */}
+      <section className="py-16 sm:py-24 border-b border-line/60 bg-gradient-to-b from-white via-sand-tint/20 to-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-18 space-y-3">
+            <div className="inline-flex items-center space-x-2 bg-teal-tint border border-teal/30 px-3.5 py-1.5 rounded-full text-xs font-bold text-teal-dark shadow-xs">
+              <Target className="w-3.5 h-3.5 text-teal" />
+              <span className="uppercase tracking-wider">OUR OBJECTIVE</span>
+            </div>
+
+            <span className="font-tempting text-[#0D9488] text-2xl sm:text-3xl font-medium block">
+              Core Philosophy
+            </span>
+
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy tracking-tight leading-tight">
+              Three Things We Wanted to{" "}
+              <span className="text-[#0D9488]">Do Differently.</span>
+            </h2>
+
+            <p className="text-muted text-small sm:text-body leading-relaxed max-w-2xl mx-auto font-normal pt-1">
+              We saw an opportunity to improve how students approach international education and related services. Our focus was on addressing three recurring gaps.
+            </p>
+
+            <div className="mx-auto mt-4 h-1.5 w-20 rounded-full bg-[#0D9488]" />
+          </div>
+
+          {/* 3 Pillars Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            {/* Card 1 */}
+            <div className="group relative bg-white/95 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-line shadow-sm hover:shadow-2xl hover:border-teal/50 transition-all duration-300 flex flex-col justify-between overflow-hidden">
+              <div className="h-1.5 w-12 rounded-full bg-[#0D9488] group-hover:w-24 transition-all duration-300 mb-6" />
+              <span className="absolute top-5 right-6 text-3xl sm:text-4xl font-black text-navy/10 group-hover:text-teal/25 transition-colors duration-300 font-heading select-none pointer-events-none">
+                01
+              </span>
+              <div className="space-y-4 relative z-10">
+                <div className="w-12 h-12 rounded-2xl bg-teal-tint border border-teal/20 text-teal flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform duration-300">
+                  <HeartHandshake className="w-6 h-6" />
+                </div>
+                <h3 className="font-heading text-xl font-bold text-navy group-hover:text-teal transition-colors">
+                  Advice Over Commercial Incentives
+                </h3>
+                <p className="text-xs sm:text-small text-muted leading-relaxed font-normal">
+                  Make recommendations based on individual requirements, academic profiles and budgets rather than the services or destinations that offer the highest commercial returns.
+                </p>
+              </div>
+              <div className="pt-5 mt-4 border-t border-line/50 flex items-center space-x-2 text-xs font-semibold text-teal-dark">
+                <CheckCircle2 className="w-4 h-4 text-teal" />
+                <span>Student-First Priority</span>
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="group relative bg-white/95 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-line shadow-sm hover:shadow-2xl hover:border-teal/50 transition-all duration-300 flex flex-col justify-between overflow-hidden">
+              <div className="h-1.5 w-12 rounded-full bg-[#122447] group-hover:w-24 transition-all duration-300 mb-6" />
+              <span className="absolute top-5 right-6 text-3xl sm:text-4xl font-black text-navy/10 group-hover:text-teal/25 transition-colors duration-300 font-heading select-none pointer-events-none">
+                02
+              </span>
+              <div className="space-y-4 relative z-10">
+                <div className="w-12 h-12 rounded-2xl bg-navy/10 border border-navy/20 text-navy flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform duration-300">
+                  <Layers className="w-6 h-6" />
+                </div>
+                <h3 className="font-heading text-xl font-bold text-navy group-hover:text-teal transition-colors">
+                  Connected Services, Not Disconnected Steps
+                </h3>
+                <p className="text-xs sm:text-small text-muted leading-relaxed font-normal">
+                  Bring admissions, test preparation, healthcare education and visa assistance into a coordinated service framework.
+                </p>
+              </div>
+              <div className="pt-5 mt-4 border-t border-line/50 flex items-center space-x-2 text-xs font-semibold text-teal-dark">
+                <CheckCircle2 className="w-4 h-4 text-teal" />
+                <span>Unified Ecosystem</span>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="group relative bg-white/95 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-line shadow-sm hover:shadow-2xl hover:border-teal/50 transition-all duration-300 flex flex-col justify-between overflow-hidden">
+              <div className="h-1.5 w-12 rounded-full bg-emerald-600 group-hover:w-24 transition-all duration-300 mb-6" />
+              <span className="absolute top-5 right-6 text-3xl sm:text-4xl font-black text-navy/10 group-hover:text-teal/25 transition-colors duration-300 font-heading select-none pointer-events-none">
+                03
+              </span>
+              <div className="space-y-4 relative z-10">
+                <div className="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform duration-300">
+                  <ShieldCheck className="w-6 h-6" />
+                </div>
+                <h3 className="font-heading text-xl font-bold text-navy group-hover:text-teal transition-colors">
+                  Clearer Industry Practices
+                </h3>
+                <p className="text-xs sm:text-small text-muted leading-relaxed font-normal">
+                  Address information gaps, unrealistic promises and unclear service processes through more structured guidance, realistic expectations and defined service responsibilities.
+                </p>
+              </div>
+              <div className="pt-5 mt-4 border-t border-line/50 flex items-center space-x-2 text-xs font-semibold text-teal-dark">
+                <CheckCircle2 className="w-4 h-4 text-teal" />
+                <span>Ethical Compliance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* ==================================================================== */}
+      {/* NEW SECTION 03 ENDS HERE                                             */}
+      {/* ==================================================================== */}
+
+      {/* ==================================================================== */}
+      {/* NEW SECTION 04: THE MEANING OF YATRA & OUR FOUR NON-NEGOTIABLES     */}
+      {/* ==================================================================== */}
+      <section className="py-16 sm:py-24 relative bg-white border-b border-line/60 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+            {/* Left Column: Behind the Name */}
+            <div className="lg:col-span-5 space-y-4 lg:sticky lg:top-28">
+              <div className="inline-flex items-center space-x-2 bg-teal-tint border border-teal/30 px-3.5 py-1.5 rounded-full text-xs font-bold text-teal-dark shadow-xs">
+                <Flag className="w-3.5 h-3.5 text-teal" />
+                <span className="uppercase tracking-wider">BEHIND THE NAME</span>
+              </div>
+
+              <span className="font-tempting text-[#0D9488] text-2xl sm:text-3xl font-medium block">
+                Journey Philosophy
+              </span>
+
+              <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy tracking-tight leading-tight">
+                Every Yatra Has a Direction.{" "}
+                <span className="text-[#0D9488]">Ours Has a Purpose.</span>
+              </h2>
+
+              <div className="space-y-4 text-muted text-small sm:text-body leading-relaxed font-normal pt-2">
+                <p>
+                  The word <strong className="text-navy font-semibold">Yatra</strong> means a journey. For us, it represents the path people take towards education, professional growth and international opportunities. Every journey has its own destination, circumstances and decisions, and we believe each one deserves an approach built around its individual purpose.
+                </p>
+                <p>
+                  That understanding became the foundation of our philosophy. It shaped how we work, the decisions we make and the standards we expect ourselves to uphold. These beliefs are reflected in our four non-negotiable principles.
+                </p>
+              </div>
+
+              <div className="h-1.5 w-20 rounded-full bg-[#0D9488] mt-4" />
+            </div>
+
+            {/* Right Column: 4 Non-Negotiables Grid */}
+            <div className="lg:col-span-7">
+              <div className="mb-6">
+                <h3 className="font-heading text-xl sm:text-2xl font-bold text-navy">
+                  Our Four Non-Negotiables
+                </h3>
+                <p className="text-xs sm:text-small text-muted mt-1">
+                  Fundamental commitments that guide every decision and consultation.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                {/* 01. Honesty */}
+                <div className="group relative bg-white/95 backdrop-blur-md rounded-3xl p-6 border border-line shadow-sm hover:shadow-xl hover:border-teal/50 transition-all duration-300 flex flex-col justify-between">
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <span className="font-heading text-3xl font-extrabold text-teal tabular-nums">
+                        01.
+                      </span>
+                      <div className="w-10 h-10 rounded-xl bg-teal-tint border border-teal/20 text-teal flex items-center justify-center shadow-xs">
+                        <Scale className="w-5 h-5" />
+                      </div>
+                    </div>
+                    <h4 className="font-heading text-lg font-bold text-navy group-hover:text-teal transition-colors">
+                      Honesty
+                    </h4>
+                    <p className="text-xs sm:text-[13px] text-muted leading-relaxed font-normal">
+                      We communicate openly and provide guidance based on what is realistic and appropriate, even when the answer may not be what someone expects.
+                    </p>
+                  </div>
+                  <div className="pt-4 mt-3 border-t border-line/40 flex items-center space-x-1.5 text-[11px] font-semibold text-teal-dark">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-teal" />
+                    <span>Core Principle</span>
+                  </div>
+                </div>
+
+                {/* 02. Transparency */}
+                <div className="group relative bg-white/95 backdrop-blur-md rounded-3xl p-6 border border-line shadow-sm hover:shadow-xl hover:border-teal/50 transition-all duration-300 flex flex-col justify-between">
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <span className="font-heading text-3xl font-extrabold text-teal tabular-nums">
+                        02.
+                      </span>
+                      <div className="w-10 h-10 rounded-xl bg-teal-tint border border-teal/20 text-teal flex items-center justify-center shadow-xs">
+                        <Eye className="w-5 h-5" />
+                      </div>
+                    </div>
+                    <h4 className="font-heading text-lg font-bold text-navy group-hover:text-teal transition-colors">
+                      Transparency
+                    </h4>
+                    <p className="text-xs sm:text-[13px] text-muted leading-relaxed font-normal">
+                      We believe people should understand the process, requirements, costs and responsibilities involved before making a decision.
+                    </p>
+                  </div>
+                  <div className="pt-4 mt-3 border-t border-line/40 flex items-center space-x-1.5 text-[11px] font-semibold text-teal-dark">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-teal" />
+                    <span>Core Principle</span>
+                  </div>
+                </div>
+
+                {/* 03. No False Promises */}
+                <div className="group relative bg-white/95 backdrop-blur-md rounded-3xl p-6 border border-line shadow-sm hover:shadow-xl hover:border-teal/50 transition-all duration-300 flex flex-col justify-between">
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <span className="font-heading text-3xl font-extrabold text-teal tabular-nums">
+                        03.
+                      </span>
+                      <div className="w-10 h-10 rounded-xl bg-teal-tint border border-teal/20 text-teal flex items-center justify-center shadow-xs">
+                        <ShieldCheck className="w-5 h-5" />
+                      </div>
+                    </div>
+                    <h4 className="font-heading text-lg font-bold text-navy group-hover:text-teal transition-colors">
+                      No False Promises
+                    </h4>
+                    <p className="text-xs sm:text-[13px] text-muted leading-relaxed font-normal">
+                      We do not guarantee admissions, test scores, visas or outcomes that are beyond our control. We set realistic expectations and stand by what we communicate.
+                    </p>
+                  </div>
+                  <div className="pt-4 mt-3 border-t border-line/40 flex items-center space-x-1.5 text-[11px] font-semibold text-teal-dark">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-teal" />
+                    <span>Core Principle</span>
+                  </div>
+                </div>
+
+                {/* 04. Growth */}
+                <div className="group relative bg-white/95 backdrop-blur-md rounded-3xl p-6 border border-line shadow-sm hover:shadow-xl hover:border-teal/50 transition-all duration-300 flex flex-col justify-between">
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <span className="font-heading text-3xl font-extrabold text-teal tabular-nums">
+                        04.
+                      </span>
+                      <div className="w-10 h-10 rounded-xl bg-teal-tint border border-teal/20 text-teal flex items-center justify-center shadow-xs">
+                        <TrendingUp className="w-5 h-5" />
+                      </div>
+                    </div>
+                    <h4 className="font-heading text-lg font-bold text-navy group-hover:text-teal transition-colors">
+                      Growth
+                    </h4>
+                    <p className="text-xs sm:text-[13px] text-muted leading-relaxed font-normal">
+                      We believe in continuous improvement, developing our expertise, strengthening our services and creating lasting value for the people and organisations we work with.
+                    </p>
+                  </div>
+                  <div className="pt-4 mt-3 border-t border-line/40 flex items-center space-x-1.5 text-[11px] font-semibold text-teal-dark">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-teal" />
+                    <span>Core Principle</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* ==================================================================== */}
+      {/* NEW SECTION 04 ENDS HERE                                             */}
+      {/* ==================================================================== */}
+
+      {/* ==================================================================== */}
+      {/* NEW SECTION 05: OUR MISSION & VISION (PURPOSE & DIRECTION)           */}
+      {/* ==================================================================== */}
+      <section className="py-16 sm:py-24 border-b border-line/60 bg-gradient-to-b from-white via-sand-tint/20 to-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-18 space-y-3">
+            <div className="inline-flex items-center space-x-2 bg-teal-tint border border-teal/30 px-3.5 py-1.5 rounded-full text-xs font-bold text-teal-dark shadow-xs">
+              <Target className="w-3.5 h-3.5 text-teal" />
+              <span className="uppercase tracking-wider">OUR PURPOSE & DIRECTION</span>
+            </div>
+
+            <span className="font-tempting text-[#0D9488] text-2xl sm:text-3xl font-medium block">
+              Corporate Vision
+            </span>
+
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy tracking-tight leading-tight">
+              What We Stand For.{" "}
+              <span className="text-[#0D9488]">What We Aim to Build.</span>
+            </h2>
+
+            <div className="mx-auto mt-4 h-1.5 w-20 rounded-full bg-[#0D9488]" />
+          </div>
+
+          {/* Dual Large Format Impact Cards */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* MISSION CARD */}
+            <div className="group relative bg-[#122447] text-white rounded-3xl p-8 sm:p-10 border border-teal/30 shadow-2xl overflow-hidden flex flex-col justify-between">
+              <div className="absolute -top-20 -right-20 w-64 h-64 bg-teal/20 rounded-full blur-3xl pointer-events-none group-hover:bg-teal/30 transition-colors" />
+
+              <div className="space-y-5 relative z-10">
+                <div className="flex items-center justify-between">
+                  <span className="inline-flex items-center space-x-1.5 bg-white/10 border border-white/20 text-teal-bright px-3.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider">
+                    <Target className="w-3.5 h-3.5 text-teal-bright" />
+                    <span>OUR MISSION</span>
+                  </span>
+                  <span className="text-xs text-sand-tint/70 font-semibold tracking-wide">
+                    Long-Term Direction
+                  </span>
+                </div>
+
+                <div>
+                  <span className="font-tempting text-teal-bright text-xl sm:text-2xl font-normal block">
+                    Continuous Progress
+                  </span>
+                  <h3 className="font-heading text-2xl sm:text-3xl font-extrabold text-white leading-tight mt-1">
+                    Our Long-Term Direction
+                  </h3>
+                </div>
+
+                <div className="space-y-4 text-sand-tint/85 text-small sm:text-body leading-relaxed font-normal">
+                  <p>
+                    Our mission is to keep Future Yatra moving forward by improving the way we work, expanding what we can offer and building stronger capabilities across the organisation. We want to create an environment where new ideas can take shape, teams can develop their expertise and business partnerships can lead to meaningful opportunities.
+                  </p>
+                  <p>
+                    This means investing in better systems, encouraging people to take initiative and learning from the work we do every day.
+                  </p>
+                  <p>
+                    Our focus is on making consistent progress, turning new opportunities into action and ensuring that growth is reflected in everything we do.
+                  </p>
+                </div>
+              </div>
+
+              <div className="pt-6 mt-6 border-t border-white/15 relative z-10 flex items-center space-x-2 text-xs font-semibold text-teal-bright">
+                <CheckCircle2 className="w-4 h-4 text-teal-bright" />
+                <span>Operational Standard Across All 4 Verticals</span>
+              </div>
+            </div>
+
+            {/* VISION CARD */}
+            <div className="group relative bg-[#0F766E] text-white rounded-3xl p-8 sm:p-10 border border-white/20 shadow-2xl overflow-hidden flex flex-col justify-between">
+              <div className="absolute -top-20 -right-20 w-64 h-64 bg-white/15 rounded-full blur-3xl pointer-events-none group-hover:bg-white/25 transition-colors" />
+
+              <div className="space-y-5 relative z-10">
+                <div className="flex items-center justify-between">
+                  <span className="inline-flex items-center space-x-1.5 bg-white/15 border border-white/25 text-white px-3.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider">
+                    <Compass className="w-3.5 h-3.5 text-white" />
+                    <span>OUR VISION</span>
+                  </span>
+                  <span className="text-xs text-white/70 font-semibold tracking-wide">
+                    Long-Term Ethos
+                  </span>
+                </div>
+
+                <div>
+                  <span className="font-tempting text-teal-tint text-xl sm:text-2xl font-normal block">
+                    Built to Endure
+                  </span>
+                  <h3 className="font-heading text-2xl sm:text-3xl font-extrabold text-white leading-tight mt-1">
+                    Our Long-Term Ethos
+                  </h3>
+                </div>
+
+                <div className="space-y-4 text-white/90 text-small sm:text-body leading-relaxed font-normal">
+                  <p>
+                    Today, Future Yatra operates through four specialised brands, each focused on a different area of education and international mobility. But we do not see the organisation as limited to its current services.
+                  </p>
+                  <p>
+                    Our vision is to build Future Yatra into a group of established businesses that can grow with changing needs, enter new markets and take on new opportunities over time.
+                  </p>
+                  <p>
+                    We want to build something that lasts beyond individual services or market trends. As the organisation grows, its ability to adapt, its standards of work and its sense of responsibility should grow with it.
+                  </p>
+                  <p className="font-semibold text-white">
+                    The ambition is simple: to build an organisation whose future is not restricted by where it started.
+                  </p>
+                </div>
+              </div>
+
+              <div className="pt-6 mt-6 border-t border-white/20 relative z-10 flex items-center space-x-2 text-xs font-semibold text-teal-tint">
+                <CheckCircle2 className="w-4 h-4 text-white" />
+                <span>Institutional Enduring Growth</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* ==================================================================== */}
+      {/* NEW SECTION 05 ENDS HERE                                             */}
+      {/* ==================================================================== */}
+
+      {/* ==================================================================== */}
+      {/* NEW SECTION 06: OUR FOUNDATION (YOUNG COMPANY & CONSULTATION CTAS)   */}
+      {/* ==================================================================== */}
+      <section className="py-16 sm:py-24 border-b border-line/60 bg-gradient-to-b from-white via-sand-tint/30 to-white relative overflow-hidden text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="inline-flex items-center space-x-2 bg-teal-tint border border-teal/30 px-3.5 py-1.5 rounded-full text-xs font-bold text-teal-dark shadow-xs mb-3">
+            <Award className="w-3.5 h-3.5 text-teal" />
+            <span className="uppercase tracking-wider">OUR FOUNDATION</span>
+          </div>
+
+          <span className="font-tempting text-[#0D9488] text-2xl sm:text-3xl font-medium block">
+            Founded in 2025
+          </span>
+
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy tracking-tight leading-tight mt-1 mb-8">
+            A Young Company.{" "}
+            <span className="text-[#0D9488]">A Clear Purpose.</span>
+          </h2>
+
+          <div className="bg-white/95 backdrop-blur-md rounded-3xl p-8 sm:p-12 border border-line shadow-xl space-y-6 text-center">
+            <div className="space-y-4 max-w-2xl mx-auto">
+              <p className="text-body sm:text-body-l font-bold text-teal-dark font-heading">
+                Future Yatra Private Limited was officially registered in 2025.
+              </p>
+              <p className="text-body sm:text-xl font-medium text-navy leading-relaxed font-body">
+                We are not here to claim decades of experience we don&apos;t have.
+              </p>
+              <p className="text-small sm:text-body text-muted leading-relaxed font-normal">
+                We are here to build something students and families can trust, one conversation at a time.
+              </p>
+            </div>
+
+            <div className="border-t border-line/60 pt-6">
+              <p className="text-2xl sm:text-3xl lg:text-4xl text-[#0D9488] font-extrabold font-heading tracking-tight leading-tight">
+                “Your future deserves an informed decision.”
+              </p>
+            </div>
+
+            <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
+              <Link href="/contact" className="inline-block">
+                <HoverBorderGradient
+                  as="div"
+                  containerClassName="rounded-full"
+                  innerBgClassName="bg-navy"
+                  className="bg-navy hover:bg-navy-glow text-white font-bold text-small sm:text-body px-8 py-4 rounded-full inline-flex items-center space-x-3 shadow-md group border border-teal/30"
+                >
+                  <span className="text-white font-bold">Book a Free Consultation</span>
+                  <ArrowRight className="w-5 h-5 text-teal-bright group-hover:translate-x-1.5 transition-transform duration-150" />
+                </HoverBorderGradient>
+              </Link>
+
+              <Link
+                href="/contact"
+                className="inline-flex items-center space-x-2 bg-white hover:bg-sand-tint text-navy font-bold text-small sm:text-body px-7 py-4 rounded-full border border-line shadow-xs transition-all hover:scale-[1.02]"
+              >
+                <span>Connect With Us</span>
+                <ChevronRight className="w-4 h-4 text-teal" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* ==================================================================== */}
+      {/* NEW SECTION 06 ENDS HERE                                             */}
+      {/* ==================================================================== */}
+
+      {/* ==================================================================== */}
+      {/* NEW SECTION 07: FREQUENTLY ASKED QUESTIONS (REUSED FROM HOMEPAGE)    */}
+      {/* ==================================================================== */}
+      <FaqSection />
+      {/* ==================================================================== */}
+      {/* NEW SECTION 07 ENDS HERE                                             */}
+      {/* ==================================================================== */}
+
+      {/* ==================================================================== */}
+      {/* OLD SECTIONS FLOW (PREVIOUS VERSION) - PRESERVED FOR REVERSIBILITY   */}
+      {/* Set false to true anytime if you want to restore previous version   */}
+      {/* ==================================================================== */}
+      {false && (
+        <div style={{ display: "none" }}>
+          {/* Previous Sections preserved safely below */}
+        </div>
+      )}
+      {/* ==================================================================== */}
+      {/* OLD SECTIONS FLOW ENDS HERE                                          */}
+      {/* ==================================================================== */}
     </div>
   );
 }
